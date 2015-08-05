@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>365</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js"></script>
+    <style>
+        html, body {margin:0; padding: 0; background: #000}
+        .fotorama__wrap { margin: auto; }
+        .fotorama__caption__wrap {background: #000;color: #555; font-size: 50px;}
+    </style>
+</head>
+<body>
+<div id="p365"></div>
+<script>
+$.getJSON('https://api.flickr.com/services/rest/', {
+    api_key: '8ab594c994d60d68b66ad14227ab8311',
+    method: 'flickr.photosets.getPhotos',
+    photoset_id: '72157650229459929',
+    user_id: '60482402@N00',
+    format: 'json',
+    extras: 'url_h,url_l,url_sq',
+    nojsoncallback: '1'
+}).done(function(resp){
+    $('#p365').fotorama({
+        nav: 'thumbs',
+        keyboard: true,
+        hash: true,
+        allowfullscreen: 'native',
+        width: '100%',
+        height: '100%',
+        ratio: '1',
+            arrows: false,
+            click: true,
+            swipe: false,
+            trackpad: false,
+        thumbwidth: '75',
+        thumbheight: '75',
+        data: resp.photoset.photo.map(function(i){return {
+            img: i.url_l,
+            full: i.url_h,
+            thumb: i.url_sq,
+            caption: i.title,
+            id: 'p' + i.title
+        }}).reverse()
+    });
+});
+</script>
+</body>
+</html>
