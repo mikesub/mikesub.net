@@ -1,0 +1,70 @@
+body {
+    margin: 1rem 3rem 10rem 3rem;
+    font-family: Georgia, serif;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+a, a:active, a:focus, a:visited, a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #1488FF;
+}
+
+body > header h1 {
+    font-size: 1.2rem;
+    letter-spacing: .3rem;
+    margin-bottom: 4rem;
+    font-style: italic;
+}
+
+article > header h1 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 0;
+}
+
+article header p {
+    margin: 0;
+    font-style: italic;
+    font-size: .9rem;
+}
+
+article header {
+    margin-bottom: 2rem;
+}
+
+article, body > header {
+    max-width: 45rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+article {
+    margin-bottom: 5rem;
+}
+
+article > p {
+    line-height: 1.6;
+    word-wrap: break-word;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+article > h2 {
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+}
+
+article > h2 + p {
+    margin-top: 0;
+}
