@@ -9,7 +9,7 @@ nunjucks.configure(path.resolve(__dirname, '../templates'));
 
 const defaultContext = {
   siteTitle: 'Михаил Сабуренков',
-  siteURL: 'http://mikesub.net',
+  siteURL: 'http://mikesub.net/blog',
   siteHeading: 'Заметки Михаила Сабуренкова',
 };
 
