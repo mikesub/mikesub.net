@@ -2,13 +2,13 @@
 <rss version="2.0">
     <channel>
         <title>Михаил Сабуренков</title>
-        <link>http://mikesub.net</link>
+        <link>http://mikesub.net/blog</link>
         <description>Заметки Михаила Сабуренкова</description>
         
             <item>
                 <title>about:blank</title>
-                <guid isPermalink="true">http://mikesub.net/about_blank.html</guid>
-                <link>http://mikesub.net/about_blank.html</link>
+                <guid isPermalink="true">http://mikesub.net/blog/about_blank.html</guid>
+                <link>http://mikesub.net/blog/about_blank.html</link>
                 <description>&lt;p&gt;Я очень скучаю по чистой вкладке, пустой белой странице. Когда-то все браузеры при открытии вкладки показывали
 чистую страницу и пользователь мог либо ввести адрес в адресную строку, либо выбрать страницу из закладок. Потом интерфейс 
 стал обрастать и появился вывод истории недавних посещений, списки популярных сайтов. Гугл начал показывать по сути свою 
@@ -34,8 +34,8 @@
         
             <item>
                 <title>Гугл мой спотлайт</title>
-                <guid isPermalink="true">http://mikesub.net/google_my_spotlight.html</guid>
-                <link>http://mikesub.net/google_my_spotlight.html</link>
+                <guid isPermalink="true">http://mikesub.net/blog/google_my_spotlight.html</guid>
+                <link>http://mikesub.net/blog/google_my_spotlight.html</link>
                 <description>&lt;p&gt;В продолжение «&lt;a href=&quot;http://ilyabirman.ru/meanwhile/all/web-or-native-future/&quot;&gt;Будущего нативных и веб-приложений&lt;/a&gt;» Ильи Бирмана.&lt;/p&gt;
 &lt;p&gt;Да, веб-приложения сейчас часто неудобнее нативных аналогов. На мобильных платформах это еще больше ощущается, чем 
 на десктопах. Одновременно с этим то, что открывается по ссылке в браузере, далеко и давно ушло от понятия 
@@ -62,8 +62,8 @@
         
             <item>
                 <title>Верстальщики: от программистов к дизайнерам</title>
-                <guid isPermalink="true">http://mikesub.net/html_designers.html</guid>
-                <link>http://mikesub.net/html_designers.html</link>
+                <guid isPermalink="true">http://mikesub.net/blog/html_designers.html</guid>
+                <link>http://mikesub.net/blog/html_designers.html</link>
                 <description>&lt;p&gt;Изначально HTML создавался как markdown или разметка wiki. Как сейчас нет markdown-верстальщика, word-писателя, так и
 изначально не было HTML—верстальщика. Это было еще один формат разметки текста.&lt;/p&gt;
 &lt;p&gt;Почти сразу HTML стали использовать не для создания документов с гиперссылками, а чего-угодно с гиперссылками.
