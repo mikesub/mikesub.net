@@ -10,7 +10,7 @@ nunjucks.configure(path.resolve(__dirname, '../templates'));
 const defaultContext = {
   siteTitle: 'Михаил Сабуренков',
   siteURL: 'http://mikesub.net/blog',
-  siteHeading: 'Заметки Михаила Сабуренкова',
+  siteHeading: 'Михаил Сабуренков',
 };
 
 const articles = _.sortBy(loadArticles(), 'sortKey').reverse();
