@@ -5,6 +5,16 @@
         <link>http://mikesub.net/blog</link>
         <description>Mike Saburenkov</description>
             <item>
+                <title>10 years a web developer</title>
+                <guid isPermalink="true">http://mikesub.net/blog/10_years_a_developer.html</guid>
+                <link>http://mikesub.net/blog/10_years_a_developer.html</link>
+                <description>&lt;p&gt;On December 2006 I joined a digital agency as a humble HTML coder. There was neither Chrome nor iPhone yet, IE market share was around 85%, table-based layouts ruled the internet and we all were debugging using &lt;em&gt;window.alert&lt;&#x2F;em&gt; calls.&lt;&#x2F;p&gt;
+&lt;p&gt;Fast-forward 10 years. Chrome&amp;#39;s released v.54, iPhone is in its 10th generation, IE has less than 15%. Web standards and its support, development tools and other technologies involved improved drastically but same happened to the complexity of products being developed nowadays. And it seems that these things are evolving nearly at the same rate. There is more or less same gap there, dev.tools can&amp;#39;t keep up with things for which we use them. Be frank, it&amp;#39;s still a pain in the neck to develop front-end stuff. We&amp;#39;ve conquered basic blocks, but interfaces are getting more sophisticated, the web is being accessed from more devices, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;And I can&amp;#39;t name anything that would change this.&lt;&#x2F;p&gt;
+</description>
+                <pubDate>24 Nov 2016 16:11 +0300</pubDate>
+            </item>
+            <item>
                 <title>Пусть бегут</title>
                 <guid isPermalink="true">http://mikesub.net/blog/let_them_run.html</guid>
                 <link>http://mikesub.net/blog/let_them_run.html</link>
