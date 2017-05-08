@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>{{siteTitle}}</title>
+        <link>{{{siteURL}}}</link>
+        <description>{{siteHeading}}</description>
+        {{#items}}
+            <item>
+                <title>{{title}}</title>
+                <guid isPermalink="true">{{{siteURL}}}/{{path}}</guid>
+                <link>{{{siteURL}}}/{{path}}</link>
+                <description>{{body}}</description>
+                <pubDate>{{rssDate}}</pubDate>
+            </item>
+        {{/items}}
+    </channel>
+</rss>
