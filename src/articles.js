@@ -1,49 +1,25 @@
-import fs from 'fs';
+const fs = require('fs');
+const path = require('path');
+const marked = require('meta-marked');
+const moment = require('moment');
 
-import marked from 'marked';
-import moment from 'moment';
+const articlesDir = 'articles';
 
-function getDescription(html) {
-  const words = html
-    .replace(/<\/?[^>]+>/g, '')
-    .replace(/\n/g, ' ')
-    .split(' ');
-  let result = '';
-
-  for (const word of words) {
-    if (result.length + word.length + 3 > 200) {
-      if (!result.endsWith('.')) {
-        result += '...';
-      }
-      break;
-    }
-    result += ` ${word}`;
-  }
-
-  return result;
-}
-
-function parseArticle(fileName) {
-  const body = marked(fs.readFileSync(`./articles/${fileName}.md`, {encoding: 'utf8'}));
-  const meta = JSON.parse(fs.readFileSync(`./articles/${fileName}.json`));
-  const title = meta.title;
-  const date = moment(meta.date);
+const parse = fileName => {
+  const parsed = marked(fs.readFileSync(path.join(articlesDir, fileName), {encoding: 'utf8'}));
+  const date = moment(parsed.meta.date);
   const isDateThisYear = date.year() === moment().year();
-
   return {
-    title: title,
-    body: body,
-    description: getDescription(body),
-    machineDate: date.format('YYYY-MM-DD'),
+    path: `${fileName.replace(/\..+$/, '')}.html`,
+    title: parsed.meta.title,
+    date: date,
+    isThisYear: isDateThisYear,
     sortKey: date.format('YYYYMMDDHHMM'),
-    humanDate: `${date.locale('ru').format('D MMMM')}${isDateThisYear ? '' : ` ${date.year()}`}`,
+    machineDate: date.format('YYYY-MM-DD'),
+    humanDate: date.locale('en').format(`MMMM D${isDateThisYear ? '' : ', Y'}`),
     rssDate: date.locale('en').format('DD MMM YYYY HH:MM ZZ'),
-    path: `${fileName}.html`,
+    body: parsed.html,
   };
-}
+};
 
-export default () => fs
-  .readdirSync('./articles')
-  .filter(i => i.endsWith('.md'))
-  .map(i => i.replace(/\..+$/, ''))
-  .map(parseArticle);
+module.exports.load = () => fs.readdirSync(articlesDir).map(parse);

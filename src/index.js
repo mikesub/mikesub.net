@@ -1,11 +1,7 @@
-import fs from 'fs';
+const fs = require('fs');
+const render = require('./render');
 
-import rendered from './render.js';
+fs.writeFileSync('./rss.xml', render.rss);
+fs.writeFileSync('./index.html', render.index);
+render.articles.forEach(article => fs.writeFileSync(article.path, article.body));
 
-fs.writeFileSync('./rss.xml', rendered.rss);
-fs.writeFileSync('./index.html', rendered.index);
-for (let article of rendered.articles) {
-  fs.writeFileSync(article.path, article.body);
-}
-
-process.exit();
