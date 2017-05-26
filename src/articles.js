@@ -3,6 +3,7 @@ const path = require('path');
 const marked = require('meta-marked');
 const moment = require('moment');
 
+
 const articlesDir = 'articles';
 
 const parse = fileName => {
@@ -18,6 +19,7 @@ const parse = fileName => {
     machineDate: date.format('YYYY-MM-DD'),
     humanDate: date.locale('en').format(`MMMM D${isDateThisYear ? '' : ', Y'}`),
     rssDate: date.locale('en').format('DD MMM YYYY HH:MM ZZ'),
+    feedDate: date.locale('en').format('YYYY-MM-DDTHH:MM:SSZ'),
     body: parsed.html,
   };
 };
