@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const marked = require('meta-marked');
 const moment = require('moment');
+const extractDescription = require('./extractDescription');
 
 
 const articlesDir = 'articles';
@@ -21,6 +22,7 @@ const parse = fileName => {
     rssDate: date.locale('en').format('DD MMM YYYY HH:MM ZZ'),
     feedDate: date.locale('en').format('YYYY-MM-DDTHH:MM:SSZ'),
     body: parsed.html,
+    description: extractDescription(parsed.html)
   };
 };
 
