@@ -1,7 +1,7 @@
 body {
     margin: 1rem 3rem 10rem 3rem;
     font-family: Georgia, serif;
-    text-rendering:  optimizeLegibility;
+    text-rendering: optimizeLegibility;
 }
 
 @media (max-width: 768px) {
@@ -66,6 +66,21 @@ article > h2 {
     font-size: 1.2rem;
 }
 
-article > h2 + p {
+article > h2 + p,
+article hr + p {
     margin-top: 0;
+}
+
+article hr {
+    border: none;
+    margin: 3rem 0 2rem 0;
+    text-align: center;
+}
+
+article hr::after {
+    content: '***';
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1;
 }
