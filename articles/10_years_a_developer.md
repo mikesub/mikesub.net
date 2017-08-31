@@ -1,6 +1,6 @@
 ---
 title: 10 years a web developer
-date: 2016-11-24 16:20
+date: 2016-11-24 16:20+03
 ---
 
 On December 2006 I joined a digital agency as a humble HTML coder. There was neither Chrome nor iPhone yet, IE market share was around 85%, table-based layouts ruled the internet and we all were debugging using _window.alert_ calls.
