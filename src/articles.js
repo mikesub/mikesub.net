@@ -9,7 +9,7 @@ const articlesDir = 'articles';
 
 const parse = fileName => {
   const parsed = marked(fs.readFileSync(path.join(articlesDir, fileName), {encoding: 'utf8'}));
-  const date = moment(parsed.meta.date);
+  const date = moment.parseZone(parsed.meta.date);
   const isDateThisYear = date.year() === moment().year();
   return {
     path: `${fileName.replace(/\..+$/, '')}.html`,
