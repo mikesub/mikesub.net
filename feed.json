@@ -5,6 +5,12 @@
  "feed_url": "http://mikesub.net/blog/feed.json",
  "items": [
   {
+   "id": "http://mikesub.net/blog/microblog.html",
+   "url": "http://mikesub.net/blog/microblog.html",
+   "content_html": "<p>a post testing micro.blog integration.</p>\n",
+   "date_published": "2018-09-25T21:09:00+01:00"
+  },
+  {
    "title": "NL#2",
    "id": "http://mikesub.net/blog/nl_drafts.html",
    "url": "http://mikesub.net/blog/nl_drafts.html",
