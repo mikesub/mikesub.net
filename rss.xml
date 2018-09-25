@@ -5,6 +5,14 @@
         <link>http://mikesub.net/blog</link>
         <description>Mike Saburenkov</description>
             <item>
+                
+                <guid isPermalink="true">http://mikesub.net/blog/microblog.html</guid>
+                <link>http://mikesub.net/blog/microblog.html</link>
+                <description>&lt;p&gt;a post testing micro.blog integration.&lt;&#x2F;p&gt;
+</description>
+                <pubDate>25 Sep 2018 21:09 +0100</pubDate>
+            </item>
+            <item>
                 <title>NL#2</title>
                 <guid isPermalink="true">http://mikesub.net/blog/nl_drafts.html</guid>
                 <link>http://mikesub.net/blog/nl_drafts.html</link>
