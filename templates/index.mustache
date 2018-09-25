@@ -20,8 +20,13 @@
   {{#items}}
     <article>
       <header>
+        {{#title}}
         <h1><a href="{{path}}">{{title}}</a></h1>
         <p><time datetime="{{machineDate}}">{{humanDate}}</time></p>
+        {{/title}}
+        {{^title}}
+          <p><a href="{{path}}"><time datetime="{{machineDate}}">{{humanDate}}</time></a></p>
+        {{/title}}
       </header>
       {{{body}}}
     </article>

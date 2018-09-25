@@ -6,7 +6,7 @@
         <description>Mike Saburenkov</description>
         {{#items}}
             <item>
-                <title>{{title}}</title>
+                {{#title}}<title>{{title}}</title>{{/title}}
                 <guid isPermalink="true">http://mikesub.net/blog/{{path}}</guid>
                 <link>http://mikesub.net/blog/{{path}}</link>
                 <description>{{body}}</description>
