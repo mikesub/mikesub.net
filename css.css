@@ -16,7 +16,6 @@ a, a:active, a:focus, a:visited {
     color: black;
 }
 
-
 body > header h1 {
     font-size: 1.5rem;
     letter-spacing: -.1rem;
@@ -74,4 +73,49 @@ article hr::after {
     position: relative;
     font-size: 1.6rem;
     line-height: 1;
+}
+
+
+body.dark {
+    background-color: rgb(50,50,50);
+}
+
+body.dark,
+body.dark a,
+body.dark a:active,
+body.dark a:focus,
+body.dark a:visited
+body.dark h1 {
+    color: rgb(200,200,200);
+}
+
+body.dark a:hover, a:hover {
+    color: #1488FF;
+}
+
+.dark-toggle {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    padding: .3rem;
+    color: rgb(200,200,200);
+    border-radius: 3px;
+    transition: all .3s;
+}
+.dark-toggle:hover {
+    cursor: pointer;
+    background: rgb(50,50,50);
+}
+
+.no-dark-toggle .dark-toggle {
+    display: none;
+}
+
+body.dark .dark-toggle {
+    background: rgb(50,50,50);
+
+}
+body.dark .dark-toggle:hover {
+    background: #fff;
+    color: #000;
 }

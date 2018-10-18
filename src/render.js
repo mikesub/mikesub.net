@@ -7,12 +7,12 @@ const feed = require('./feed');
 
 const templatesDir = 'templates';
 
-
 const loadTemplate = fileName => fs.readFileSync(path.join(templatesDir, `${fileName}.mustache`), {encoding: 'utf8'});
 const articles = _articles.load();
 const sortedArticles = _.sortBy(articles, 'sortKey').reverse();
-const renderList = (template, items) => mustache.render(loadTemplate(template), {items});
-const renderArticle = (template, item) => mustache.render(loadTemplate(template), {item});
+const partials = {'_darkmode': loadTemplate('_darkmode')};
+const renderList = (template, items) => mustache.render(loadTemplate(template), {items}, partials);
+const renderArticle = (template, item) => mustache.render(loadTemplate(template), {item}, partials);
 
 module.exports = {
   index: renderList('index', sortedArticles),
