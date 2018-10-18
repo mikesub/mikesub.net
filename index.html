@@ -168,5 +168,21 @@
 вместе с этим плавно перетекают либо в дизайнеров, либо в программистов и это прекрасно.</p>
 
     </article>
+<button class="dark-toggle js-dark-toggle" tabindex="0">
+set dark<br /> mode to<br /> not dark<br /> mode
+</button>
+<script>
+(function () {
+    var darkMode = localStorage.getItem('darkmode') === '1';
+    document.body.className = darkMode ? 'dark' : '';
+    document.querySelector('.js-dark-toggle').addEventListener('click', function () {
+    var darkMode = document.body.className === 'dark';
+    try {
+        localStorage.setItem('darkmode', darkMode ? 0 : 1);
+    } catch (e) { }
+    document.body.className = darkMode ? '' : 'dark';
+    })
+})();
+</script>
 </body>
 </html>
