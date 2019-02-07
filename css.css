@@ -4,6 +4,26 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+code {
+    border-radius: 3px;
+    padding: .2rem .3rem;
+    font-size: 1.1rem;
+    white-space: pre;
+}
+
+pre, code {
+    background: rgb(230,230,230);
+    font-family: "Fire Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
+}
+
+pre {
+    line-height: 1.45rem;
+    padding: 1rem;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+
 @media (max-width: 768px) {
     body {
         margin-left: 1rem;
@@ -118,4 +138,9 @@ body.dark .dark-toggle {
 body.dark .dark-toggle:hover {
     background: #fff;
     color: #000;
+}
+
+body.dark pre,
+body.dark code {
+    background: rgb(40,40,40);
 }
