@@ -16,11 +16,11 @@ const parse = fileName => {
     title: parsed.meta.title,
     date: date,
     isThisYear: isDateThisYear,
-    sortKey: date.format('YYYYMMDDHHMM'),
+    sortKey: date.format('YYYYMMDDHHmm'),
     machineDate: date.format('YYYY-MM-DD'),
     humanDate: date.locale('en').format(`MMMM D${isDateThisYear ? '' : ', Y'}`),
-    rssDate: date.locale('en').format('DD MMM YYYY HH:MM ZZ'),
-    feedDate: date.locale('en').format('YYYY-MM-DDTHH:MM:SSZ'),
+    rssDate: date.locale('en').format('DD MMM YYYY HH:mm ZZ'),
+    feedDate: date.locale('en').format('YYYY-MM-DDTHH:mm:ssZ'),
     body: parsed.html,
     description: extractDescription(parsed.html)
   };
