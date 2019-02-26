@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>Mike Saburenkov</title>
-        <link>http://mikesub.net/blog</link>
+        <link>http://mikesub.net/blog/</link>
         <description>Mike Saburenkov</description>
             <item>
                 <title>TypeScript. Bad Parts</title>

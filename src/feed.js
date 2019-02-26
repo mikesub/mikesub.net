@@ -1,6 +1,5 @@
 const _ = require("lodash");
-
-const url = "http://mikesub.net/blog/";
+const { url, title } = require("../config.json");
 
 const item = ({ title, path, body, feedDate }) => {
   return _.pickBy({
@@ -16,7 +15,7 @@ const genFeed = items =>
   JSON.stringify(
     {
       version: "https://jsonfeed.org/version/1",
-      title: "Mike Saburenkov",
+      title: title,
       home_page_url: url,
       feed_url: `${url}feed.json`,
       items: items.map(item)

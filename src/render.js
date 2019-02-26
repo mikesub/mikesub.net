@@ -4,7 +4,7 @@ const _ = require("lodash");
 const mustache = require("mustache");
 const _articles = require("./articles");
 const feed = require("./feed");
-
+const config = require("../config.json");
 const templatesDir = "templates";
 
 const loadTemplate = fileName =>
@@ -19,9 +19,9 @@ const partials = {
   _analytics: loadTemplate("_analytics")
 };
 const renderList = (template, items) =>
-  mustache.render(loadTemplate(template), { items }, partials);
+  mustache.render(loadTemplate(template), { config, items }, partials);
 const renderArticle = (template, item) =>
-  mustache.render(loadTemplate(template), { item }, partials);
+  mustache.render(loadTemplate(template), { config, item }, partials);
 
 module.exports = {
   index: renderList("index", sortedArticles),
