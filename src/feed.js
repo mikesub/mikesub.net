@@ -1,17 +1,15 @@
+const _ = require("lodash");
+
 const url = "http://mikesub.net/blog/";
 
 const item = ({ title, path, body, feedDate }) => {
-  let result = {
+  return _.pickBy({
     title: title,
     id: url + path,
     url: url + path,
     content_html: body,
     date_published: feedDate
-  };
-  if (!title) {
-    delete result.title;
-  }
-  return result;
+  });
 };
 
 const genFeed = items =>
@@ -23,7 +21,7 @@ const genFeed = items =>
       feed_url: `${url}feed.json`,
       items: items.map(item)
     },
-    null,
+    null, // eslint-disable-line fp/no-nil
     1
   );
 

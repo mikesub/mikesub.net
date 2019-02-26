@@ -12,6 +12,7 @@ const loadTemplate = fileName =>
     encoding: "utf8"
   });
 const articles = _articles.load();
+// eslint-disable-next-line fp/no-mutating-methods
 const sortedArticles = _.sortBy(articles, "sortKey").reverse();
 const partials = {
   _darkmode: loadTemplate("_darkmode"),

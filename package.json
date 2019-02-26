@@ -3,7 +3,7 @@
   "scripts": {
     "start": "yarn build; http-server . -p 8080",
     "build": "node ./src",
-    "lint": "prettier -c src/*"
+    "lint": "eslint src/* && prettier -c src/*"
   },
   "husky": {
     "hooks": {
