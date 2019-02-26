@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "yarn build; http-server . -p 8080",
+    "start": "npm run build; http-server . -p 8080",
     "build": "node ./src",
     "lint": "eslint src/* && prettier -c src/*"
   },
