@@ -1,1 +1,1 @@
-# [http://mikesub.net/blog](http://mikesub.net/blog)
+# [https://mikesub.net](https://mikesub.net)
