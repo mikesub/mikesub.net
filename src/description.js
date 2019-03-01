@@ -7,10 +7,12 @@ function stripNewLines(text) {
   return text.replace(/\n/g, "");
 }
 
-module.exports = function(html) {
+function truncate(html) {
   return _.truncate(stripNewLines(stripTags(html)), {
     length: 200,
     omission: "...",
     separator: " "
   });
-};
+}
+
+module.exports = { truncate };

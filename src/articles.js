@@ -2,11 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const marked = require("meta-marked");
 const moment = require("moment");
-const extractDescription = require("./extractDescription");
+const description = require("./description");
+const { articlesDir } = require("../config.json");
 
-const articlesDir = "articles";
-
-const parse = fileName => {
+function parseArticle(fileName) {
   const parsed = marked(
     fs.readFileSync(path.join(articlesDir, fileName), { encoding: "utf8" })
   );
@@ -23,8 +22,12 @@ const parse = fileName => {
     rssDate: date.locale("en").format("DD MMM YYYY HH:mm ZZ"),
     feedDate: date.locale("en").format("YYYY-MM-DDTHH:mm:ssZ"),
     body: parsed.html,
-    description: extractDescription(parsed.html)
+    description: description.truncate(parsed.html)
   };
-};
+}
 
-module.exports.load = () => fs.readdirSync(articlesDir).map(parse);
+function load() {
+  return fs.readdirSync(articlesDir).map(parseArticle);
+}
+
+module.exports = { load };

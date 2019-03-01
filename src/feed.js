@@ -1,7 +1,7 @@
 const _ = require("lodash");
 const { url, title } = require("../config.json");
 
-const item = ({ title, path, body, feedDate }) => {
+function item({ title, path, body, feedDate }) {
   return _.pickBy({
     title: title,
     id: url + path,
@@ -9,10 +9,10 @@ const item = ({ title, path, body, feedDate }) => {
     content_html: body,
     date_published: feedDate
   });
-};
+}
 
-const genFeed = items =>
-  JSON.stringify(
+function genFeed(items) {
+  return JSON.stringify(
     {
       version: "https://jsonfeed.org/version/1",
       title: title,
@@ -23,5 +23,5 @@ const genFeed = items =>
     null, // eslint-disable-line fp/no-nil
     1
   );
-
+}
 module.exports = { genFeed };
