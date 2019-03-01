@@ -4,6 +4,6 @@
   "author": "Mike Saburenkov",
   "twitter": "@mikesub",
   "microblog": "https://micro.blog/mikesub",
-  "articlesDir": "articles",
+  "articlesDir": "articles/",
   "targetDir": "docs/blog/"
 }
