@@ -3,7 +3,7 @@ title: TypeScript. Bad Parts
 date: 2019-02-07 23:00+01
 ---
 
-I've been writing TypeScript for more than a year now and gone through well-known five stages of grief so it's time to share my experience. It all started as a compilation of tips & tricks I've discovered so far. Then it went to a more meta level of what types bring JS at all. And so I was writing two pieces asynchronously when I began to find myself noticing ‘bad’ parts here and there. At some point, there were enough of them for a separate discussion. So to keep those original ideas free of them, here they are, unordered.
+I've been writing TypeScript for more than a year now and gone through well-known five stages of grief so it's time to share my experience. It all started as a compilation of tips & tricks I've discovered so far. Then it went to a more meta level of what types bring to JS at all. And as I was writing two pieces asynchronously I began to find myself noticing ‘bad’ parts here and there. At some point, there were enough of them for a separate discussion. So to keep those original ideas free of them, here they are, unordered.
 
 ## Slowness
 Everything is pointing out it could be considerably faster. I should admit it's slow but stable so if authors had to choose between those, they did the right choice, but hey, it's v3 already, maybe it's time to address that.
