@@ -5,6 +5,46 @@
         <link>http://mikesub.net/blog/</link>
         <description>Mike Saburenkov</description>
             <item>
+                <title>Types and runtime checks</title>
+                <guid isPermalink="true">http://mikesub.net/blog/types_runtime_checks.html</guid>
+                <link>http://mikesub.net/blog/types_runtime_checks.html</link>
+                <description>&lt;p&gt;That&amp;#39;s the second article in a series on TypeScript started by ‘&lt;a href&#x3D;&quot;ts_bad_parts.html&quot;&gt;TypeScript. Bad Parts&lt;&#x2F;a&gt;’. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic. But if you can&amp;#39;t decide, make it &lt;a href&#x3D;&quot;ts_bad_parts.html&quot;&gt;chronologically&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;So what do types bring to JS? They fix some bad parts of JS, but that&amp;#39;s a byproduct. Mainly they add some semantics to code which helps editors and people to get more sense what it&amp;#39;s doing, how it should work and also spot some things which can be optimised. Let me show-case that with several examples.&lt;&#x2F;p&gt;
+&lt;h2 id&#x3D;&quot;runtime-checks&quot;&gt;Runtime checks&lt;&#x2F;h2&gt;
+&lt;p&gt;Say, we have a function which takes a configuration object, which is a JS way to have named arguments, and it really needs &lt;code&gt;url&lt;&#x2F;code&gt; out of it.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;lang-javascript&quot;&gt;function main({ url }) {
+  &#x2F;&#x2F; ...
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;It can not do a thing without &lt;code&gt;url&lt;&#x2F;code&gt;, no fallback or default value possible. So there are two options, either to exit silently returning &lt;code&gt;undefined&lt;&#x2F;code&gt; or, to make it more explicit, to throw an error:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;lang-javascript&quot;&gt;function main({ url }) {
+  if (!url) {
+    throw new Error(&amp;quot;no URL provided&amp;quot;);
+  }
+  &#x2F;&#x2F; ...
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That should work. If somebody fails to put URL there, they notice it ASAP. But since it&amp;#39;s not really named arguments there but just a fake, the code might fail even before. If one doesn&amp;#39;t provide an object at all, we&amp;#39;ll get:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;TypeError: Cannot destructure property &#x60;url&#x60; of &amp;#39;undefined&amp;#39; or &amp;#39;null&amp;#39;.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;p&gt;Let&amp;#39;s not discuss the fact that my Chrome can&amp;#39;t decide what it gets there: null or undefined, and try to fix that.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;lang-javascript&quot;&gt;function main({ url } &#x3D; {}) {
+  if (!url) {
+    throw new Error(&amp;quot;no URL provided&amp;quot;);
+  }
+  &#x2F;&#x2F; ...
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now it&amp;#39;s better. Though now it looks stupid. We&amp;#39;ve just provided a fallback value to be able to throw an error which can not be caught and recovered from.&lt;&#x2F;p&gt;
+&lt;p&gt;And that&amp;#39;s all happening in runtime. The code is there: parsed, evaluated, running, though isn&amp;#39;t helping at all. If you use type annotations you can prevent that thing before runtime.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;lang-typescript&quot;&gt;function main({ url }: { url: string }) {
+  &#x2F;&#x2F; ...
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Instead of providing a default value and throwing an error, we state that the argument is required and it needs to have &lt;code&gt;url&lt;&#x2F;code&gt; key which is a string. That&amp;#39;s not ideal as any string, even empty one, will pass. But TypeScript might evolve to it at some point: &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;github.com&#x2F;Microsoft&#x2F;TypeScript&#x2F;issues&#x2F;6579&quot;&gt;regex-validated string type&lt;&#x2F;a&gt;. And as of now, we&amp;#39;re already preventing some errors w&#x2F;o any runtime costs.&lt;&#x2F;p&gt;
+</description>
+                <pubDate>01 Mar 2019 18:00 +0100</pubDate>
+            </item>
+            <item>
                 <title>TypeScript. Bad Parts</title>
                 <guid isPermalink="true">http://mikesub.net/blog/ts_bad_parts.html</guid>
                 <link>http://mikesub.net/blog/ts_bad_parts.html</link>
