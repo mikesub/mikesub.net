@@ -3,5 +3,7 @@
   "title": "Mike Saburenkov",
   "author": "Mike Saburenkov",
   "twitter": "@mikesub",
-  "microblog": "https://micro.blog/mikesub"
+  "microblog": "https://micro.blog/mikesub",
+  "articlesDir": "articles",
+  "targetDir": "docs/blog/"
 }
