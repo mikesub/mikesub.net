@@ -26,19 +26,22 @@
     <p>a post testing micro.blog integration.</p>
 
   </article>
-<button class="dark-toggle js-dark-toggle" tabindex="0">
+<button class="dark-toggle js-dark-toggle" hidden tabindex="0">
 set dark<br /> mode to<br /> not dark<br /> mode
 </button>
 <script>
 (function () {
     var darkMode = localStorage.getItem('darkmode') === '1';
     document.body.className = darkMode ? 'dark' : '';
-    document.querySelector('.js-dark-toggle').addEventListener('click', function () {
-    var darkMode = document.body.className === 'dark';
-    try {
-        localStorage.setItem('darkmode', darkMode ? 0 : 1);
-    } catch (e) { }
-    document.body.className = darkMode ? '' : 'dark';
+
+    var button = document.querySelector('.js-dark-toggle');
+    button.removeAttribute('hidden');
+    button.addEventListener('click', function () {
+        var isItDark = document.body.className === 'dark';
+        try {
+            localStorage.setItem('darkmode', isItDark ? 0 : 1);
+        } catch (e) { }
+        document.body.className = isItDark ? '' : 'dark';
     })
 })();
 </script>
