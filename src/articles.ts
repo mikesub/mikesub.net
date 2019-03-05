@@ -1,11 +1,25 @@
-const fs = require("fs");
-const path = require("path");
-const marked = require("meta-marked");
-const moment = require("moment");
-const description = require("./description");
-const { articlesDir } = require("../config.json");
+import fs from "fs";
+import marked from "meta-marked";
+import moment from "moment";
+import path from "path";
+import { articlesDir } from "../config.json";
+import * as description from "./description";
 
-function parseArticle(fileName) {
+export type Article = {
+  path: string;
+  title: string;
+  date: moment.Moment;
+  isThisYear: boolean;
+  sortKey: string;
+  machineDate: string;
+  humanDate: string;
+  rssDate: string;
+  feedDate: string;
+  body: string;
+  description: string;
+};
+
+function parseArticle(fileName: string): Article {
   const parsed = marked(
     fs.readFileSync(path.join(articlesDir, fileName), { encoding: "utf8" })
   );
@@ -14,7 +28,7 @@ function parseArticle(fileName) {
   return {
     path: `${fileName.replace(/\..+$/, "")}.html`,
     title: parsed.meta.title,
-    date: date,
+    date,
     isThisYear: isDateThisYear,
     sortKey: date.format("YYYYMMDDHHmm"),
     machineDate: date.format("YYYY-MM-DD"),
@@ -26,8 +40,6 @@ function parseArticle(fileName) {
   };
 }
 
-function load() {
+export function load() {
   return fs.readdirSync(articlesDir).map(parseArticle);
 }
-
-module.exports = { load };
