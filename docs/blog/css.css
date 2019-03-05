@@ -10,6 +10,7 @@ code {
     padding: .2rem .3rem;
     font-size: 1.1rem;
     white-space: pre;
+    overflow-wrap: normal;
 }
 
 pre, code {
@@ -33,7 +34,6 @@ pre {
 }
 
 a, a:active, a:focus, a:visited {
-    text-decoration: none;
     color: black;
 }
 
@@ -47,6 +47,10 @@ article > header h1 {
     font-size: 1.5rem;
     line-height: 2rem;
     margin-bottom: 0;
+}
+
+header a {
+    text-decoration: none;
 }
 
 article header p {
@@ -96,6 +100,14 @@ article hr::after {
     line-height: 1;
 }
 
+article > p > a {
+    text-decoration: underline;
+    text-decoration-color: #1488FF;
+}
+
+article > p > a:hover {
+    text-decoration: none;
+}
 
 body.dark {
     background-color: rgb(50,50,50);
