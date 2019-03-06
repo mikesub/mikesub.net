@@ -56,3 +56,10 @@ function main({ url }: { url: string }) {
 ```
 
 Instead of providing a default value and throwing an error, we state that the argument is required and it needs to have `url` key which is a string. That's not ideal as any string, even empty one, will pass. But TypeScript might evolve to it at some point: [regex-validated string type](https://github.com/Microsoft/TypeScript/issues/6579). And as of now, we're already preventing some errors w/o any runtime costs.
+
+---
+
+That's the second article in a series on TypeScript. You can read them in any order as they aren't really connected apart from covering the same topic:
+
+- [TypeScript. Bad Parts](ts_bad_parts.html)
+- [Types and string semantics](types_string_semantics.html)

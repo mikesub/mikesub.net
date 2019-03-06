@@ -35,22 +35,22 @@
 <h2 id="index-signatures">Index signatures</h2>
 <p>In JS you can put anything as a key in object and it will be converted to a string. TS decided to improve that a bit and allows <code>{ [key: number]: boolean }</code>. Basically, it points that even though key is to be coerced to a string, let&#39;s check that we pass only numbers here. But then we get these:</p>
 <pre><code class="lang-typescript">type A = { [k: number]: any };
-const a2: A = {2: true}; // alright
-const a1: A = {&#39;string&#39;: true}; // error, fine
-const a3: A = {&#39;2&#39;: true}; // no error?
+const a2: A = { 2: true }; // alright
+const a1: A = { string: true }; // error, fine
+const a3: A = { &quot;2&quot;: true }; // no error?
 
 type B = { [k: string]: any };
-const b1: B = {&#39;string&#39;: true}; // alright
-const b3: B = {&#39;2&#39;: true}; // no error, fine
-const b2: B = {2: true}; // no error?
+const b1: B = { string: true }; // alright
+const b3: B = { &quot;2&quot;: true }; // no error, fine
+const b2: B = { 2: true }; // no error?
 </code></pre>
 <p>And <code>Object.keys()</code> is not a generic, because it can&#39;t be as it always returns strings. The coercion was irreversible, nobody can convert strings back to original types for you. You&#39;re alone.</p>
-<pre><code class="lang-typescript">Object.keys() // {} =&gt; string[]
+<pre><code class="lang-typescript">Object.keys(); // {} =&gt; string[]
 </code></pre>
 <p>And the last, not the least, is that you can only use primitives there, not your own types:</p>
 <pre><code class="lang-typescript">type Id = number;
-type Item = {id: Id};
-type Index = { [k: Id]: Item}; // nope, number please
+type Item = { id: Id };
+type Index = { [k: Id]: Item }; // nope, number please
 </code></pre>
 <h2 id="type-inference">Type Inference</h2>
 <p>That&#39;s nice. You feel good when you can drop obvious cases. It feels like language has done its homework. But then it starts taking defaults when there are multiple options and now you should be aware of them.</p>
@@ -59,18 +59,18 @@ type Index = { [k: Id]: Item}; // nope, number please
 </code></pre>
 <p>And when you return different shapes of objects from a function (say, redux reducer), inference creates monsters.</p>
 <pre><code class="lang-typescript">function foo(x: boolean, arr: []) {
-    if (x) {
-        return {&#39;a&#39;: true, &#39;3&#39;: 2}
-    } else {
-        return {&#39;b&#39;: 2, 3: arr.length};
-    }
+  if (x) {
+    return { a: true, &quot;3&quot;: 2 };
+  } else {
+    return { b: 2, 3: arr.length };
+  }
 }
 // Inferred: {&#39;a&#39;: boolean; &#39;3&#39;: number; &#39;b&#39;?: undefined;}
 //           | {&#39;bar&#39;: number; 3: 0; &#39;a&#39;?: undefined}
 //
 // Meant to be: {a?: boolean; &#39;3&#39;: number; b?: number;}
 </code></pre>
-<p> Possible solution might be to add strict check similar to disabling implicit ‘any’ to avoid this monsters guessing and fail to infer when it is ambigious.</p>
+<p>Possible solution might be to add strict check similar to disabling implicit ‘any’ to avoid this monsters guessing and fail to infer when it is ambigious.</p>
 <h2 id="global-scope">Global scope</h2>
 <p>If you write TS for a browser, thus adding <code>dom</code> in <code>compilerOptions/lib</code>, lots of useful types become available in the global scope. And you don&#39;t need to import them explicitly. You know what it means. And they aren&#39;t grouped into a namespace. Yup.
 Some are easy to expect as <code>XMLHTTPRequest</code> but others have more abstract names: <code>AlignSetting</code>, <code>Transport</code>. You will notice errors if you would try to define them in your code:</p>
@@ -78,8 +78,10 @@ Some are easy to expect as <code>XMLHTTPRequest</code> but others have more abst
 // duplicate identifier, was already declared in dom.d.ts
 </code></pre>
 <p>But you might miss the error if you just forget to define it and thus built-in will be used. And even worse will happen if you clash with built-in interfaces, as they will be merged:</p>
-<pre><code class="lang-typescript">interface Account { foo: &#39;bar&#39; }
-let x: Account = { foo: &#39;bar&#39; };
+<pre><code class="lang-typescript">interface Account {
+  foo: &quot;bar&quot;;
+}
+let x: Account = { foo: &quot;bar&quot; };
 // missing displayName, id, rpDisplayName from type &#39;Account&#39;.
 </code></pre>
 <h2 id="official-documentation">Official documentation</h2>
@@ -88,21 +90,30 @@ let x: Account = { foo: &#39;bar&#39; };
 <p>JS started to feel heavy when they added object destructuring. Then defaults and renaming came. Only type annotations were missing. Oh, it could be nested. I know it can be easily avoided by code style rules but still sometimes I find myself hitting the timeout in trying to parse the function declaration.</p>
 <hr>
 <p>Alright. The path for more positive things looks much clear now. If you have any comments, please reach out to me, I&#39;d love to discuss that in more details. And stay tuned, originally planned articles will follow.</p>
+<h2 id="update">Update</h2>
+<p>This article started a series on TypeScript. You can read them in any order as they aren&#39;t really connected apart from covering the same topic:</p>
+<ul>
+<li><a href="types_runtime_checks.html">Types and runtime checks</a></li>
+<li><a href="types_string_semantics.html">Types and string semantics</a></li>
+</ul>
 
   </article>
-<button class="dark-toggle js-dark-toggle" tabindex="0">
+<button class="dark-toggle js-dark-toggle" hidden tabindex="0">
 set dark<br /> mode to<br /> not dark<br /> mode
 </button>
 <script>
 (function () {
     var darkMode = localStorage.getItem('darkmode') === '1';
     document.body.className = darkMode ? 'dark' : '';
-    document.querySelector('.js-dark-toggle').addEventListener('click', function () {
-    var darkMode = document.body.className === 'dark';
-    try {
-        localStorage.setItem('darkmode', darkMode ? 0 : 1);
-    } catch (e) { }
-    document.body.className = darkMode ? '' : 'dark';
+
+    var button = document.querySelector('.js-dark-toggle');
+    button.removeAttribute('hidden');
+    button.addEventListener('click', function () {
+        var isItDark = document.body.className === 'dark';
+        try {
+            localStorage.setItem('darkmode', isItDark ? 0 : 1);
+        } catch (e) { }
+        document.body.className = isItDark ? '' : 'dark';
     })
 })();
 </script>
