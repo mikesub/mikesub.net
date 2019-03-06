@@ -62,4 +62,4 @@ Instead of providing a default value and throwing an error, we state that the ar
 That's the second article in a series on TypeScript. You can read them in any order as they aren't really connected apart from covering the same topic:
 
 - [TypeScript. Bad Parts](ts_bad_parts.html)
-- [Types and string semantics](types_string_semantics.html)
+- [Types. String semantics](types_string_semantics.html)

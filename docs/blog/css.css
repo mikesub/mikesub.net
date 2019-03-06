@@ -64,13 +64,13 @@ body.dark code {
 code {
   border-radius: 3px;
   padding: 0.2rem 0.3rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   white-space: pre;
   overflow-wrap: normal;
 }
 
 pre {
-  line-height: 1.45rem;
+  line-height: 1.5rem;
   padding: 1rem;
   max-width: 100%;
   overflow-x: auto;

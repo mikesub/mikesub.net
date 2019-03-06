@@ -5,6 +5,55 @@
         <link>http://mikesub.net/blog/</link>
         <description>Mike Saburenkov</description>
             <item>
+                <title>Types. String semantics</title>
+                <guid isPermalink="true">http://mikesub.net/blog/types_string_semantics.html</guid>
+                <link>http://mikesub.net/blog/types_string_semantics.html</link>
+                <description>&lt;p&gt;That&amp;#39;s the third article in a series on TypeScript started by ‘&lt;a href&#x3D;&quot;ts_bad_parts.html&quot;&gt;TypeScript. Bad Parts&lt;&#x2F;a&gt;’. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic. But if you can&amp;#39;t decide, make it &lt;a href&#x3D;&quot;ts_bad_parts.html&quot;&gt;chronologically&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;This time I&amp;#39;d like to show how you can leverage types to simplify your runtime code.&lt;&#x2F;p&gt;
+&lt;p&gt;Let&amp;#39;s say we have a function which calculates a flag&amp;#39;s value based on some input. And later you use that flag to do some checks. The easiest way to write that could be something like that:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;lang-javascript&quot;&gt;function calculateFlag(conditions) {
+  return &amp;quot;important&amp;quot;;
+}
+
+const flag &#x3D; calculateFlag(context);
+if (flag !&#x3D;&#x3D; &amp;quot;important&amp;quot;) {
+  &#x2F;* ... *&#x2F;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That would work but it&amp;#39;s error-prone and your colleagues might signal you about it during a code review. It turns out that neither any editor nor javascript itself knows much about your flags and what values are valid there, for them it&amp;#39;s just strings, nothing more. That&amp;#39;s why they can&amp;#39;t help you much in refactoring or spot a typo if you misspell a value in one of the places. The common JS pattern to mitigate that is to use an object as a poor-man enum.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;lang-javascript&quot;&gt;const flags &#x3D; { important: &amp;quot;important&amp;quot; };
+function calculateFlag(conditions) {
+  return flags.important;
+}
+const flag &#x3D; calculateFlag(context);
+if (flag !&#x3D;&#x3D; flags.important) {
+  &#x2F;* ... *&#x2F;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You have your value in one place, it&amp;#39;s easier to change it, editors might warn you if you make a mistake in accessing an inexistent property, all good. But that brings a small penalty that you introduce an object where your runtime doesn&amp;#39;t need one. It&amp;#39;s small enough not to care at all, benefits outweigh that clearly. Though nobody would object if some pre-compiler inlines it away as it doesn&amp;#39;t possess any runtime value in itself.&lt;&#x2F;p&gt;
+&lt;p&gt;With types, you can add that semantics to your code that it&amp;#39;s not just a random string without adding any objects and keeping it as strings.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;lang-typescript&quot;&gt;type Flag &#x3D; &amp;quot;important&amp;quot;;
+function calculateFlag(conditions): Flag {
+  return &amp;quot;important&amp;quot;;
+}
+const flag &#x3D; calculateFlag(context);
+if (flag !&#x3D;&#x3D; &amp;quot;important&amp;quot;) {
+  &#x2F;* ... *&#x2F;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now it knows that your function returns that value (in real life it should be a union of several valid strings) and it can check whether your &lt;code&gt;if&lt;&#x2F;code&gt; later makes any sense.&lt;&#x2F;p&gt;
+&lt;p&gt;I see it as a nice example of adding more expressiveness to the language. One can argue that implementing such checks using built-in features like a plain object is even better. But I do see some value in using separate construct for these needs. Having fewer concepts is better in terms you should not have too many of them. Otherwise, it would be too low-level.&lt;&#x2F;p&gt;
+&lt;p&gt;Another take on that (and actually the original premise of that note) is that I tend to use TypeScript solely as a type annotations system and try to avoid any additional features it brings and enums is one of them. And so this example is a nice one to demonstrate that you don&amp;#39;t need enums for that, just use a union type and you&amp;#39;re good. Hello, &lt;code&gt;flag.isImportant()&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;hr&gt;
+&lt;p&gt;That&amp;#39;s the third article in a series on TypeScript. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;ts_bad_parts.html&quot;&gt;TypeScript. Bad Parts&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;types_runtime_checks.html&quot;&gt;Types and runtime checks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+                <pubDate>06 Mar 2019 10:08 +0100</pubDate>
+            </item>
+            <item>
                 <title>Types and runtime checks</title>
                 <guid isPermalink="true">http://mikesub.net/blog/types_runtime_checks.html</guid>
                 <link>http://mikesub.net/blog/types_runtime_checks.html</link>
@@ -45,7 +94,7 @@
 &lt;p&gt;That&amp;#39;s the second article in a series on TypeScript. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href&#x3D;&quot;ts_bad_parts.html&quot;&gt;TypeScript. Bad Parts&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href&#x3D;&quot;types_string_semantics.html&quot;&gt;Types and string semantics&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;types_string_semantics.html&quot;&gt;Types. String semantics&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
                 <pubDate>01 Mar 2019 18:00 +0100</pubDate>
@@ -125,7 +174,7 @@ let x: Account &#x3D; { foo: &amp;quot;bar&amp;quot; };
 &lt;p&gt;This article started a series on TypeScript. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href&#x3D;&quot;types_runtime_checks.html&quot;&gt;Types and runtime checks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href&#x3D;&quot;types_string_semantics.html&quot;&gt;Types and string semantics&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;types_string_semantics.html&quot;&gt;Types. String semantics&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
                 <pubDate>07 Feb 2019 23:00 +0100</pubDate>
