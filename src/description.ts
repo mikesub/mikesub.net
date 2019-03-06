@@ -4,7 +4,7 @@ function stripTags(html: string) {
   return html.replace(/<\/?[^>]+>/g, "");
 }
 function stripNewLines(text: string) {
-  return text.replace(/\n/g, "");
+  return text.replace(/\n/g, " ");
 }
 
 export function truncate(html: string) {

@@ -56,6 +56,12 @@
 }
 </code></pre>
 <p>Instead of providing a default value and throwing an error, we state that the argument is required and it needs to have <code>url</code> key which is a string. That&#39;s not ideal as any string, even empty one, will pass. But TypeScript might evolve to it at some point: <a href="https://github.com/Microsoft/TypeScript/issues/6579">regex-validated string type</a>. And as of now, we&#39;re already preventing some errors w/o any runtime costs.</p>
+<hr>
+<p>That&#39;s the second article in a series on TypeScript. You can read them in any order as they aren&#39;t really connected apart from covering the same topic:</p>
+<ul>
+<li><a href="ts_bad_parts.html">TypeScript. Bad Parts</a></li>
+<li><a href="types_string_semantics.html">Types and string semantics</a></li>
+</ul>
 
     </article>
     <article>
@@ -75,22 +81,22 @@
 <h2 id="index-signatures">Index signatures</h2>
 <p>In JS you can put anything as a key in object and it will be converted to a string. TS decided to improve that a bit and allows <code>{ [key: number]: boolean }</code>. Basically, it points that even though key is to be coerced to a string, let&#39;s check that we pass only numbers here. But then we get these:</p>
 <pre><code class="lang-typescript">type A = { [k: number]: any };
-const a2: A = {2: true}; // alright
-const a1: A = {&#39;string&#39;: true}; // error, fine
-const a3: A = {&#39;2&#39;: true}; // no error?
+const a2: A = { 2: true }; // alright
+const a1: A = { string: true }; // error, fine
+const a3: A = { &quot;2&quot;: true }; // no error?
 
 type B = { [k: string]: any };
-const b1: B = {&#39;string&#39;: true}; // alright
-const b3: B = {&#39;2&#39;: true}; // no error, fine
-const b2: B = {2: true}; // no error?
+const b1: B = { string: true }; // alright
+const b3: B = { &quot;2&quot;: true }; // no error, fine
+const b2: B = { 2: true }; // no error?
 </code></pre>
 <p>And <code>Object.keys()</code> is not a generic, because it can&#39;t be as it always returns strings. The coercion was irreversible, nobody can convert strings back to original types for you. You&#39;re alone.</p>
-<pre><code class="lang-typescript">Object.keys() // {} =&gt; string[]
+<pre><code class="lang-typescript">Object.keys(); // {} =&gt; string[]
 </code></pre>
 <p>And the last, not the least, is that you can only use primitives there, not your own types:</p>
 <pre><code class="lang-typescript">type Id = number;
-type Item = {id: Id};
-type Index = { [k: Id]: Item}; // nope, number please
+type Item = { id: Id };
+type Index = { [k: Id]: Item }; // nope, number please
 </code></pre>
 <h2 id="type-inference">Type Inference</h2>
 <p>That&#39;s nice. You feel good when you can drop obvious cases. It feels like language has done its homework. But then it starts taking defaults when there are multiple options and now you should be aware of them.</p>
@@ -99,18 +105,18 @@ type Index = { [k: Id]: Item}; // nope, number please
 </code></pre>
 <p>And when you return different shapes of objects from a function (say, redux reducer), inference creates monsters.</p>
 <pre><code class="lang-typescript">function foo(x: boolean, arr: []) {
-    if (x) {
-        return {&#39;a&#39;: true, &#39;3&#39;: 2}
-    } else {
-        return {&#39;b&#39;: 2, 3: arr.length};
-    }
+  if (x) {
+    return { a: true, &quot;3&quot;: 2 };
+  } else {
+    return { b: 2, 3: arr.length };
+  }
 }
 // Inferred: {&#39;a&#39;: boolean; &#39;3&#39;: number; &#39;b&#39;?: undefined;}
 //           | {&#39;bar&#39;: number; 3: 0; &#39;a&#39;?: undefined}
 //
 // Meant to be: {a?: boolean; &#39;3&#39;: number; b?: number;}
 </code></pre>
-<p> Possible solution might be to add strict check similar to disabling implicit ‘any’ to avoid this monsters guessing and fail to infer when it is ambigious.</p>
+<p>Possible solution might be to add strict check similar to disabling implicit ‘any’ to avoid this monsters guessing and fail to infer when it is ambigious.</p>
 <h2 id="global-scope">Global scope</h2>
 <p>If you write TS for a browser, thus adding <code>dom</code> in <code>compilerOptions/lib</code>, lots of useful types become available in the global scope. And you don&#39;t need to import them explicitly. You know what it means. And they aren&#39;t grouped into a namespace. Yup.
 Some are easy to expect as <code>XMLHTTPRequest</code> but others have more abstract names: <code>AlignSetting</code>, <code>Transport</code>. You will notice errors if you would try to define them in your code:</p>
@@ -118,8 +124,10 @@ Some are easy to expect as <code>XMLHTTPRequest</code> but others have more abst
 // duplicate identifier, was already declared in dom.d.ts
 </code></pre>
 <p>But you might miss the error if you just forget to define it and thus built-in will be used. And even worse will happen if you clash with built-in interfaces, as they will be merged:</p>
-<pre><code class="lang-typescript">interface Account { foo: &#39;bar&#39; }
-let x: Account = { foo: &#39;bar&#39; };
+<pre><code class="lang-typescript">interface Account {
+  foo: &quot;bar&quot;;
+}
+let x: Account = { foo: &quot;bar&quot; };
 // missing displayName, id, rpDisplayName from type &#39;Account&#39;.
 </code></pre>
 <h2 id="official-documentation">Official documentation</h2>
@@ -128,6 +136,12 @@ let x: Account = { foo: &#39;bar&#39; };
 <p>JS started to feel heavy when they added object destructuring. Then defaults and renaming came. Only type annotations were missing. Oh, it could be nested. I know it can be easily avoided by code style rules but still sometimes I find myself hitting the timeout in trying to parse the function declaration.</p>
 <hr>
 <p>Alright. The path for more positive things looks much clear now. If you have any comments, please reach out to me, I&#39;d love to discuss that in more details. And stay tuned, originally planned articles will follow.</p>
+<h2 id="update">Update</h2>
+<p>This article started a series on TypeScript. You can read them in any order as they aren&#39;t really connected apart from covering the same topic:</p>
+<ul>
+<li><a href="types_runtime_checks.html">Types and runtime checks</a></li>
+<li><a href="types_string_semantics.html">Types and string semantics</a></li>
+</ul>
 
     </article>
     <article>
@@ -176,9 +190,9 @@ let x: Account = { foo: &#39;bar&#39; };
         <h1><a href="let_them_run.html">Пусть бегут</a></h1>
         <p><time datetime="2015-12-31">December 31, 2015</time></p>
       </header>
-      <p>Ну а если серьёзно про 2015 год, то чаще остального мы вспоминаем момент с одной из пробежек. Мы подбегали к небольшой горке, по которой поднимался мальчик лет 5-6 на 
-велосипеде. Ему было тяжело забираться, но он не сдавался, медленно и методично крутил педали. Тут мы с разбега забегаем на эту горку и начинаем его догонять. В 
-какой-то момент равняемся с ним, а потом начинаем медленно обгонять. Мальчик сначала прибавляет и пытается не дать себя обогнать, всё-таки он же на велосипеде, но 
+      <p>Ну а если серьёзно про 2015 год, то чаще остального мы вспоминаем момент с одной из пробежек. Мы подбегали к небольшой горке, по которой поднимался мальчик лет 5-6 на
+велосипеде. Ему было тяжело забираться, но он не сдавался, медленно и методично крутил педали. Тут мы с разбега забегаем на эту горку и начинаем его догонять. В
+какой-то момент равняемся с ним, а потом начинаем медленно обгонять. Мальчик сначала прибавляет и пытается не дать себя обогнать, всё-таки он же на велосипеде, но
 вскоре сдаётся и произносит как бы про себя, но вслух, в сторону: «Пусть бегут».</p>
 
     </article>
@@ -188,23 +202,23 @@ let x: Account = { foo: &#39;bar&#39; };
         <p><time datetime="2015-03-26">March 26, 2015</time></p>
       </header>
       <p>Я очень скучаю по чистой вкладке, пустой белой странице. Когда-то все браузеры при открытии вкладки показывали
-чистую страницу и пользователь мог либо ввести адрес в адресную строку, либо выбрать страницу из закладок. Потом интерфейс 
-стал обрастать и появился вывод истории недавних посещений, списки популярных сайтов. Гугл начал показывать по сути свою 
+чистую страницу и пользователь мог либо ввести адрес в адресную строку, либо выбрать страницу из закладок. Потом интерфейс
+стал обрастать и появился вывод истории недавних посещений, списки популярных сайтов. Гугл начал показывать по сути свою
 стартовую страницу, одно время показывал свои приложения и т.п.</p>
-<p>Одно время это было опционально, но сейчас уже в хроме настроить показ пустой страницы нельзя. Вслед за ним опера и 
+<p>Одно время это было опционально, но сейчас уже в хроме настроить показ пустой страницы нельзя. Вслед за ним опера и
 яндекс также не дают такую возможность. В сафари и фаерфоксе такая опция осталась, но неизвестно надолго ли.</p>
 <p>Я держу свой рабочий стол (тот, который на компьютере) абсолютно пустым, без обоев, с одноцветной заливкой. Переключаясь
-на него, я попадаю на чистый лист и из спотлайта начинаю новую задачу. Также и в браузере. Если мне операционная система 
-вместо пустого десктопа будет выводить какие-нибудь списки недавно открытых файлов, популярных приложений — не знаю 
-смогу ли я к этому привыкнуть, либо придется искать обходные пути отключения этой функциональности.  </p>
-<p>На написание этой заметки меня натолкнул 
-<a href="http://blog.flickr.net/en/2015/03/18/flickr-tab-in-google-chrome/">flickr tab</a>, расширение для хрома, которое в каждой новой вкладке показывает 
-случайную популярную фотографию с одноименного сервиса. Я его установил в попытке избежать мусорной стартовой страницы. 
-Но в результате поймал себя за тем, что открывая новый вкладку, я автоматически открываю еще одну, так как срабатывает 
+на него, я попадаю на чистый лист и из спотлайта начинаю новую задачу. Также и в браузере. Если мне операционная система
+вместо пустого десктопа будет выводить какие-нибудь списки недавно открытых файлов, популярных приложений — не знаю
+смогу ли я к этому привыкнуть, либо придется искать обходные пути отключения этой функциональности.</p>
+<p>На написание этой заметки меня натолкнул
+<a href="http://blog.flickr.net/en/2015/03/18/flickr-tab-in-google-chrome/">flickr tab</a>, расширение для хрома, которое в каждой новой вкладке показывает
+случайную популярную фотографию с одноименного сервиса. Я его установил в попытке избежать мусорной стартовой страницы.
+Но в результате поймал себя за тем, что открывая новый вкладку, я автоматически открываю еще одну, так как срабатывает
 рефлекс того, что я очутился не на новой вкладке, а просто переключился на какую-то старую, в которой что-то уже открыто.</p>
-<p>Ну и немного про обои рабочего стола: из-за моих настроек я долго не замечал в yosemite полупрозрачного фона боковых 
-панелей, меню и прочих элементов. Из-за однотонного темносерого фона я просто считал, что всё в новой ОС тускло и 
-странно. Только случайно, поставив каких-то ярких слонов на рабочий стол, я заметил эту полупрозрачность. Слонов я убрал 
+<p>Ну и немного про обои рабочего стола: из-за моих настроек я долго не замечал в yosemite полупрозрачного фона боковых
+панелей, меню и прочих элементов. Из-за однотонного темносерого фона я просто считал, что всё в новой ОС тускло и
+странно. Только случайно, поставив каких-то ярких слонов на рабочий стол, я заметил эту полупрозрачность. Слонов я убрал
 и поставил крыжик в system preferences &gt; accessibility &gt; reduce transparency, чего всем и советую.</p>
 
     </article>
@@ -214,23 +228,23 @@ let x: Account = { foo: &#39;bar&#39; };
         <p><time datetime="2015-03-26">March 26, 2015</time></p>
       </header>
       <p>В продолжение «<a href="http://ilyabirman.ru/meanwhile/all/web-or-native-future/">Будущего нативных и веб-приложений</a>» Ильи Бирмана.</p>
-<p>Да, веб-приложения сейчас часто неудобнее нативных аналогов. На мобильных платформах это еще больше ощущается, чем 
-на десктопах. Одновременно с этим то, что открывается по ссылке в браузере, далеко и давно ушло от понятия 
-веб-страницы. Даже простейший блог со статьями, который, казалось бы, наиболее близок к тому, зачем придумали интернет — 
-уже не список статей с перекрестными ссылками. Поиск, комментарии, админка — всё это ближе к сервису/приложению нежели 
+<p>Да, веб-приложения сейчас часто неудобнее нативных аналогов. На мобильных платформах это еще больше ощущается, чем
+на десктопах. Одновременно с этим то, что открывается по ссылке в браузере, далеко и давно ушло от понятия
+веб-страницы. Даже простейший блог со статьями, который, казалось бы, наиболее близок к тому, зачем придумали интернет —
+уже не список статей с перекрестными ссылками. Поиск, комментарии, админка — всё это ближе к сервису/приложению нежели
 к странице.</p>
-<p>Но разработчики веб-сервисов с одной стороны и разработчики браузеров с другой до сих расценивают интернет как список 
-веб-страниц. </p>
-<p>Представьте, если бы при запуске нативного приложения, вы бы попадали на лэндинг/промо- страницу с описанием сервиса, а 
+<p>Но разработчики веб-сервисов с одной стороны и разработчики браузеров с другой до сих расценивают интернет как список
+веб-страниц.</p>
+<p>Представьте, если бы при запуске нативного приложения, вы бы попадали на лэндинг/промо- страницу с описанием сервиса, а
 не туда, где вы остановили работу в этом приложении. В вебе такое еще можно встретить.</p>
-<p>Представьте, что ваш док приложений — список безликих иконок «программа». В вебе сейчас это так. В Apple пошли 
+<p>Представьте, что ваш док приложений — список безликих иконок «программа». В вебе сейчас это так. В Apple пошли
 дальше и убрали даже фавиконки у закладок в Safari.</p>
 <p>Представьте, что каждый раз при запуске приложения вам необходимо было бы вводить логин/пароль. Такое в вебе еще встречается.
-В идеале вся авторизация в вебе должна остаться в случаях, требующих дополнительной защиты. Также как в нативных 
-приложениях 1Password требует дополнительную авторизацию, а почтовый клиент не требует, также и в браузере интернет-банк 
+В идеале вся авторизация в вебе должна остаться в случаях, требующих дополнительной защиты. Также как в нативных
+приложениях 1Password требует дополнительную авторизацию, а почтовый клиент не требует, также и в браузере интернет-банк
 пусть требует.</p>
-<p>А теперь представьте, что вы могли бы себе в док (или из спотлайта) попасть сразу в нужную папку вашего почтового клиента 
-или в нужный список reminders в обход разводящего экрана. </p>
+<p>А теперь представьте, что вы могли бы себе в док (или из спотлайта) попасть сразу в нужную папку вашего почтового клиента
+или в нужный список reminders в обход разводящего экрана.</p>
 <p>Но мы неизбежно к этому идём и те, кто избавляются от концепции URLов в своих веб-приложениях (привет, интернет-банки),
 кто по умолчанию выставляет режим «не запоминать пароль» — все они идут не в ту сторону.</p>
 
@@ -244,21 +258,21 @@ let x: Account = { foo: &#39;bar&#39; };
 изначально не было HTML—верстальщика. Это было еще один формат разметки текста.</p>
 <p>Почти сразу HTML стали использовать не для создания документов с гиперссылками, а чего-угодно с гиперссылками.
 Так появились веб-сайты: интерактивные документы, с одной стороны пытающие предоставить интерфейс по аналогии с GUI
-всего остального компьютера, с другой стороны предоставить вёрстку в полиграфическом смысле. Технология этого 
+всего остального компьютера, с другой стороны предоставить вёрстку в полиграфическом смысле. Технология этого
 не позволяла. С интерактивностью еще куда ни шло, появились веб-формы, а вот с вёрсткой (раскладка, сетки,
 блоки) — с этим были большие проблемы. Но никто ничего знать не хотел и поэтому в ход шли таблицы, распорки в виде
 прозрачных изображений и т.д. Собственно, из-за этого вся эта сложность, инструментария нет, есть несколько программ
-(браузеров), которые воспринимают инструкции по—разному, а плохие дизайнеры показывают нарисованные макеты в растровом 
+(браузеров), которые воспринимают инструкции по—разному, а плохие дизайнеры показывают нарисованные макеты в растровом
 графическом формате и настаивают на своём.</p>
-<p>Поэтому выделились люди, которые могли как-то заставить браузер отрисовывать то, что нарисовал дизайнер. Cо временем, 
-технологии и инструменты прогрессировали и эволюционировали, и стало возможным верстать предназначенными для этого 
-средствами, а не костылями. Так ушла вёрстка таблицами, но до сих пор нет инструмента, который бы позволил полностью 
-правильно сделать то, что вы рисуете. Но, конечно, ситуация гораздо лучше, чем несколько лет назад. Сейчас, если брать 
-современный браузер, то, в целом, в HTML есть все нужные средства, и он опять превращается в более-менее простой 
-инструмент вёрстки. В рамках прототипов/макетов на нем можно писать человеку не сильно вовлеченному во все 
+<p>Поэтому выделились люди, которые могли как-то заставить браузер отрисовывать то, что нарисовал дизайнер. Cо временем,
+технологии и инструменты прогрессировали и эволюционировали, и стало возможным верстать предназначенными для этого
+средствами, а не костылями. Так ушла вёрстка таблицами, но до сих пор нет инструмента, который бы позволил полностью
+правильно сделать то, что вы рисуете. Но, конечно, ситуация гораздо лучше, чем несколько лет назад. Сейчас, если брать
+современный браузер, то, в целом, в HTML есть все нужные средства, и он опять превращается в более-менее простой
+инструмент вёрстки. В рамках прототипов/макетов на нем можно писать человеку не сильно вовлеченному во все
 эти технологии.</p>
 <p>Также сейчас с появлением AJAX-подгрузки частей страницы, возможностей анимации, адаптивного подстраивания под разные
-размеры окна, всё это сложнее и сложнее умещать в плоский PSD-макет. Теперь вместе с макетом идёт документация или 
+размеры окна, всё это сложнее и сложнее умещать в плоский PSD-макет. Теперь вместе с макетом идёт документация или
 раскадровка разных состояний. Но когда перед разработчиком плоский макет, то не видно всей логики, которую
 закладывал проектировщик/дизайнер: это просто два разных цвета, или этот цвет — функция от того цвета (затемнение на
 20%), это 10px или это расстояние зависит от состояния вот того блока, или это какой-нибудь «стандартный отступ при
@@ -277,23 +291,26 @@ let x: Account = { foo: &#39;bar&#39; };
 документацию какую-то прикладывать, которая слепая (всяко лучше самому это реализовать и увидеть как это
 на самом деле в браузере будет работать).</p>
 <p>Поэтому веб-вёрстка, изначально зародившаяся как инструмент программиста, после этого выделившись в отдельную
-специализацию, сейчас плавно и верно перетекает в сторону проектировщиков интерфейсов и это отлично. А верстальщики 
+специализацию, сейчас плавно и верно перетекает в сторону проектировщиков интерфейсов и это отлично. А верстальщики
 вместе с этим плавно перетекают либо в дизайнеров, либо в программистов и это прекрасно.</p>
 
     </article>
-<button class="dark-toggle js-dark-toggle" tabindex="0">
+<button class="dark-toggle js-dark-toggle" hidden tabindex="0">
 set dark<br /> mode to<br /> not dark<br /> mode
 </button>
 <script>
 (function () {
     var darkMode = localStorage.getItem('darkmode') === '1';
     document.body.className = darkMode ? 'dark' : '';
-    document.querySelector('.js-dark-toggle').addEventListener('click', function () {
-    var darkMode = document.body.className === 'dark';
-    try {
-        localStorage.setItem('darkmode', darkMode ? 0 : 1);
-    } catch (e) { }
-    document.body.className = darkMode ? '' : 'dark';
+
+    var button = document.querySelector('.js-dark-toggle');
+    button.removeAttribute('hidden');
+    button.addEventListener('click', function () {
+        var isItDark = document.body.className === 'dark';
+        try {
+            localStorage.setItem('darkmode', isItDark ? 0 : 1);
+        } catch (e) { }
+        document.body.className = isItDark ? '' : 'dark';
     })
 })();
 </script>

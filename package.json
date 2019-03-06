@@ -3,7 +3,7 @@
   "scripts": {
     "start": "yarn build && python -m SimpleHTTPServer",
     "build": "ts-node ./src/index.ts",
-    "lint": "tslint src/* && prettier -c src/*"
+    "lint": "tslint src/* && prettier -c src/* docs/blog/css.css articles/*md"
   },
   "husky": {
     "hooks": {
