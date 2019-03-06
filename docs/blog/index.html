@@ -20,6 +20,55 @@
   <header><h1>Mike Saburenkov</h1></header>
     <article>
       <header>
+        <h1><a href="types_string_semantics.html">Types. String semantics</a></h1>
+        <p><time datetime="2019-03-06">March 6</time></p>
+      </header>
+      <p>That&#39;s the third article in a series on TypeScript started by ‘<a href="ts_bad_parts.html">TypeScript. Bad Parts</a>’. You can read them in any order as they aren&#39;t really connected apart from covering the same topic. But if you can&#39;t decide, make it <a href="ts_bad_parts.html">chronologically</a>.</p>
+<p>This time I&#39;d like to show how you can leverage types to simplify your runtime code.</p>
+<p>Let&#39;s say we have a function which calculates a flag&#39;s value based on some input. And later you use that flag to do some checks. The easiest way to write that could be something like that:</p>
+<pre><code class="lang-javascript">function calculateFlag(conditions) {
+  return &quot;important&quot;;
+}
+
+const flag = calculateFlag(context);
+if (flag !== &quot;important&quot;) {
+  /* ... */
+}
+</code></pre>
+<p>That would work but it&#39;s error-prone and your colleagues might signal you about it during a code review. It turns out that neither any editor nor javascript itself knows much about your flags and what values are valid there, for them it&#39;s just strings, nothing more. That&#39;s why they can&#39;t help you much in refactoring or spot a typo if you misspell a value in one of the places. The common JS pattern to mitigate that is to use an object as a poor-man enum.</p>
+<pre><code class="lang-javascript">const flags = { important: &quot;important&quot; };
+function calculateFlag(conditions) {
+  return flags.important;
+}
+const flag = calculateFlag(context);
+if (flag !== flags.important) {
+  /* ... */
+}
+</code></pre>
+<p>You have your value in one place, it&#39;s easier to change it, editors might warn you if you make a mistake in accessing an inexistent property, all good. But that brings a small penalty that you introduce an object where your runtime doesn&#39;t need one. It&#39;s small enough not to care at all, benefits outweigh that clearly. Though nobody would object if some pre-compiler inlines it away as it doesn&#39;t possess any runtime value in itself.</p>
+<p>With types, you can add that semantics to your code that it&#39;s not just a random string without adding any objects and keeping it as strings.</p>
+<pre><code class="lang-typescript">type Flag = &quot;important&quot;;
+function calculateFlag(conditions): Flag {
+  return &quot;important&quot;;
+}
+const flag = calculateFlag(context);
+if (flag !== &quot;important&quot;) {
+  /* ... */
+}
+</code></pre>
+<p>Now it knows that your function returns that value (in real life it should be a union of several valid strings) and it can check whether your <code>if</code> later makes any sense.</p>
+<p>I see it as a nice example of adding more expressiveness to the language. One can argue that implementing such checks using built-in features like a plain object is even better. But I do see some value in using separate construct for these needs. Having fewer concepts is better in terms you should not have too many of them. Otherwise, it would be too low-level.</p>
+<p>Another take on that (and actually the original premise of that note) is that I tend to use TypeScript solely as a type annotations system and try to avoid any additional features it brings and enums is one of them. And so this example is a nice one to demonstrate that you don&#39;t need enums for that, just use a union type and you&#39;re good. Hello, <code>flag.isImportant()</code>.</p>
+<hr>
+<p>That&#39;s the third article in a series on TypeScript. You can read them in any order as they aren&#39;t really connected apart from covering the same topic:</p>
+<ul>
+<li><a href="ts_bad_parts.html">TypeScript. Bad Parts</a></li>
+<li><a href="types_runtime_checks.html">Types and runtime checks</a></li>
+</ul>
+
+    </article>
+    <article>
+      <header>
         <h1><a href="types_runtime_checks.html">Types and runtime checks</a></h1>
         <p><time datetime="2019-03-01">March 1</time></p>
       </header>
@@ -60,7 +109,7 @@
 <p>That&#39;s the second article in a series on TypeScript. You can read them in any order as they aren&#39;t really connected apart from covering the same topic:</p>
 <ul>
 <li><a href="ts_bad_parts.html">TypeScript. Bad Parts</a></li>
-<li><a href="types_string_semantics.html">Types and string semantics</a></li>
+<li><a href="types_string_semantics.html">Types. String semantics</a></li>
 </ul>
 
     </article>
@@ -140,7 +189,7 @@ let x: Account = { foo: &quot;bar&quot; };
 <p>This article started a series on TypeScript. You can read them in any order as they aren&#39;t really connected apart from covering the same topic:</p>
 <ul>
 <li><a href="types_runtime_checks.html">Types and runtime checks</a></li>
-<li><a href="types_string_semantics.html">Types and string semantics</a></li>
+<li><a href="types_string_semantics.html">Types. String semantics</a></li>
 </ul>
 
     </article>
