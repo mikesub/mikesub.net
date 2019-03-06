@@ -41,5 +41,8 @@ function parseArticle(fileName: string): Article {
 }
 
 export function load() {
-  return fs.readdirSync(articlesDir).map(parseArticle);
+  return fs
+    .readdirSync(articlesDir)
+    .filter(fileName => !fileName.startsWith("_"))
+    .map(parseArticle);
 }
