@@ -4,28 +4,13 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-rendering: optimizeLegibility;
   transition: background-color 0.1s;
+  background-color: white;
+  color: black;
 }
 
-code {
-  border-radius: 3px;
-  padding: 0.2rem 0.3rem;
-  font-size: 1.1rem;
-  white-space: pre;
-  overflow-wrap: normal;
-}
-
-pre,
-code {
-  background: rgb(230, 230, 230);
-  font-family: "Fire Code", SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", Courier, monospace;
-}
-
-pre {
-  line-height: 1.45rem;
-  padding: 1rem;
-  max-width: 100%;
-  overflow-x: auto;
+body.dark {
+  background-color: rgb(50, 50, 50);
+  color: rgb(200, 200, 200);
 }
 
 @media (max-width: 768px) {
@@ -40,6 +25,59 @@ a:active,
 a:focus,
 a:visited {
   color: black;
+  text-decoration: none;
+}
+
+a:hover,
+body.dark a:hover {
+  color: #1488ff;
+  text-decoration: none;
+}
+
+body.dark a,
+body.dark a:active,
+body.dark a:focus,
+body.dark a:visited {
+  color: rgb(200, 200, 200);
+}
+
+article > header h1 a {
+  text-decoration: none;
+}
+
+article a {
+  text-decoration: underline;
+}
+
+pre,
+code {
+  background: rgb(230, 230, 230);
+  font-family: "Fire Code", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", Courier, monospace;
+}
+
+body.dark pre,
+body.dark code {
+  background: rgb(40, 40, 40);
+}
+
+code {
+  border-radius: 3px;
+  padding: 0.2rem 0.3rem;
+  font-size: 1.1rem;
+  white-space: pre;
+  overflow-wrap: normal;
+}
+
+pre {
+  line-height: 1.45rem;
+  padding: 1rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+body > header {
+  margin-bottom: 4rem;
 }
 
 body > header h1 {
@@ -48,30 +86,25 @@ body > header h1 {
   margin-bottom: 4rem;
 }
 
+body > article,
+body > header {
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+body > article {
+  margin-bottom: 5rem;
+}
+
 article > header h1 {
   font-size: 1.5rem;
   line-height: 2rem;
   margin-bottom: 0;
 }
 
-header a {
-  text-decoration: none;
-}
-
 article header p {
   margin: 0;
   font-size: 1rem;
-}
-
-article,
-body > header {
-  max-width: 45rem;
-  margin: 0 auto;
-  margin-bottom: 4rem;
-}
-
-article {
-  margin-bottom: 5rem;
 }
 
 article > p {
@@ -92,13 +125,25 @@ article hr + p {
   margin-top: 0;
 }
 
-article hr {
+article ul {
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+}
+
+article li {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+hr {
   border: none;
   margin: 1.5rem 0 1rem 0;
   text-align: center;
 }
 
-article hr::after {
+hr::after {
   content: "***";
   display: inline-block;
   position: relative;
@@ -106,61 +151,29 @@ article hr::after {
   line-height: 1;
 }
 
-article > p > a {
-  text-decoration: underline;
-  text-decoration-color: #1488ff;
-}
-
-article > p > a:hover {
-  text-decoration: none;
-}
-
-body.dark {
-  background-color: rgb(50, 50, 50);
-}
-
-body.dark,
-body.dark a,
-body.dark a:active,
-body.dark a:focus,
-body.dark a:visited body.dark h1 {
-  color: rgb(200, 200, 200);
-}
-
-body.dark a:hover,
-a:hover {
-  color: #1488ff;
-}
-
 .dark-toggle {
   position: absolute;
   top: 0.5rem;
   right: 1rem;
   padding: 0.3rem;
-  color: rgb(118, 118, 118);
   border-radius: 3px;
   transition: all 0.3s;
-  background: rgb(255, 255, 255);
-}
-.dark-toggle:hover {
   cursor: pointer;
-  background: rgb(50, 50, 50);
-  color: rgb(153, 153, 153);
+
+  color: rgb(118, 118, 118);
+  background-color: white;
 }
 
-.no-dark-toggle .dark-toggle {
-  display: none;
+.dark-toggle:hover {
+  color: rgb(153, 153, 153);
+  background-color: rgb(50, 50, 50);
 }
 
 body.dark .dark-toggle {
-  background: rgb(50, 50, 50);
-}
-body.dark .dark-toggle:hover {
-  background: #fff;
-  color: #000;
+  background-color: rgb(50, 50, 50);
 }
 
-body.dark pre,
-body.dark code {
-  background: rgb(40, 40, 40);
+body.dark .dark-toggle:hover {
+  background: white;
+  color: #000;
 }
