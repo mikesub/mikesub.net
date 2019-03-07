@@ -19,6 +19,26 @@
   <header><h1>Mike Saburenkov</h1></header>
     <article>
       <header>
+        <h1><a href="ssr.html">A Case of SSR</a></h1>
+        <p><time datetime="2019-03-07">March 7</time></p>
+      </header>
+      <p>If we take popular JS topics currently out there, type annotations, server-side rendering (SSR) and CSS in JS are probably in top four. Virtual DOM frameworks has come as a solution to a request of getting more code on a client side. Tools like TypeScript and Flow appeared as attempts to fix some JS parts. Also people started to seek for ways how not to duplicate ‘view’ code between server and client. Most often it leads to running JS in Node.js on server, which comes with <a href="https://solovyov.net/en/2017/server-side-rendering/">‘restart every N requests’</a> and other implications. But people still go there to serve content faster. And it&#39;s obvious — why to take away from browsers what they do best: parsing and rendering HTML pages. And so now it&#39;s even supported by many frameworks out of the box.</p>
+<p>But do you need all that? Do you need to add SSR to your React (insert any other Virtual DOM framework) application? Given the complexity it brings, I would say often ‘no’ and let me elaborate on that.</p>
+<p>To show ‘loading’ screen and do everything client-side would be much easier. Yes, it would drastically increase first page load time but if you deal with application-type website, sometimes it&#39;s acceptable. To mitigate drawbacks, there are few techniques to hack perception of this loading time. For example, you can show placeholders for content, preparing users for actual things to appear.</p>
+<p><img src="images/content-placeholder.png" alt="Content placeholder"></p>
+<p>BUT HEY NO, not acceptable. It can be done better. We have service workers, critical path render techniques, all those are at our disposal. And nothing&#39;s wrong with using node.js.</p>
+<p>But then there is a thing. The markup you&#39;d prepare on server will be static (sic!). It&#39;s a safe bet to assume that all event listeners would be attached after DOM is parsed, rendered and your JS bundles are downloaded, parsed, interpreted. And it leads to showing static markup of something intended to be dynamic, breaking UX right from the first interaction.</p>
+<p>So it&#39;s possible that ‘loading’ screen, fully functional, yet empty is not that bad, if you can&#39;t do the other option right. To show prefectly-looking tabs which are not clickable is just ignorant.</p>
+<p><img src="images/ns-wifi.png" alt="NS wifi splash screen"></p>
+<p>That&#39;s a splash screen for wifi on Dutch railways. The connection is often flaky as there are many devices online and cell coverage is also spotty sometimes. And so I see a page, but can&#39;t switch to a tab I need. And yes, probably it doesn&#39;t even use React, it&#39;s actually an illustration to already forgotten ‘Unobtrusive JS‘ thing, but it&#39;s the same issue.</p>
+<p>Unobtrusive JS is still the right approach. But it adds so many things to take care of, so it&#39;s very tempting to disregard it. Hey, it loads blazingly fast on my machine, and yes, I will wait few seconds before clicking anywhere just because I know that this button, even though already rendered, won&#39;t be responsive for a while. So what should I do? Right, let&#39;s move everything to JS so there is nothing to obtruse. Then we got loading state and we get back to square one with going SSR.</p>
+<p>As always there is a third option. And it can help to escape that loop: to serve content in chunks and to send parts of JS with every chunk, progressively build a page with atomic blocks, but that brings you problems with shared dependencies and some others</p>
+<p>(╯°□°)╯︵ ┻━┻</p>
+<p>So going SSR, first of all, you need to solve how not to show broken interface while not everything is ready to interact. And don&#39;t ignore that as network is slow, unpredictable and with few guarantees.</p>
+
+    </article>
+    <article>
+      <header>
         <h1><a href="types_string_semantics.html">Types. String semantics</a></h1>
         <p><time datetime="2019-03-06">March 6</time></p>
       </header>
