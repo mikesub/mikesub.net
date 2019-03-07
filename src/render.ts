@@ -25,8 +25,7 @@ function loadTemplate(fileName: string) {
 }
 
 const partials = {
-  _darkmode: loadTemplate("_darkmode"),
-  _analytics: loadTemplate("_analytics")
+  _darkmode: loadTemplate("_darkmode")
 };
 
 function render(
