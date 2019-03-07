@@ -14,7 +14,6 @@
   <meta name="twitter:title" content="NL"/>
   <meta name="twitter:description" content="Стояло жаркое лето середины 90-х и я пытался изо всех сил угнаться за своим братом на велосипеде. Он ехал на «Украине», я на чём-то поменьше. Первые километра четыре шли по довольно спокойной..."/>
   <link href="https://micro.blog/mikesub" rel="me" />
-<script async src="https://plausible.io/js/analytics.js"></script>
 </head>
 <body>
   <header><h1><a href="index.html">Mike Saburenkov</a></h1></header>
@@ -38,17 +37,17 @@ set dark<br /> mode to<br /> not dark<br /> mode
 </button>
 <script>
 (function () {
-    var darkMode = localStorage.getItem('darkmode') === '1';
-    document.body.className = darkMode ? 'dark' : '';
+    var isItDark = localStorage.getItem('darkmode') === '1';
+    document.body.className = isItDark ? 'dark' : '';
 
     var button = document.querySelector('.js-dark-toggle');
     button.removeAttribute('hidden');
     button.addEventListener('click', function () {
-        var isItDark = document.body.className === 'dark';
         try {
             localStorage.setItem('darkmode', isItDark ? 0 : 1);
         } catch (e) { }
         document.body.className = isItDark ? '' : 'dark';
+        isItDark = !isItDark;
     })
 })();
 </script>
