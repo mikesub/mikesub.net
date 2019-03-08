@@ -1,16 +1,18 @@
-import _ from "lodash";
+const _ = require("lodash");
 
-function stripTags(html: string) {
+function stripTags(html) {
   return html.replace(/<\/?[^>]+>/g, "");
 }
-function stripNewLines(text: string) {
+function stripNewLines(text) {
   return text.replace(/\n/g, " ");
 }
 
-export function truncate(html: string) {
+function truncate(html) {
   return _.truncate(stripNewLines(stripTags(html)), {
     length: 200,
     omission: "...",
     separator: " "
   });
 }
+
+module.exports = { truncate };
