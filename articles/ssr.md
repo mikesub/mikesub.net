@@ -1,6 +1,6 @@
 ---
 title: A Case of SSR
-date: 2019-03-07 17:40+01
+date: 2019-03-07 16:40
 ---
 
 If we take popular JS topics currently out there, type annotations, server-side rendering (SSR) and CSS in JS are probably in the top four. Virtual DOM frameworks have come as a solution to a request of getting more code on a client side. Tools like TypeScript and Flow appeared as attempts to fix some JS parts. Also, people started to seek for ways how not to duplicate ‘view’ code between server and client. Most often it leads to running JS in Node.js on server, which comes with [‘restart every N requests’](https://solovyov.net/en/2017/server-side-rendering/) and other implications. But people still go there to serve content faster. And it's obvious — why to take away from browsers what they do best: parsing and rendering HTML pages. And so now it's even supported by many frameworks out of the box.

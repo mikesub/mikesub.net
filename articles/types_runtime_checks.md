@@ -1,6 +1,6 @@
 ---
 title: Types and runtime checks
-date: 2019-03-01 18:00+01
+date: 2019-03-01 17:00
 ---
 
 That's the second article in a series on TypeScript started by ‘[TypeScript. Bad Parts](ts_bad_parts.html)’. You can read them in any order as they aren't really connected apart from covering the same topic. But if you can't decide, make it [chronologically](ts_bad_parts.html).

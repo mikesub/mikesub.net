@@ -1,6 +1,6 @@
 ---
 title: Types. Introspect
-date: 2019-03-07 10:08+01
+date: 2019-03-07 10:08
 ---
 
 That's the fourth and the last one in a series on TypeScript started by ‘[TypeScript. Bad Parts](ts_bad_parts.html)’. You can read them in any order as they aren't really connected apart from covering the same topic. But if you can't decide, make it [chronologically](ts_bad_parts.html).
