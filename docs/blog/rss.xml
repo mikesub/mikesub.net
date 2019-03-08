@@ -205,7 +205,7 @@ let x: Account &#x3D; { foo: &amp;quot;bar&amp;quot; };
                 <link>http://mikesub.net/blog/microblog.html</link>
                 <description>&lt;p&gt;a post testing micro.blog integration.&lt;&#x2F;p&gt;
 </description>
-                <pubDate>25 Sep 2018 21:30 +0100</pubDate>
+                <pubDate>25 Sep 2018 22:30 +0200</pubDate>
             </item>
             <item>
                 <title>NL#2</title>
@@ -228,7 +228,7 @@ let x: Account &#x3D; { foo: &amp;quot;bar&amp;quot; };
 &lt;hr&gt;
 &lt;p&gt;Еще вперед на три года и вот я уже не обращаю внимания на дождь, если это не ливень, у меня уже украли один велосипед и, кажется, я готов рассказать про вотсап-дружины, про фризский язык, про особенности банковской системы, про то, что почти невозможно возить велосипеды в электричках и про то, что имеет смысл дарить уезжающим сюда.&lt;&#x2F;p&gt;
 </description>
-                <pubDate>31 Aug 2017 09:00 +0100</pubDate>
+                <pubDate>31 Aug 2017 10:00 +0200</pubDate>
             </item>
             <item>
                 <title>10 years a web developer</title>
@@ -238,7 +238,7 @@ let x: Account &#x3D; { foo: &amp;quot;bar&amp;quot; };
 &lt;p&gt;Fast-forward 10 years. Chrome&amp;#39;s released v.54, iPhone is in its 10th generation, IE has less than 15%. Web standards and its support, development tools and other technologies involved improved drastically but same happened to the complexity of products being developed nowadays. And it seems that these things are evolving nearly at the same rate. There is more or less same gap there, dev.tools can&amp;#39;t keep up with things for which we use them. Be frank, it&amp;#39;s still a pain in the neck to develop front-end stuff. We&amp;#39;ve conquered basic blocks, but interfaces are getting more sophisticated, the web is being accessed from more devices, etc.&lt;&#x2F;p&gt;
 &lt;p&gt;And I can&amp;#39;t name anything that would change this.&lt;&#x2F;p&gt;
 </description>
-                <pubDate>24 Nov 2016 16:20 +0300</pubDate>
+                <pubDate>24 Nov 2016 14:20 +0100</pubDate>
             </item>
             <item>
                 <title>Пусть бегут</title>
@@ -249,7 +249,7 @@ let x: Account &#x3D; { foo: &amp;quot;bar&amp;quot; };
 какой-то момент равняемся с ним, а потом начинаем медленно обгонять. Мальчик сначала прибавляет и пытается не дать себя обогнать, всё-таки он же на велосипеде, но
 вскоре сдаётся и произносит как бы про себя, но вслух, в сторону: «Пусть бегут».&lt;&#x2F;p&gt;
 </description>
-                <pubDate>31 Dec 2015 11:06 +0300</pubDate>
+                <pubDate>31 Dec 2015 09:06 +0100</pubDate>
             </item>
             <item>
                 <title>about:blank</title>
@@ -275,7 +275,7 @@ let x: Account &#x3D; { foo: &amp;quot;bar&amp;quot; };
 странно. Только случайно, поставив каких-то ярких слонов на рабочий стол, я заметил эту полупрозрачность. Слонов я убрал
 и поставил крыжик в system preferences &amp;gt; accessibility &amp;gt; reduce transparency, чего всем и советую.&lt;&#x2F;p&gt;
 </description>
-                <pubDate>26 Mar 2015 17:45 +0300</pubDate>
+                <pubDate>26 Mar 2015 15:45 +0100</pubDate>
             </item>
             <item>
                 <title>Гугл мой спотлайт</title>
@@ -302,7 +302,7 @@ let x: Account &#x3D; { foo: &amp;quot;bar&amp;quot; };
 &lt;p&gt;Но мы неизбежно к этому идём и те, кто избавляются от концепции URLов в своих веб-приложениях (привет, интернет-банки),
 кто по умолчанию выставляет режим «не запоминать пароль» — все они идут не в ту сторону.&lt;&#x2F;p&gt;
 </description>
-                <pubDate>26 Mar 2015 02:15 +0300</pubDate>
+                <pubDate>26 Mar 2015 00:15 +0100</pubDate>
             </item>
             <item>
                 <title>Верстальщики: от программистов к дизайнерам</title>
@@ -348,7 +348,7 @@ let x: Account &#x3D; { foo: &amp;quot;bar&amp;quot; };
 специализацию, сейчас плавно и верно перетекает в сторону проектировщиков интерфейсов и это отлично. А верстальщики
 вместе с этим плавно перетекают либо в дизайнеров, либо в программистов и это прекрасно.&lt;&#x2F;p&gt;
 </description>
-                <pubDate>22 Mar 2015 02:15 +0300</pubDate>
+                <pubDate>22 Mar 2015 00:15 +0100</pubDate>
             </item>
     </channel>
 </rss>
