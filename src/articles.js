@@ -24,11 +24,11 @@ function parseArticle(fileName) {
     title: parsed.meta.title,
     date: date,
     isThisYear: isDateThisYear,
-    sortKey: dateFns.format(date, "YYYYMMDDHHmm"),
-    machineDate: dateFns.format(date, "YYYY-MM-DD"),
-    humanDate: dateFns.format(date, `MMMM D${isDateThisYear ? "" : ", YYYY"}`),
-    rssDate: dateFns.format(date, "DD MMM YYYY HH:mm ZZ"),
-    feedDate: dateFns.format(date, "YYYY-MM-DDTHH:mm:ssZ"),
+    sortKey: dateFns.format(date, "yyyyLLddHHmm"),
+    machineDate: dateFns.format(date, "yyyy-LL-dd"),
+    humanDate: dateFns.format(date, `LLLL d${isDateThisYear ? "" : ", yyyy"}`),
+    rssDate: dateFns.format(date, "dd LLL yyyy HH:mm xx"),
+    feedDate: dateFns.format(date, "yyyy-LL-dd'T'HH:mm:ssxxx"),
     body: parsed.html,
     description: description.truncate(parsed.html)
   };
