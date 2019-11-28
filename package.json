@@ -5,11 +5,6 @@
     "build": "node ./src",
     "lint": "eslint src/* && prettier -c src/* docs/blog/css.css articles/*md"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint"
-    }
-  },
   "dependencies": {
     "date-fns": "2.8.1",
     "lodash": "4.17.15",
@@ -20,7 +15,6 @@
     "eslint": "6.7.1",
     "eslint-config-prettier": "6.7.0",
     "eslint-plugin-fp": "2.3.0",
-    "husky": "3.1.0",
     "prettier": "1.19.1"
   }
 }
