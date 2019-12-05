@@ -1,6 +1,6 @@
 ---
 title: Django cards
-date: 2019-12-01 00:00
+date: 2019-12-05 13:15
 photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/window.jpg
 ---
 
