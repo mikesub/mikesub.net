@@ -1,13 +1,15 @@
 const _ = require("lodash");
+const mime = require("mime-types");
 const { url, title } = require("../config.json");
 
-function item({ title, path, body, feedDate }) {
+function item({ title, path, bodyUntouched, feedDate, attachment }) {
   return _.pickBy({
     title: title,
     id: url + path,
     url: url + path,
-    content_html: body,
-    date_published: feedDate
+    content_html: bodyUntouched,
+    date_published: feedDate,
+    attachment: attachment ? [{ url: attachment, mime_type: mime.lookup(attachment) }] : undefined,
   });
 }
 
