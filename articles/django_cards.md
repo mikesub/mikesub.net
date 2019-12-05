@@ -1,8 +1,9 @@
 ---
 title: Django cards
 date: 2019-12-05 13:15
-photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/window.jpg
 ---
+
+![](https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/window.jpg)
 
 If you take metro and stand facing doors, it might feel as if the train goes straight without turns. Though if you look back and the previous car can be seen, you'll notice that it's wriggling from side to side.
 
