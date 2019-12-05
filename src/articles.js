@@ -19,6 +19,10 @@ function parseArticle(fileName) {
   );
   const isDateThisYear = dateFns.isThisYear(date);
 
+  const html = parsed.meta.photo
+    ? `<p><img src="${parsed.meta.photo}" alt="a photograph"/></p>` + parsed.html
+    : parsed.html;
+
   return {
     path: `${fileName.replace(/\..+$/, "")}.html`,
     title: parsed.meta.title,
@@ -29,8 +33,10 @@ function parseArticle(fileName) {
     humanDate: dateFns.format(date, `LLLL d${isDateThisYear ? "" : ", yyyy"}`),
     rssDate: dateFns.format(date, "dd LLL yyyy HH:mm xx"),
     feedDate: dateFns.format(date, "yyyy-LL-dd'T'HH:mm:ssxxx"),
-    body: parsed.html,
-    description: description.truncate(parsed.html)
+    body: html,
+    bodyUntouched: parsed.html,
+    description: description.truncate(parsed.html),
+    attachment: parsed.meta.photo
   };
 }
 
