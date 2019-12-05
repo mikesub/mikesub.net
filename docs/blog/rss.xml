@@ -5,6 +5,23 @@
         <link>http://mikesub.net/blog/</link>
         <description>Mike Saburenkov</description>
             <item>
+                <title>Django cards</title>
+                <guid isPermalink="true">http://mikesub.net/blog/django_cards.html</guid>
+                <link>http://mikesub.net/blog/django_cards.html</link>
+                <description>&lt;p&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;media.githubusercontent.com&#x2F;media&#x2F;mikesub&#x2F;mikesub.net&#x2F;master&#x2F;photos&#x2F;window.jpg&quot; alt&#x3D;&quot;a photograph&quot;&#x2F;&gt;&lt;&#x2F;p&gt;&lt;p&gt;If you take metro and stand facing doors, it might feel as if the train goes straight without turns. Though if you look back and the previous car can be seen, you&amp;#39;ll notice that it&amp;#39;s wriggling from side to side.&lt;&#x2F;p&gt;
+&lt;p&gt;That&amp;#39;s what I ended up while trying to describe my interests in creativity. To capture and share such moments, mostly by photography now, occasionally by text. So at first, it was some DIY weblog, then I moved LiveJournal. Later it was Flickr, then Instagram until it all froze in early 2018. Since then I&amp;#39;ve been thinking how to do it right. All social networks or standalone portfolio&#x2F;blogging web platforms didn&amp;#39;t appeal to me. It was either focused on different goals or just too noisy. Also, I didn&amp;#39;t stop thinking of what to do with photographs being just a sub-second glimpse on your displays.&lt;&#x2F;p&gt;
+&lt;p&gt;So here is another attempt. Now here.&lt;&#x2F;p&gt;
+&lt;p&gt;There are several ways to follow:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Support me at &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;patreon.com&#x2F;djangocards&quot;&gt;Patreon&lt;&#x2F;a&gt; and get printed photographs every quarter.&lt;&#x2F;li&gt;
+&lt;li&gt;Use &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;mikesub.net&#x2F;blog&#x2F;feed.json&quot;&gt;RSS&lt;&#x2F;a&gt; or &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;mikesub.net&#x2F;blog&#x2F;rss.xml&quot;&gt;JSON Feed&lt;&#x2F;a&gt; to follow online&lt;&#x2F;li&gt;
+&lt;li&gt;Join Telegram Group to discuss published notes and give any feedback. Contact me for the link at &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;telegram.me&#x2F;mikesub&quot;&gt;@mikesub&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Oh, and I&amp;#39;d like to mention recent findings that helped me to decide: &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;www.theredhandfiles.com&#x2F;&quot;&gt;The Red Hand Files&lt;&#x2F;a&gt; by Nick Cave and &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;brandur.org&#x2F;sequences-project&quot;&gt;Sequences&lt;&#x2F;a&gt; by Brandur Leach. Check them out. And let&amp;#39;s start.&lt;&#x2F;p&gt;
+</description>
+                <pubDate>01 Dec 2019 01:00 +0100</pubDate>
+            </item>
+            <item>
                 <title>A Case of SSR</title>
                 <guid isPermalink="true">http://mikesub.net/blog/ssr.html</guid>
                 <link>http://mikesub.net/blog/ssr.html</link>
