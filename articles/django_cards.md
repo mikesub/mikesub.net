@@ -14,7 +14,7 @@ So here is another attempt. Now here.
 There are several ways to follow:
 
 * Support me at [Patreon](https://patreon.com/djangocards) and get printed photographs every quarter.
-* Use [RSS](https://mikesub.net/blog/feed.json) or [JSON Feed](https://mikesub.net/blog/rss.xml) to follow online
+* Use [RSS](https://mikesub.net/blog/rss.xml) or [JSON Feed](https://mikesub.net/blog/feed.json) to follow online
 * Join Telegram Group to discuss published notes and give any feedback. Contact me for the link at [@mikesub](https://telegram.me/mikesub)
 
 Oh, and I'd like to mention recent findings that helped me to decide: [The Red Hand Files](https://www.theredhandfiles.com/) by Nick Cave and [Sequences](https://brandur.org/sequences-project) by Brandur Leach. Check them out. And let's start.
