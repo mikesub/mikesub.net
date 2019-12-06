@@ -165,9 +165,12 @@ hr::after {
   border-radius: 3px;
   transition: all 0.3s;
   cursor: pointer;
-
   color: rgb(118, 118, 118);
   background-color: white;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid rgb(118, 118, 118);
 }
 
 .dark-toggle:hover {
