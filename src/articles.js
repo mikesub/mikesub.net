@@ -31,6 +31,7 @@ function parseArticle(fileName) {
     feedDate: dateFns.format(date, "yyyy-LL-dd'T'HH:mm:ssxxx"),
     body: parsed.html,
     description: description.truncate(parsed.html),
+    photo: parsed.meta.photo,
   };
 }
 
