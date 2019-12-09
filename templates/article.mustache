@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,9 @@
   <link rel="alternate" type="application/rss+xml" title="{{config.title}}" href="{{{config.url}}}rss.xml"/>
   <meta name="author" content="{{config.author}}"/>
   <meta name="description" content="{{item.description}}"/>  
+  <meta property="og:title" content="{{item.title}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{{config.url}}}{{{item.path}}}" />
   {{#item.photo}}<meta property="og:image" content="{{{item.photo}}}" />{{/item.photo}}
 </head>
 <body>
