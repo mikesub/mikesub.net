@@ -1,5 +1,4 @@
 const _ = require("lodash");
-const mime = require("mime-types");
 const { url, title } = require("../config.json");
 
 function item({ title, path, body, feedDate }) {
