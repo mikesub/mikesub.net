@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intermission - Mike Saburenkov</title>
+  <link rel="stylesheet" href="css.css"/>
+  <link rel="alternate" type="application/json" title="Mike Saburenkov" href="http://mikesub.net/blog/feed.json" />
+  <link rel="alternate" type="application/rss+xml" title="Mike Saburenkov" href="http://mikesub.net/blog/rss.xml"/>
+  <meta name="author" content="Mike Saburenkov"/>
+  <meta name="description" content="Obviously, it turned out harder than expected. My plans to go through all my photos year by year stalled on year #2 (2006). I haven&amp;#39;t picked a photo and finished the note but already have an..."/>  
+  <meta property="og:title" content="Intermission" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://mikesub.net/blog/intermission.html" />
+  <meta property="og:image" content="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/flower_thrower.jpeg" />
+</head>
+<body>
+  <header><h1><a href="index.html">Mike Saburenkov</a></h1></header>
+  <article>
+    <header>
+      <h1>Intermission</h1>
+      <p><time datetime="2020-01-26">January 26</time></p>
+    </header>
+    <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/flower_thrower.jpeg" alt=""></p>
+<p>Obviously, it turned out harder than expected. My plans to go through all my photos year by year stalled on year #2 (2006).
+I haven&#39;t picked a photo and finished the note but already have an external HDD dead, recovered data from backups, 
+disassembled proprietory photo libraries, found a way to export photos from Lightroom CC (which doesn&#39;t have Export 
+option), removed dedupes after merging inconsistently structured backups (better than none) and so on.</p>
+<p>Computers.</p>
+<p>Meanwhile, new photos keep appearing. This one I&#39;ve just taken yesterday. It&#39;s probably too early to share it
+but I feel the need to fill that intermission.</p>
+
+  </article>
+<button class="dark-toggle js-dark-toggle" hidden tabindex="0">
+set dark<br /> mode to<br /> not dark<br /> mode
+</button>
+<script>
+(function () {
+    var isItDark = localStorage.getItem('darkmode') === '1';
+    document.body.className = isItDark ? 'dark' : '';
+
+    var button = document.querySelector('.js-dark-toggle');
+    button.removeAttribute('hidden');
+    button.addEventListener('click', function () {
+        try {
+            localStorage.setItem('darkmode', isItDark ? 0 : 1);
+        } catch (e) { }
+        document.body.className = isItDark ? '' : 'dark';
+        isItDark = !isItDark;
+    })
+})();
+</script>
+</body>
+</html>
