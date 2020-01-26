@@ -5,6 +5,13 @@
  "feed_url": "http://mikesub.net/blog/feed.json",
  "items": [
   {
+   "title": "Intermission",
+   "id": "http://mikesub.net/blog/intermission.html",
+   "url": "http://mikesub.net/blog/intermission.html",
+   "content_html": "<p><img src=\"https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/flower_thrower.jpeg\" alt=\"\"></p>\n<p>Obviously, it turned out harder than expected. My plans to go through all my photos year by year stalled on year #2 (2006).\nI haven&#39;t picked a photo and finished the note but already have an external HDD dead, recovered data from backups, \ndisassembled proprietory photo libraries, found a way to export photos from Lightroom CC (which doesn&#39;t have Export \noption), removed dedupes after merging inconsistently structured backups (better than none) and so on.</p>\n<p>Computers.</p>\n<p>Meanwhile, new photos keep appearing. This one I&#39;ve just taken yesterday. It&#39;s probably too early to share it\nbut I feel the need to fill that intermission.</p>\n",
+   "date_published": "2020-01-26T16:20:00+01:00"
+  },
+  {
    "title": "Oh five",
    "id": "http://mikesub.net/blog/2005.html",
    "url": "http://mikesub.net/blog/2005.html",
