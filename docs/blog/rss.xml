@@ -5,6 +5,21 @@
         <link>http://mikesub.net/blog/</link>
         <description>Mike Saburenkov</description>
             <item>
+                <title>The setup</title>
+                <guid isPermalink="true">http://mikesub.net/blog/setup.html</guid>
+                <link>http://mikesub.net/blog/setup.html</link>
+                <description>&lt;p&gt;I&amp;#39;ve just realised that &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;www.theolognion.com&#x2F;programmer-starts-a-blog-doesnt-write-about-their-static-site-generator-setup-in-the-first-post&#x2F;&quot;&gt;Joanne Dvorak&lt;&#x2F;a&gt; might be not the only one to make such mistake.&lt;&#x2F;p&gt;
+&lt;p&gt;So let me fix it. I&amp;#39;ve never been a fan of write-your-own-thing when there are many superior alternatives available. Now I’m even less of it. But when I decided to spin up a stand-alone blog, I didn’t go for Hugo, Gatsby or Jekyll. I thought it’s just a bunch of static pages, right. If you add some basic scripts for automation so you don’t need to update a RSS file manually and don’t copy-paste a HTML header, you should end up in less than a hundred lines of code. That probably should take less than reading through docs and configuring something ready-made. Well, I’ve ended up in &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;github.com&#x2F;mikesub&#x2F;mikesub.net&#x2F;tree&#x2F;master&#x2F;src&quot;&gt;~150&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;To be fair, it has dependencies on Date-fns, Lodash, Mustache and Meta-marked. In theory, I could have gone without first two. That would increase the size, of course. Mustache and Meta-marked (a markdown library) is harder to remove but at the same time I could make it as an independent external process in the build system, not depending on node-modules implementation. It seems to be an overkill, I&amp;#39;m not a purist in this regard.&lt;&#x2F;p&gt;
+&lt;p&gt;One thing I&amp;#39;m very pleased with is how tests are done. There are none of them. I&amp;#39;ve just made it work once by manual testing, then results (htmls and feeds) got pushed to Git and from that moment I just re-run builds and check Git diff. No changes, no regression. I like it. Snapshot testing, haha.&lt;&#x2F;p&gt;
+&lt;p&gt;The blog comes with a dark mode, human date formatting, drafts, RSS and JSONFeed.&lt;&#x2F;p&gt;
+&lt;p&gt;As for the deploy, I just push changes to GitHub. Hosting comes for free from GitHub at the moment. The only thing I’m paying for is the domain name.&lt;&#x2F;p&gt;
+&lt;p&gt;It misses a favicon, I&amp;#39;ll make it eventually. Also I planned to add tags when I got enough posts, but with the current pace I have few more years for that.&lt;&#x2F;p&gt;
+&lt;p&gt;Now you know.&lt;&#x2F;p&gt;
+</description>
+                <pubDate>03 Sep 2020 23:31 +0200</pubDate>
+            </item>
+            <item>
                 <title>Unknowns and surprises</title>
                 <guid isPermalink="true">http://mikesub.net/blog/unknowns_and_surprises.html</guid>
                 <link>http://mikesub.net/blog/unknowns_and_surprises.html</link>
