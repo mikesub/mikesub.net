@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The setup - Mike Saburenkov</title>
+  <link rel="stylesheet" href="css.css"/>
+  <link rel="alternate" type="application/json" title="Mike Saburenkov" href="http://mikesub.net/blog/feed.json" />
+  <link rel="alternate" type="application/rss+xml" title="Mike Saburenkov" href="http://mikesub.net/blog/rss.xml"/>
+  <meta name="author" content="Mike Saburenkov"/>
+  <meta name="description" content="I&amp;#39;ve just realised that Joanne Dvorak might be not the only one to make such mistake. So let me fix it. I&amp;#39;ve never been a fan of write-your-own-thing when there are many superior..."/>  
+  <meta property="og:title" content="The setup" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://mikesub.net/blog/setup.html" />
+  
+</head>
+<body>
+  <header><h1><a href="index.html">Mike Saburenkov</a></h1></header>
+  <article>
+    <header>
+      <h1>The setup</h1>
+      <p><time datetime="2020-09-03">September 3</time></p>
+    </header>
+    <p>I&#39;ve just realised that <a href="https://www.theolognion.com/programmer-starts-a-blog-doesnt-write-about-their-static-site-generator-setup-in-the-first-post/">Joanne Dvorak</a> might be not the only one to make such mistake.</p>
+<p>So let me fix it. I&#39;ve never been a fan of write-your-own-thing when there are many superior alternatives available. Now I’m even less of it. But when I decided to spin up a stand-alone blog, I didn’t go for Hugo, Gatsby or Jekyll. I thought it’s just a bunch of static pages, right. If you add some basic scripts for automation so you don’t need to update a RSS file manually and don’t copy-paste a HTML header, you should end up in less than a hundred lines of code. That probably should take less than reading through docs and configuring something ready-made. Well, I’ve ended up in <a href="https://github.com/mikesub/mikesub.net/tree/master/src">~150</a>.</p>
+<p>To be fair, it has dependencies on Date-fns, Lodash, Mustache and Meta-marked. In theory, I could have gone without first two. That would increase the size, of course. Mustache and Meta-marked (a markdown library) is harder to remove but at the same time I could make it as an independent external process in the build system, not depending on node-modules implementation. It seems to be an overkill, I&#39;m not a purist in this regard.</p>
+<p>One thing I&#39;m very pleased with is how tests are done. There are none of them. I&#39;ve just made it work once by manual testing, then results (htmls and feeds) got pushed to Git and from that moment I just re-run builds and check Git diff. No changes, no regression. I like it. Snapshot testing, haha.</p>
+<p>The blog comes with a dark mode, human date formatting, drafts, RSS and JSONFeed.</p>
+<p>As for the deploy, I just push changes to GitHub. Hosting comes for free from GitHub at the moment. The only thing I’m paying for is the domain name.</p>
+<p>It misses a favicon, I&#39;ll make it eventually. Also I planned to add tags when I got enough posts, but with the current pace I have few more years for that.</p>
+<p>Now you know.</p>
+
+  </article>
+<button class="dark-toggle js-dark-toggle" hidden tabindex="0">
+set dark<br /> mode to<br /> not dark<br /> mode
+</button>
+<script>
+(function () {
+    var isItDark = localStorage.getItem('darkmode') === '1';
+    document.body.className = isItDark ? 'dark' : '';
+
+    var button = document.querySelector('.js-dark-toggle');
+    button.removeAttribute('hidden');
+    button.addEventListener('click', function () {
+        try {
+            localStorage.setItem('darkmode', isItDark ? 0 : 1);
+        } catch (e) { }
+        document.body.className = isItDark ? '' : 'dark';
+        isItDark = !isItDark;
+    })
+})();
+</script>
+</body>
+</html>
