@@ -7,8 +7,8 @@ photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/master/phot
 ![](https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/flower_thrower.jpeg)
 
 Obviously, it turned out harder than expected. My plans to go through all my photos year by year stalled on year #2 (2006).
-I haven't picked a photo and finished the note but already have an external HDD dead, recovered data from backups, 
-disassembled proprietory photo libraries, found a way to export photos from Lightroom CC (which doesn't have Export 
+I haven't picked a photo and finished the note but already have an external HDD dead, recovered data from backups,
+disassembled proprietory photo libraries, found a way to export photos from Lightroom CC (which doesn't have Export
 option), removed dedupes after merging inconsistently structured backups (better than none) and so on.
 
 Computers.
