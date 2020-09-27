@@ -19,7 +19,7 @@ function reducer(s: State, [kind, value]: Event): State {
     case "created":
       return [...s, value];
     case "deleted":
-      return s.filter(x => x !== value);
+      return s.filter((x) => x !== value);
   }
 }
 ```
