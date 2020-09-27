@@ -11,7 +11,7 @@ function truncate(html) {
   return _.truncate(stripNewLines(stripTags(html)).trim(), {
     length: 200,
     omission: "...",
-    separator: " "
+    separator: " ",
   });
 }
 

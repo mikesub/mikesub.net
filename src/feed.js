@@ -18,7 +18,7 @@ function genFeed(items) {
       title: title,
       home_page_url: url,
       feed_url: `${url}feed.json`,
-      items: items.map(item)
+      items: items.map(item),
     },
     null, // eslint-disable-line fp/no-nil
     1

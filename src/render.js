@@ -9,12 +9,12 @@ const templatesDir = "templates";
 
 function loadTemplate(fileName) {
   return fs.readFileSync(path.join(templatesDir, `${fileName}.mustache`), {
-    encoding: "utf8"
+    encoding: "utf8",
   });
 }
 
 const partials = {
-  _darkmode: loadTemplate("_darkmode")
+  _darkmode: loadTemplate("_darkmode"),
 };
 
 function render(template, context) {
@@ -32,8 +32,8 @@ module.exports = {
   index: render("index", { items: sortedArticles }),
   rss: render("rss", { items: sortedArticles }),
   feed: feed.genFeed(sortedArticles),
-  articles: sortedArticles.map(article => ({
+  articles: sortedArticles.map((article) => ({
     path: article.path,
-    body: render("article", { item: article })
-  }))
+    body: render("article", { item: article }),
+  })),
 };
