@@ -6,15 +6,15 @@
     "lint": "eslint src/* && prettier -c src/* docs/blog/css.css articles/*md"
   },
   "dependencies": {
-    "date-fns": "2.8.1",
-    "lodash": "4.17.15",
+    "date-fns": "2.16.1",
+    "lodash": "4.17.20",
     "meta-marked": "0.4.2",
-    "mustache": "3.1.0"
+    "mustache": "4.0.1"
   },
   "devDependencies": {
-    "eslint": "6.7.1",
-    "eslint-config-prettier": "6.7.0",
+    "eslint": "7.10.0",
+    "eslint-config-prettier": "6.12.0",
     "eslint-plugin-fp": "2.3.0",
-    "prettier": "1.19.1"
+    "prettier": "2.1.2"
   }
 }
