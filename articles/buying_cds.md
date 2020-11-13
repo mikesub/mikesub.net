@@ -18,5 +18,5 @@ So I returned the turntable and sold the amp. I didn’t need a pre-amp anymore,
 
 So now I’m slowly selling my vinyl and already ordered a couple of CDs. Who would have thought?
 
-And by the way, it looks like there will be the fourth episode of "sick of it all digital". The first one was about [VHS vs. Netflix](http://localhost:8000/docs/blog/spoilers.html), the second was about [film photograpy](http://localhost:8000/docs/blog/unknowns_and_surprises.html).
+And by the way, it looks like there will be the fourth episode of "sick of it all digital". The first one was about [VHS vs. Netflix](spoilers.html), the second was about [film photograpy](unknowns_and_surprises.html).
 And I'm already reading about analog watches.
