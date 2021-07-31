@@ -8,6 +8,11 @@ body {
   padding: 0 1rem;
 }
 
+i {
+  background:  lightgoldenrodyellow;
+  padding: 4px 0;
+}
+
 nav, .text {
   max-width: 45rem;
 }
