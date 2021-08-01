@@ -8,9 +8,10 @@ body {
   padding: 0 1rem;
 }
 
-i {
-  background:  lightgoldenrodyellow;
-  padding: 4px 0;
+em {
+  background: lightgoldenrodyellow; 
+  padding: 3px 2px;
+  font-style: normal;
 }
 
 nav, .text {
