@@ -7,7 +7,7 @@ photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/2d745cd0a60
 ![](https://media.githubusercontent.com/media/mikesub/mikesub.net/2d745cd0a60c491bb7c701cc1ecdf8ded120fbea/photos/tv_dinner.jpg)
 
 
-Recently I recalled that I need to recompile this blog to add a year to the dates of the posts for the previous year. And so I decided to journal results for 2023. Then I saw others' posts online and realized I would be writing roughly the same, and for some reason, it stopped me. Then, having found no rationale why not to, I thought it still was worth writing about the disenchantment which feels now not transient but getting deeply rooted.
+No updates here for a long time. And 2023 has ended, so why not to journal some results. Then I saw others' posts online and realized I would be writing roughly the same, and for some reason, it stopped me. Then, having found no rationale why not to, I thought it still was worth writing about the disenchantment which feels now not transient but getting deeply rooted.
 
 It probably all began during the pandemic, with disenchantment in governments and states in general. Then it was affirmed and intensified due to the war. This year, I keenly felt it from social media and from the internet. At some point, I realized that I gain no interest and knowledge reading my RSS subscriptions, with rare exceptions. I didn't renew my FeedBin and didn't notice much difference. I did transfer a couple of subscriptions to email and that's it. I tried to read books and listen to audio versions more. Not a strong habit yet but feels much better in comparison.
 
