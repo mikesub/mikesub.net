@@ -21,34 +21,29 @@
 <p>So what do types bring to JS? They fix some bad parts of JS, but that&#39;s a byproduct. Mainly they add some semantics to code which helps editors and people to get more sense what it&#39;s doing, how it should work and also spot some things which can be optimised. Let me show-case that with several examples.</p>
 <h2 id="runtime-checks">Runtime checks</h2>
 <p>Say, we have a function which takes a configuration object, which is a JS way to have named arguments, and it really needs <code>url</code> out of it.</p>
-<pre><code class="lang-javascript">function main({ url }) {
+<pre><code class="language-javascript">function main({ url }) {
   // ...
-}
-</code></pre>
+}</code></pre>
 <p>It can not do a thing without <code>url</code>, no fallback or default value possible. So there are two options, either to exit silently returning <code>undefined</code> or, to make it more explicit, to throw an error:</p>
-<pre><code class="lang-javascript">function main({ url }) {
+<pre><code class="language-javascript">function main({ url }) {
   if (!url) {
     throw new Error(&quot;no URL provided&quot;);
   }
   // ...
-}
-</code></pre>
+}</code></pre>
 <p>That should work. If somebody fails to put URL there, they notice it ASAP. But since it&#39;s not really named arguments there but just a fake, the code might fail even before. If one doesn&#39;t provide an object at all, we&#39;ll get:</p>
-<pre><code>TypeError: Cannot destructure property `url` of &#39;undefined&#39; or &#39;null&#39;.
-</code></pre><p>Let&#39;s not discuss the fact that my Chrome can&#39;t decide what it gets there: null or undefined, and try to fix that.</p>
-<pre><code class="lang-javascript">function main({ url } = {}) {
+<pre><code>TypeError: Cannot destructure property `url` of &#39;undefined&#39; or &#39;null&#39;.</code></pre><p>Let&#39;s not discuss the fact that my Chrome can&#39;t decide what it gets there: null or undefined, and try to fix that.</p>
+<pre><code class="language-javascript">function main({ url } = {}) {
   if (!url) {
     throw new Error(&quot;no URL provided&quot;);
   }
   // ...
-}
-</code></pre>
+}</code></pre>
 <p>Now it&#39;s better. Though now it looks stupid. We&#39;ve just provided a fallback value to be able to throw an error which can not be caught and recovered from.</p>
 <p>And that&#39;s all happening in runtime. The code is there: parsed, evaluated, running, though isn&#39;t helping at all. If you use type annotations you can prevent that thing before runtime.</p>
-<pre><code class="lang-typescript">function main({ url }: { url: string }) {
+<pre><code class="language-typescript">function main({ url }: { url: string }) {
   // ...
-}
-</code></pre>
+}</code></pre>
 <p>Instead of providing a default value and throwing an error, we state that the argument is required and it needs to have <code>url</code> key which is a string. That&#39;s not ideal as any string, even empty one, will pass. But TypeScript might evolve to it at some point: <a href="https://github.com/Microsoft/TypeScript/issues/6579">regex-validated string type</a>. And as of now, we&#39;re already preventing some errors w/o any runtime costs.</p>
 <hr>
 <p>That&#39;s the second article in a series on TypeScript. You can read them in any order as they aren&#39;t really connected apart from covering the same topic:</p>

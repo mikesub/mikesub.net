@@ -28,7 +28,7 @@
 <p>If you prepend enum declaration with <code>const</code> the compiler inlines it without creating an object. I can&#39;t see why I have to make that choice, the compiler has all the knowledge (actually even more than me) to decide whether it makes sense or not.</p>
 <h2 id="index-signatures">Index signatures</h2>
 <p>In JS you can put anything as a key in object and it will be converted to a string. TS decided to improve that a bit and allows <code>{ [key: number]: boolean }</code>. Basically, it points that even though key is to be coerced to a string, let&#39;s check that we pass only numbers here. But then we get these:</p>
-<pre><code class="lang-typescript">type A = { [k: number]: any };
+<pre><code class="language-typescript">type A = { [k: number]: any };
 const a2: A = { 2: true }; // alright
 const a1: A = { string: true }; // error, fine
 const a3: A = { &quot;2&quot;: true }; // no error?
@@ -36,23 +36,19 @@ const a3: A = { &quot;2&quot;: true }; // no error?
 type B = { [k: string]: any };
 const b1: B = { string: true }; // alright
 const b3: B = { &quot;2&quot;: true }; // no error, fine
-const b2: B = { 2: true }; // no error?
-</code></pre>
+const b2: B = { 2: true }; // no error?</code></pre>
 <p>And <code>Object.keys()</code> is not a generic, because it can&#39;t be as it always returns strings. The coercion was irreversible, nobody can convert strings back to original types for you. You&#39;re alone.</p>
-<pre><code class="lang-typescript">Object.keys(); // {} =&gt; string[]
-</code></pre>
+<pre><code class="language-typescript">Object.keys(); // {} =&gt; string[]</code></pre>
 <p>And the last, not the least, is that you can only use primitives there, not your own types:</p>
-<pre><code class="lang-typescript">type Id = number;
+<pre><code class="language-typescript">type Id = number;
 type Item = { id: Id };
-type Index = { [k: Id]: Item }; // nope, number please
-</code></pre>
+type Index = { [k: Id]: Item }; // nope, number please</code></pre>
 <h2 id="type-inference">Type Inference</h2>
 <p>That&#39;s nice. You feel good when you can drop obvious cases. It feels like language has done its homework. But then it starts taking defaults when there are multiple options and now you should be aware of them.</p>
-<pre><code class="lang-typescript">const x = [2, true];
-// (number | boolean)[], not [number, boolean]
-</code></pre>
+<pre><code class="language-typescript">const x = [2, true];
+// (number | boolean)[], not [number, boolean]</code></pre>
 <p>And when you return different shapes of objects from a function (say, redux reducer), inference creates monsters.</p>
-<pre><code class="lang-typescript">function foo(x: boolean, arr: []) {
+<pre><code class="language-typescript">function foo(x: boolean, arr: []) {
   if (x) {
     return { a: true, &quot;3&quot;: 2 };
   } else {
@@ -62,22 +58,19 @@ type Index = { [k: Id]: Item }; // nope, number please
 // Inferred: {&#39;a&#39;: boolean; &#39;3&#39;: number; &#39;b&#39;?: undefined;}
 //           | {&#39;bar&#39;: number; 3: 0; &#39;a&#39;?: undefined}
 //
-// Meant to be: {a?: boolean; &#39;3&#39;: number; b?: number;}
-</code></pre>
+// Meant to be: {a?: boolean; &#39;3&#39;: number; b?: number;}</code></pre>
 <p>Possible solution might be to add strict check similar to disabling implicit ‘any’ to avoid this monsters guessing and fail to infer when it is ambigious.</p>
 <h2 id="global-scope">Global scope</h2>
 <p>If you write TS for a browser, thus adding <code>dom</code> in <code>compilerOptions/lib</code>, lots of useful types become available in the global scope. And you don&#39;t need to import them explicitly. You know what it means. And they aren&#39;t grouped into a namespace. Yup.
 Some are easy to expect as <code>XMLHTTPRequest</code> but others have more abstract names: <code>AlignSetting</code>, <code>Transport</code>. You will notice errors if you would try to define them in your code:</p>
-<pre><code class="lang-typescript">type Transport = ...;
-// duplicate identifier, was already declared in dom.d.ts
-</code></pre>
+<pre><code class="language-typescript">type Transport = ...;
+// duplicate identifier, was already declared in dom.d.ts</code></pre>
 <p>But you might miss the error if you just forget to define it and thus built-in will be used. And even worse will happen if you clash with built-in interfaces, as they will be merged:</p>
-<pre><code class="lang-typescript">interface Account {
+<pre><code class="language-typescript">interface Account {
   foo: &quot;bar&quot;;
 }
 let x: Account = { foo: &quot;bar&quot; };
-// missing displayName, id, rpDisplayName from type &#39;Account&#39;.
-</code></pre>
+// missing displayName, id, rpDisplayName from type &#39;Account&#39;.</code></pre>
 <h2 id="official-documentation">Official documentation</h2>
 <p>It&#39;s lacking behind. TS v3.3 is the latest now. <code>BigInt</code> has been added in v3.2 but official documentation hasn&#39;t been updated.</p>
 <h2 id="syntax">Syntax</h2>

@@ -160,36 +160,33 @@ but I feel the need to fill that intermission.&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;That&amp;#39;s the third article in a series on TypeScript started by ‘&lt;a href&#x3D;&quot;ts_bad_parts.html&quot;&gt;TypeScript. Bad Parts&lt;&#x2F;a&gt;’. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic. But if you can&amp;#39;t decide, make it &lt;a href&#x3D;&quot;ts_bad_parts.html&quot;&gt;chronologically&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;This time I&amp;#39;d like to show how you can leverage types to simplify your runtime code.&lt;&#x2F;p&gt;
 &lt;p&gt;Let&amp;#39;s say we have a function which calculates a flag&amp;#39;s value based on some input. And later you use that flag to do some checks. The easiest way to write that could be something like that:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-javascript&quot;&gt;function calculateFlag(conditions) {
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;function calculateFlag(conditions) {
   return &amp;quot;important&amp;quot;;
 }
 
 const flag &#x3D; calculateFlag(context);
 if (flag !&#x3D;&#x3D; &amp;quot;important&amp;quot;) {
   &#x2F;* ... *&#x2F;
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+}&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;That would work but it&amp;#39;s error-prone and your colleagues might signal you about it during a code review. It turns out that neither any editor nor javascript itself knows much about your flags and what values are valid there, for them it&amp;#39;s just strings, nothing more. That&amp;#39;s why they can&amp;#39;t help you much in refactoring or spot a typo if you misspell a value in one of the places. The common JS pattern to mitigate that is to use an object as a poor-man enum.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-javascript&quot;&gt;const flags &#x3D; { important: &amp;quot;important&amp;quot; };
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;const flags &#x3D; { important: &amp;quot;important&amp;quot; };
 function calculateFlag(conditions) {
   return flags.important;
 }
 const flag &#x3D; calculateFlag(context);
 if (flag !&#x3D;&#x3D; flags.important) {
   &#x2F;* ... *&#x2F;
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+}&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;You have your value in one place, it&amp;#39;s easier to change it, editors might warn you if you make a mistake in accessing an inexistent property, all good. But that brings a small penalty that you introduce an object where your runtime doesn&amp;#39;t need one. It&amp;#39;s small enough not to care at all, benefits outweigh that clearly. Though nobody would object if some pre-compiler inlines it away as it doesn&amp;#39;t possess any runtime value in itself.&lt;&#x2F;p&gt;
 &lt;p&gt;With types, you can add that semantics to your code that it&amp;#39;s not just a random string without adding any objects and keeping it as strings.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-typescript&quot;&gt;type Flag &#x3D; &amp;quot;important&amp;quot;;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;type Flag &#x3D; &amp;quot;important&amp;quot;;
 function calculateFlag(conditions): Flag {
   return &amp;quot;important&amp;quot;;
 }
 const flag &#x3D; calculateFlag(context);
 if (flag !&#x3D;&#x3D; &amp;quot;important&amp;quot;) {
   &#x2F;* ... *&#x2F;
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+}&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Now it knows that your function returns that value (in real life it should be a union of several valid strings) and it can check whether your &lt;code&gt;if&lt;&#x2F;code&gt; later makes any sense.&lt;&#x2F;p&gt;
 &lt;p&gt;I see it as a nice example of adding more expressiveness to the language. One can argue that implementing such checks using built-in features like a plain object is even better. But I do see some value in using separate construct for these needs. Having fewer concepts is better in terms you should not have too many of them. Otherwise, it would be too low-level.&lt;&#x2F;p&gt;
 &lt;p&gt;Another take on that (and actually the original premise of that note) is that I tend to use TypeScript solely as a type annotations system and try to avoid any additional features it brings and enums is one of them. And so this example is a nice one to demonstrate that you don&amp;#39;t need enums for that, just use a union type and you&amp;#39;re good. Hello, &lt;code&gt;flag.isImportant()&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
@@ -210,34 +207,29 @@ if (flag !&#x3D;&#x3D; &amp;quot;important&amp;quot;) {
 &lt;p&gt;So what do types bring to JS? They fix some bad parts of JS, but that&amp;#39;s a byproduct. Mainly they add some semantics to code which helps editors and people to get more sense what it&amp;#39;s doing, how it should work and also spot some things which can be optimised. Let me show-case that with several examples.&lt;&#x2F;p&gt;
 &lt;h2 id&#x3D;&quot;runtime-checks&quot;&gt;Runtime checks&lt;&#x2F;h2&gt;
 &lt;p&gt;Say, we have a function which takes a configuration object, which is a JS way to have named arguments, and it really needs &lt;code&gt;url&lt;&#x2F;code&gt; out of it.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-javascript&quot;&gt;function main({ url }) {
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;function main({ url }) {
   &#x2F;&#x2F; ...
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+}&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It can not do a thing without &lt;code&gt;url&lt;&#x2F;code&gt;, no fallback or default value possible. So there are two options, either to exit silently returning &lt;code&gt;undefined&lt;&#x2F;code&gt; or, to make it more explicit, to throw an error:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-javascript&quot;&gt;function main({ url }) {
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;function main({ url }) {
   if (!url) {
     throw new Error(&amp;quot;no URL provided&amp;quot;);
   }
   &#x2F;&#x2F; ...
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+}&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;That should work. If somebody fails to put URL there, they notice it ASAP. But since it&amp;#39;s not really named arguments there but just a fake, the code might fail even before. If one doesn&amp;#39;t provide an object at all, we&amp;#39;ll get:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;TypeError: Cannot destructure property &#x60;url&#x60; of &amp;#39;undefined&amp;#39; or &amp;#39;null&amp;#39;.
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;p&gt;Let&amp;#39;s not discuss the fact that my Chrome can&amp;#39;t decide what it gets there: null or undefined, and try to fix that.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-javascript&quot;&gt;function main({ url } &#x3D; {}) {
+&lt;pre&gt;&lt;code&gt;TypeError: Cannot destructure property &#x60;url&#x60; of &amp;#39;undefined&amp;#39; or &amp;#39;null&amp;#39;.&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;p&gt;Let&amp;#39;s not discuss the fact that my Chrome can&amp;#39;t decide what it gets there: null or undefined, and try to fix that.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-javascript&quot;&gt;function main({ url } &#x3D; {}) {
   if (!url) {
     throw new Error(&amp;quot;no URL provided&amp;quot;);
   }
   &#x2F;&#x2F; ...
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+}&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Now it&amp;#39;s better. Though now it looks stupid. We&amp;#39;ve just provided a fallback value to be able to throw an error which can not be caught and recovered from.&lt;&#x2F;p&gt;
 &lt;p&gt;And that&amp;#39;s all happening in runtime. The code is there: parsed, evaluated, running, though isn&amp;#39;t helping at all. If you use type annotations you can prevent that thing before runtime.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-typescript&quot;&gt;function main({ url }: { url: string }) {
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;function main({ url }: { url: string }) {
   &#x2F;&#x2F; ...
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+}&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Instead of providing a default value and throwing an error, we state that the argument is required and it needs to have &lt;code&gt;url&lt;&#x2F;code&gt; key which is a string. That&amp;#39;s not ideal as any string, even empty one, will pass. But TypeScript might evolve to it at some point: &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;github.com&#x2F;Microsoft&#x2F;TypeScript&#x2F;issues&#x2F;6579&quot;&gt;regex-validated string type&lt;&#x2F;a&gt;. And as of now, we&amp;#39;re already preventing some errors w&#x2F;o any runtime costs.&lt;&#x2F;p&gt;
 &lt;hr&gt;
 &lt;p&gt;That&amp;#39;s the second article in a series on TypeScript. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic:&lt;&#x2F;p&gt;
@@ -263,7 +255,7 @@ if (flag !&#x3D;&#x3D; &amp;quot;important&amp;quot;) {
 &lt;p&gt;If you prepend enum declaration with &lt;code&gt;const&lt;&#x2F;code&gt; the compiler inlines it without creating an object. I can&amp;#39;t see why I have to make that choice, the compiler has all the knowledge (actually even more than me) to decide whether it makes sense or not.&lt;&#x2F;p&gt;
 &lt;h2 id&#x3D;&quot;index-signatures&quot;&gt;Index signatures&lt;&#x2F;h2&gt;
 &lt;p&gt;In JS you can put anything as a key in object and it will be converted to a string. TS decided to improve that a bit and allows &lt;code&gt;{ [key: number]: boolean }&lt;&#x2F;code&gt;. Basically, it points that even though key is to be coerced to a string, let&amp;#39;s check that we pass only numbers here. But then we get these:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-typescript&quot;&gt;type A &#x3D; { [k: number]: any };
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;type A &#x3D; { [k: number]: any };
 const a2: A &#x3D; { 2: true }; &#x2F;&#x2F; alright
 const a1: A &#x3D; { string: true }; &#x2F;&#x2F; error, fine
 const a3: A &#x3D; { &amp;quot;2&amp;quot;: true }; &#x2F;&#x2F; no error?
@@ -271,23 +263,19 @@ const a3: A &#x3D; { &amp;quot;2&amp;quot;: true }; &#x2F;&#x2F; no error?
 type B &#x3D; { [k: string]: any };
 const b1: B &#x3D; { string: true }; &#x2F;&#x2F; alright
 const b3: B &#x3D; { &amp;quot;2&amp;quot;: true }; &#x2F;&#x2F; no error, fine
-const b2: B &#x3D; { 2: true }; &#x2F;&#x2F; no error?
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+const b2: B &#x3D; { 2: true }; &#x2F;&#x2F; no error?&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And &lt;code&gt;Object.keys()&lt;&#x2F;code&gt; is not a generic, because it can&amp;#39;t be as it always returns strings. The coercion was irreversible, nobody can convert strings back to original types for you. You&amp;#39;re alone.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-typescript&quot;&gt;Object.keys(); &#x2F;&#x2F; {} &#x3D;&amp;gt; string[]
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;Object.keys(); &#x2F;&#x2F; {} &#x3D;&amp;gt; string[]&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And the last, not the least, is that you can only use primitives there, not your own types:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-typescript&quot;&gt;type Id &#x3D; number;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;type Id &#x3D; number;
 type Item &#x3D; { id: Id };
-type Index &#x3D; { [k: Id]: Item }; &#x2F;&#x2F; nope, number please
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+type Index &#x3D; { [k: Id]: Item }; &#x2F;&#x2F; nope, number please&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id&#x3D;&quot;type-inference&quot;&gt;Type Inference&lt;&#x2F;h2&gt;
 &lt;p&gt;That&amp;#39;s nice. You feel good when you can drop obvious cases. It feels like language has done its homework. But then it starts taking defaults when there are multiple options and now you should be aware of them.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-typescript&quot;&gt;const x &#x3D; [2, true];
-&#x2F;&#x2F; (number | boolean)[], not [number, boolean]
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;const x &#x3D; [2, true];
+&#x2F;&#x2F; (number | boolean)[], not [number, boolean]&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And when you return different shapes of objects from a function (say, redux reducer), inference creates monsters.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-typescript&quot;&gt;function foo(x: boolean, arr: []) {
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;function foo(x: boolean, arr: []) {
   if (x) {
     return { a: true, &amp;quot;3&amp;quot;: 2 };
   } else {
@@ -297,22 +285,19 @@ type Index &#x3D; { [k: Id]: Item }; &#x2F;&#x2F; nope, number please
 &#x2F;&#x2F; Inferred: {&amp;#39;a&amp;#39;: boolean; &amp;#39;3&amp;#39;: number; &amp;#39;b&amp;#39;?: undefined;}
 &#x2F;&#x2F;           | {&amp;#39;bar&amp;#39;: number; 3: 0; &amp;#39;a&amp;#39;?: undefined}
 &#x2F;&#x2F;
-&#x2F;&#x2F; Meant to be: {a?: boolean; &amp;#39;3&amp;#39;: number; b?: number;}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&#x2F;&#x2F; Meant to be: {a?: boolean; &amp;#39;3&amp;#39;: number; b?: number;}&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Possible solution might be to add strict check similar to disabling implicit ‘any’ to avoid this monsters guessing and fail to infer when it is ambigious.&lt;&#x2F;p&gt;
 &lt;h2 id&#x3D;&quot;global-scope&quot;&gt;Global scope&lt;&#x2F;h2&gt;
 &lt;p&gt;If you write TS for a browser, thus adding &lt;code&gt;dom&lt;&#x2F;code&gt; in &lt;code&gt;compilerOptions&#x2F;lib&lt;&#x2F;code&gt;, lots of useful types become available in the global scope. And you don&amp;#39;t need to import them explicitly. You know what it means. And they aren&amp;#39;t grouped into a namespace. Yup.
 Some are easy to expect as &lt;code&gt;XMLHTTPRequest&lt;&#x2F;code&gt; but others have more abstract names: &lt;code&gt;AlignSetting&lt;&#x2F;code&gt;, &lt;code&gt;Transport&lt;&#x2F;code&gt;. You will notice errors if you would try to define them in your code:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-typescript&quot;&gt;type Transport &#x3D; ...;
-&#x2F;&#x2F; duplicate identifier, was already declared in dom.d.ts
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;type Transport &#x3D; ...;
+&#x2F;&#x2F; duplicate identifier, was already declared in dom.d.ts&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;But you might miss the error if you just forget to define it and thus built-in will be used. And even worse will happen if you clash with built-in interfaces, as they will be merged:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code class&#x3D;&quot;lang-typescript&quot;&gt;interface Account {
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-typescript&quot;&gt;interface Account {
   foo: &amp;quot;bar&amp;quot;;
 }
 let x: Account &#x3D; { foo: &amp;quot;bar&amp;quot; };
-&#x2F;&#x2F; missing displayName, id, rpDisplayName from type &amp;#39;Account&amp;#39;.
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&#x2F;&#x2F; missing displayName, id, rpDisplayName from type &amp;#39;Account&amp;#39;.&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id&#x3D;&quot;official-documentation&quot;&gt;Official documentation&lt;&#x2F;h2&gt;
 &lt;p&gt;It&amp;#39;s lacking behind. TS v3.3 is the latest now. &lt;code&gt;BigInt&lt;&#x2F;code&gt; has been added in v3.2 but official documentation hasn&amp;#39;t been updated.&lt;&#x2F;p&gt;
 &lt;h2 id&#x3D;&quot;syntax&quot;&gt;Syntax&lt;&#x2F;h2&gt;
