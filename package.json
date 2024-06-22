@@ -1,14 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "start": "yarn build && python -m SimpleHTTPServer",
+    "start": "npm run build && http-server docs",
     "build": "node ./src",
     "lint": "eslint src/* && prettier -c src/* docs/blog/css.css articles/*md"
   },
   "dependencies": {
     "date-fns": "2.16.1",
-    "lodash": "4.17.20",
-    "meta-marked": "0.4.2",
+    "http-server": "14.1.1",
+    "lodash": "4.17.21",
+    "meta-marked": "0.4.4",
     "mustache": "4.0.1"
   },
   "devDependencies": {
