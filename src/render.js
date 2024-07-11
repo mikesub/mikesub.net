@@ -1,16 +1,16 @@
-const fs = require("fs");
-const path = require("path");
-const _ = require("lodash");
-const mustache = require("mustache");
-const articles = require("./articles");
-const feed = require("./feed");
-const config = require("../config.json");
+import * as path from "@std/path";
+import _ from "lodash";
+import mustache from "mustache";
+import * as articles from "./articles.js";
+import * as feed from "./feed.js";
+import config from "./config.js";
+
 const templatesDir = "templates";
 
 function loadTemplate(fileName) {
-  return fs.readFileSync(path.join(templatesDir, `${fileName}.mustache`), {
-    encoding: "utf8",
-  });
+  return new TextDecoder("utf-8").decode(
+    Deno.readFileSync(path.join(templatesDir, `${fileName}.mustache`)),
+  );
 }
 
 const partials = {
@@ -21,14 +21,13 @@ function render(template, context) {
   return mustache.render(
     loadTemplate(template),
     { config, ...context },
-    partials
+    partials,
   );
 }
 
-// eslint-disable-next-line fp/no-mutating-methods
 const sortedArticles = _.sortBy(articles.load(), "sortKey").reverse();
 
-module.exports = {
+export default {
   index: render("index", { items: sortedArticles }),
   rss: render("rss", { items: sortedArticles }),
   feed: feed.genFeed(sortedArticles),

@@ -1,0 +1,7 @@
+export default {
+  url: "http://mikesub.net/blog/",
+  title: "Mike Saburenkov",
+  author: "Mike Saburenkov",
+  articlesDir: "articles/",
+  targetDir: "docs/blog/",
+};

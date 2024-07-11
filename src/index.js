@@ -1,12 +1,22 @@
-const fs = require("fs");
-const render = require("./render");
-const config = require("../config.json");
+import render from "./render.js";
+import config from "./config.js";
 
-/* eslint-disable fp/no-unused-expression */
-fs.writeFileSync(`${config.targetDir}rss.xml`, render.rss);
-fs.writeFileSync(`${config.targetDir}index.html`, render.index);
-fs.writeFileSync(`${config.targetDir}feed.json`, render.feed);
-render.articles.forEach((article) =>
-  fs.writeFileSync(config.targetDir + article.path, article.body)
+Deno.writeFileSync(
+  `${config.targetDir}rss.xml`,
+  new TextEncoder().encode(render.rss),
 );
-/* eslint-enable fp/no-unused-expression */
+Deno.writeFileSync(
+  `${config.targetDir}index.html`,
+  new TextEncoder().encode(render.index),
+);
+Deno.writeFileSync(
+  `${config.targetDir}feed.json`,
+  new TextEncoder().encode(render.feed),
+);
+
+render.articles.forEach((article) =>
+  Deno.writeFileSync(
+    config.targetDir + article.path,
+    new TextEncoder().encode(article.body),
+  ),
+);

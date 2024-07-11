@@ -1,0 +1,15 @@
+{
+  "imports": {
+    "@std/path": "jsr:@std/path@0.225.2",
+    "lodash": "npm:lodash@4.17.21",
+    "date-fns": "npm:date-fns@3.6.0",
+    "mustache": "npm:mustache@4.2.0",
+    "meta-marked": "npm:meta-marked@0.5.0"
+  },
+  "tasks": {
+    "build": "deno run -A src/index.js"
+  },
+  "fmt": {
+    "include": ["src/"]
+  }
+}

@@ -1,13 +1,14 @@
-const fs = require("fs");
-const path = require("path");
-const marked = require("meta-marked");
-const dateFns = require("date-fns");
-const description = require("./description");
-const { articlesDir } = require("../config.json");
+import * as path from "@std/path";
+import marked from "meta-marked";
+import * as dateFns from "date-fns";
+import * as description from "./description.js";
+import config from "./config.js";
 
-function parseArticle(fileName) {
+function parseArticle(fileEntry) {
   const parsed = marked(
-    fs.readFileSync(path.join(articlesDir, fileName), { encoding: "utf8" })
+    new TextDecoder("utf-8").decode(
+      Deno.readFileSync(path.join(config.articlesDir, fileEntry.name)),
+    ),
   );
 
   const date = Date.UTC(
@@ -15,12 +16,12 @@ function parseArticle(fileName) {
     Number(parsed.meta.date.substring(5, 7)) - 1,
     Number(parsed.meta.date.substring(8, 10)),
     Number(parsed.meta.date.substring(11, 13)),
-    Number(parsed.meta.date.substring(14))
+    Number(parsed.meta.date.substring(14)),
   );
   const isDateThisYear = dateFns.isThisYear(date);
 
   return {
-    path: `${fileName.replace(/\..+$/, "")}.html`,
+    path: `${fileEntry.name.replace(/\..+$/, "")}.html`,
     title: parsed.meta.title,
     date: date,
     isThisYear: isDateThisYear,
@@ -35,11 +36,8 @@ function parseArticle(fileName) {
   };
 }
 
-function load() {
-  return fs
-    .readdirSync(articlesDir)
-    .filter((fileName) => !fileName.startsWith("_"))
+export function load() {
+  return Array.from(Deno.readDirSync(config.articlesDir))
+    .filter((dirEntry) => dirEntry.isFile && !dirEntry.name.startsWith("_"))
     .map(parseArticle);
 }
-
-module.exports = { load };
