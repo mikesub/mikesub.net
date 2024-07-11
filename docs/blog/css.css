@@ -1,188 +1,189 @@
 body {
-  margin: 1rem 3rem 10rem 3rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-rendering: optimizeLegibility;
-  transition: background-color 0.1s;
-  background-color: white;
-  color: black;
+    margin: 1rem 3rem 10rem 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.1s;
+    background-color: white;
+    color: black;
 }
 
 body.dark {
-  background-color: rgb(50, 50, 50);
-  color: rgb(200, 200, 200);
+    background-color: rgb(50, 50, 50);
+    color: rgb(200, 200, 200);
 }
 
 @media (max-width: 768px) {
-  body {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+    body {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 a,
 a:active,
 a:focus,
 a:visited {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 a:hover,
 body.dark a:hover {
-  color: #1488ff;
-  text-decoration: none;
+    color: #1488ff;
+    text-decoration: none;
 }
 
 body.dark a,
 body.dark a:active,
 body.dark a:focus,
 body.dark a:visited {
-  color: rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
 }
 
 article > header h1 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 article a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 pre,
 code {
-  background: rgb(230, 230, 230);
-  font-family: "Fire Code", SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", Courier, monospace;
+    background: rgb(230, 230, 230);
+    font-family: "Fire Code", SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", Courier, monospace;
 }
 
 body.dark pre,
 body.dark code {
-  background: rgb(40, 40, 40);
+    background: rgb(40, 40, 40);
 }
 
 code {
-  border-radius: 3px;
-  padding: 0.2rem 0.3rem;
-  font-size: 1rem;
-  white-space: pre;
-  overflow-wrap: normal;
+    border-radius: 3px;
+    padding: 0.2rem 0.3rem;
+    font-size: 1rem;
+    white-space: pre;
+    overflow-wrap: normal;
 }
 
 pre {
-  line-height: 1.5rem;
-  padding: 1rem;
-  max-width: 100%;
-  overflow-x: auto;
+    line-height: 1.5rem;
+    padding: 1rem;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 body > header {
-  margin-bottom: 4rem;
+    margin-bottom: 4rem;
 }
 
 body > header h1 {
-  font-size: 1.5rem;
-  letter-spacing: -0.1rem;
-  margin-bottom: 4rem;
+    font-size: 1.5rem;
+    letter-spacing: -0.1rem;
+    margin-bottom: 4rem;
 }
 
 body > article,
 body > header {
-  max-width: 45rem;
-  margin: 0 auto;
+    max-width: 45rem;
+    margin: 0 auto;
 }
 
 body > article {
-  margin-bottom: 5rem;
+    margin-bottom: 5rem;
 }
 
 article > header h1 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 0;
 }
 
 article header p {
-  margin: 0;
-  font-size: 1rem;
+    margin: 0;
+    font-size: 1rem;
 }
 
 article > p {
-  line-height: 1.6;
-  word-wrap: break-word;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 article > h2 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
 article > h2 + p,
 article hr + p {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 article ul {
-  margin: 0;
-  padding: 0 0 0 1.5rem;
+    margin: 0;
+    padding: 0 0 0 1.5rem;
 }
 
 article li {
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 1.2rem;
 }
 
 article img {
-  max-width: 100%;
-  margin: 0 auto;
-  display: block;
+    max-height: 80vh;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
 }
 
 hr {
-  border: none;
-  margin: 1.5rem 0 1rem 0;
-  text-align: center;
+    border: none;
+    margin: 1.5rem 0 1rem 0;
+    text-align: center;
 }
 
 hr::after {
-  content: "***";
-  display: inline-block;
-  position: relative;
-  font-size: 1.6rem;
-  line-height: 1;
+    content: "***";
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1;
 }
 
 .dark-toggle {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  padding: 0.3rem;
-  border-radius: 3px;
-  transition: all 0.3s;
-  cursor: pointer;
-  color: rgb(118, 118, 118);
-  background-color: white;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 1px solid rgb(118, 118, 118);
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    padding: 0.3rem;
+    border-radius: 3px;
+    transition: all 0.3s;
+    cursor: pointer;
+    color: rgb(118, 118, 118);
+    background-color: white;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid rgb(118, 118, 118);
 }
 
 .dark-toggle:hover {
-  color: rgb(153, 153, 153);
-  background-color: rgb(50, 50, 50);
+    color: rgb(153, 153, 153);
+    background-color: rgb(50, 50, 50);
 }
 
 body.dark .dark-toggle {
-  background-color: rgb(50, 50, 50);
+    background-color: rgb(50, 50, 50);
 }
 
 body.dark .dark-toggle:hover {
-  background: white;
-  color: #000;
+    background: white;
+    color: #000;
 }
