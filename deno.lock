@@ -6,8 +6,6 @@
       "jsr:@std/path@0.225.2": "jsr:@std/path@0.225.2",
       "npm:date-fns": "npm:date-fns@3.6.0",
       "npm:date-fns@3.6.0": "npm:date-fns@3.6.0",
-      "npm:lodash": "npm:lodash@4.17.21",
-      "npm:lodash@4.17.21": "npm:lodash@4.17.21",
       "npm:meta-marked": "npm:meta-marked@0.5.0",
       "npm:meta-marked@0.5.0": "npm:meta-marked@0.5.0",
       "npm:mustache": "npm:mustache@4.2.0",
@@ -46,10 +44,6 @@
           "esprima": "esprima@4.0.1"
         }
       },
-      "lodash@4.17.21": {
-        "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==",
-        "dependencies": {}
-      },
       "marked@0.8.2": {
         "integrity": "sha512-EGwzEeCcLniFX51DhTpmTom+dSA/MG/OBUDjnWtHbEnjAH180VzUeAw+oE4+Zv+CoYBWyRlYOTR0N8SO9R1PVw==",
         "dependencies": {}
@@ -76,7 +70,6 @@
     "dependencies": [
       "jsr:@std/path@0.225.2",
       "npm:date-fns@3.6.0",
-      "npm:lodash@4.17.21",
       "npm:meta-marked@0.5.0",
       "npm:mustache@4.2.0"
     ]

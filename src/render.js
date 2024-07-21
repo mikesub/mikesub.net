@@ -1,5 +1,4 @@
 import * as path from "@std/path";
-import _ from "lodash";
 import mustache from "mustache";
 import * as articles from "./articles.js";
 import * as feed from "./feed.js";
@@ -25,7 +24,9 @@ function render(template, context) {
   );
 }
 
-const sortedArticles = _.sortBy(articles.load(), "sortKey").reverse();
+const sortedArticles = [...articles.load()]
+  .sort((a, b) => a.sortKey - b.sortKey)
+  .reverse();
 
 export default {
   index: render("index", { items: sortedArticles }),

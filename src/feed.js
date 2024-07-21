@@ -1,14 +1,13 @@
-import _ from "npm:lodash";
 import config from "./config.js";
 
 function item({ title, path, body, feedDate }) {
-  return _.pickBy({
+  return {
     title: title,
     id: config.url + path,
     url: config.url + path,
     content_html: body,
     date_published: feedDate,
-  });
+  };
 }
 
 export function genFeed(items) {
