@@ -1,14 +1,13 @@
-import * as path from "@std/path";
 import mustache from "mustache";
 import * as articles from "./articles.js";
 import * as feed from "./feed.js";
 import config from "./config.js";
 
-const templatesDir = "templates";
+const templatesDir = "templates/";
 
 function loadTemplate(fileName) {
   return new TextDecoder("utf-8").decode(
-    Deno.readFileSync(path.join(templatesDir, `${fileName}.mustache`)),
+    Deno.readFileSync(`${templatesDir}${fileName}.mustache`),
   );
 }
 

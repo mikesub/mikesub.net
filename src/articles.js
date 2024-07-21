@@ -1,4 +1,3 @@
-import * as path from "@std/path";
 import marked from "meta-marked";
 import * as description from "./description.js";
 import config from "./config.js";
@@ -10,7 +9,7 @@ function addLeadingZero(number) {
 function parseArticle(fileEntry) {
   const parsed = marked(
     new TextDecoder("utf-8").decode(
-      Deno.readFileSync(path.join(config.articlesDir, fileEntry.name)),
+      Deno.readFileSync(`${config.articlesDir}${fileEntry.name}`),
     ),
   );
 

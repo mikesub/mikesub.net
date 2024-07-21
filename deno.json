@@ -1,6 +1,5 @@
 {
   "imports": {
-    "@std/path": "jsr:@std/path@0.225.2",
     "mustache": "npm:mustache@4.2.0",
     "meta-marked": "npm:meta-marked@0.5.0"
   },
