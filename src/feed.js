@@ -1,4 +1,4 @@
-import config from "./config.js";
+import config from "../config.js";
 
 function item({ title, path, body, feedDate }) {
   return {

@@ -1,7 +1,7 @@
 import mustache from "mustache";
 import * as articles from "./articles.js";
 import * as feed from "./feed.js";
-import config from "./config.js";
+import config from "../config.js";
 
 function loadTemplate(fileName) {
   return new TextDecoder("utf-8").decode(

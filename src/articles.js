@@ -1,6 +1,6 @@
 import marked from "meta-marked";
 import * as description from "./description.js";
-import config from "./config.js";
+import config from "../config.js";
 
 function addLeadingZero(number) {
   return number < 10 ? `0${number}` : String(number);

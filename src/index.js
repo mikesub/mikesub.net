@@ -1,5 +1,5 @@
 import render from "./render.js";
-import config from "./config.js";
+import config from "../config.js";
 
 Deno.writeFileSync(
   `${config.targetDir}rss.xml`,
