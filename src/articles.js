@@ -38,7 +38,9 @@ function parseArticle(fileEntry) {
   const tzHours = Math.floor(Math.abs(tzOffset) / 60);
   const tzMinutes = (tzOffset / 60 - Math.floor(tzOffset / 60)) * 60;
   const xx = `${tzSign}${addLeadingZero(tzHours)}${addLeadingZero(tzMinutes)}`; // -0800, +0530, +0000
-  const xxx = `${tzSign}${addLeadingZero(tzHours)}:${addLeadingZero(tzMinutes)}`; // -08:00, +05:30, +00:00
+  const xxx = `${tzSign}${addLeadingZero(tzHours)}:${
+    addLeadingZero(tzMinutes)
+  }`; // -08:00, +05:30, +00:00
 
   return {
     path: `${fileEntry.name.replace(/\..+$/, "")}.html`,

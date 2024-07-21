@@ -18,5 +18,5 @@ render.articles.forEach((article) =>
   Deno.writeFileSync(
     config.targetDir + article.path,
     new TextEncoder().encode(article.body),
-  ),
+  )
 );
