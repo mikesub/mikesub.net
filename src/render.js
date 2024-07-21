@@ -4,9 +4,7 @@ import * as feed from "./feed.js";
 import config from "../config.js";
 
 function loadTemplate(fileName) {
-  return new TextDecoder("utf-8").decode(
-    Deno.readFileSync(`${config.templatesDir}${fileName}.mustache`),
-  );
+  return Deno.readTextFileSync(`${config.templatesDir}${fileName}.mustache`);
 }
 
 const partials = {

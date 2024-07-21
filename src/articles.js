@@ -8,9 +8,7 @@ function addLeadingZero(number) {
 
 function parseArticle(fileEntry) {
   const parsed = marked(
-    new TextDecoder("utf-8").decode(
-      Deno.readFileSync(`${config.articlesDir}${fileEntry.name}`),
-    ),
+    Deno.readTextFileSync(`${config.articlesDir}${fileEntry.name}`),
   );
 
   const yearUTC = Number(parsed.meta.date.substring(0, 4));

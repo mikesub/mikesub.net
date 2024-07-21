@@ -1,22 +1,10 @@
 import render from "./render.js";
 import config from "../config.js";
 
-Deno.writeFileSync(
-  `${config.targetDir}rss.xml`,
-  new TextEncoder().encode(render.rss),
-);
-Deno.writeFileSync(
-  `${config.targetDir}index.html`,
-  new TextEncoder().encode(render.index),
-);
-Deno.writeFileSync(
-  `${config.targetDir}feed.json`,
-  new TextEncoder().encode(render.feed),
-);
+Deno.writeTextFileSync(`${config.targetDir}rss.xml`, render.rss);
+Deno.writeTextFileSync(`${config.targetDir}index.html`, render.index);
+Deno.writeTextFileSync(`${config.targetDir}feed.json`, render.feed);
 
 render.articles.forEach((article) =>
-  Deno.writeFileSync(
-    config.targetDir + article.path,
-    new TextEncoder().encode(article.body),
-  )
+  Deno.writeTextFileSync(config.targetDir + article.path, article.body)
 );
