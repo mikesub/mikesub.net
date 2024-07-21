@@ -19,7 +19,8 @@ function render(template, context) {
   );
 }
 
-const sortedArticles = [...articles.load()]
+const sortedArticles = articles
+  .load()
   .sort((a, b) => a.sortKey - b.sortKey)
   .reverse();
 
