@@ -4,8 +4,6 @@
     "specifiers": {
       "jsr:@std/assert@^0.226.0": "jsr:@std/assert@0.226.0",
       "jsr:@std/path@0.225.2": "jsr:@std/path@0.225.2",
-      "npm:date-fns": "npm:date-fns@3.6.0",
-      "npm:date-fns@3.6.0": "npm:date-fns@3.6.0",
       "npm:meta-marked": "npm:meta-marked@0.5.0",
       "npm:meta-marked@0.5.0": "npm:meta-marked@0.5.0",
       "npm:mustache": "npm:mustache@4.2.0",
@@ -28,10 +26,6 @@
         "dependencies": {
           "sprintf-js": "sprintf-js@1.0.3"
         }
-      },
-      "date-fns@3.6.0": {
-        "integrity": "sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==",
-        "dependencies": {}
       },
       "esprima@4.0.1": {
         "integrity": "sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==",
@@ -69,7 +63,6 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/path@0.225.2",
-      "npm:date-fns@3.6.0",
       "npm:meta-marked@0.5.0",
       "npm:mustache@4.2.0"
     ]
