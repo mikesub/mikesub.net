@@ -3,11 +3,9 @@ import * as articles from "./articles.js";
 import * as feed from "./feed.js";
 import config from "./config.js";
 
-const templatesDir = "templates/";
-
 function loadTemplate(fileName) {
   return new TextDecoder("utf-8").decode(
-    Deno.readFileSync(`${templatesDir}${fileName}.mustache`),
+    Deno.readFileSync(`${config.templatesDir}${fileName}.mustache`),
   );
 }
 
