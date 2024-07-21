@@ -1,9 +1,10 @@
 import mustache from "mustache";
-import * as articles from "./articles.js";
-import * as feed from "./feed.js";
-import config from "../config.js";
+import * as articles from "./articles.ts";
+import * as feed from "./feed.ts";
+import config from "../config.json" with { type: "json" };
+import type { Article } from "./types.ts";
 
-function loadTemplate(fileName) {
+function loadTemplate(fileName: string) {
   return Deno.readTextFileSync(`${config.templatesDir}${fileName}.mustache`);
 }
 
@@ -11,7 +12,12 @@ const partials = {
   _darkmode: loadTemplate("_darkmode"),
 };
 
-function render(template, context) {
+type Context = {
+  items?: Article[];
+  item?: Article;
+};
+
+function render(template: string, context: Context) {
   return mustache.render(
     loadTemplate(template),
     { config, ...context },

@@ -1,12 +1,13 @@
 import marked from "meta-marked";
-import * as description from "./description.js";
-import config from "../config.js";
+import * as description from "./description.ts";
+import config from "../config.json" with { type: "json" };
+import type { Article } from "./types.ts";
 
-function addLeadingZero(number) {
+function addLeadingZero(number: number) {
   return number < 10 ? `0${number}` : String(number);
 }
 
-function parseArticle(fileEntry) {
+function parseArticle(fileEntry: Deno.DirEntry): Article {
   const parsed = marked(
     Deno.readTextFileSync(`${config.articlesDir}${fileEntry.name}`),
   );
@@ -45,7 +46,7 @@ function parseArticle(fileEntry) {
     title: parsed.meta.title,
     date: date,
     isThisYear: isDateThisYear,
-    sortKey: `${yyyy}${LL}${dd}${HH}${mm}`,
+    sortKey: Number(`${yyyy}${LL}${dd}${HH}${mm}`),
     machineDate: `${yyyy}-${LL}-${dd}`,
     humanDate: `${LLLL} ${d}${isDateThisYear ? "" : `, ${yyyy}`}`,
     rssDate: `${dd} ${LLL} ${yyyy} ${HH}:${mm} ${xx}`,
