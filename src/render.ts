@@ -8,10 +8,6 @@ function loadTemplate(fileName: string) {
   return Deno.readTextFileSync(`${config.templatesDir}${fileName}.mustache`);
 }
 
-const partials = {
-  _darkmode: loadTemplate("_darkmode"),
-};
-
 type Context = {
   items?: Article[];
   item?: Article;
@@ -20,8 +16,7 @@ type Context = {
 function render(template: string, context: Context) {
   return mustache.render(
     loadTemplate(template),
-    { config, ...context },
-    partials,
+    { config, ...context }
   );
 }
 

@@ -5,6 +5,7 @@
   },
   "tasks": {
     "build": "deno run -A src/index.ts"
+    "run": "deno task build && python3 -m http.server -d docs"
   },
   "fmt": {
     "include": ["src/"]
