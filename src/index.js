@@ -1,4 +1,4 @@
-import render from "./render.ts";
+import render from "./render.js";
 import config from "../config.json" with { type: "json" };
 
 Deno.writeTextFileSync(`${config.targetDir}rss.xml`, render.rss);

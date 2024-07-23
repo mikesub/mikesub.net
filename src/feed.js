@@ -1,7 +1,6 @@
 import config from "../config.json" with { type: "json" };
-import type { Article } from "./types.ts";
 
-function item({ title, path, body, feedDate }: Article) {
+function item({ title, path, body, feedDate }) {
   return {
     title: title,
     id: config.url + path,
@@ -11,7 +10,7 @@ function item({ title, path, body, feedDate }: Article) {
   };
 }
 
-export function genFeed(items: Article[]) {
+export function genFeed(items) {
   return JSON.stringify(
     {
       version: "https://jsonfeed.org/version/1",

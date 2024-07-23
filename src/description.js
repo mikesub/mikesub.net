@@ -1,12 +1,12 @@
-function stripTags(html: string) {
+function stripTags(html) {
   return html.replace(/<\/?[^>]+>/g, "");
 }
 
-function stripNewLines(text: string) {
+function stripNewLines(text) {
   return text.replace(/\n/g, " ");
 }
 
-export function truncate(html: string) {
+export function truncate(html) {
   const maxLength = 200;
   let str = stripNewLines(stripTags(html)).trim();
   if (str.length <= maxLength) return str;

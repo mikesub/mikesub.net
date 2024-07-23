@@ -1,19 +1,13 @@
-import mustache from "mustache";
-import * as articles from "./articles.ts";
-import * as feed from "./feed.ts";
+import mustache from "npm:mustache@4.2.0";
+import * as articles from "./articles.js";
+import * as feed from "./feed.js";
 import config from "../config.json" with { type: "json" };
-import type { Article } from "./types.ts";
 
-function loadTemplate(fileName: string) {
+function loadTemplate(fileName) {
   return Deno.readTextFileSync(`${config.templatesDir}${fileName}.mustache`);
 }
 
-type Context = {
-  items?: Article[];
-  item?: Article;
-};
-
-function render(template: string, context: Context) {
+function render(template, context) {
   return mustache.render(
     loadTemplate(template),
     { config, ...context }

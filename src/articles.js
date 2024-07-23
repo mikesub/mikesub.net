@@ -1,13 +1,12 @@
-import marked from "meta-marked";
-import * as description from "./description.ts";
+import marked from "npm:meta-marked@0.5.0";
+import * as description from "./description.js";
 import config from "../config.json" with { type: "json" };
-import type { Article } from "./types.ts";
 
-function addLeadingZero(number: number) {
+function addLeadingZero(number) {
   return number < 10 ? `0${number}` : String(number);
 }
 
-function parseArticle(fileEntry: Deno.DirEntry): Article {
+function parseArticle(fileEntry) {
   const parsed = marked(
     Deno.readTextFileSync(`${config.articlesDir}${fileEntry.name}`),
   );

@@ -2,9 +2,7 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "npm:meta-marked": "npm:meta-marked@0.5.0",
       "npm:meta-marked@0.5.0": "npm:meta-marked@0.5.0",
-      "npm:mustache": "npm:mustache@4.2.0",
       "npm:mustache@4.2.0": "npm:mustache@4.2.0"
     },
     "npm": {
@@ -46,11 +44,5 @@
       }
     }
   },
-  "remote": {},
-  "workspace": {
-    "dependencies": [
-      "npm:meta-marked@0.5.0",
-      "npm:mustache@4.2.0"
-    ]
-  }
+  "remote": {}
 }
