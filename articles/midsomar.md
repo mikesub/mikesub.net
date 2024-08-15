@@ -12,8 +12,8 @@ publish this for others to use, it could be as simple as just cloning a reposito
 No need for package managers or anything else. You just clone, configure, add content, it's all gitignored. You only need to pull updates 
 occasionally. I love this simplicity, although I'm not sure if I'll actually publish it.
 
-The same simplicity attracted me in Pocketbase.io. It’s a Go executable with embedded WAL-enabled SQLite, providing REST APIs out of the box, 
-along with a pretty nice admin dashboard interface. If you need to extend it, you just add properly named files next to it. To deploy, 
+The same simplicity attracted me in [PocketBase](https://pocketbase.io/). It’s a Go executable with embedded WAL-enabled SQLite, providing REST APIs out of the box, 
+along with a pretty nice admin dashboard interface. A backend in 1 file. If you need to extend it, you just add properly named files next to it. To deploy, 
 you simply copy this one file to your server, and you have everything you need for a small-scale web service backend. No Docker, no pods.
 
 Other interesting links I stumbled upon:

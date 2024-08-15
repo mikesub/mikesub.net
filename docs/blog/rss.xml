@@ -14,8 +14,8 @@ it Deno for the rest of the tooling. There&amp;#39;s nothing particularly intere
 publish this for others to use, it could be as simple as just cloning a repository and periodically rebasing it on my remote origin. 
 No need for package managers or anything else. You just clone, configure, add content, it&amp;#39;s all gitignored. You only need to pull updates 
 occasionally. I love this simplicity, although I&amp;#39;m not sure if I&amp;#39;ll actually publish it.&lt;&#x2F;p&gt;
-&lt;p&gt;The same simplicity attracted me in Pocketbase.io. It’s a Go executable with embedded WAL-enabled SQLite, providing REST APIs out of the box, 
-along with a pretty nice admin dashboard interface. If you need to extend it, you just add properly named files next to it. To deploy, 
+&lt;p&gt;The same simplicity attracted me in &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;pocketbase.io&#x2F;&quot;&gt;PocketBase&lt;&#x2F;a&gt;. It’s a Go executable with embedded WAL-enabled SQLite, providing REST APIs out of the box, 
+along with a pretty nice admin dashboard interface. A backend in 1 file. If you need to extend it, you just add properly named files next to it. To deploy, 
 you simply copy this one file to your server, and you have everything you need for a small-scale web service backend. No Docker, no pods.&lt;&#x2F;p&gt;
 &lt;p&gt;Other interesting links I stumbled upon:&lt;&#x2F;p&gt;
 &lt;ul&gt;
