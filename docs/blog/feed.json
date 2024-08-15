@@ -5,6 +5,13 @@
  "feed_url": "http://mikesub.net/blog/feed.json",
  "items": [
   {
+   "title": "Midsummer 2024",
+   "id": "http://mikesub.net/blog/midsomar.html",
+   "url": "http://mikesub.net/blog/midsomar.html",
+   "content_html": "<p><img src=\"https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/harvest.jpg\" alt=\"\"></p>\n<p>I decided to extract a blog engine from my blog repository, even though nobody asked for it. While doing so, I dropped TypeScript but moved \nit Deno for the rest of the tooling. There&#39;s nothing particularly interesting about this, except for one thing I noticed: If I decide to \npublish this for others to use, it could be as simple as just cloning a repository and periodically rebasing it on my remote origin. \nNo need for package managers or anything else. You just clone, configure, add content, it&#39;s all gitignored. You only need to pull updates \noccasionally. I love this simplicity, although I&#39;m not sure if I&#39;ll actually publish it.</p>\n<p>The same simplicity attracted me in Pocketbase.io. It’s a Go executable with embedded WAL-enabled SQLite, providing REST APIs out of the box, \nalong with a pretty nice admin dashboard interface. If you need to extend it, you just add properly named files next to it. To deploy, \nyou simply copy this one file to your server, and you have everything you need for a small-scale web service backend. No Docker, no pods.</p>\n<p>Other interesting links I stumbled upon:</p>\n<ul>\n<li><a href=\"https://www.keithcirkel.co.uk/css-classes-considered-harmful/\">CSS Classes considered harmful</a></li>\n<li><a href=\"https://www.404media.co/email/4650b997-7cc3-4578-834c-7e663ed3d516/\">Google&#39;s Exclusive Reddit Access</a></li>\n<li><a href=\"https://alttextselfies.net/selfies/\">Alt Text Selfies</a></li>\n<li><a href=\"https://playhtml.fun/fridge.html\">Fridge Poetry</a></li>\n</ul>\n<p>Last two come from <a href=\"https://tinyawards.net/\">Tiny Awards</a>. A wonderful thing on its own.</p>\n<p>Music:</p>\n<ul>\n<li><a href=\"https://music.youtube.com/watch?v=bEBV7hNh3MM&amp;si=ZeBQdALv2BEhuy2G\">Leonid Fyodorov — Mir</a> </li>\n<li><a href=\"https://music.youtube.com/watch?v=37kjXWxGQGU&amp;si=PwZ6zCHvPBSCoV2E\">The Crazy World Of Arthur Brown</a></li>\n</ul>\n<p>See you in Fall!</p>\n",
+   "date_published": "2024-08-15T23:00:00+02:00"
+  },
+  {
    "title": "A blog entry",
    "id": "http://mikesub.net/blog/2407.html",
    "url": "http://mikesub.net/blog/2407.html",

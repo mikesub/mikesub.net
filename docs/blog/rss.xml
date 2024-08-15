@@ -5,6 +5,36 @@
         <link>http://mikesub.net/blog/</link>
         <description>Mike Saburenkov</description>
             <item>
+                <title>Midsummer 2024</title>
+                <guid isPermalink="true">http://mikesub.net/blog/midsomar.html</guid>
+                <link>http://mikesub.net/blog/midsomar.html</link>
+                <description>&lt;p&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;media.githubusercontent.com&#x2F;media&#x2F;mikesub&#x2F;mikesub.net&#x2F;master&#x2F;photos&#x2F;harvest.jpg&quot; alt&#x3D;&quot;&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I decided to extract a blog engine from my blog repository, even though nobody asked for it. While doing so, I dropped TypeScript but moved 
+it Deno for the rest of the tooling. There&amp;#39;s nothing particularly interesting about this, except for one thing I noticed: If I decide to 
+publish this for others to use, it could be as simple as just cloning a repository and periodically rebasing it on my remote origin. 
+No need for package managers or anything else. You just clone, configure, add content, it&amp;#39;s all gitignored. You only need to pull updates 
+occasionally. I love this simplicity, although I&amp;#39;m not sure if I&amp;#39;ll actually publish it.&lt;&#x2F;p&gt;
+&lt;p&gt;The same simplicity attracted me in Pocketbase.io. It’s a Go executable with embedded WAL-enabled SQLite, providing REST APIs out of the box, 
+along with a pretty nice admin dashboard interface. If you need to extend it, you just add properly named files next to it. To deploy, 
+you simply copy this one file to your server, and you have everything you need for a small-scale web service backend. No Docker, no pods.&lt;&#x2F;p&gt;
+&lt;p&gt;Other interesting links I stumbled upon:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;www.keithcirkel.co.uk&#x2F;css-classes-considered-harmful&#x2F;&quot;&gt;CSS Classes considered harmful&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;www.404media.co&#x2F;email&#x2F;4650b997-7cc3-4578-834c-7e663ed3d516&#x2F;&quot;&gt;Google&amp;#39;s Exclusive Reddit Access&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;alttextselfies.net&#x2F;selfies&#x2F;&quot;&gt;Alt Text Selfies&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;playhtml.fun&#x2F;fridge.html&quot;&gt;Fridge Poetry&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Last two come from &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;tinyawards.net&#x2F;&quot;&gt;Tiny Awards&lt;&#x2F;a&gt;. A wonderful thing on its own.&lt;&#x2F;p&gt;
+&lt;p&gt;Music:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;music.youtube.com&#x2F;watch?v&#x3D;bEBV7hNh3MM&amp;amp;si&#x3D;ZeBQdALv2BEhuy2G&quot;&gt;Leonid Fyodorov — Mir&lt;&#x2F;a&gt; &lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;music.youtube.com&#x2F;watch?v&#x3D;37kjXWxGQGU&amp;amp;si&#x3D;PwZ6zCHvPBSCoV2E&quot;&gt;The Crazy World Of Arthur Brown&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;See you in Fall!&lt;&#x2F;p&gt;
+</description>
+                <pubDate>15 Aug 2024 23:00 +0200</pubDate>
+            </item>
+            <item>
                 <title>A blog entry</title>
                 <guid isPermalink="true">http://mikesub.net/blog/2407.html</guid>
                 <link>http://mikesub.net/blog/2407.html</link>
