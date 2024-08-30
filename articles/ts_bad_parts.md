@@ -114,5 +114,5 @@ Alright. The path for more positive things looks much clear now. If you have any
 
 This article started a series on TypeScript. You can read them in any order as they aren't really connected apart from covering the same topic:
 
-- [Types and runtime checks](types_runtime_checks.html)
-- [Types. String semantics](types_string_semantics.html)
+- [Types and runtime checks](https://mikesub.net/blog/types_runtime_checks.html)
+- [Types. String semantics](https://mikesub.net/blog/types_string_semantics.html)

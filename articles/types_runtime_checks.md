@@ -3,7 +3,7 @@ title: Types and runtime checks
 date: 2019-03-01 17:00
 ---
 
-That's the second article in a series on TypeScript started by ‘[TypeScript. Bad Parts](ts_bad_parts.html)’. You can read them in any order as they aren't really connected apart from covering the same topic. But if you can't decide, make it [chronologically](ts_bad_parts.html).
+That's the second article in a series on TypeScript started by ‘[TypeScript. Bad Parts](https://mikesub.net/blog/ts_bad_parts.html)’. You can read them in any order as they aren't really connected apart from covering the same topic. But if you can't decide, make it [chronologically](https://mikesub.net/blog/ts_bad_parts.html).
 
 So what do types bring to JS? They fix some bad parts of JS, but that's a byproduct. Mainly they add some semantics to code which helps editors and people to get more sense what it's doing, how it should work and also spot some things which can be optimised. Let me show-case that with several examples.
 
@@ -61,5 +61,5 @@ Instead of providing a default value and throwing an error, we state that the ar
 
 That's the second article in a series on TypeScript. You can read them in any order as they aren't really connected apart from covering the same topic:
 
-- [TypeScript. Bad Parts](ts_bad_parts.html)
-- [Types. String semantics](types_string_semantics.html)
+- [TypeScript. Bad Parts](https://mikesub.net/blog/ts_bad_parts.html)
+- [Types. String semantics](https://mikesub.net/blog/types_string_semantics.html)

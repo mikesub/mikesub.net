@@ -1,18 +1,10 @@
-import mustache from "npm:mustache@4.2.0";
 import * as articles from "./articles.js";
 import * as feed from "./feed.js";
 import config from "../config.json" with { type: "json" };
 
-function loadTemplate(fileName) {
-  return Deno.readTextFileSync(`${config.templatesDir}${fileName}.mustache`);
-}
-
-function render(template, context) {
-  return mustache.render(
-    loadTemplate(template),
-    { config, ...context }
-  );
-}
+import articleTemplate from './template-article.js';
+import indexTemplate from './template-index.js';
+import rssTemplate from './template-rss.js';
 
 const sortedArticles = articles
   .load()
@@ -20,11 +12,11 @@ const sortedArticles = articles
   .reverse();
 
 export default {
-  index: render("index", { items: sortedArticles }),
-  rss: render("rss", { items: sortedArticles }),
+  index: indexTemplate({ config, items: sortedArticles }),
+  rss: rssTemplate({config, items: sortedArticles }),
   feed: feed.genFeed(sortedArticles),
   articles: sortedArticles.map((article) => ({
     path: article.path,
-    body: render("article", { item: article }),
+    body: articleTemplate({config, item: article }),
   })),
 };

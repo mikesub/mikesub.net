@@ -3,7 +3,7 @@ title: Types. String semantics
 date: 2019-03-06 09:08
 ---
 
-That's the third article in a series on TypeScript started by ‘[TypeScript. Bad Parts](ts_bad_parts.html)’. You can read them in any order as they aren't really connected apart from covering the same topic. But if you can't decide, make it [chronologically](ts_bad_parts.html).
+That's the third article in a series on TypeScript started by ‘[TypeScript. Bad Parts](https://mikesub.net/blog/ts_bad_parts.html)’. You can read them in any order as they aren't really connected apart from covering the same topic. But if you can't decide, make it [chronologically](https://mikesub.net/blog/ts_bad_parts.html).
 
 This time I'd like to show how you can leverage types to simplify your runtime code.
 
@@ -58,5 +58,5 @@ Another take on that (and actually the original premise of that note) is that I 
 
 That's the third article in a series on TypeScript. You can read them in any order as they aren't really connected apart from covering the same topic:
 
-- [TypeScript. Bad Parts](ts_bad_parts.html)
-- [Types and runtime checks](types_runtime_checks.html)
+- [TypeScript. Bad Parts](https://mikesub.net/blog/ts_bad_parts.html)
+- [Types and runtime checks](https://mikesub.net/blog/types_runtime_checks.html)
