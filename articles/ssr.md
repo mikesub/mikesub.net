@@ -9,7 +9,7 @@ But do you need all that? Do you need to add SSR to your React (insert any other
 
 To show a ‘loading’ screen and do everything client-side would be much easier. Yes, it would drastically increase first page load time but if you deal with application-type website, sometimes it's acceptable. To mitigate drawbacks, there are few techniques to hack the perception of this loading time. For example, you can show placeholders for content, preparing users for actual things to appear.
 
-![Content placeholder](images/content-placeholder.png)
+![Content placeholder](https://mikesub.net/blog/images/content-placeholder.png)
 
 BUT HEY NO, not acceptable. It can be done better. We have service workers, critical path render techniques, all those are at our disposal. And nothing's wrong with using node.js.
 
@@ -17,7 +17,7 @@ But then there is a thing. The markup you'd prepare on server will be static (si
 
 So it's possible that ‘loading’ screen, fully functional, yet empty is not that bad if you can't do the other option right. To show perfectly-looking tabs which are not clickable is just ignorant.
 
-![NS wifi splash screen](images/ns-wifi.png)
+![NS wifi splash screen](https://mikesub.net/blog/images/ns-wifi.png)
 
 That's a splash screen for wifi on Dutch railways. The connection is often flaky as there are many devices online and cell coverage is also spotty sometimes. And so I see a page, but can't switch to a tab I need. And yes, probably it doesn't even use React, it's actually an illustration to already forgotten ‘Unobtrusive JS‘ thing, but it's the same issue.
 
