@@ -1,10 +1,12 @@
 function escapeHTML(htmlString) {
     return htmlString
+        .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
-        .replace(/&/g, '&amp;')
         .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;')
+        .replace(/'/g, '&apos;')
+        
+        .replace(/&/g, '&amp;')
 }
 
 export default function({items, config}) {
