@@ -9,26 +9,26 @@
                 <title>Welcome to the fall</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/thefall.html</guid>
                 <link>https://mikesub.net/blog/thefall.html</link>
-                <description>&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/objects.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;One thing that surprised me when I moved to the Netherlands was the difference in how the seasons are observed.
+                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/objects.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;One thing that surprised me when I moved to the Netherlands was the difference in how the seasons are observed.
 It turns out that there are at least two ways: astronomical and calendar-based. I was used to calendar seasons, where
-each season has three months, starting on the first and ending on the last day of the respective months. While some countries use astronomical approach where it&amp;amp;#39;s defined by solstices and equinoxes.
-So, for me, it&amp;amp;#39;s already autumn, while for you, it might still be summer. Lucky you.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;The first correspondence has arrived! I didn&amp;amp;#39;t expect to get any response to my invitation for letters exchange but it worked. All this blogging is not in vain. Phew. (and EPS FTW!) Actually, at some point in the past, I wondered if anybody was reading these notes. I don&amp;amp;#39;t have any analytics, and I host it via GitHub Pages so I don&amp;amp;#39;t even have access logs or anything. But it seems like someone is out there. Nice. Speaking of access logs, I stumbled upon Caddy, a webserver in Go. It might be slower than nginx, but at least its configs don&amp;amp;#39;t make eyes bleed. That&amp;amp;#39;s worth something, as we all&amp;amp;#39;ve just developed a bit of Stockholm syndrome.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Caddy was mentioned in a episode of Software Unscripted, where they touched upon why functional languages are less popular than imperative ones. There are many valid reasons, but one interesting observation was that functional languages make easy things a bit harder, while making hard things easier. And most people don&amp;amp;#39;t care about the hard stuff. I totally agree that they make hard things made easier, but I&amp;amp;#39;m not so sure about easy things becoming harder. Are while/for loops really easier to write than a recursion? Who wouldn&amp;amp;#39;t like more uniform, predictable and easier syntax? Who would, in the right mind, avoid immutability? To me, it all just feels like not much more than a mix of bad luck, timing, marketing. And people are known for using inferior tools and that&amp;amp;#39;s totally fine. Look at Tailwind CSS.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Speaking of which and the broader frontend, I got immersed in it at the beginning, didn&amp;amp;#39;t know anything outside and thought everything was fine as it could and should be. Then I learned about other approaches, saw how things are handled in other languages and understood the point that frontend is quite a mess. Then I stepped away from coding, gained some distanced and my opinion transformed into more humble one — of course, there are issues but nothing critical, it&amp;amp;#39;s just a matter of taste and preference, really. Recently, though, I got my hands back on coding and took a shower of multi-gigabytes of node_modules, complexities of compilation tools, a zoo of bundlers, multiple standards of, hey, importing modules. DHH, talking about this year being the year of Linux on the desktop, mentioned that &amp;amp;quot;if you&amp;amp;#39;re able to figure out how to setup a modern build pipeline for JavaScript or even correctly configure IAM for AWS, you already have all the stamina you need for the Linux journey. Think about giving it another try. Not because it is easy, but because it is worth it&amp;amp;quot;. So, what is figuring out a modern JS build pipeline really worth for?&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Links:&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/nodejs/loaders/issues/217&amp;quot;&amp;gt;TypeScript support in Node.js&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.instantdb.com/&amp;quot;&amp;gt;InstantDB&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://caddyserver.com/&amp;quot;&amp;gt;Caddy&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://pod.link/1602572955&amp;quot;&amp;gt;Software Unscripted podcast&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://world.hey.com/dhh/&amp;quot;&amp;gt;DHH&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;p&amp;gt;Music:&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://nickcave-badseeds.ffm.to/wild-god&amp;quot;&amp;gt;Nick Cave &amp;amp;amp; The Bad Seeds — Wild God&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
+each season has three months, starting on the first and ending on the last day of the respective months. While some countries use astronomical approach where it&amp;#39;s defined by solstices and equinoxes.
+So, for me, it&amp;#39;s already autumn, while for you, it might still be summer. Lucky you.&lt;/p&gt;
+&lt;p&gt;The first correspondence has arrived! I didn&amp;#39;t expect to get any response to my invitation for letters exchange but it worked. All this blogging is not in vain. Phew. (and EPS FTW!) Actually, at some point in the past, I wondered if anybody was reading these notes. I don&amp;#39;t have any analytics, and I host it via GitHub Pages so I don&amp;#39;t even have access logs or anything. But it seems like someone is out there. Nice. Speaking of access logs, I stumbled upon Caddy, a webserver in Go. It might be slower than nginx, but at least its configs don&amp;#39;t make eyes bleed. That&amp;#39;s worth something, as we all&amp;#39;ve just developed a bit of Stockholm syndrome.&lt;/p&gt;
+&lt;p&gt;Caddy was mentioned in a episode of Software Unscripted, where they touched upon why functional languages are less popular than imperative ones. There are many valid reasons, but one interesting observation was that functional languages make easy things a bit harder, while making hard things easier. And most people don&amp;#39;t care about the hard stuff. I totally agree that they make hard things made easier, but I&amp;#39;m not so sure about easy things becoming harder. Are while/for loops really easier to write than a recursion? Who wouldn&amp;#39;t like more uniform, predictable and easier syntax? Who would, in the right mind, avoid immutability? To me, it all just feels like not much more than a mix of bad luck, timing, marketing. And people are known for using inferior tools and that&amp;#39;s totally fine. Look at Tailwind CSS.&lt;/p&gt;
+&lt;p&gt;Speaking of which and the broader frontend, I got immersed in it at the beginning, didn&amp;#39;t know anything outside and thought everything was fine as it could and should be. Then I learned about other approaches, saw how things are handled in other languages and understood the point that frontend is quite a mess. Then I stepped away from coding, gained some distanced and my opinion transformed into more humble one — of course, there are issues but nothing critical, it&amp;#39;s just a matter of taste and preference, really. Recently, though, I got my hands back on coding and took a shower of multi-gigabytes of node_modules, complexities of compilation tools, a zoo of bundlers, multiple standards of, hey, importing modules. DHH, talking about this year being the year of Linux on the desktop, mentioned that &amp;quot;if you&amp;#39;re able to figure out how to setup a modern build pipeline for JavaScript or even correctly configure IAM for AWS, you already have all the stamina you need for the Linux journey. Think about giving it another try. Not because it is easy, but because it is worth it&amp;quot;. So, what is figuring out a modern JS build pipeline really worth for?&lt;/p&gt;
+&lt;p&gt;Links:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nodejs/loaders/issues/217&quot;&gt;TypeScript support in Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.instantdb.com/&quot;&gt;InstantDB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://caddyserver.com/&quot;&gt;Caddy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pod.link/1602572955&quot;&gt;Software Unscripted podcast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://world.hey.com/dhh/&quot;&gt;DHH&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Music:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://nickcave-badseeds.ffm.to/wild-god&quot;&gt;Nick Cave &amp;amp; The Bad Seeds — Wild God&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
                 <pubDate>10 Sep 2024 17:00 +0200</pubDate>
             </item>
@@ -36,29 +36,29 @@ So, for me, it&amp;amp;#39;s already autumn, while for you, it might still be su
                 <title>Midsummer 2024</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/midsomar.html</guid>
                 <link>https://mikesub.net/blog/midsomar.html</link>
-                <description>&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/harvest.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;I decided to extract a blog engine from my blog repository, even though nobody asked for it. While doing so, I dropped TypeScript but moved 
-it Deno for the rest of the tooling. There&amp;amp;#39;s nothing particularly interesting about this, except for one thing I noticed: If I decide to 
+                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/harvest.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I decided to extract a blog engine from my blog repository, even though nobody asked for it. While doing so, I dropped TypeScript but moved 
+it Deno for the rest of the tooling. There&amp;#39;s nothing particularly interesting about this, except for one thing I noticed: If I decide to 
 publish this for others to use, it could be as simple as just cloning a repository and periodically rebasing it on my remote origin. 
-No need for package managers or anything else. You just clone, configure, add content, it&amp;amp;#39;s all gitignored. You only need to pull updates 
-occasionally. I love this simplicity, although I&amp;amp;#39;m not sure if I&amp;amp;#39;ll actually publish it.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;The same simplicity attracted me in &amp;lt;a href=&amp;quot;https://pocketbase.io/&amp;quot;&amp;gt;PocketBase&amp;lt;/a&amp;gt;. It’s a Go executable with embedded WAL-enabled SQLite, providing REST APIs out of the box, 
+No need for package managers or anything else. You just clone, configure, add content, it&amp;#39;s all gitignored. You only need to pull updates 
+occasionally. I love this simplicity, although I&amp;#39;m not sure if I&amp;#39;ll actually publish it.&lt;/p&gt;
+&lt;p&gt;The same simplicity attracted me in &lt;a href=&quot;https://pocketbase.io/&quot;&gt;PocketBase&lt;/a&gt;. It’s a Go executable with embedded WAL-enabled SQLite, providing REST APIs out of the box, 
 along with a pretty nice admin dashboard interface. A backend in 1 file. If you need to extend it, you just add properly named files next to it. To deploy, 
-you simply copy this one file to your server, and you have everything you need for a small-scale web service backend. No Docker, no pods.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Other interesting links I stumbled upon:&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.keithcirkel.co.uk/css-classes-considered-harmful/&amp;quot;&amp;gt;CSS Classes considered harmful&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.404media.co/email/4650b997-7cc3-4578-834c-7e663ed3d516/&amp;quot;&amp;gt;Google&amp;amp;#39;s Exclusive Reddit Access&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://alttextselfies.net/selfies/&amp;quot;&amp;gt;Alt Text Selfies&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://playhtml.fun/fridge.html&amp;quot;&amp;gt;Fridge Poetry&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;p&amp;gt;Last two come from &amp;lt;a href=&amp;quot;https://tinyawards.net/&amp;quot;&amp;gt;Tiny Awards&amp;lt;/a&amp;gt;. A wonderful thing on its own.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Music:&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://music.youtube.com/watch?v=bEBV7hNh3MM&amp;amp;amp;si=ZeBQdALv2BEhuy2G&amp;quot;&amp;gt;Leonid Fyodorov — Mir&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://music.youtube.com/watch?v=37kjXWxGQGU&amp;amp;amp;si=PwZ6zCHvPBSCoV2E&amp;quot;&amp;gt;The Crazy World Of Arthur Brown&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;p&amp;gt;See you in Fall!&amp;lt;/p&amp;gt;
+you simply copy this one file to your server, and you have everything you need for a small-scale web service backend. No Docker, no pods.&lt;/p&gt;
+&lt;p&gt;Other interesting links I stumbled upon:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.keithcirkel.co.uk/css-classes-considered-harmful/&quot;&gt;CSS Classes considered harmful&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.404media.co/email/4650b997-7cc3-4578-834c-7e663ed3d516/&quot;&gt;Google&amp;#39;s Exclusive Reddit Access&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://alttextselfies.net/selfies/&quot;&gt;Alt Text Selfies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://playhtml.fun/fridge.html&quot;&gt;Fridge Poetry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Last two come from &lt;a href=&quot;https://tinyawards.net/&quot;&gt;Tiny Awards&lt;/a&gt;. A wonderful thing on its own.&lt;/p&gt;
+&lt;p&gt;Music:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://music.youtube.com/watch?v=bEBV7hNh3MM&amp;amp;si=ZeBQdALv2BEhuy2G&quot;&gt;Leonid Fyodorov — Mir&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://music.youtube.com/watch?v=37kjXWxGQGU&amp;amp;si=PwZ6zCHvPBSCoV2E&quot;&gt;The Crazy World Of Arthur Brown&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See you in Fall!&lt;/p&gt;
 </description>
                 <pubDate>15 Aug 2024 23:00 +0200</pubDate>
             </item>
@@ -66,13 +66,13 @@ you simply copy this one file to your server, and you have everything you need f
                 <title>A blog entry</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/2407.html</guid>
                 <link>https://mikesub.net/blog/2407.html</link>
-                <description>&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/40yo.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Quitting social media is like quitting smoking — easy, done it several times.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;E-mail correspondence I suggested in my previous update didn’t really work out. Not that I expected it to. So here are some links I found interesting recently:&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://escapethealgorithm.substack.com/p/should-this-be-a-map-or-500-maps&amp;quot;&amp;gt;A story&amp;lt;/a&amp;gt; how on 1700s Spanish King ordered to an accurate map of the kingdom and that resulted in 500 different maps.&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.sanfordhealthplan.com/-/media/files/documents/providers/clinical-resources/cms-quality-adult_adhd_self_report_screener_new_2012.pdf&amp;quot;&amp;gt;WHO Adult ADHD Self-Report Scale&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
+                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/40yo.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Quitting social media is like quitting smoking — easy, done it several times.&lt;/p&gt;
+&lt;p&gt;E-mail correspondence I suggested in my previous update didn’t really work out. Not that I expected it to. So here are some links I found interesting recently:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://escapethealgorithm.substack.com/p/should-this-be-a-map-or-500-maps&quot;&gt;A story&lt;/a&gt; how on 1700s Spanish King ordered to an accurate map of the kingdom and that resulted in 500 different maps.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.sanfordhealthplan.com/-/media/files/documents/providers/clinical-resources/cms-quality-adult_adhd_self_report_screener_new_2012.pdf&quot;&gt;WHO Adult ADHD Self-Report Scale&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
                 <pubDate>12 Jul 2024 02:30 +0200</pubDate>
             </item>
@@ -80,14 +80,14 @@ you simply copy this one file to your server, and you have everything you need f
                 <title>Disenchantment</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/disenchantment.html</guid>
                 <link>https://mikesub.net/blog/disenchantment.html</link>
-                <description>&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/2d745cd0a60c491bb7c701cc1ecdf8ded120fbea/photos/tv_dinner.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;No updates here for a long time. And 2023 has ended, so why not to journal some results. Then I saw others&amp;amp;#39; posts online and realized I would be writing roughly the same, and for some reason, it stopped me. Then, having found no rationale why not to, I thought it still was worth writing about the disenchantment which feels now not transient but getting deeply rooted.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;It probably all began during the pandemic, with disenchantment in governments and states in general. Then it was affirmed and intensified due to the war. This year, I keenly felt it from social media and from the internet. At some point, I realized that I gain no interest and knowledge reading my RSS subscriptions, with rare exceptions. I didn&amp;amp;#39;t renew my FeedBin and didn&amp;amp;#39;t notice much difference. I did transfer a couple of subscriptions to email and that&amp;amp;#39;s it. I tried to read books and listen to audio versions more. Not a strong habit yet but feels much better in comparison.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Also, I decided to try to transform email into what it used to be. You receive a letter, sometimes a long one, and you read it with interest, instead of an impersonal stream of spam in the form of updates for the sake of updates and news for attention-grabbing.
+                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/2d745cd0a60c491bb7c701cc1ecdf8ded120fbea/photos/tv_dinner.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;No updates here for a long time. And 2023 has ended, so why not to journal some results. Then I saw others&amp;#39; posts online and realized I would be writing roughly the same, and for some reason, it stopped me. Then, having found no rationale why not to, I thought it still was worth writing about the disenchantment which feels now not transient but getting deeply rooted.&lt;/p&gt;
+&lt;p&gt;It probably all began during the pandemic, with disenchantment in governments and states in general. Then it was affirmed and intensified due to the war. This year, I keenly felt it from social media and from the internet. At some point, I realized that I gain no interest and knowledge reading my RSS subscriptions, with rare exceptions. I didn&amp;#39;t renew my FeedBin and didn&amp;#39;t notice much difference. I did transfer a couple of subscriptions to email and that&amp;#39;s it. I tried to read books and listen to audio versions more. Not a strong habit yet but feels much better in comparison.&lt;/p&gt;
+&lt;p&gt;Also, I decided to try to transform email into what it used to be. You receive a letter, sometimes a long one, and you read it with interest, instead of an impersonal stream of spam in the form of updates for the sake of updates and news for attention-grabbing.
 Simultaneously, I took a break from Twitter, which was the only social media I used. In the beginning, I tried moving to Mastodon, found no one there, and eventually quit both.
-But to feel all this more vividly, I had to return to Twitter in December to sense this contrast. What a place!&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;At the same time, there are no hopes and expectations for 2024. As Dan The Stranger said, at best, it will be average. The only thing I find interesting to follow now is Argentina, but as they reminded us recently on the Reason podcast: all politicians are garbage and will disappoint you in the end.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;So how about your 2023 and 2024 plans? Let&amp;amp;#39;s start a correspondence?&amp;lt;/p&amp;gt;
+But to feel all this more vividly, I had to return to Twitter in December to sense this contrast. What a place!&lt;/p&gt;
+&lt;p&gt;At the same time, there are no hopes and expectations for 2024. As Dan The Stranger said, at best, it will be average. The only thing I find interesting to follow now is Argentina, but as they reminded us recently on the Reason podcast: all politicians are garbage and will disappoint you in the end.&lt;/p&gt;
+&lt;p&gt;So how about your 2023 and 2024 plans? Let&amp;#39;s start a correspondence?&lt;/p&gt;
 </description>
                 <pubDate>10 Jan 2024 14:25 +0100</pubDate>
             </item>
@@ -95,12 +95,12 @@ But to feel all this more vividly, I had to return to Twitter in December to sen
                 <title>Swamp surf</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/swamp_surf.html</guid>
                 <link>https://mikesub.net/blog/swamp_surf.html</link>
-                <description>&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/car.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;I&amp;amp;#39;m afraid of being that bear to the gardener, but let&amp;amp;#39;s talk about burnouts.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Good things first. Burnout is not a stable condition. Once you remove yourself from the environment that caused it, you recover. I did. I even got curious about the work again. A thought of returning too soon and spoiling the time spent recovering was quite scary. At the same time, it was tempting to try to ride that motivation wave of curiosity to get back. In my case the timing was right. Trusting yourself worked. &amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;It was clear that the wave would give me only that initial boost. Then I would have to jump from a board into good old surroundings which had once caused all that. What worked for me was resetting my goals and taking on projects with defined success metrics and intermediate milestones. All of them should be like that, right? Pause here and check yours. &amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Instead of following a schedule of slowly increasing load, I worked when I felt like I was making progress. I believe that&amp;amp;#39;s crucial. If you stop feel yourself efficient and stop relating to what you do, it quickly becomes a slippery burning slope.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;It all happened in 2022. It&amp;amp;#39;s now 2023 and I feel I&amp;amp;#39;ve managed to move on from burnout. Insights are unsurprising. Keep questioning yourself what you do and what sense it makes. Work-life balance is somewhat a hoax. You burn out not because you forget about this balance. Having ideally time-boxed 4-6-8 hours of meaningless work would burn you out quicker than you might think. And that&amp;amp;#39;d be strange if it were different when you spend most of your time on something you don&amp;amp;#39;t really like and where you don&amp;amp;#39;t feel yourself efficient. Finding motivating and fulfilling projects helps. If you can&amp;amp;#39;t find that in your current job, it may be time to consider a change.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/car.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;#39;m afraid of being that bear to the gardener, but let&amp;#39;s talk about burnouts.&lt;/p&gt;
+&lt;p&gt;Good things first. Burnout is not a stable condition. Once you remove yourself from the environment that caused it, you recover. I did. I even got curious about the work again. A thought of returning too soon and spoiling the time spent recovering was quite scary. At the same time, it was tempting to try to ride that motivation wave of curiosity to get back. In my case the timing was right. Trusting yourself worked. &lt;/p&gt;
+&lt;p&gt;It was clear that the wave would give me only that initial boost. Then I would have to jump from a board into good old surroundings which had once caused all that. What worked for me was resetting my goals and taking on projects with defined success metrics and intermediate milestones. All of them should be like that, right? Pause here and check yours. &lt;/p&gt;
+&lt;p&gt;Instead of following a schedule of slowly increasing load, I worked when I felt like I was making progress. I believe that&amp;#39;s crucial. If you stop feel yourself efficient and stop relating to what you do, it quickly becomes a slippery burning slope.&lt;/p&gt;
+&lt;p&gt;It all happened in 2022. It&amp;#39;s now 2023 and I feel I&amp;#39;ve managed to move on from burnout. Insights are unsurprising. Keep questioning yourself what you do and what sense it makes. Work-life balance is somewhat a hoax. You burn out not because you forget about this balance. Having ideally time-boxed 4-6-8 hours of meaningless work would burn you out quicker than you might think. And that&amp;#39;d be strange if it were different when you spend most of your time on something you don&amp;#39;t really like and where you don&amp;#39;t feel yourself efficient. Finding motivating and fulfilling projects helps. If you can&amp;#39;t find that in your current job, it may be time to consider a change.&lt;/p&gt;
 </description>
                 <pubDate>05 Apr 2023 02:50 +0200</pubDate>
             </item>
@@ -108,15 +108,15 @@ But to feel all this more vividly, I had to return to Twitter in December to sen
                 <title>Buying CDs in 2020</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/buying_cds.html</guid>
                 <link>https://mikesub.net/blog/buying_cds.html</link>
-                <description>&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/curtains.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Around 8 years ago I started to buy vinyl records. It wasn’t for the vinyl audio quality. The idea was to have the most favourite albums in physical format. I did not even have a record player. I thought of getting one at some point but the goal was to have records on a shelf. I could stream the music online while sitting in the chair and enjoying a rich booklet of a deluxe edition with photos, lyrics and additional materials.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Later I got an amplifier and bookshelf speakers. There was room for extending the system with a record player, but at the same time it worked alright with a computer as the source. Recently, years later, I finally got a turntable. And the whole world of complexity crushed upon me. Records are not the most convenient format to start with: they’re heavy, need care to store, act as dust magnets. But the hardware added even more: pre-amps, the world of cartridges, fine-tuning the player itself (tonearms, counterweights), electric issues resulting in humming and/or hissing sounds, the space it takes, sound quality degradation due to scratches. And it looks like you need to clean/wash records which seems to be the ritual in itself. Yes, it could be all simpler and some of those things you might successfully skip or don’t have problems with, but they’re there still. Some would say that’s the essential part of the experience and they would be true. But not for me, so I thought whether I could keep that physical aspect but avoiding all the complexity mentioned? It turned out humans invented CDs just for that.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;But there was a reason why I hadn’t considered them originally. Opposed to vinyl, I was there when CDs were the staple format. And around me, all CDs were from pirates: faceless jewel cases, no booklets. I didn’t see many digipaks, didn’t know what’s the deal with deluxe/limited editions. They were better than cassettes (which I started my audio experience with) but I didn’t think twice about abandoning them for mp3 collections, first, again on pirate CDs and then on iPod. And vinyl was before my times. And I skipped cheap mass editions of it. All I saw were gorgeous editions made for collectors and fans as everybody consumed mp3 anyway.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Overall, if we put aside audiophile discussions, CDs seem to be better plainly better. The hardware is easier to deal with, they’re cheaper, easier in care and you still have a booklet to look through and enjoy. Yes, it&amp;amp;#39;s 9 times smaller in size but given how much hustle and pain is avoided it seems worth it. And now some deluxe editions could be literally books so sometimes you don’t even really lose much. Oh, and you always can backup your CD and then burn it again, it gets hidden inside the player anyway so not a big deal.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;So I returned the turntable and sold the amp. I didn’t need a pre-amp anymore, it had some other compromises and I thought of getting something more compact. Ideally, I’d sell speakers too but it turns out if you want a one-piece CD player it&amp;amp;#39;s hard to find anything more serious than a kids CD boombox. Everything else is modular so I kept the speakers. As you might have noticed, I’m not that into sound quality. Yes, I’d not use a $50 boombox but I don’t need a $5k system either. And for me it&amp;amp;#39;s totally fine to have a CD transport, a DAC and an amp all combined in one unit. And it turns out they still produce them and call them CD receivers. They all have radio for some reason which I’d remove but apart from that they’re almost ideal: restrained design, physical buttons, tactile experience, dot-matrix display, no thrills. It feels so good. Much better and more reliable than any software from the industry giants for sure.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;So now I’m slowly selling my vinyl and already ordered a couple of CDs. Who would have thought?&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;And by the way, it looks like there will be the fourth episode of &amp;amp;quot;sick of it all digital&amp;amp;quot;. The first one was about &amp;lt;a href=&amp;quot;https://mikesub.net/blog/spoilers.html&amp;quot;&amp;gt;VHS vs. Netflix&amp;lt;/a&amp;gt;, the second was about &amp;lt;a href=&amp;quot;https://mikesub.net/blog/unknowns_and_surprises.html&amp;quot;&amp;gt;film photograpy&amp;lt;/a&amp;gt;.
-And I&amp;amp;#39;m already reading about analog watches.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/curtains.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Around 8 years ago I started to buy vinyl records. It wasn’t for the vinyl audio quality. The idea was to have the most favourite albums in physical format. I did not even have a record player. I thought of getting one at some point but the goal was to have records on a shelf. I could stream the music online while sitting in the chair and enjoying a rich booklet of a deluxe edition with photos, lyrics and additional materials.&lt;/p&gt;
+&lt;p&gt;Later I got an amplifier and bookshelf speakers. There was room for extending the system with a record player, but at the same time it worked alright with a computer as the source. Recently, years later, I finally got a turntable. And the whole world of complexity crushed upon me. Records are not the most convenient format to start with: they’re heavy, need care to store, act as dust magnets. But the hardware added even more: pre-amps, the world of cartridges, fine-tuning the player itself (tonearms, counterweights), electric issues resulting in humming and/or hissing sounds, the space it takes, sound quality degradation due to scratches. And it looks like you need to clean/wash records which seems to be the ritual in itself. Yes, it could be all simpler and some of those things you might successfully skip or don’t have problems with, but they’re there still. Some would say that’s the essential part of the experience and they would be true. But not for me, so I thought whether I could keep that physical aspect but avoiding all the complexity mentioned? It turned out humans invented CDs just for that.&lt;/p&gt;
+&lt;p&gt;But there was a reason why I hadn’t considered them originally. Opposed to vinyl, I was there when CDs were the staple format. And around me, all CDs were from pirates: faceless jewel cases, no booklets. I didn’t see many digipaks, didn’t know what’s the deal with deluxe/limited editions. They were better than cassettes (which I started my audio experience with) but I didn’t think twice about abandoning them for mp3 collections, first, again on pirate CDs and then on iPod. And vinyl was before my times. And I skipped cheap mass editions of it. All I saw were gorgeous editions made for collectors and fans as everybody consumed mp3 anyway.&lt;/p&gt;
+&lt;p&gt;Overall, if we put aside audiophile discussions, CDs seem to be better plainly better. The hardware is easier to deal with, they’re cheaper, easier in care and you still have a booklet to look through and enjoy. Yes, it&amp;#39;s 9 times smaller in size but given how much hustle and pain is avoided it seems worth it. And now some deluxe editions could be literally books so sometimes you don’t even really lose much. Oh, and you always can backup your CD and then burn it again, it gets hidden inside the player anyway so not a big deal.&lt;/p&gt;
+&lt;p&gt;So I returned the turntable and sold the amp. I didn’t need a pre-amp anymore, it had some other compromises and I thought of getting something more compact. Ideally, I’d sell speakers too but it turns out if you want a one-piece CD player it&amp;#39;s hard to find anything more serious than a kids CD boombox. Everything else is modular so I kept the speakers. As you might have noticed, I’m not that into sound quality. Yes, I’d not use a $50 boombox but I don’t need a $5k system either. And for me it&amp;#39;s totally fine to have a CD transport, a DAC and an amp all combined in one unit. And it turns out they still produce them and call them CD receivers. They all have radio for some reason which I’d remove but apart from that they’re almost ideal: restrained design, physical buttons, tactile experience, dot-matrix display, no thrills. It feels so good. Much better and more reliable than any software from the industry giants for sure.&lt;/p&gt;
+&lt;p&gt;So now I’m slowly selling my vinyl and already ordered a couple of CDs. Who would have thought?&lt;/p&gt;
+&lt;p&gt;And by the way, it looks like there will be the fourth episode of &amp;quot;sick of it all digital&amp;quot;. The first one was about &lt;a href=&quot;https://mikesub.net/blog/spoilers.html&quot;&gt;VHS vs. Netflix&lt;/a&gt;, the second was about &lt;a href=&quot;https://mikesub.net/blog/unknowns_and_surprises.html&quot;&gt;film photograpy&lt;/a&gt;.
+And I&amp;#39;m already reading about analog watches.&lt;/p&gt;
 </description>
                 <pubDate>13 Nov 2020 01:30 +0100</pubDate>
             </item>
@@ -124,14 +124,14 @@ And I&amp;amp;#39;m already reading about analog watches.&amp;lt;/p&amp;gt;
                 <title>The setup</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/setup.html</guid>
                 <link>https://mikesub.net/blog/setup.html</link>
-                <description>&amp;lt;p&amp;gt;I&amp;amp;#39;ve just realised that &amp;lt;a href=&amp;quot;https://www.theolognion.com/programmer-starts-a-blog-doesnt-write-about-their-static-site-generator-setup-in-the-first-post/&amp;quot;&amp;gt;Joanne Dvorak&amp;lt;/a&amp;gt; might be not the only one to make such mistake.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;So let me fix it. I&amp;amp;#39;ve never been a fan of write-your-own-thing when there are many superior alternatives available. Now I’m even less of it. But when I decided to spin up a stand-alone blog, I didn’t go for Hugo, Gatsby or Jekyll. I thought it’s just a bunch of static pages, right. If you add some basic scripts for automation so you don’t need to update a RSS file manually and don’t copy-paste a HTML header, you should end up in less than a hundred lines of code. That probably should take less than reading through docs and configuring something ready-made. Well, I’ve ended up in &amp;lt;a href=&amp;quot;https://github.com/mikesub/mikesub.net/tree/master/src&amp;quot;&amp;gt;~150&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;To be fair, it has dependencies on Date-fns, Lodash, Mustache and Meta-marked. In theory, I could have gone without first two. That would increase the size, of course. Mustache and Meta-marked (a markdown library) is harder to remove but at the same time I could make it as an independent external process in the build system, not depending on node-modules implementation. It seems to be an overkill, I&amp;amp;#39;m not a purist in this regard.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;One thing I&amp;amp;#39;m very pleased with is how tests are done. There are none of them. I&amp;amp;#39;ve just made it work once by manual testing, then results (htmls and feeds) got pushed to Git and from that moment I just re-run builds and check Git diff. No changes, no regression. I like it. Snapshot testing, haha.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;The blog comes with a dark mode, human date formatting, drafts, RSS and JSONFeed.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;As for the deploy, I just push changes to GitHub. Hosting comes for free from GitHub at the moment. The only thing I’m paying for is the domain name.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;It misses a favicon, I&amp;amp;#39;ll make it eventually. Also I planned to add tags when I got enough posts, but with the current pace I have few more years for that.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Now you know.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;I&amp;#39;ve just realised that &lt;a href=&quot;https://www.theolognion.com/programmer-starts-a-blog-doesnt-write-about-their-static-site-generator-setup-in-the-first-post/&quot;&gt;Joanne Dvorak&lt;/a&gt; might be not the only one to make such mistake.&lt;/p&gt;
+&lt;p&gt;So let me fix it. I&amp;#39;ve never been a fan of write-your-own-thing when there are many superior alternatives available. Now I’m even less of it. But when I decided to spin up a stand-alone blog, I didn’t go for Hugo, Gatsby or Jekyll. I thought it’s just a bunch of static pages, right. If you add some basic scripts for automation so you don’t need to update a RSS file manually and don’t copy-paste a HTML header, you should end up in less than a hundred lines of code. That probably should take less than reading through docs and configuring something ready-made. Well, I’ve ended up in &lt;a href=&quot;https://github.com/mikesub/mikesub.net/tree/master/src&quot;&gt;~150&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To be fair, it has dependencies on Date-fns, Lodash, Mustache and Meta-marked. In theory, I could have gone without first two. That would increase the size, of course. Mustache and Meta-marked (a markdown library) is harder to remove but at the same time I could make it as an independent external process in the build system, not depending on node-modules implementation. It seems to be an overkill, I&amp;#39;m not a purist in this regard.&lt;/p&gt;
+&lt;p&gt;One thing I&amp;#39;m very pleased with is how tests are done. There are none of them. I&amp;#39;ve just made it work once by manual testing, then results (htmls and feeds) got pushed to Git and from that moment I just re-run builds and check Git diff. No changes, no regression. I like it. Snapshot testing, haha.&lt;/p&gt;
+&lt;p&gt;The blog comes with a dark mode, human date formatting, drafts, RSS and JSONFeed.&lt;/p&gt;
+&lt;p&gt;As for the deploy, I just push changes to GitHub. Hosting comes for free from GitHub at the moment. The only thing I’m paying for is the domain name.&lt;/p&gt;
+&lt;p&gt;It misses a favicon, I&amp;#39;ll make it eventually. Also I planned to add tags when I got enough posts, but with the current pace I have few more years for that.&lt;/p&gt;
+&lt;p&gt;Now you know.&lt;/p&gt;
 </description>
                 <pubDate>03 Sep 2020 23:31 +0200</pubDate>
             </item>
@@ -139,12 +139,12 @@ And I&amp;amp;#39;m already reading about analog watches.&amp;lt;/p&amp;gt;
                 <title>Unknowns and surprises</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/unknowns_and_surprises.html</guid>
                 <link>https://mikesub.net/blog/unknowns_and_surprises.html</link>
-                <description>&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/self_grass.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;For most of my years in photography I’ve been using digital cameras. I bought film cameras a few times just to play around with the film but always sold it back after several months. And I never got into analogue printing, just developing and scanning with DSLRs.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Around three years ago I found a full darkroom set for sale and decided to experience the complete process. It costed almost nothing and contained everything you might need. There was even some film in bulk rolls. But then it had to wait for two more years in my storage room until I finally found space and time to try it out.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;So I started with a bulk roll can marked Ilford FP4 (without plus) which I knew nothing about. Wikipedia says it was discontinued in 1990. I didn’t even know whether it had some film inside or not. Few empty cassettes were there as well so I barricaded in my bathroom and opened a can. The can contained some film but I couldn’t tell how much of the original 17 meters. Also, I was not sure was it FP4 to start with and how expired it was. W/o any precision, spreading my arms to measure the length, I loaded my first cassette and put it in my freshly obtained Olympus XA2.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;It resulted in 30 something frames. I’m not a quick shooter so even for testing purposes it took me several weeks to finish the roll. During all that time I was not sure what I’m shooting on. The untested camera also gave me some doubts. Then it came to development which neither I have much experience nor it was clear how to develop such expired film. But in the end, it all turned out quite ok. It was FP4 indeed, ISO was right, the camera worked, Rodinal did its job.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;And this bulk roll helped me to realise that these unknowns, surprises, inaccuracies, delays in seeing results, shooting a roll and being not sure whether it would work at all... photography seems to be a significantly incomplete experience for me without it.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/self_grass.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;For most of my years in photography I’ve been using digital cameras. I bought film cameras a few times just to play around with the film but always sold it back after several months. And I never got into analogue printing, just developing and scanning with DSLRs.&lt;/p&gt;
+&lt;p&gt;Around three years ago I found a full darkroom set for sale and decided to experience the complete process. It costed almost nothing and contained everything you might need. There was even some film in bulk rolls. But then it had to wait for two more years in my storage room until I finally found space and time to try it out.&lt;/p&gt;
+&lt;p&gt;So I started with a bulk roll can marked Ilford FP4 (without plus) which I knew nothing about. Wikipedia says it was discontinued in 1990. I didn’t even know whether it had some film inside or not. Few empty cassettes were there as well so I barricaded in my bathroom and opened a can. The can contained some film but I couldn’t tell how much of the original 17 meters. Also, I was not sure was it FP4 to start with and how expired it was. W/o any precision, spreading my arms to measure the length, I loaded my first cassette and put it in my freshly obtained Olympus XA2.&lt;/p&gt;
+&lt;p&gt;It resulted in 30 something frames. I’m not a quick shooter so even for testing purposes it took me several weeks to finish the roll. During all that time I was not sure what I’m shooting on. The untested camera also gave me some doubts. Then it came to development which neither I have much experience nor it was clear how to develop such expired film. But in the end, it all turned out quite ok. It was FP4 indeed, ISO was right, the camera worked, Rodinal did its job.&lt;/p&gt;
+&lt;p&gt;And this bulk roll helped me to realise that these unknowns, surprises, inaccuracies, delays in seeing results, shooting a roll and being not sure whether it would work at all... photography seems to be a significantly incomplete experience for me without it.&lt;/p&gt;
 </description>
                 <pubDate>02 Sep 2020 02:30 +0200</pubDate>
             </item>
@@ -152,12 +152,12 @@ And I&amp;amp;#39;m already reading about analog watches.&amp;lt;/p&amp;gt;
                 <title>Spoilers for unknowns</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/spoilers.html</guid>
                 <link>https://mikesub.net/blog/spoilers.html</link>
-                <description>&amp;lt;p&amp;gt;I was born in late USSR. Some things, somewhat ordinary to Western World, were either in scarcity or just not existing in my childhood. Though my uncle emigrated to Australia so occasionally we were getting something from there. At some point, we got a VHS. The player came with a bunch of cassettes with movies recorded from Australian TV. Sometimes they were re-recorded. And in this case, if the original film was longer than a new one, you got an additional ending of something unknown after the closing credits.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;It was mostly action movies there. So imagine, you’ve just finished watching The Temple of Doom or Romancing the Stone and you get a bonus. Most often those last 10-15 mins were either a final fight or, if you’re not lucky, a happy ending when the main hero has already won the fight and escaped with his woman.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;But you skipped everything before. And there is no way even to know the movie title. You don’t know who they are and where they are. How many secondary characters have died by that moment, or captured or trapped and about to be either smashed by some ticking mechanism or their cage is slowly going into open space or lava. Why does the main hero have only an ancient melee weapon in his hands and why is he all in some sort of grease. You could just imagine.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;But that was the climax, sometimes the most expensive part, so you skim it off the top. And then came the closure with all the freeing of hostages, escaping from the bunker by grabbing a helicopter rope ladder.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Later I discovered some of those movies. Many stayed in my memory like that, I guess, for ever. But that was a fun experience.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Beat that, Netflix.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;I was born in late USSR. Some things, somewhat ordinary to Western World, were either in scarcity or just not existing in my childhood. Though my uncle emigrated to Australia so occasionally we were getting something from there. At some point, we got a VHS. The player came with a bunch of cassettes with movies recorded from Australian TV. Sometimes they were re-recorded. And in this case, if the original film was longer than a new one, you got an additional ending of something unknown after the closing credits.&lt;/p&gt;
+&lt;p&gt;It was mostly action movies there. So imagine, you’ve just finished watching The Temple of Doom or Romancing the Stone and you get a bonus. Most often those last 10-15 mins were either a final fight or, if you’re not lucky, a happy ending when the main hero has already won the fight and escaped with his woman.&lt;/p&gt;
+&lt;p&gt;But you skipped everything before. And there is no way even to know the movie title. You don’t know who they are and where they are. How many secondary characters have died by that moment, or captured or trapped and about to be either smashed by some ticking mechanism or their cage is slowly going into open space or lava. Why does the main hero have only an ancient melee weapon in his hands and why is he all in some sort of grease. You could just imagine.&lt;/p&gt;
+&lt;p&gt;But that was the climax, sometimes the most expensive part, so you skim it off the top. And then came the closure with all the freeing of hostages, escaping from the bunker by grabbing a helicopter rope ladder.&lt;/p&gt;
+&lt;p&gt;Later I discovered some of those movies. Many stayed in my memory like that, I guess, for ever. But that was a fun experience.&lt;/p&gt;
+&lt;p&gt;Beat that, Netflix.&lt;/p&gt;
 </description>
                 <pubDate>09 Aug 2020 01:40 +0200</pubDate>
             </item>
@@ -165,14 +165,14 @@ And I&amp;amp;#39;m already reading about analog watches.&amp;lt;/p&amp;gt;
                 <title>Intermission</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/intermission.html</guid>
                 <link>https://mikesub.net/blog/intermission.html</link>
-                <description>&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/flower_thrower.jpeg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Obviously, it turned out harder than expected. My plans to go through all my photos year by year stalled on year #2 (2006).
-I haven&amp;amp;#39;t picked a photo and finished the note but already have an external HDD dead, recovered data from backups,
-disassembled proprietory photo libraries, found a way to export photos from Lightroom CC (which doesn&amp;amp;#39;t have Export
-option), removed dedupes after merging inconsistently structured backups (better than none) and so on.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Computers.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Meanwhile, new photos keep appearing. This one I&amp;amp;#39;ve just taken yesterday. It&amp;amp;#39;s probably too early to share it
-but I feel the need to fill that intermission.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/flower_thrower.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Obviously, it turned out harder than expected. My plans to go through all my photos year by year stalled on year #2 (2006).
+I haven&amp;#39;t picked a photo and finished the note but already have an external HDD dead, recovered data from backups,
+disassembled proprietory photo libraries, found a way to export photos from Lightroom CC (which doesn&amp;#39;t have Export
+option), removed dedupes after merging inconsistently structured backups (better than none) and so on.&lt;/p&gt;
+&lt;p&gt;Computers.&lt;/p&gt;
+&lt;p&gt;Meanwhile, new photos keep appearing. This one I&amp;#39;ve just taken yesterday. It&amp;#39;s probably too early to share it
+but I feel the need to fill that intermission.&lt;/p&gt;
 </description>
                 <pubDate>26 Jan 2020 16:20 +0100</pubDate>
             </item>
@@ -180,10 +180,10 @@ but I feel the need to fill that intermission.&amp;lt;/p&amp;gt;
                 <title>Oh five</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/2005.html</guid>
                 <link>https://mikesub.net/blog/2005.html</link>
-                <description>&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/escalator.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;There is no better than to start from 2005. I borrowed a &amp;lt;a href=&amp;quot;https://www.dpreview.com/reviews/minoltadimagea1&amp;quot;&amp;gt;Minolta DiMAGE A1&amp;lt;/a&amp;gt; from a friend and started shooting. That was my first exposure into digital photography and photography in general apart from few episodes in my childhood.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Obviously, there is nothing worth sharing from these times, now it all seems very primitive and full of mistakes, but that was arguably the most exciting time: constant learning, a-ha moments, experiments, not knowing a thing, that was fantastic.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;And this is a shot of a man on a escalator in Moscow metro. The original was lost, all I have this 600x450 processed for web. But that might be even better, that shows that all I knew at that moment was a pair of brightness and contrast sliders.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/escalator.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;There is no better than to start from 2005. I borrowed a &lt;a href=&quot;https://www.dpreview.com/reviews/minoltadimagea1&quot;&gt;Minolta DiMAGE A1&lt;/a&gt; from a friend and started shooting. That was my first exposure into digital photography and photography in general apart from few episodes in my childhood.&lt;/p&gt;
+&lt;p&gt;Obviously, there is nothing worth sharing from these times, now it all seems very primitive and full of mistakes, but that was arguably the most exciting time: constant learning, a-ha moments, experiments, not knowing a thing, that was fantastic.&lt;/p&gt;
+&lt;p&gt;And this is a shot of a man on a escalator in Moscow metro. The original was lost, all I have this 600x450 processed for web. But that might be even better, that shows that all I knew at that moment was a pair of brightness and contrast sliders.&lt;/p&gt;
 </description>
                 <pubDate>09 Dec 2019 16:20 +0100</pubDate>
             </item>
@@ -191,17 +191,17 @@ but I feel the need to fill that intermission.&amp;lt;/p&amp;gt;
                 <title>Django cards</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/django_cards.html</guid>
                 <link>https://mikesub.net/blog/django_cards.html</link>
-                <description>&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/window.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;If you take metro and stand facing doors, it might feel as if the train goes straight without turns. Though if you look back and the previous car can be seen, you&amp;amp;#39;ll notice that it&amp;amp;#39;s wriggling from side to side.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;That&amp;amp;#39;s what I ended up with while trying to describe my interests in creativity. To capture and share such moments, mostly by photography now, occasionally by text. So at first, it was some DIY weblog, then I moved to LiveJournal. Later it was Flickr, then Instagram until it all froze in early 2018. Since then I&amp;amp;#39;ve been thinking how to do it right. All social networks or standalone portfolio/blogging web platforms didn&amp;amp;#39;t appeal to me. It was either focused on different goals or just too noisy. Also, I didn&amp;amp;#39;t stop thinking of what to do with photographs being just a sub-second glimpse on your displays.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;So here is another attempt. Now here.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;There are several ways to follow:&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;Support me at &amp;lt;a href=&amp;quot;https://patreon.com/djangocards&amp;quot;&amp;gt;Patreon&amp;lt;/a&amp;gt; and get printed photographs every quarter.&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt; Use &amp;lt;a href=&amp;quot;https://mikesub.net/blog/rss.xml&amp;quot;&amp;gt;RSS&amp;lt;/a&amp;gt; or &amp;lt;a href=&amp;quot;https://mikesub.net/blog/feed.json&amp;quot;&amp;gt;JSON Feed&amp;lt;/a&amp;gt; to follow online&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt; Join Telegram Group to discuss published notes and give any feedback. Contact me for the link at &amp;lt;a href=&amp;quot;https://telegram.me/mikesub&amp;quot;&amp;gt;@mikesub&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;p&amp;gt;Oh, and I&amp;amp;#39;d like to mention recent findings that helped me to decide: &amp;lt;a href=&amp;quot;https://www.theredhandfiles.com/&amp;quot;&amp;gt;The Red Hand Files&amp;lt;/a&amp;gt; by Nick Cave and &amp;lt;a href=&amp;quot;https://brandur.org/sequences-project&amp;quot;&amp;gt;Sequences&amp;lt;/a&amp;gt; by Brandur Leach. Check them out. And let&amp;amp;#39;s start.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/window.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;If you take metro and stand facing doors, it might feel as if the train goes straight without turns. Though if you look back and the previous car can be seen, you&amp;#39;ll notice that it&amp;#39;s wriggling from side to side.&lt;/p&gt;
+&lt;p&gt;That&amp;#39;s what I ended up with while trying to describe my interests in creativity. To capture and share such moments, mostly by photography now, occasionally by text. So at first, it was some DIY weblog, then I moved to LiveJournal. Later it was Flickr, then Instagram until it all froze in early 2018. Since then I&amp;#39;ve been thinking how to do it right. All social networks or standalone portfolio/blogging web platforms didn&amp;#39;t appeal to me. It was either focused on different goals or just too noisy. Also, I didn&amp;#39;t stop thinking of what to do with photographs being just a sub-second glimpse on your displays.&lt;/p&gt;
+&lt;p&gt;So here is another attempt. Now here.&lt;/p&gt;
+&lt;p&gt;There are several ways to follow:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Support me at &lt;a href=&quot;https://patreon.com/djangocards&quot;&gt;Patreon&lt;/a&gt; and get printed photographs every quarter.&lt;/li&gt;
+&lt;li&gt; Use &lt;a href=&quot;https://mikesub.net/blog/rss.xml&quot;&gt;RSS&lt;/a&gt; or &lt;a href=&quot;https://mikesub.net/blog/feed.json&quot;&gt;JSON Feed&lt;/a&gt; to follow online&lt;/li&gt;
+&lt;li&gt; Join Telegram Group to discuss published notes and give any feedback. Contact me for the link at &lt;a href=&quot;https://telegram.me/mikesub&quot;&gt;@mikesub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Oh, and I&amp;#39;d like to mention recent findings that helped me to decide: &lt;a href=&quot;https://www.theredhandfiles.com/&quot;&gt;The Red Hand Files&lt;/a&gt; by Nick Cave and &lt;a href=&quot;https://brandur.org/sequences-project&quot;&gt;Sequences&lt;/a&gt; by Brandur Leach. Check them out. And let&amp;#39;s start.&lt;/p&gt;
 </description>
                 <pubDate>05 Dec 2019 14:15 +0100</pubDate>
             </item>
@@ -209,19 +209,19 @@ but I feel the need to fill that intermission.&amp;lt;/p&amp;gt;
                 <title>A Case of SSR</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/ssr.html</guid>
                 <link>https://mikesub.net/blog/ssr.html</link>
-                <description>&amp;lt;p&amp;gt;If we take popular JS topics currently out there, type annotations, server-side rendering (SSR) and CSS in JS are probably in the top four. Virtual DOM frameworks have come as a solution to a request of getting more code on a client side. Tools like TypeScript and Flow appeared as attempts to fix some JS parts. Also, people started to seek for ways how not to duplicate ‘view’ code between server and client. Most often it leads to running JS in Node.js on server, which comes with &amp;lt;a href=&amp;quot;https://solovyov.net/en/2017/server-side-rendering/&amp;quot;&amp;gt;‘restart every N requests’&amp;lt;/a&amp;gt; and other implications. But people still go there to serve content faster. And it&amp;amp;#39;s obvious — why to take away from browsers what they do best: parsing and rendering HTML pages. And so now it&amp;amp;#39;s even supported by many frameworks out of the box.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;But do you need all that? Do you need to add SSR to your React (insert any other Virtual DOM framework) application? Given the complexity it brings, I would say often ‘no’ and let me elaborate on that.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;To show a ‘loading’ screen and do everything client-side would be much easier. Yes, it would drastically increase first page load time but if you deal with application-type website, sometimes it&amp;amp;#39;s acceptable. To mitigate drawbacks, there are few techniques to hack the perception of this loading time. For example, you can show placeholders for content, preparing users for actual things to appear.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://mikesub.net/blog/images/content-placeholder.png&amp;quot; alt=&amp;quot;Content placeholder&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;BUT HEY NO, not acceptable. It can be done better. We have service workers, critical path render techniques, all those are at our disposal. And nothing&amp;amp;#39;s wrong with using node.js.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;But then there is a thing. The markup you&amp;amp;#39;d prepare on server will be static (sic!). It&amp;amp;#39;s a safe bet to assume that all event listeners would be attached after DOM is parsed, rendered and your JS bundles are downloaded, parsed, interpreted. And it leads to showing static markup of something intended to be dynamic, breaking UX right from the first interaction.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;So it&amp;amp;#39;s possible that ‘loading’ screen, fully functional, yet empty is not that bad if you can&amp;amp;#39;t do the other option right. To show perfectly-looking tabs which are not clickable is just ignorant.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;https://mikesub.net/blog/images/ns-wifi.png&amp;quot; alt=&amp;quot;NS wifi splash screen&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;That&amp;amp;#39;s a splash screen for wifi on Dutch railways. The connection is often flaky as there are many devices online and cell coverage is also spotty sometimes. And so I see a page, but can&amp;amp;#39;t switch to a tab I need. And yes, probably it doesn&amp;amp;#39;t even use React, it&amp;amp;#39;s actually an illustration to already forgotten ‘Unobtrusive JS‘ thing, but it&amp;amp;#39;s the same issue.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Unobtrusive JS is still the right approach. But it adds so many things to take care of, so it&amp;amp;#39;s very tempting to disregard it. Hey, it loads blazingly fast on my machine, and yes, I will wait few seconds before clicking anywhere just because I know that this button, even though already rendered, won&amp;amp;#39;t be responsive for a while. So what should I do? Right, let&amp;amp;#39;s move everything to JS so there is no static markup to break. Then we got loading state and we get back to square one with going SSR.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;As always there is a third option. And it can help to escape that loop: to serve content in chunks and to send parts of JS with every chunk, progressively build a page with atomic blocks, but that brings you problems with shared dependencies and some others&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;(╯°□°)╯︵ ┻━┻&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;So going SSR, first of all, you need to solve how not to show broken interface while not everything is ready to interact. And don&amp;amp;#39;t ignore that as network is slow, unpredictable and with few guarantees.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;If we take popular JS topics currently out there, type annotations, server-side rendering (SSR) and CSS in JS are probably in the top four. Virtual DOM frameworks have come as a solution to a request of getting more code on a client side. Tools like TypeScript and Flow appeared as attempts to fix some JS parts. Also, people started to seek for ways how not to duplicate ‘view’ code between server and client. Most often it leads to running JS in Node.js on server, which comes with &lt;a href=&quot;https://solovyov.net/en/2017/server-side-rendering/&quot;&gt;‘restart every N requests’&lt;/a&gt; and other implications. But people still go there to serve content faster. And it&amp;#39;s obvious — why to take away from browsers what they do best: parsing and rendering HTML pages. And so now it&amp;#39;s even supported by many frameworks out of the box.&lt;/p&gt;
+&lt;p&gt;But do you need all that? Do you need to add SSR to your React (insert any other Virtual DOM framework) application? Given the complexity it brings, I would say often ‘no’ and let me elaborate on that.&lt;/p&gt;
+&lt;p&gt;To show a ‘loading’ screen and do everything client-side would be much easier. Yes, it would drastically increase first page load time but if you deal with application-type website, sometimes it&amp;#39;s acceptable. To mitigate drawbacks, there are few techniques to hack the perception of this loading time. For example, you can show placeholders for content, preparing users for actual things to appear.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mikesub.net/blog/images/content-placeholder.png&quot; alt=&quot;Content placeholder&quot;&gt;&lt;/p&gt;
+&lt;p&gt;BUT HEY NO, not acceptable. It can be done better. We have service workers, critical path render techniques, all those are at our disposal. And nothing&amp;#39;s wrong with using node.js.&lt;/p&gt;
+&lt;p&gt;But then there is a thing. The markup you&amp;#39;d prepare on server will be static (sic!). It&amp;#39;s a safe bet to assume that all event listeners would be attached after DOM is parsed, rendered and your JS bundles are downloaded, parsed, interpreted. And it leads to showing static markup of something intended to be dynamic, breaking UX right from the first interaction.&lt;/p&gt;
+&lt;p&gt;So it&amp;#39;s possible that ‘loading’ screen, fully functional, yet empty is not that bad if you can&amp;#39;t do the other option right. To show perfectly-looking tabs which are not clickable is just ignorant.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mikesub.net/blog/images/ns-wifi.png&quot; alt=&quot;NS wifi splash screen&quot;&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;#39;s a splash screen for wifi on Dutch railways. The connection is often flaky as there are many devices online and cell coverage is also spotty sometimes. And so I see a page, but can&amp;#39;t switch to a tab I need. And yes, probably it doesn&amp;#39;t even use React, it&amp;#39;s actually an illustration to already forgotten ‘Unobtrusive JS‘ thing, but it&amp;#39;s the same issue.&lt;/p&gt;
+&lt;p&gt;Unobtrusive JS is still the right approach. But it adds so many things to take care of, so it&amp;#39;s very tempting to disregard it. Hey, it loads blazingly fast on my machine, and yes, I will wait few seconds before clicking anywhere just because I know that this button, even though already rendered, won&amp;#39;t be responsive for a while. So what should I do? Right, let&amp;#39;s move everything to JS so there is no static markup to break. Then we got loading state and we get back to square one with going SSR.&lt;/p&gt;
+&lt;p&gt;As always there is a third option. And it can help to escape that loop: to serve content in chunks and to send parts of JS with every chunk, progressively build a page with atomic blocks, but that brings you problems with shared dependencies and some others&lt;/p&gt;
+&lt;p&gt;(╯°□°)╯︵ ┻━┻&lt;/p&gt;
+&lt;p&gt;So going SSR, first of all, you need to solve how not to show broken interface while not everything is ready to interact. And don&amp;#39;t ignore that as network is slow, unpredictable and with few guarantees.&lt;/p&gt;
 </description>
                 <pubDate>07 Mar 2019 17:40 +0100</pubDate>
             </item>
@@ -229,45 +229,45 @@ but I feel the need to fill that intermission.&amp;lt;/p&amp;gt;
                 <title>Types. String semantics</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/types_string_semantics.html</guid>
                 <link>https://mikesub.net/blog/types_string_semantics.html</link>
-                <description>&amp;lt;p&amp;gt;That&amp;amp;#39;s the third article in a series on TypeScript started by ‘&amp;lt;a href=&amp;quot;https://mikesub.net/blog/ts_bad_parts.html&amp;quot;&amp;gt;TypeScript. Bad Parts&amp;lt;/a&amp;gt;’. You can read them in any order as they aren&amp;amp;#39;t really connected apart from covering the same topic. But if you can&amp;amp;#39;t decide, make it &amp;lt;a href=&amp;quot;https://mikesub.net/blog/ts_bad_parts.html&amp;quot;&amp;gt;chronologically&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;This time I&amp;amp;#39;d like to show how you can leverage types to simplify your runtime code.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Let&amp;amp;#39;s say we have a function which calculates a flag&amp;amp;#39;s value based on some input. And later you use that flag to do some checks. The easiest way to write that could be something like that:&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-javascript&amp;quot;&amp;gt;function calculateFlag(conditions) {
-  return &amp;amp;quot;important&amp;amp;quot;;
+                <description>&lt;p&gt;That&amp;#39;s the third article in a series on TypeScript started by ‘&lt;a href=&quot;https://mikesub.net/blog/ts_bad_parts.html&quot;&gt;TypeScript. Bad Parts&lt;/a&gt;’. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic. But if you can&amp;#39;t decide, make it &lt;a href=&quot;https://mikesub.net/blog/ts_bad_parts.html&quot;&gt;chronologically&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This time I&amp;#39;d like to show how you can leverage types to simplify your runtime code.&lt;/p&gt;
+&lt;p&gt;Let&amp;#39;s say we have a function which calculates a flag&amp;#39;s value based on some input. And later you use that flag to do some checks. The easiest way to write that could be something like that:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;function calculateFlag(conditions) {
+  return &amp;quot;important&amp;quot;;
 }
 
 const flag = calculateFlag(context);
-if (flag !== &amp;amp;quot;important&amp;amp;quot;) {
+if (flag !== &amp;quot;important&amp;quot;) {
   /* ... */
-}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;That would work but it&amp;amp;#39;s error-prone and your colleagues might signal you about it during a code review. It turns out that neither any editor nor javascript itself knows much about your flags and what values are valid there, for them it&amp;amp;#39;s just strings, nothing more. That&amp;amp;#39;s why they can&amp;amp;#39;t help you much in refactoring or spot a typo if you misspell a value in one of the places. The common JS pattern to mitigate that is to use an object as a poor-man enum.&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-javascript&amp;quot;&amp;gt;const flags = { important: &amp;amp;quot;important&amp;amp;quot; };
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That would work but it&amp;#39;s error-prone and your colleagues might signal you about it during a code review. It turns out that neither any editor nor javascript itself knows much about your flags and what values are valid there, for them it&amp;#39;s just strings, nothing more. That&amp;#39;s why they can&amp;#39;t help you much in refactoring or spot a typo if you misspell a value in one of the places. The common JS pattern to mitigate that is to use an object as a poor-man enum.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;const flags = { important: &amp;quot;important&amp;quot; };
 function calculateFlag(conditions) {
   return flags.important;
 }
 const flag = calculateFlag(context);
 if (flag !== flags.important) {
   /* ... */
-}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;You have your value in one place, it&amp;amp;#39;s easier to change it, editors might warn you if you make a mistake in accessing an inexistent property, all good. But that brings a small penalty that you introduce an object where your runtime doesn&amp;amp;#39;t need one. It&amp;amp;#39;s small enough not to care at all, benefits outweigh that clearly. Though nobody would object if some pre-compiler inlines it away as it doesn&amp;amp;#39;t possess any runtime value in itself.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;With types, you can add that semantics to your code that it&amp;amp;#39;s not just a random string without adding any objects and keeping it as strings.&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-typescript&amp;quot;&amp;gt;type Flag = &amp;amp;quot;important&amp;amp;quot;;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You have your value in one place, it&amp;#39;s easier to change it, editors might warn you if you make a mistake in accessing an inexistent property, all good. But that brings a small penalty that you introduce an object where your runtime doesn&amp;#39;t need one. It&amp;#39;s small enough not to care at all, benefits outweigh that clearly. Though nobody would object if some pre-compiler inlines it away as it doesn&amp;#39;t possess any runtime value in itself.&lt;/p&gt;
+&lt;p&gt;With types, you can add that semantics to your code that it&amp;#39;s not just a random string without adding any objects and keeping it as strings.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typescript&quot;&gt;type Flag = &amp;quot;important&amp;quot;;
 function calculateFlag(conditions): Flag {
-  return &amp;amp;quot;important&amp;amp;quot;;
+  return &amp;quot;important&amp;quot;;
 }
 const flag = calculateFlag(context);
-if (flag !== &amp;amp;quot;important&amp;amp;quot;) {
+if (flag !== &amp;quot;important&amp;quot;) {
   /* ... */
-}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;Now it knows that your function returns that value (in real life it should be a union of several valid strings) and it can check whether your &amp;lt;code&amp;gt;if&amp;lt;/code&amp;gt; later makes any sense.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;I see it as a nice example of adding more expressiveness to the language. One can argue that implementing such checks using built-in features like a plain object is even better. But I do see some value in using separate construct for these needs. Having fewer concepts is better in terms you should not have too many of them. Otherwise, it would be too low-level.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Another take on that (and actually the original premise of that note) is that I tend to use TypeScript solely as a type annotations system and try to avoid any additional features it brings and enums is one of them. And so this example is a nice one to demonstrate that you don&amp;amp;#39;t need enums for that, just use a union type and you&amp;amp;#39;re good. Hello, &amp;lt;code&amp;gt;flag.isImportant()&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;
-&amp;lt;hr&amp;gt;
-&amp;lt;p&amp;gt;That&amp;amp;#39;s the third article in a series on TypeScript. You can read them in any order as they aren&amp;amp;#39;t really connected apart from covering the same topic:&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://mikesub.net/blog/ts_bad_parts.html&amp;quot;&amp;gt;TypeScript. Bad Parts&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://mikesub.net/blog/types_runtime_checks.html&amp;quot;&amp;gt;Types and runtime checks&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now it knows that your function returns that value (in real life it should be a union of several valid strings) and it can check whether your &lt;code&gt;if&lt;/code&gt; later makes any sense.&lt;/p&gt;
+&lt;p&gt;I see it as a nice example of adding more expressiveness to the language. One can argue that implementing such checks using built-in features like a plain object is even better. But I do see some value in using separate construct for these needs. Having fewer concepts is better in terms you should not have too many of them. Otherwise, it would be too low-level.&lt;/p&gt;
+&lt;p&gt;Another take on that (and actually the original premise of that note) is that I tend to use TypeScript solely as a type annotations system and try to avoid any additional features it brings and enums is one of them. And so this example is a nice one to demonstrate that you don&amp;#39;t need enums for that, just use a union type and you&amp;#39;re good. Hello, &lt;code&gt;flag.isImportant()&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;That&amp;#39;s the third article in a series on TypeScript. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mikesub.net/blog/ts_bad_parts.html&quot;&gt;TypeScript. Bad Parts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mikesub.net/blog/types_runtime_checks.html&quot;&gt;Types and runtime checks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
                 <pubDate>06 Mar 2019 10:08 +0100</pubDate>
             </item>
@@ -275,40 +275,40 @@ if (flag !== &amp;amp;quot;important&amp;amp;quot;) {
                 <title>Types and runtime checks</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/types_runtime_checks.html</guid>
                 <link>https://mikesub.net/blog/types_runtime_checks.html</link>
-                <description>&amp;lt;p&amp;gt;That&amp;amp;#39;s the second article in a series on TypeScript started by ‘&amp;lt;a href=&amp;quot;https://mikesub.net/blog/ts_bad_parts.html&amp;quot;&amp;gt;TypeScript. Bad Parts&amp;lt;/a&amp;gt;’. You can read them in any order as they aren&amp;amp;#39;t really connected apart from covering the same topic. But if you can&amp;amp;#39;t decide, make it &amp;lt;a href=&amp;quot;https://mikesub.net/blog/ts_bad_parts.html&amp;quot;&amp;gt;chronologically&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;So what do types bring to JS? They fix some bad parts of JS, but that&amp;amp;#39;s a byproduct. Mainly they add some semantics to code which helps editors and people to get more sense what it&amp;amp;#39;s doing, how it should work and also spot some things which can be optimised. Let me show-case that with several examples.&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;quot;runtime-checks&amp;quot;&amp;gt;Runtime checks&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;Say, we have a function which takes a configuration object, which is a JS way to have named arguments, and it really needs &amp;lt;code&amp;gt;url&amp;lt;/code&amp;gt; out of it.&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-javascript&amp;quot;&amp;gt;function main({ url }) {
+                <description>&lt;p&gt;That&amp;#39;s the second article in a series on TypeScript started by ‘&lt;a href=&quot;https://mikesub.net/blog/ts_bad_parts.html&quot;&gt;TypeScript. Bad Parts&lt;/a&gt;’. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic. But if you can&amp;#39;t decide, make it &lt;a href=&quot;https://mikesub.net/blog/ts_bad_parts.html&quot;&gt;chronologically&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So what do types bring to JS? They fix some bad parts of JS, but that&amp;#39;s a byproduct. Mainly they add some semantics to code which helps editors and people to get more sense what it&amp;#39;s doing, how it should work and also spot some things which can be optimised. Let me show-case that with several examples.&lt;/p&gt;
+&lt;h2 id=&quot;runtime-checks&quot;&gt;Runtime checks&lt;/h2&gt;
+&lt;p&gt;Say, we have a function which takes a configuration object, which is a JS way to have named arguments, and it really needs &lt;code&gt;url&lt;/code&gt; out of it.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;function main({ url }) {
   // ...
-}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;It can not do a thing without &amp;lt;code&amp;gt;url&amp;lt;/code&amp;gt;, no fallback or default value possible. So there are two options, either to exit silently returning &amp;lt;code&amp;gt;undefined&amp;lt;/code&amp;gt; or, to make it more explicit, to throw an error:&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-javascript&amp;quot;&amp;gt;function main({ url }) {
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It can not do a thing without &lt;code&gt;url&lt;/code&gt;, no fallback or default value possible. So there are two options, either to exit silently returning &lt;code&gt;undefined&lt;/code&gt; or, to make it more explicit, to throw an error:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;function main({ url }) {
   if (!url) {
-    throw new Error(&amp;amp;quot;no URL provided&amp;amp;quot;);
+    throw new Error(&amp;quot;no URL provided&amp;quot;);
   }
   // ...
-}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;That should work. If somebody fails to put URL there, they notice it ASAP. But since it&amp;amp;#39;s not really named arguments there but just a fake, the code might fail even before. If one doesn&amp;amp;#39;t provide an object at all, we&amp;amp;#39;ll get:&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;TypeError: Cannot destructure property `url` of &amp;amp;#39;undefined&amp;amp;#39; or &amp;amp;#39;null&amp;amp;#39;.&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Let&amp;amp;#39;s not discuss the fact that my Chrome can&amp;amp;#39;t decide what it gets there: null or undefined, and try to fix that.&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-javascript&amp;quot;&amp;gt;function main({ url } = {}) {
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That should work. If somebody fails to put URL there, they notice it ASAP. But since it&amp;#39;s not really named arguments there but just a fake, the code might fail even before. If one doesn&amp;#39;t provide an object at all, we&amp;#39;ll get:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;TypeError: Cannot destructure property `url` of &amp;#39;undefined&amp;#39; or &amp;#39;null&amp;#39;.&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let&amp;#39;s not discuss the fact that my Chrome can&amp;#39;t decide what it gets there: null or undefined, and try to fix that.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;function main({ url } = {}) {
   if (!url) {
-    throw new Error(&amp;amp;quot;no URL provided&amp;amp;quot;);
+    throw new Error(&amp;quot;no URL provided&amp;quot;);
   }
   // ...
-}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;Now it&amp;amp;#39;s better. Though now it looks stupid. We&amp;amp;#39;ve just provided a fallback value to be able to throw an error which can not be caught and recovered from.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;And that&amp;amp;#39;s all happening in runtime. The code is there: parsed, evaluated, running, though isn&amp;amp;#39;t helping at all. If you use type annotations you can prevent that thing before runtime.&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-typescript&amp;quot;&amp;gt;function main({ url }: { url: string }) {
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now it&amp;#39;s better. Though now it looks stupid. We&amp;#39;ve just provided a fallback value to be able to throw an error which can not be caught and recovered from.&lt;/p&gt;
+&lt;p&gt;And that&amp;#39;s all happening in runtime. The code is there: parsed, evaluated, running, though isn&amp;#39;t helping at all. If you use type annotations you can prevent that thing before runtime.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typescript&quot;&gt;function main({ url }: { url: string }) {
   // ...
-}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;Instead of providing a default value and throwing an error, we state that the argument is required and it needs to have &amp;lt;code&amp;gt;url&amp;lt;/code&amp;gt; key which is a string. That&amp;amp;#39;s not ideal as any string, even empty one, will pass. But TypeScript might evolve to it at some point: &amp;lt;a href=&amp;quot;https://github.com/Microsoft/TypeScript/issues/6579&amp;quot;&amp;gt;regex-validated string type&amp;lt;/a&amp;gt;. And as of now, we&amp;amp;#39;re already preventing some errors w/o any runtime costs.&amp;lt;/p&amp;gt;
-&amp;lt;hr&amp;gt;
-&amp;lt;p&amp;gt;That&amp;amp;#39;s the second article in a series on TypeScript. You can read them in any order as they aren&amp;amp;#39;t really connected apart from covering the same topic:&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://mikesub.net/blog/ts_bad_parts.html&amp;quot;&amp;gt;TypeScript. Bad Parts&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://mikesub.net/blog/types_string_semantics.html&amp;quot;&amp;gt;Types. String semantics&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Instead of providing a default value and throwing an error, we state that the argument is required and it needs to have &lt;code&gt;url&lt;/code&gt; key which is a string. That&amp;#39;s not ideal as any string, even empty one, will pass. But TypeScript might evolve to it at some point: &lt;a href=&quot;https://github.com/Microsoft/TypeScript/issues/6579&quot;&gt;regex-validated string type&lt;/a&gt;. And as of now, we&amp;#39;re already preventing some errors w/o any runtime costs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;That&amp;#39;s the second article in a series on TypeScript. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mikesub.net/blog/ts_bad_parts.html&quot;&gt;TypeScript. Bad Parts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mikesub.net/blog/types_string_semantics.html&quot;&gt;Types. String semantics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
                 <pubDate>01 Mar 2019 18:00 +0100</pubDate>
             </item>
@@ -316,72 +316,72 @@ if (flag !== &amp;amp;quot;important&amp;amp;quot;) {
                 <title>TypeScript. Bad Parts</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/ts_bad_parts.html</guid>
                 <link>https://mikesub.net/blog/ts_bad_parts.html</link>
-                <description>&amp;lt;p&amp;gt;I&amp;amp;#39;ve been writing TypeScript for more than a year now and gone through well-known five stages of grief so it&amp;amp;#39;s time to share my experience. It all started as a compilation of tips &amp;amp;amp; tricks I&amp;amp;#39;ve discovered so far. Then it went to a more meta level of what types bring to JS at all. And as I was writing two pieces asynchronously I began to find myself noticing ‘bad’ parts here and there. At some point, there were enough of them for a separate discussion. So to keep those original ideas free of them, here they are, unordered.&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;quot;slowness&amp;quot;&amp;gt;Slowness&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;Everything is pointing out it could be considerably faster. I should admit it&amp;amp;#39;s slow but stable so if authors had to choose between those, they did the right choice, but hey, it&amp;amp;#39;s v3 already, maybe it&amp;amp;#39;s time to address that.&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;quot;cryptic-error-messages&amp;quot;&amp;gt;Cryptic error messages&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;They are. When you rely much on type inferring, it&amp;amp;#39;s even worse. Basically, they are generic stack traces which most of the times I see in a hint window in VSCode. They&amp;amp;#39;re not alone, some other languages are also known for it, but that&amp;amp;#39;s not an excuse.&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;quot;types-vs-interfaces&amp;quot;&amp;gt;Types vs. interfaces&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;As of TS v3, I don&amp;amp;#39;t see any difference in them, practically speaking. Yes, interfaces can be extended and merged but differences are so subtle so it adds more confusion in the current state of things than benefits.&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;quot;const-enums&amp;quot;&amp;gt;Const enums&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;If you prepend enum declaration with &amp;lt;code&amp;gt;const&amp;lt;/code&amp;gt; the compiler inlines it without creating an object. I can&amp;amp;#39;t see why I have to make that choice, the compiler has all the knowledge (actually even more than me) to decide whether it makes sense or not.&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;quot;index-signatures&amp;quot;&amp;gt;Index signatures&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;In JS you can put anything as a key in object and it will be converted to a string. TS decided to improve that a bit and allows &amp;lt;code&amp;gt;{ [key: number]: boolean }&amp;lt;/code&amp;gt;. Basically, it points that even though key is to be coerced to a string, let&amp;amp;#39;s check that we pass only numbers here. But then we get these:&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-typescript&amp;quot;&amp;gt;type A = { [k: number]: any };
+                <description>&lt;p&gt;I&amp;#39;ve been writing TypeScript for more than a year now and gone through well-known five stages of grief so it&amp;#39;s time to share my experience. It all started as a compilation of tips &amp;amp; tricks I&amp;#39;ve discovered so far. Then it went to a more meta level of what types bring to JS at all. And as I was writing two pieces asynchronously I began to find myself noticing ‘bad’ parts here and there. At some point, there were enough of them for a separate discussion. So to keep those original ideas free of them, here they are, unordered.&lt;/p&gt;
+&lt;h2 id=&quot;slowness&quot;&gt;Slowness&lt;/h2&gt;
+&lt;p&gt;Everything is pointing out it could be considerably faster. I should admit it&amp;#39;s slow but stable so if authors had to choose between those, they did the right choice, but hey, it&amp;#39;s v3 already, maybe it&amp;#39;s time to address that.&lt;/p&gt;
+&lt;h2 id=&quot;cryptic-error-messages&quot;&gt;Cryptic error messages&lt;/h2&gt;
+&lt;p&gt;They are. When you rely much on type inferring, it&amp;#39;s even worse. Basically, they are generic stack traces which most of the times I see in a hint window in VSCode. They&amp;#39;re not alone, some other languages are also known for it, but that&amp;#39;s not an excuse.&lt;/p&gt;
+&lt;h2 id=&quot;types-vs-interfaces&quot;&gt;Types vs. interfaces&lt;/h2&gt;
+&lt;p&gt;As of TS v3, I don&amp;#39;t see any difference in them, practically speaking. Yes, interfaces can be extended and merged but differences are so subtle so it adds more confusion in the current state of things than benefits.&lt;/p&gt;
+&lt;h2 id=&quot;const-enums&quot;&gt;Const enums&lt;/h2&gt;
+&lt;p&gt;If you prepend enum declaration with &lt;code&gt;const&lt;/code&gt; the compiler inlines it without creating an object. I can&amp;#39;t see why I have to make that choice, the compiler has all the knowledge (actually even more than me) to decide whether it makes sense or not.&lt;/p&gt;
+&lt;h2 id=&quot;index-signatures&quot;&gt;Index signatures&lt;/h2&gt;
+&lt;p&gt;In JS you can put anything as a key in object and it will be converted to a string. TS decided to improve that a bit and allows &lt;code&gt;{ [key: number]: boolean }&lt;/code&gt;. Basically, it points that even though key is to be coerced to a string, let&amp;#39;s check that we pass only numbers here. But then we get these:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typescript&quot;&gt;type A = { [k: number]: any };
 const a2: A = { 2: true }; // alright
 const a1: A = { string: true }; // error, fine
-const a3: A = { &amp;amp;quot;2&amp;amp;quot;: true }; // no error?
+const a3: A = { &amp;quot;2&amp;quot;: true }; // no error?
 
 type B = { [k: string]: any };
 const b1: B = { string: true }; // alright
-const b3: B = { &amp;amp;quot;2&amp;amp;quot;: true }; // no error, fine
-const b2: B = { 2: true }; // no error?&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;And &amp;lt;code&amp;gt;Object.keys()&amp;lt;/code&amp;gt; is not a generic, because it can&amp;amp;#39;t be as it always returns strings. The coercion was irreversible, nobody can convert strings back to original types for you. You&amp;amp;#39;re alone.&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-typescript&amp;quot;&amp;gt;Object.keys(); // {} =&amp;amp;gt; string[]&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;And the last, not the least, is that you can only use primitives there, not your own types:&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-typescript&amp;quot;&amp;gt;type Id = number;
+const b3: B = { &amp;quot;2&amp;quot;: true }; // no error, fine
+const b2: B = { 2: true }; // no error?&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And &lt;code&gt;Object.keys()&lt;/code&gt; is not a generic, because it can&amp;#39;t be as it always returns strings. The coercion was irreversible, nobody can convert strings back to original types for you. You&amp;#39;re alone.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typescript&quot;&gt;Object.keys(); // {} =&amp;gt; string[]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And the last, not the least, is that you can only use primitives there, not your own types:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typescript&quot;&gt;type Id = number;
 type Item = { id: Id };
-type Index = { [k: Id]: Item }; // nope, number please&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;h2 id=&amp;quot;type-inference&amp;quot;&amp;gt;Type Inference&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;That&amp;amp;#39;s nice. You feel good when you can drop obvious cases. It feels like language has done its homework. But then it starts taking defaults when there are multiple options and now you should be aware of them.&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-typescript&amp;quot;&amp;gt;const x = [2, true];
-// (number | boolean)[], not [number, boolean]&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;And when you return different shapes of objects from a function (say, redux reducer), inference creates monsters.&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-typescript&amp;quot;&amp;gt;function foo(x: boolean, arr: []) {
+type Index = { [k: Id]: Item }; // nope, number please&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;type-inference&quot;&gt;Type Inference&lt;/h2&gt;
+&lt;p&gt;That&amp;#39;s nice. You feel good when you can drop obvious cases. It feels like language has done its homework. But then it starts taking defaults when there are multiple options and now you should be aware of them.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typescript&quot;&gt;const x = [2, true];
+// (number | boolean)[], not [number, boolean]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And when you return different shapes of objects from a function (say, redux reducer), inference creates monsters.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typescript&quot;&gt;function foo(x: boolean, arr: []) {
   if (x) {
-    return { a: true, &amp;amp;quot;3&amp;amp;quot;: 2 };
+    return { a: true, &amp;quot;3&amp;quot;: 2 };
   } else {
     return { b: 2, 3: arr.length };
   }
 }
-// Inferred: {&amp;amp;#39;a&amp;amp;#39;: boolean; &amp;amp;#39;3&amp;amp;#39;: number; &amp;amp;#39;b&amp;amp;#39;?: undefined;}
-//           | {&amp;amp;#39;bar&amp;amp;#39;: number; 3: 0; &amp;amp;#39;a&amp;amp;#39;?: undefined}
+// Inferred: {&amp;#39;a&amp;#39;: boolean; &amp;#39;3&amp;#39;: number; &amp;#39;b&amp;#39;?: undefined;}
+//           | {&amp;#39;bar&amp;#39;: number; 3: 0; &amp;#39;a&amp;#39;?: undefined}
 //
-// Meant to be: {a?: boolean; &amp;amp;#39;3&amp;amp;#39;: number; b?: number;}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;Possible solution might be to add strict check similar to disabling implicit ‘any’ to avoid this monsters guessing and fail to infer when it is ambigious.&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;quot;global-scope&amp;quot;&amp;gt;Global scope&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;If you write TS for a browser, thus adding &amp;lt;code&amp;gt;dom&amp;lt;/code&amp;gt; in &amp;lt;code&amp;gt;compilerOptions/lib&amp;lt;/code&amp;gt;, lots of useful types become available in the global scope. And you don&amp;amp;#39;t need to import them explicitly. You know what it means. And they aren&amp;amp;#39;t grouped into a namespace. Yup.
-Some are easy to expect as &amp;lt;code&amp;gt;XMLHTTPRequest&amp;lt;/code&amp;gt; but others have more abstract names: &amp;lt;code&amp;gt;AlignSetting&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;Transport&amp;lt;/code&amp;gt;. You will notice errors if you would try to define them in your code:&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-typescript&amp;quot;&amp;gt;type Transport = ...;
-// duplicate identifier, was already declared in dom.d.ts&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;But you might miss the error if you just forget to define it and thus built-in will be used. And even worse will happen if you clash with built-in interfaces, as they will be merged:&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code class=&amp;quot;language-typescript&amp;quot;&amp;gt;interface Account {
-  foo: &amp;amp;quot;bar&amp;amp;quot;;
+// Meant to be: {a?: boolean; &amp;#39;3&amp;#39;: number; b?: number;}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Possible solution might be to add strict check similar to disabling implicit ‘any’ to avoid this monsters guessing and fail to infer when it is ambigious.&lt;/p&gt;
+&lt;h2 id=&quot;global-scope&quot;&gt;Global scope&lt;/h2&gt;
+&lt;p&gt;If you write TS for a browser, thus adding &lt;code&gt;dom&lt;/code&gt; in &lt;code&gt;compilerOptions/lib&lt;/code&gt;, lots of useful types become available in the global scope. And you don&amp;#39;t need to import them explicitly. You know what it means. And they aren&amp;#39;t grouped into a namespace. Yup.
+Some are easy to expect as &lt;code&gt;XMLHTTPRequest&lt;/code&gt; but others have more abstract names: &lt;code&gt;AlignSetting&lt;/code&gt;, &lt;code&gt;Transport&lt;/code&gt;. You will notice errors if you would try to define them in your code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typescript&quot;&gt;type Transport = ...;
+// duplicate identifier, was already declared in dom.d.ts&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But you might miss the error if you just forget to define it and thus built-in will be used. And even worse will happen if you clash with built-in interfaces, as they will be merged:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typescript&quot;&gt;interface Account {
+  foo: &amp;quot;bar&amp;quot;;
 }
-let x: Account = { foo: &amp;amp;quot;bar&amp;amp;quot; };
-// missing displayName, id, rpDisplayName from type &amp;amp;#39;Account&amp;amp;#39;.&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&amp;lt;h2 id=&amp;quot;official-documentation&amp;quot;&amp;gt;Official documentation&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;It&amp;amp;#39;s lacking behind. TS v3.3 is the latest now. &amp;lt;code&amp;gt;BigInt&amp;lt;/code&amp;gt; has been added in v3.2 but official documentation hasn&amp;amp;#39;t been updated.&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;quot;syntax&amp;quot;&amp;gt;Syntax&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;JS started to feel heavy when they added object destructuring. Then defaults and renaming came. Only type annotations were missing. Oh, it could be nested. I know it can be easily avoided by code style rules but still sometimes I find myself hitting the timeout in trying to parse the function declaration.&amp;lt;/p&amp;gt;
-&amp;lt;hr&amp;gt;
-&amp;lt;p&amp;gt;Alright. The path for more positive things looks much clear now. If you have any comments, please reach out to me, I&amp;amp;#39;d love to discuss that in more details. And stay tuned, originally planned articles will follow.&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;quot;update&amp;quot;&amp;gt;Update&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;This article started a series on TypeScript. You can read them in any order as they aren&amp;amp;#39;t really connected apart from covering the same topic:&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://mikesub.net/blog/types_runtime_checks.html&amp;quot;&amp;gt;Types and runtime checks&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://mikesub.net/blog/types_string_semantics.html&amp;quot;&amp;gt;Types. String semantics&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
+let x: Account = { foo: &amp;quot;bar&amp;quot; };
+// missing displayName, id, rpDisplayName from type &amp;#39;Account&amp;#39;.&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;official-documentation&quot;&gt;Official documentation&lt;/h2&gt;
+&lt;p&gt;It&amp;#39;s lacking behind. TS v3.3 is the latest now. &lt;code&gt;BigInt&lt;/code&gt; has been added in v3.2 but official documentation hasn&amp;#39;t been updated.&lt;/p&gt;
+&lt;h2 id=&quot;syntax&quot;&gt;Syntax&lt;/h2&gt;
+&lt;p&gt;JS started to feel heavy when they added object destructuring. Then defaults and renaming came. Only type annotations were missing. Oh, it could be nested. I know it can be easily avoided by code style rules but still sometimes I find myself hitting the timeout in trying to parse the function declaration.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Alright. The path for more positive things looks much clear now. If you have any comments, please reach out to me, I&amp;#39;d love to discuss that in more details. And stay tuned, originally planned articles will follow.&lt;/p&gt;
+&lt;h2 id=&quot;update&quot;&gt;Update&lt;/h2&gt;
+&lt;p&gt;This article started a series on TypeScript. You can read them in any order as they aren&amp;#39;t really connected apart from covering the same topic:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mikesub.net/blog/types_runtime_checks.html&quot;&gt;Types and runtime checks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mikesub.net/blog/types_string_semantics.html&quot;&gt;Types. String semantics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
                 <pubDate>07 Feb 2019 23:00 +0100</pubDate>
             </item>
@@ -389,7 +389,7 @@ let x: Account = { foo: &amp;amp;quot;bar&amp;amp;quot; };
                 
                 <guid isPermaLink="true">https://mikesub.net/blog/microblog.html</guid>
                 <link>https://mikesub.net/blog/microblog.html</link>
-                <description>&amp;lt;p&amp;gt;a post testing micro.blog integration.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;a post testing micro.blog integration.&lt;/p&gt;
 </description>
                 <pubDate>25 Sep 2018 22:30 +0200</pubDate>
             </item>
@@ -397,7 +397,7 @@ let x: Account = { foo: &amp;amp;quot;bar&amp;amp;quot; };
                 <title>NL#2</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/nl_drafts.html</guid>
                 <link>https://mikesub.net/blog/nl_drafts.html</link>
-                <description>&amp;lt;p&amp;gt;Прошло полгода после анонса, а я так и не закончил свою первую заметку про Нидерланды. Чтобы как-то сдвинуть дело, начну выкладывать черновики записей: &amp;lt;a href=&amp;quot;https://t.me/transmith&amp;quot;&amp;gt;https://t.me/transmith&amp;lt;/a&amp;gt; Возможно, позже получится из них собрать что-то полноценное.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;Прошло полгода после анонса, а я так и не закончил свою первую заметку про Нидерланды. Чтобы как-то сдвинуть дело, начну выкладывать черновики записей: &lt;a href=&quot;https://t.me/transmith&quot;&gt;https://t.me/transmith&lt;/a&gt; Возможно, позже получится из них собрать что-то полноценное.&lt;/p&gt;
 </description>
                 <pubDate>12 Feb 2018 21:59 +0100</pubDate>
             </item>
@@ -405,14 +405,14 @@ let x: Account = { foo: &amp;amp;quot;bar&amp;amp;quot; };
                 <title>NL</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/nl.html</guid>
                 <link>https://mikesub.net/blog/nl.html</link>
-                <description>&amp;lt;p&amp;gt;Стояло жаркое лето середины 90-х и я пытался изо всех сил угнаться за своим братом на велосипеде. Он ехал на «Украине», я на чём-то поменьше. Первые километра четыре шли по довольно спокойной асфальтированной дороге, одной из тех, которая ведет от шоссе к десяткам деревень и дачных посёлков. Оставшийся же путь надо было проделать по пыльной обочине горьковского шоссе. Там, где-то не доезжая Покрова, было что-то придорожное, где можно было купить аэрозоль против насекомых. Он понадобился, чтобы вывести совсем уж наглых размеров осиное гнездо на чердаке дома, где мы летом спали.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Жару усугубляли резкие порывы горячего пыльного воздуха от фур, проносившихся мимо. Когда мы доехали до заветного грубо сколоченного придорожного ларька, помимо аэрозоли брат купил банку Amsterdam Navigator. Он был крепкий, теплый и пена из банки моментально сделала наши руки отвратительно липкими.&amp;lt;/p&amp;gt;
-&amp;lt;hr&amp;gt;
-&amp;lt;p&amp;gt;Спустя лет пятнадцать, пасмурным осенним днём мы купили бутылку виски, поехали в нижнее течении Москвы-реки, и надев резиновые сапоги, зашли постоять в воду и выпить. Так мы тогда оказались в Лыткарино, на другом берегу реки от деревни Андреевское. Там были очистные сооружения, 24 маленькие градирни, бывший колхоз им. Ленина, испытательный комплекс Центрального института авиационного моторостроения и жилой комплекс «Адмиралтейский». Через несколько месяцев со мной на фликре связался дизайнер из Голландии и предложил купить права на фотографию, сделанную в тот день. Я согласился и спустя некоторое время в Голландии вышел какой-то проходной роман с моей будущей женой и её подругой на обложке. Мне прислали несколько экземпляров и тогда я решил при случае выучить голландский, чтобы всё-таки прочитать эту книгу.&amp;lt;/p&amp;gt;
-&amp;lt;hr&amp;gt;
-&amp;lt;p&amp;gt;Еще переместимся на шесть лет вперед, и вот я выхожу из аэропорта Скипхол, еду заселяться в номер отеля, на следующий день приезжаю в офис какого-то издательского дома, прохожу интервью и в результате, получив офер, решаю остаться в Москве. В тот же день происходит авиакатастрофа рейса MH17 Амстердам—Куала-Лумпур в Донецкой области.&amp;lt;/p&amp;gt;
-&amp;lt;hr&amp;gt;
-&amp;lt;p&amp;gt;Еще вперед на три года и вот я уже не обращаю внимания на дождь, если это не ливень, у меня уже украли один велосипед и, кажется, я готов рассказать про вотсап-дружины, про фризский язык, про особенности банковской системы, про то, что почти невозможно возить велосипеды в электричках и про то, что имеет смысл дарить уезжающим сюда.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;Стояло жаркое лето середины 90-х и я пытался изо всех сил угнаться за своим братом на велосипеде. Он ехал на «Украине», я на чём-то поменьше. Первые километра четыре шли по довольно спокойной асфальтированной дороге, одной из тех, которая ведет от шоссе к десяткам деревень и дачных посёлков. Оставшийся же путь надо было проделать по пыльной обочине горьковского шоссе. Там, где-то не доезжая Покрова, было что-то придорожное, где можно было купить аэрозоль против насекомых. Он понадобился, чтобы вывести совсем уж наглых размеров осиное гнездо на чердаке дома, где мы летом спали.&lt;/p&gt;
+&lt;p&gt;Жару усугубляли резкие порывы горячего пыльного воздуха от фур, проносившихся мимо. Когда мы доехали до заветного грубо сколоченного придорожного ларька, помимо аэрозоли брат купил банку Amsterdam Navigator. Он был крепкий, теплый и пена из банки моментально сделала наши руки отвратительно липкими.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Спустя лет пятнадцать, пасмурным осенним днём мы купили бутылку виски, поехали в нижнее течении Москвы-реки, и надев резиновые сапоги, зашли постоять в воду и выпить. Так мы тогда оказались в Лыткарино, на другом берегу реки от деревни Андреевское. Там были очистные сооружения, 24 маленькие градирни, бывший колхоз им. Ленина, испытательный комплекс Центрального института авиационного моторостроения и жилой комплекс «Адмиралтейский». Через несколько месяцев со мной на фликре связался дизайнер из Голландии и предложил купить права на фотографию, сделанную в тот день. Я согласился и спустя некоторое время в Голландии вышел какой-то проходной роман с моей будущей женой и её подругой на обложке. Мне прислали несколько экземпляров и тогда я решил при случае выучить голландский, чтобы всё-таки прочитать эту книгу.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Еще переместимся на шесть лет вперед, и вот я выхожу из аэропорта Скипхол, еду заселяться в номер отеля, на следующий день приезжаю в офис какого-то издательского дома, прохожу интервью и в результате, получив офер, решаю остаться в Москве. В тот же день происходит авиакатастрофа рейса MH17 Амстердам—Куала-Лумпур в Донецкой области.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Еще вперед на три года и вот я уже не обращаю внимания на дождь, если это не ливень, у меня уже украли один велосипед и, кажется, я готов рассказать про вотсап-дружины, про фризский язык, про особенности банковской системы, про то, что почти невозможно возить велосипеды в электричках и про то, что имеет смысл дарить уезжающим сюда.&lt;/p&gt;
 </description>
                 <pubDate>31 Aug 2017 10:00 +0200</pubDate>
             </item>
@@ -420,9 +420,9 @@ let x: Account = { foo: &amp;amp;quot;bar&amp;amp;quot; };
                 <title>10 years a web developer</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/10_years_a_developer.html</guid>
                 <link>https://mikesub.net/blog/10_years_a_developer.html</link>
-                <description>&amp;lt;p&amp;gt;On December 2006 I joined a digital agency as a humble HTML coder. There was neither Chrome nor iPhone yet, IE market share was around 85%, table-based layouts ruled the internet and we all were debugging using &amp;lt;em&amp;gt;window.alert&amp;lt;/em&amp;gt; calls.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Fast-forward 10 years. Chrome&amp;amp;#39;s released v.54, iPhone is in its 10th generation, IE has less than 15%. Web standards and its support, development tools and other technologies involved improved drastically but same happened to the complexity of products being developed nowadays. And it seems that these things are evolving nearly at the same rate. There is more or less same gap there, dev.tools can&amp;amp;#39;t keep up with things for which we use them. Be frank, it&amp;amp;#39;s still a pain in the neck to develop front-end stuff. We&amp;amp;#39;ve conquered basic blocks, but interfaces are getting more sophisticated, the web is being accessed from more devices, etc.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;And I can&amp;amp;#39;t name anything that would change this.&amp;lt;/p&amp;gt;
+                <description>&lt;p&gt;On December 2006 I joined a digital agency as a humble HTML coder. There was neither Chrome nor iPhone yet, IE market share was around 85%, table-based layouts ruled the internet and we all were debugging using &lt;em&gt;window.alert&lt;/em&gt; calls.&lt;/p&gt;
+&lt;p&gt;Fast-forward 10 years. Chrome&amp;#39;s released v.54, iPhone is in its 10th generation, IE has less than 15%. Web standards and its support, development tools and other technologies involved improved drastically but same happened to the complexity of products being developed nowadays. And it seems that these things are evolving nearly at the same rate. There is more or less same gap there, dev.tools can&amp;#39;t keep up with things for which we use them. Be frank, it&amp;#39;s still a pain in the neck to develop front-end stuff. We&amp;#39;ve conquered basic blocks, but interfaces are getting more sophisticated, the web is being accessed from more devices, etc.&lt;/p&gt;
+&lt;p&gt;And I can&amp;#39;t name anything that would change this.&lt;/p&gt;
 </description>
                 <pubDate>24 Nov 2016 14:20 +0100</pubDate>
             </item>
@@ -430,10 +430,10 @@ let x: Account = { foo: &amp;amp;quot;bar&amp;amp;quot; };
                 <title>Пусть бегут</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/let_them_run.html</guid>
                 <link>https://mikesub.net/blog/let_them_run.html</link>
-                <description>&amp;lt;p&amp;gt;Ну а если серьёзно про 2015 год, то чаще остального мы вспоминаем момент с одной из пробежек. Мы подбегали к небольшой горке, по которой поднимался мальчик лет 5-6 на
+                <description>&lt;p&gt;Ну а если серьёзно про 2015 год, то чаще остального мы вспоминаем момент с одной из пробежек. Мы подбегали к небольшой горке, по которой поднимался мальчик лет 5-6 на
 велосипеде. Ему было тяжело забираться, но он не сдавался, медленно и методично крутил педали. Тут мы с разбега забегаем на эту горку и начинаем его догонять. В
 какой-то момент равняемся с ним, а потом начинаем медленно обгонять. Мальчик сначала прибавляет и пытается не дать себя обогнать, всё-таки он же на велосипеде, но
-вскоре сдаётся и произносит как бы про себя, но вслух, в сторону: «Пусть бегут».&amp;lt;/p&amp;gt;
+вскоре сдаётся и произносит как бы про себя, но вслух, в сторону: «Пусть бегут».&lt;/p&gt;
 </description>
                 <pubDate>31 Dec 2015 09:06 +0100</pubDate>
             </item>
@@ -441,25 +441,25 @@ let x: Account = { foo: &amp;amp;quot;bar&amp;amp;quot; };
                 <title>about:blank</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/about_blank.html</guid>
                 <link>https://mikesub.net/blog/about_blank.html</link>
-                <description>&amp;lt;p&amp;gt;Я очень скучаю по чистой вкладке, пустой белой странице. Когда-то все браузеры при открытии вкладки показывали
+                <description>&lt;p&gt;Я очень скучаю по чистой вкладке, пустой белой странице. Когда-то все браузеры при открытии вкладки показывали
 чистую страницу и пользователь мог либо ввести адрес в адресную строку, либо выбрать страницу из закладок. Потом интерфейс
 стал обрастать и появился вывод истории недавних посещений, списки популярных сайтов. Гугл начал показывать по сути свою
-стартовую страницу, одно время показывал свои приложения и т.п.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Одно время это было опционально, но сейчас уже в хроме настроить показ пустой страницы нельзя. Вслед за ним опера и
-яндекс также не дают такую возможность. В сафари и фаерфоксе такая опция осталась, но неизвестно надолго ли.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Я держу свой рабочий стол (тот, который на компьютере) абсолютно пустым, без обоев, с одноцветной заливкой. Переключаясь
+стартовую страницу, одно время показывал свои приложения и т.п.&lt;/p&gt;
+&lt;p&gt;Одно время это было опционально, но сейчас уже в хроме настроить показ пустой страницы нельзя. Вслед за ним опера и
+яндекс также не дают такую возможность. В сафари и фаерфоксе такая опция осталась, но неизвестно надолго ли.&lt;/p&gt;
+&lt;p&gt;Я держу свой рабочий стол (тот, который на компьютере) абсолютно пустым, без обоев, с одноцветной заливкой. Переключаясь
 на него, я попадаю на чистый лист и из спотлайта начинаю новую задачу. Также и в браузере. Если мне операционная система
 вместо пустого десктопа будет выводить какие-нибудь списки недавно открытых файлов, популярных приложений — не знаю
-смогу ли я к этому привыкнуть, либо придется искать обходные пути отключения этой функциональности.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;На написание этой заметки меня натолкнул
-&amp;lt;a href=&amp;quot;http://blog.flickr.net/en/2015/03/18/flickr-tab-in-google-chrome/&amp;quot;&amp;gt;flickr tab&amp;lt;/a&amp;gt;, расширение для хрома, которое в каждой новой вкладке показывает
+смогу ли я к этому привыкнуть, либо придется искать обходные пути отключения этой функциональности.&lt;/p&gt;
+&lt;p&gt;На написание этой заметки меня натолкнул
+&lt;a href=&quot;http://blog.flickr.net/en/2015/03/18/flickr-tab-in-google-chrome/&quot;&gt;flickr tab&lt;/a&gt;, расширение для хрома, которое в каждой новой вкладке показывает
 случайную популярную фотографию с одноименного сервиса. Я его установил в попытке избежать мусорной стартовой страницы.
 Но в результате поймал себя за тем, что открывая новый вкладку, я автоматически открываю еще одну, так как срабатывает
-рефлекс того, что я очутился не на новой вкладке, а просто переключился на какую-то старую, в которой что-то уже открыто.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Ну и немного про обои рабочего стола: из-за моих настроек я долго не замечал в yosemite полупрозрачного фона боковых
+рефлекс того, что я очутился не на новой вкладке, а просто переключился на какую-то старую, в которой что-то уже открыто.&lt;/p&gt;
+&lt;p&gt;Ну и немного про обои рабочего стола: из-за моих настроек я долго не замечал в yosemite полупрозрачного фона боковых
 панелей, меню и прочих элементов. Из-за однотонного темносерого фона я просто считал, что всё в новой ОС тускло и
 странно. Только случайно, поставив каких-то ярких слонов на рабочий стол, я заметил эту полупрозрачность. Слонов я убрал
-и поставил крыжик в system preferences &amp;amp;gt; accessibility &amp;amp;gt; reduce transparency, чего всем и советую.&amp;lt;/p&amp;gt;
+и поставил крыжик в system preferences &amp;gt; accessibility &amp;gt; reduce transparency, чего всем и советую.&lt;/p&gt;
 </description>
                 <pubDate>26 Mar 2015 15:45 +0100</pubDate>
             </item>
@@ -467,26 +467,26 @@ let x: Account = { foo: &amp;amp;quot;bar&amp;amp;quot; };
                 <title>Гугл мой спотлайт</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/google_my_spotlight.html</guid>
                 <link>https://mikesub.net/blog/google_my_spotlight.html</link>
-                <description>&amp;lt;p&amp;gt;В продолжение «&amp;lt;a href=&amp;quot;http://ilyabirman.ru/meanwhile/all/web-or-native-future/&amp;quot;&amp;gt;Будущего нативных и веб-приложений&amp;lt;/a&amp;gt;» Ильи Бирмана.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Да, веб-приложения сейчас часто неудобнее нативных аналогов. На мобильных платформах это еще больше ощущается, чем
+                <description>&lt;p&gt;В продолжение «&lt;a href=&quot;http://ilyabirman.ru/meanwhile/all/web-or-native-future/&quot;&gt;Будущего нативных и веб-приложений&lt;/a&gt;» Ильи Бирмана.&lt;/p&gt;
+&lt;p&gt;Да, веб-приложения сейчас часто неудобнее нативных аналогов. На мобильных платформах это еще больше ощущается, чем
 на десктопах. Одновременно с этим то, что открывается по ссылке в браузере, далеко и давно ушло от понятия
 веб-страницы. Даже простейший блог со статьями, который, казалось бы, наиболее близок к тому, зачем придумали интернет —
 уже не список статей с перекрестными ссылками. Поиск, комментарии, админка — всё это ближе к сервису/приложению нежели
-к странице.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Но разработчики веб-сервисов с одной стороны и разработчики браузеров с другой до сих расценивают интернет как список
-веб-страниц.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Представьте, если бы при запуске нативного приложения, вы бы попадали на лэндинг/промо- страницу с описанием сервиса, а
-не туда, где вы остановили работу в этом приложении. В вебе такое еще можно встретить.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Представьте, что ваш док приложений — список безликих иконок «программа». В вебе сейчас это так. В Apple пошли
-дальше и убрали даже фавиконки у закладок в Safari.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Представьте, что каждый раз при запуске приложения вам необходимо было бы вводить логин/пароль. Такое в вебе еще встречается.
+к странице.&lt;/p&gt;
+&lt;p&gt;Но разработчики веб-сервисов с одной стороны и разработчики браузеров с другой до сих расценивают интернет как список
+веб-страниц.&lt;/p&gt;
+&lt;p&gt;Представьте, если бы при запуске нативного приложения, вы бы попадали на лэндинг/промо- страницу с описанием сервиса, а
+не туда, где вы остановили работу в этом приложении. В вебе такое еще можно встретить.&lt;/p&gt;
+&lt;p&gt;Представьте, что ваш док приложений — список безликих иконок «программа». В вебе сейчас это так. В Apple пошли
+дальше и убрали даже фавиконки у закладок в Safari.&lt;/p&gt;
+&lt;p&gt;Представьте, что каждый раз при запуске приложения вам необходимо было бы вводить логин/пароль. Такое в вебе еще встречается.
 В идеале вся авторизация в вебе должна остаться в случаях, требующих дополнительной защиты. Также как в нативных
 приложениях 1Password требует дополнительную авторизацию, а почтовый клиент не требует, также и в браузере интернет-банк
-пусть требует.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;А теперь представьте, что вы могли бы себе в док (или из спотлайта) попасть сразу в нужную папку вашего почтового клиента
-или в нужный список reminders в обход разводящего экрана.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Но мы неизбежно к этому идём и те, кто избавляются от концепции URLов в своих веб-приложениях (привет, интернет-банки),
-кто по умолчанию выставляет режим «не запоминать пароль» — все они идут не в ту сторону.&amp;lt;/p&amp;gt;
+пусть требует.&lt;/p&gt;
+&lt;p&gt;А теперь представьте, что вы могли бы себе в док (или из спотлайта) попасть сразу в нужную папку вашего почтового клиента
+или в нужный список reminders в обход разводящего экрана.&lt;/p&gt;
+&lt;p&gt;Но мы неизбежно к этому идём и те, кто избавляются от концепции URLов в своих веб-приложениях (привет, интернет-банки),
+кто по умолчанию выставляет режим «не запоминать пароль» — все они идут не в ту сторону.&lt;/p&gt;
 </description>
                 <pubDate>26 Mar 2015 00:15 +0100</pubDate>
             </item>
@@ -494,45 +494,45 @@ let x: Account = { foo: &amp;amp;quot;bar&amp;amp;quot; };
                 <title>Верстальщики: от программистов к дизайнерам</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/html_designers.html</guid>
                 <link>https://mikesub.net/blog/html_designers.html</link>
-                <description>&amp;lt;p&amp;gt;Изначально HTML создавался как markdown или разметка wiki. Как сейчас нет markdown-верстальщика, word-писателя, так и
-изначально не было HTML—верстальщика. Это было еще один формат разметки текста.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Почти сразу HTML стали использовать не для создания документов с гиперссылками, а чего-угодно с гиперссылками.
+                <description>&lt;p&gt;Изначально HTML создавался как markdown или разметка wiki. Как сейчас нет markdown-верстальщика, word-писателя, так и
+изначально не было HTML—верстальщика. Это было еще один формат разметки текста.&lt;/p&gt;
+&lt;p&gt;Почти сразу HTML стали использовать не для создания документов с гиперссылками, а чего-угодно с гиперссылками.
 Так появились веб-сайты: интерактивные документы, с одной стороны пытающие предоставить интерфейс по аналогии с GUI
 всего остального компьютера, с другой стороны предоставить вёрстку в полиграфическом смысле. Технология этого
 не позволяла. С интерактивностью еще куда ни шло, появились веб-формы, а вот с вёрсткой (раскладка, сетки,
 блоки) — с этим были большие проблемы. Но никто ничего знать не хотел и поэтому в ход шли таблицы, распорки в виде
 прозрачных изображений и т.д. Собственно, из-за этого вся эта сложность, инструментария нет, есть несколько программ
 (браузеров), которые воспринимают инструкции по—разному, а плохие дизайнеры показывают нарисованные макеты в растровом
-графическом формате и настаивают на своём.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Поэтому выделились люди, которые могли как-то заставить браузер отрисовывать то, что нарисовал дизайнер. Cо временем,
+графическом формате и настаивают на своём.&lt;/p&gt;
+&lt;p&gt;Поэтому выделились люди, которые могли как-то заставить браузер отрисовывать то, что нарисовал дизайнер. Cо временем,
 технологии и инструменты прогрессировали и эволюционировали, и стало возможным верстать предназначенными для этого
 средствами, а не костылями. Так ушла вёрстка таблицами, но до сих пор нет инструмента, который бы позволил полностью
 правильно сделать то, что вы рисуете. Но, конечно, ситуация гораздо лучше, чем несколько лет назад. Сейчас, если брать
 современный браузер, то, в целом, в HTML есть все нужные средства, и он опять превращается в более-менее простой
 инструмент вёрстки. В рамках прототипов/макетов на нем можно писать человеку не сильно вовлеченному во все
-эти технологии.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Также сейчас с появлением AJAX-подгрузки частей страницы, возможностей анимации, адаптивного подстраивания под разные
+эти технологии.&lt;/p&gt;
+&lt;p&gt;Также сейчас с появлением AJAX-подгрузки частей страницы, возможностей анимации, адаптивного подстраивания под разные
 размеры окна, всё это сложнее и сложнее умещать в плоский PSD-макет. Теперь вместе с макетом идёт документация или
 раскадровка разных состояний. Но когда перед разработчиком плоский макет, то не видно всей логики, которую
 закладывал проектировщик/дизайнер: это просто два разных цвета, или этот цвет — функция от того цвета (затемнение на
 20%), это 10px или это расстояние зависит от состояния вот того блока, или это какой-нибудь «стандартный отступ при
-таких-то условиях» и тому подобное.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;То есть информация заложенная дизайнером так или иначе теряется, и приходится сажать рядом дизайнера, чтобы он объяснял
+таких-то условиях» и тому подобное.&lt;/p&gt;
+&lt;p&gt;То есть информация заложенная дизайнером так или иначе теряется, и приходится сажать рядом дизайнера, чтобы он объяснял
 по картинке, почему где как, или писать документацию, или дробить разработку на много итераций, постоянно показывая
-результат и внося в него изменения.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;И тут начинается самое интересное. Сейчас технология развивается, уже можно делать раскладку без использования неявных
+результат и внося в него изменения.&lt;/p&gt;
+&lt;p&gt;И тут начинается самое интересное. Сейчас технология развивается, уже можно делать раскладку без использования неявных
 побочных эффектов каких-либо свойств, уже можно сохранять зависимости размеров, цветов и прочего используя удобные
-пре- и пост- процессоры, которые довольно по-человечески работают.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;И, возвращаясь к интерактивности, популярного сейчас параллакс-эффекта и т.д., win-win ситуация для проектировщика
+пре- и пост- процессоры, которые довольно по-человечески работают.&lt;/p&gt;
+&lt;p&gt;И, возвращаясь к интерактивности, популярного сейчас параллакс-эффекта и т.д., win-win ситуация для проектировщика
 интерфейса — когда он как минимум на одном языке разговаривает с разработчиком, и как максимум, а технологии уже
 это позволяют, набрасывает какие-то прототипы, которые верстальщик уже потом доведёт до своих стандартов качества,
-не забудет про всякие сложные моменты и сделает, чтобы это везде работало, как задумано.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;ну и конечно все эти анимации и резиновость - это тоже на статических макетах не опишешь, приходится отдельно
+не забудет про всякие сложные моменты и сделает, чтобы это везде работало, как задумано.&lt;/p&gt;
+&lt;p&gt;ну и конечно все эти анимации и резиновость - это тоже на статических макетах не опишешь, приходится отдельно
 документацию какую-то прикладывать, которая слепая (всяко лучше самому это реализовать и увидеть как это
-на самом деле в браузере будет работать).&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Поэтому веб-вёрстка, изначально зародившаяся как инструмент программиста, после этого выделившись в отдельную
+на самом деле в браузере будет работать).&lt;/p&gt;
+&lt;p&gt;Поэтому веб-вёрстка, изначально зародившаяся как инструмент программиста, после этого выделившись в отдельную
 специализацию, сейчас плавно и верно перетекает в сторону проектировщиков интерфейсов и это отлично. А верстальщики
-вместе с этим плавно перетекают либо в дизайнеров, либо в программистов и это прекрасно.&amp;lt;/p&amp;gt;
+вместе с этим плавно перетекают либо в дизайнеров, либо в программистов и это прекрасно.&lt;/p&gt;
 </description>
                 <pubDate>22 Mar 2015 00:15 +0100</pubDate>
             </item>
