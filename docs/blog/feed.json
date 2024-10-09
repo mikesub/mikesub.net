@@ -5,6 +5,13 @@
  "feed_url": "https://mikesub.net/blog/feed.json",
  "items": [
   {
+   "title": "The 10th month of October",
+   "id": "https://mikesub.net/blog/octo10.html",
+   "url": "https://mikesub.net/blog/octo10.html",
+   "content_html": "<p><img src=\"https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/vdnkh.jpg\" alt=\"\"></p>\n<p>Some years ago, I would have listed these as problems that could be solved by now:</p>\n<h2 id=\"seamless-language-translation\">Seamless language translation</h2>\n<p>Babel Fish by Douglas Adams. No matter what language one is writing, another should be able to seamlessly read and understand the written. We do have Google Translate, DeepL and LLMs, some of them even built-in in modern browsers, but they still feel a bit clunky. These tools often fail to translate all the text, and sometimes they break JavaScript interactivity and form submissions. We&#39;re still in the POC stage, not much further.\nSometimes I don&#39;t need to translate the full page, just a section. Some sites offer a &quot;translate&quot; button ((X has it next to a tweet), but that&#39;s not a browser or an OS. It can be much smoother experience.</p>\n<h2 id=\"smart-diffs\">Smart diffs</h2>\n<p>Imagine comparing programming code files not just by lines of text, but by actually analyzing the code— parsing the AST, symbols, and tokens to understand semantics. And no, we don&#39;t need LLMs to predict merges; algorithms can handle that. It might not be perfect, but it would be a game-changing improvement over simply comparing characters and lines.</p>\n<p>Recent links:</p>\n<ul>\n<li><a href=\"https://build-your-own.org/blog/20240813_css_vertical_center/\">2024. CSS has vertical centering</a></li>\n<li><a href=\"https://notebooklm.google/\">Google NotebookLM</a></li>\n<li><a href=\"https://www.theverge.com/2024/9/27/24256361/\">WordPress drama</a></li>\n<li><a href=\"https://erikbern.com/2024/09/27/its-hard-to-write-code-for-humans\">It&#39;s hard to write code for computers, but it&#39;s even harder to write code for humans</a></li>\n</ul>\n<p>Music:</p>\n<ul>\n<li><a href=\"https://music.youtube.com/playlist?list=OLAK5uy_luqjVwyPbpq_jAce9ziu8tKL33SXJF1mQ\">Depeche Mode - Ultra</a></li>\n</ul>\n",
+   "date_published": "2024-10-10T02:05:00+02:00"
+  },
+  {
    "title": "Welcome to the fall",
    "id": "https://mikesub.net/blog/thefall.html",
    "url": "https://mikesub.net/blog/thefall.html",
