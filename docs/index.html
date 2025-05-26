@@ -18,6 +18,50 @@
     />
     <meta name="author" content="Mike Saburenkov" />
     <meta name="description" content="Mike Saburenkov" />
+    <style>
+         :root {
+           color-scheme: light dark;
+         }
+         body {
+           font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+           font-weight: normal;
+           background-color: #0E1415;
+           background-color: light-dark(#F7F7F7, #0E1415);
+           font-size: 1.2rem;
+
+           max-width: 45rem;
+           margin-left: auto;
+           margin-right: auto;
+         }
+
+         body,
+         a,
+         a:active,
+         a:focus,
+         a:visited,
+         a:hover {
+           color: #ccc;
+           color: light-dark(#000, #ccc);
+         }
+
+         a,
+         a:active,
+         a:focus,
+         a:visited,
+         a:hover {
+           text-decoration: underline;
+         }
+
+         a:hover {
+           color: #325CC0;
+         }
+
+         @media (max-width: 768px) {
+           body {
+             margin: 1rem;
+           }
+         }
+       </style>
   </head>
   <body>
     <main>
