@@ -1,4 +1,4 @@
-export default function({items, config}) {
+export default function ({ items, config }) {
 	return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,14 +13,21 @@ export default function({items, config}) {
 </head>
 <body>
   <header><h1><a href="..">${config.title}</a></h1></header>
-${items.map(({path, title, machineDate, humanDate, body}) => `    <article>
+  <main>
+${items
+	.map(
+		({ path, title, machineDate, humanDate, body }) => `    <article>
       <header>
-        <h1><a href="${path}">${title ? title: "#"}</a></h1>
+        <h2><a href="${path}">${title ? title : "#"}</a></h2>
         <p><time datetime="${machineDate}">${humanDate}</time></p>
       </header>
       ${body}
     </article>
-`).join('')}
+`,
+	)
+	.join("")}
+</main>
 </body>
 </html>
-`}
+`;
+}
