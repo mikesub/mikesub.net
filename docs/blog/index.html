@@ -12,9 +12,94 @@
 </head>
 <body>
   <header><h1><a href="..">Mike Saburenkov</a></h1></header>
+  <main>
     <article>
       <header>
-        <h1><a href="octo10.html">The 10th month of October</a></h1>
+        <h2><a href="html-mcp.html">HTML MCP</a></h2>
+        <p><time datetime="2025-05-28">May 28</time></p>
+      </header>
+      <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/wires.jpg" alt=""></p>
+<p>I’ve been playing around with MCP lately, trying to figure out what it’s really about. I remember when OpenAI introduced function calling two years ago — that felt like a big deal. It was that missing piece: LLMs struggle with simple deterministic stuff — like counting how many rs are in strawberry, and doing basic math. But they’re smart enough to ask for help, if you tell them how to ask.</p>
+<p>Basically, you could now prompt LLMs with:</p>
+<pre><code>What is 8 * 23?
+And by the way, if you need a calculator, 
+just reply with “CALC: formula” and I’ll give you the result, 
+so you can use this information in your final answer.</code></pre><p>And suddenly LLMs were getting the weather, sending emails and searching knowledge bases.</p>
+<p>Then, two years later, came MCP. It’s still tool calling, but with some added plumbing: a way to discover tools, communicate results, handle invocation, etc. The protocol design decisions are quite questionable so far, and the docs/SDKs are clearly early-stage — but the direction makes sense. Eventually, it’ll be usable and maybe even nice.</p>
+<p>Besides “Why not use WebSockets?”, one of the most common questions I see about MCP is “Why not just use OpenAPI?” And the arguments tend to be:</p>
+<ol>
+<li>Token efficiency — specs are large, and LLMs get overwhelmed or hallucinate more with too much irrelevant context. JSON should be dense and purpose-built.</li>
+<li>OpenAPI specs are static. MCP supports more dynamic tool usage (whatever that exactly means).</li>
+</ol>
+<p>Neither argument feels super convincing as a reason to design a new protocol... but that’s not the point of this post.</p>
+<p>I want to go even further back — before OpenAPI — to REST itself.</p>
+<p>A decade ago, I was designing a public HTTP API for a SaaS product. Back then, even choosing JSON over XML felt edgy. We spent days arguing about what makes an API “RESTful”: what HTTP methods to use, what status codes to return, how to structure paths, all that. And we talked about HATEOAS.</p>
+<p>It felt utopian — the idea that you could fully navigate and use APIs just from what the server gives you in responses. For machine-consumable JSON APIs, it didn’t really work. No clear way to describe input schemas, required fields, or methods. And even if we had it all, you can&#39;t just script the algorithm to use it, you need human agency to interpret the responses. It worked fine for things like pagination: <code>&quot;next_page_url&quot;</code>, where clients could write their logic to follow the link, but for more complex workflows, we quickly dropped it.</p>
+<p>Fast forward 10 years — and somehow, it might be a good time to revisit it. Now we have LLMs who could somewhat reason about the text we give them and decide what to do. It led me to reread a really good piece by HTMX on <a href="https://htmx.org/essays/hateoas/">HATEOAS</a>, then open ChatGPT and try this little experiment:</p>
+<pre><code>**Me**
+The goal is to trigger depositing money to an account, 
+using HTTP API calls. At the start, you&#39;re given 
+only the hostname (bank.example.com) 
+and the entry-point URL: /accounts/12345. 
+You should give me HTTP requests you&#39;d like 
+to make (no words, just HTTP requests). 
+I&#39;ll act as a server. And we&#39;ll see if we get the task done.
+
+**ChatGPT**
+GET /accounts/12345 HTTP/1.1
+Host: bank.example.com
+
+
+**Me**
+HTTP/1.1 200 OK
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;div&gt;Account number: 12345&lt;/div&gt;
+    &lt;div&gt;Balance: $100.00 USD&lt;/div&gt;
+    &lt;div&gt;Links:
+      &lt;a href=&quot;/accounts/12345/deposits&quot;&gt;deposits&lt;/a&gt;
+      &lt;a href=&quot;/accounts/12345/withdrawals&quot;&gt;withdrawals&lt;/a&gt;
+      &lt;a href=&quot;/accounts/12345/transfers&quot;&gt;transfers&lt;/a&gt;
+      &lt;a href=&quot;/accounts/12345/close-requests&quot;&gt;close-requests&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+
+**ChatGPT**
+GET /accounts/12345/deposits HTTP/1.1
+Host: bank.example.com
+
+
+**Me**
+HTTP/1.1 200 OK
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;/accounts/12345/deposits&quot;&gt;
+      &lt;input name=&quot;amount&quot; type=&quot;number&quot; /&gt;
+      &lt;button&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+
+**ChatGPT**
+POST /accounts/12345/deposits HTTP/1.1
+Host: bank.example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 11
+
+amount=50</code></pre><p><a href="https://chatgpt.com/share/68365c43-61c8-8005-95f2-f6fc8fc814ac">here is a chatgpt.com-hosted chat transcript</a></p>
+<p>So, basically, HTML here fills all the missing pieces: method, endpoint, schema, everything. No additional docs or schemas. Just HTML. LLM handled other standard HTTP patterns (like 401 Unauthorized) all perfectly, no surprises.</p>
+<p>So, here we are. HATEOASy HTML over HTTP might already have everything we need for. And it’s human-readable, and LLM-friendly. It’s not a static doc — tools and flows can change based on context, user input, or app state. It’s not really verbose. You can drop most of the markup (html, body, and other tags), and it&#39;s still totally valid HTML.</p>
+<p>The beauty of it is that the same HTML can serve both as a UI for humans and a tool interface for LLMs. You can load it in your browser, click through it manually, and see exactly what the agent would see. No need for separate dev consoles or special tooling.</p>
+<p>So yeah — turns out old-school HTML over HTTP might just be the most future-proof API format we’ve got. And now with LLM reasoning, HATEOAS might be relevant again.</p>
+<p><em>Update:</em><br>Just after writing the draft for this note, I saw the CEO of HTMX <a href="https://bsky.app/profile/htmx.org/post/3lq6pobpjb22j">bsky&#39;ed about the same thing</a>, referencing his older article from 2016, “<a href="https://htmx.org/articles/hateoas-is-for-humans/">HATEOAS is for Humans</a>”. Well, it&#39;s 2025 and it might be not just for humans anymore.</p>
+
+    </article>
+    <article>
+      <header>
+        <h2><a href="octo10.html">The 10th month of October</a></h2>
         <p><time datetime="2024-10-10">October 10, 2024</time></p>
       </header>
       <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/vdnkh.jpg" alt=""></p>
@@ -39,7 +124,7 @@ Sometimes I don&#39;t need to translate the full page, just a section. Some site
     </article>
     <article>
       <header>
-        <h1><a href="thefall.html">Welcome to the fall</a></h1>
+        <h2><a href="thefall.html">Welcome to the fall</a></h2>
         <p><time datetime="2024-09-10">September 10, 2024</time></p>
       </header>
       <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/objects.jpg" alt=""></p>
@@ -66,7 +151,7 @@ So, for me, it&#39;s already autumn, while for you, it might still be summer. Lu
     </article>
     <article>
       <header>
-        <h1><a href="midsomar.html">Midsummer 2024</a></h1>
+        <h2><a href="midsomar.html">Midsummer 2024</a></h2>
         <p><time datetime="2024-08-15">August 15, 2024</time></p>
       </header>
       <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/harvest.jpg" alt=""></p>
@@ -96,7 +181,7 @@ you simply copy this one file to your server, and you have everything you need f
     </article>
     <article>
       <header>
-        <h1><a href="2407.html">A blog entry</a></h1>
+        <h2><a href="2407.html">A blog entry</a></h2>
         <p><time datetime="2024-07-12">July 12, 2024</time></p>
       </header>
       <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/40yo.jpg" alt=""></p>
@@ -110,7 +195,7 @@ you simply copy this one file to your server, and you have everything you need f
     </article>
     <article>
       <header>
-        <h1><a href="disenchantment.html">Disenchantment</a></h1>
+        <h2><a href="disenchantment.html">Disenchantment</a></h2>
         <p><time datetime="2024-01-10">January 10, 2024</time></p>
       </header>
       <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/2d745cd0a60c491bb7c701cc1ecdf8ded120fbea/photos/tv_dinner.jpg" alt=""></p>
@@ -125,7 +210,7 @@ But to feel all this more vividly, I had to return to Twitter in December to sen
     </article>
     <article>
       <header>
-        <h1><a href="swamp_surf.html">Swamp surf</a></h1>
+        <h2><a href="swamp_surf.html">Swamp surf</a></h2>
         <p><time datetime="2023-04-05">April 5, 2023</time></p>
       </header>
       <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/car.jpg" alt=""></p>
@@ -138,7 +223,7 @@ But to feel all this more vividly, I had to return to Twitter in December to sen
     </article>
     <article>
       <header>
-        <h1><a href="buying_cds.html">Buying CDs in 2020</a></h1>
+        <h2><a href="buying_cds.html">Buying CDs in 2020</a></h2>
         <p><time datetime="2020-11-13">November 13, 2020</time></p>
       </header>
       <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/curtains.jpg" alt=""></p>
@@ -154,7 +239,7 @@ And I&#39;m already reading about analog watches.</p>
     </article>
     <article>
       <header>
-        <h1><a href="setup.html">The setup</a></h1>
+        <h2><a href="setup.html">The setup</a></h2>
         <p><time datetime="2020-09-03">September 3, 2020</time></p>
       </header>
       <p>I&#39;ve just realised that <a href="https://www.theolognion.com/programmer-starts-a-blog-doesnt-write-about-their-static-site-generator-setup-in-the-first-post/">Joanne Dvorak</a> might be not the only one to make such mistake.</p>
@@ -169,7 +254,7 @@ And I&#39;m already reading about analog watches.</p>
     </article>
     <article>
       <header>
-        <h1><a href="unknowns_and_surprises.html">Unknowns and surprises</a></h1>
+        <h2><a href="unknowns_and_surprises.html">Unknowns and surprises</a></h2>
         <p><time datetime="2020-09-02">September 2, 2020</time></p>
       </header>
       <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/self_grass.jpg" alt=""></p>
@@ -182,7 +267,7 @@ And I&#39;m already reading about analog watches.</p>
     </article>
     <article>
       <header>
-        <h1><a href="spoilers.html">Spoilers for unknowns</a></h1>
+        <h2><a href="spoilers.html">Spoilers for unknowns</a></h2>
         <p><time datetime="2020-08-09">August 9, 2020</time></p>
       </header>
       <p>I was born in late USSR. Some things, somewhat ordinary to Western World, were either in scarcity or just not existing in my childhood. Though my uncle emigrated to Australia so occasionally we were getting something from there. At some point, we got a VHS. The player came with a bunch of cassettes with movies recorded from Australian TV. Sometimes they were re-recorded. And in this case, if the original film was longer than a new one, you got an additional ending of something unknown after the closing credits.</p>
@@ -195,7 +280,7 @@ And I&#39;m already reading about analog watches.</p>
     </article>
     <article>
       <header>
-        <h1><a href="intermission.html">Intermission</a></h1>
+        <h2><a href="intermission.html">Intermission</a></h2>
         <p><time datetime="2020-01-26">January 26, 2020</time></p>
       </header>
       <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/flower_thrower.jpeg" alt=""></p>
@@ -210,7 +295,7 @@ but I feel the need to fill that intermission.</p>
     </article>
     <article>
       <header>
-        <h1><a href="2005.html">Oh five</a></h1>
+        <h2><a href="2005.html">Oh five</a></h2>
         <p><time datetime="2019-12-09">December 9, 2019</time></p>
       </header>
       <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/escalator.jpg" alt=""></p>
@@ -221,7 +306,7 @@ but I feel the need to fill that intermission.</p>
     </article>
     <article>
       <header>
-        <h1><a href="django_cards.html">Django cards</a></h1>
+        <h2><a href="django_cards.html">Django cards</a></h2>
         <p><time datetime="2019-12-05">December 5, 2019</time></p>
       </header>
       <p><img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/window.jpg" alt=""></p>
@@ -239,7 +324,7 @@ but I feel the need to fill that intermission.</p>
     </article>
     <article>
       <header>
-        <h1><a href="ssr.html">A Case of SSR</a></h1>
+        <h2><a href="ssr.html">A Case of SSR</a></h2>
         <p><time datetime="2019-03-07">March 7, 2019</time></p>
       </header>
       <p>If we take popular JS topics currently out there, type annotations, server-side rendering (SSR) and CSS in JS are probably in the top four. Virtual DOM frameworks have come as a solution to a request of getting more code on a client side. Tools like TypeScript and Flow appeared as attempts to fix some JS parts. Also, people started to seek for ways how not to duplicate ‘view’ code between server and client. Most often it leads to running JS in Node.js on server, which comes with <a href="https://solovyov.net/en/2017/server-side-rendering/">‘restart every N requests’</a> and other implications. But people still go there to serve content faster. And it&#39;s obvious — why to take away from browsers what they do best: parsing and rendering HTML pages. And so now it&#39;s even supported by many frameworks out of the box.</p>
@@ -259,7 +344,7 @@ but I feel the need to fill that intermission.</p>
     </article>
     <article>
       <header>
-        <h1><a href="types_string_semantics.html">Types. String semantics</a></h1>
+        <h2><a href="types_string_semantics.html">Types. String semantics</a></h2>
         <p><time datetime="2019-03-06">March 6, 2019</time></p>
       </header>
       <p>That&#39;s the third article in a series on TypeScript started by ‘<a href="https://mikesub.net/blog/ts_bad_parts.html">TypeScript. Bad Parts</a>’. You can read them in any order as they aren&#39;t really connected apart from covering the same topic. But if you can&#39;t decide, make it <a href="https://mikesub.net/blog/ts_bad_parts.html">chronologically</a>.</p>
@@ -305,7 +390,7 @@ if (flag !== &quot;important&quot;) {
     </article>
     <article>
       <header>
-        <h1><a href="types_runtime_checks.html">Types and runtime checks</a></h1>
+        <h2><a href="types_runtime_checks.html">Types and runtime checks</a></h2>
         <p><time datetime="2019-03-01">March 1, 2019</time></p>
       </header>
       <p>That&#39;s the second article in a series on TypeScript started by ‘<a href="https://mikesub.net/blog/ts_bad_parts.html">TypeScript. Bad Parts</a>’. You can read them in any order as they aren&#39;t really connected apart from covering the same topic. But if you can&#39;t decide, make it <a href="https://mikesub.net/blog/ts_bad_parts.html">chronologically</a>.</p>
@@ -346,7 +431,7 @@ if (flag !== &quot;important&quot;) {
     </article>
     <article>
       <header>
-        <h1><a href="ts_bad_parts.html">TypeScript. Bad Parts</a></h1>
+        <h2><a href="ts_bad_parts.html">TypeScript. Bad Parts</a></h2>
         <p><time datetime="2019-02-07">February 7, 2019</time></p>
       </header>
       <p>I&#39;ve been writing TypeScript for more than a year now and gone through well-known five stages of grief so it&#39;s time to share my experience. It all started as a compilation of tips &amp; tricks I&#39;ve discovered so far. Then it went to a more meta level of what types bring to JS at all. And as I was writing two pieces asynchronously I began to find myself noticing ‘bad’ parts here and there. At some point, there were enough of them for a separate discussion. So to keep those original ideas free of them, here they are, unordered.</p>
@@ -419,7 +504,7 @@ let x: Account = { foo: &quot;bar&quot; };
     </article>
     <article>
       <header>
-        <h1><a href="microblog.html">#</a></h1>
+        <h2><a href="microblog.html">#</a></h2>
         <p><time datetime="2018-09-25">September 25, 2018</time></p>
       </header>
       <p>a post testing micro.blog integration.</p>
@@ -427,7 +512,7 @@ let x: Account = { foo: &quot;bar&quot; };
     </article>
     <article>
       <header>
-        <h1><a href="nl_drafts.html">NL#2</a></h1>
+        <h2><a href="nl_drafts.html">NL#2</a></h2>
         <p><time datetime="2018-02-12">February 12, 2018</time></p>
       </header>
       <p>Прошло полгода после анонса, а я так и не закончил свою первую заметку про Нидерланды. Чтобы как-то сдвинуть дело, начну выкладывать черновики записей: <a href="https://t.me/transmith">https://t.me/transmith</a> Возможно, позже получится из них собрать что-то полноценное.</p>
@@ -435,7 +520,7 @@ let x: Account = { foo: &quot;bar&quot; };
     </article>
     <article>
       <header>
-        <h1><a href="nl.html">NL</a></h1>
+        <h2><a href="nl.html">NL</a></h2>
         <p><time datetime="2017-08-31">August 31, 2017</time></p>
       </header>
       <p>Стояло жаркое лето середины 90-х и я пытался изо всех сил угнаться за своим братом на велосипеде. Он ехал на «Украине», я на чём-то поменьше. Первые километра четыре шли по довольно спокойной асфальтированной дороге, одной из тех, которая ведет от шоссе к десяткам деревень и дачных посёлков. Оставшийся же путь надо было проделать по пыльной обочине горьковского шоссе. Там, где-то не доезжая Покрова, было что-то придорожное, где можно было купить аэрозоль против насекомых. Он понадобился, чтобы вывести совсем уж наглых размеров осиное гнездо на чердаке дома, где мы летом спали.</p>
@@ -450,7 +535,7 @@ let x: Account = { foo: &quot;bar&quot; };
     </article>
     <article>
       <header>
-        <h1><a href="10_years_a_developer.html">10 years a web developer</a></h1>
+        <h2><a href="10_years_a_developer.html">10 years a web developer</a></h2>
         <p><time datetime="2016-11-24">November 24, 2016</time></p>
       </header>
       <p>On December 2006 I joined a digital agency as a humble HTML coder. There was neither Chrome nor iPhone yet, IE market share was around 85%, table-based layouts ruled the internet and we all were debugging using <em>window.alert</em> calls.</p>
@@ -460,7 +545,7 @@ let x: Account = { foo: &quot;bar&quot; };
     </article>
     <article>
       <header>
-        <h1><a href="let_them_run.html">Пусть бегут</a></h1>
+        <h2><a href="let_them_run.html">Пусть бегут</a></h2>
         <p><time datetime="2015-12-31">December 31, 2015</time></p>
       </header>
       <p>Ну а если серьёзно про 2015 год, то чаще остального мы вспоминаем момент с одной из пробежек. Мы подбегали к небольшой горке, по которой поднимался мальчик лет 5-6 на
@@ -471,7 +556,7 @@ let x: Account = { foo: &quot;bar&quot; };
     </article>
     <article>
       <header>
-        <h1><a href="about_blank.html">about:blank</a></h1>
+        <h2><a href="about_blank.html">about:blank</a></h2>
         <p><time datetime="2015-03-26">March 26, 2015</time></p>
       </header>
       <p>Я очень скучаю по чистой вкладке, пустой белой странице. Когда-то все браузеры при открытии вкладки показывали
@@ -497,7 +582,7 @@ let x: Account = { foo: &quot;bar&quot; };
     </article>
     <article>
       <header>
-        <h1><a href="google_my_spotlight.html">Гугл мой спотлайт</a></h1>
+        <h2><a href="google_my_spotlight.html">Гугл мой спотлайт</a></h2>
         <p><time datetime="2015-03-26">March 26, 2015</time></p>
       </header>
       <p>В продолжение «<a href="http://ilyabirman.ru/meanwhile/all/web-or-native-future/">Будущего нативных и веб-приложений</a>» Ильи Бирмана.</p>
@@ -524,7 +609,7 @@ let x: Account = { foo: &quot;bar&quot; };
     </article>
     <article>
       <header>
-        <h1><a href="html_designers.html">Верстальщики: от программистов к дизайнерам</a></h1>
+        <h2><a href="html_designers.html">Верстальщики: от программистов к дизайнерам</a></h2>
         <p><time datetime="2015-03-22">March 22, 2015</time></p>
       </header>
       <p>Изначально HTML создавался как markdown или разметка wiki. Как сейчас нет markdown-верстальщика, word-писателя, так и
@@ -569,5 +654,6 @@ let x: Account = { foo: &quot;bar&quot; };
 
     </article>
 
+</main>
 </body>
 </html>

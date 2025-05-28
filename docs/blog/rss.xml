@@ -6,6 +6,90 @@
         <link>https://mikesub.net/blog/</link>
         <description>Mike Saburenkov</description>
             <item>
+                <title>HTML MCP</title>
+                <guid isPermaLink="true">https://mikesub.net/blog/html-mcp.html</guid>
+                <link>https://mikesub.net/blog/html-mcp.html</link>
+                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/wires.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I’ve been playing around with MCP lately, trying to figure out what it’s really about. I remember when OpenAI introduced function calling two years ago — that felt like a big deal. It was that missing piece: LLMs struggle with simple deterministic stuff — like counting how many rs are in strawberry, and doing basic math. But they’re smart enough to ask for help, if you tell them how to ask.&lt;/p&gt;
+&lt;p&gt;Basically, you could now prompt LLMs with:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;What is 8 * 23?
+And by the way, if you need a calculator, 
+just reply with “CALC: formula” and I’ll give you the result, 
+so you can use this information in your final answer.&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And suddenly LLMs were getting the weather, sending emails and searching knowledge bases.&lt;/p&gt;
+&lt;p&gt;Then, two years later, came MCP. It’s still tool calling, but with some added plumbing: a way to discover tools, communicate results, handle invocation, etc. The protocol design decisions are quite questionable so far, and the docs/SDKs are clearly early-stage — but the direction makes sense. Eventually, it’ll be usable and maybe even nice.&lt;/p&gt;
+&lt;p&gt;Besides “Why not use WebSockets?”, one of the most common questions I see about MCP is “Why not just use OpenAPI?” And the arguments tend to be:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Token efficiency — specs are large, and LLMs get overwhelmed or hallucinate more with too much irrelevant context. JSON should be dense and purpose-built.&lt;/li&gt;
+&lt;li&gt;OpenAPI specs are static. MCP supports more dynamic tool usage (whatever that exactly means).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Neither argument feels super convincing as a reason to design a new protocol... but that’s not the point of this post.&lt;/p&gt;
+&lt;p&gt;I want to go even further back — before OpenAPI — to REST itself.&lt;/p&gt;
+&lt;p&gt;A decade ago, I was designing a public HTTP API for a SaaS product. Back then, even choosing JSON over XML felt edgy. We spent days arguing about what makes an API “RESTful”: what HTTP methods to use, what status codes to return, how to structure paths, all that. And we talked about HATEOAS.&lt;/p&gt;
+&lt;p&gt;It felt utopian — the idea that you could fully navigate and use APIs just from what the server gives you in responses. For machine-consumable JSON APIs, it didn’t really work. No clear way to describe input schemas, required fields, or methods. And even if we had it all, you can&amp;#39;t just script the algorithm to use it, you need human agency to interpret the responses. It worked fine for things like pagination: &lt;code&gt;&amp;quot;next_page_url&amp;quot;&lt;/code&gt;, where clients could write their logic to follow the link, but for more complex workflows, we quickly dropped it.&lt;/p&gt;
+&lt;p&gt;Fast forward 10 years — and somehow, it might be a good time to revisit it. Now we have LLMs who could somewhat reason about the text we give them and decide what to do. It led me to reread a really good piece by HTMX on &lt;a href=&quot;https://htmx.org/essays/hateoas/&quot;&gt;HATEOAS&lt;/a&gt;, then open ChatGPT and try this little experiment:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;**Me**
+The goal is to trigger depositing money to an account, 
+using HTTP API calls. At the start, you&amp;#39;re given 
+only the hostname (bank.example.com) 
+and the entry-point URL: /accounts/12345. 
+You should give me HTTP requests you&amp;#39;d like 
+to make (no words, just HTTP requests). 
+I&amp;#39;ll act as a server. And we&amp;#39;ll see if we get the task done.
+
+**ChatGPT**
+GET /accounts/12345 HTTP/1.1
+Host: bank.example.com
+
+
+**Me**
+HTTP/1.1 200 OK
+&amp;lt;html&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;Account number: 12345&amp;lt;/div&amp;gt;
+    &amp;lt;div&amp;gt;Balance: $100.00 USD&amp;lt;/div&amp;gt;
+    &amp;lt;div&amp;gt;Links:
+      &amp;lt;a href=&amp;quot;/accounts/12345/deposits&amp;quot;&amp;gt;deposits&amp;lt;/a&amp;gt;
+      &amp;lt;a href=&amp;quot;/accounts/12345/withdrawals&amp;quot;&amp;gt;withdrawals&amp;lt;/a&amp;gt;
+      &amp;lt;a href=&amp;quot;/accounts/12345/transfers&amp;quot;&amp;gt;transfers&amp;lt;/a&amp;gt;
+      &amp;lt;a href=&amp;quot;/accounts/12345/close-requests&amp;quot;&amp;gt;close-requests&amp;lt;/a&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+**ChatGPT**
+GET /accounts/12345/deposits HTTP/1.1
+Host: bank.example.com
+
+
+**Me**
+HTTP/1.1 200 OK
+&amp;lt;html&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;form method=&amp;quot;post&amp;quot; action=&amp;quot;/accounts/12345/deposits&amp;quot;&amp;gt;
+      &amp;lt;input name=&amp;quot;amount&amp;quot; type=&amp;quot;number&amp;quot; /&amp;gt;
+      &amp;lt;button&amp;gt;Submit&amp;lt;/button&amp;gt;
+    &amp;lt;/form&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+**ChatGPT**
+POST /accounts/12345/deposits HTTP/1.1
+Host: bank.example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 11
+
+amount=50&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;https://chatgpt.com/share/68365c43-61c8-8005-95f2-f6fc8fc814ac&quot;&gt;here is a chatgpt.com-hosted chat transcript&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So, basically, HTML here fills all the missing pieces: method, endpoint, schema, everything. No additional docs or schemas. Just HTML. LLM handled other standard HTTP patterns (like 401 Unauthorized) all perfectly, no surprises.&lt;/p&gt;
+&lt;p&gt;So, here we are. HATEOASy HTML over HTTP might already have everything we need for. And it’s human-readable, and LLM-friendly. It’s not a static doc — tools and flows can change based on context, user input, or app state. It’s not really verbose. You can drop most of the markup (html, body, and other tags), and it&amp;#39;s still totally valid HTML.&lt;/p&gt;
+&lt;p&gt;The beauty of it is that the same HTML can serve both as a UI for humans and a tool interface for LLMs. You can load it in your browser, click through it manually, and see exactly what the agent would see. No need for separate dev consoles or special tooling.&lt;/p&gt;
+&lt;p&gt;So yeah — turns out old-school HTML over HTTP might just be the most future-proof API format we’ve got. And now with LLM reasoning, HATEOAS might be relevant again.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt;&lt;br&gt;Just after writing the draft for this note, I saw the CEO of HTMX &lt;a href=&quot;https://bsky.app/profile/htmx.org/post/3lq6pobpjb22j&quot;&gt;bsky&amp;#39;ed about the same thing&lt;/a&gt;, referencing his older article from 2016, “&lt;a href=&quot;https://htmx.org/articles/hateoas-is-for-humans/&quot;&gt;HATEOAS is for Humans&lt;/a&gt;”. Well, it&amp;#39;s 2025 and it might be not just for humans anymore.&lt;/p&gt;
+</description>
+                <pubDate>28 May 2025 04:51 +0200</pubDate>
+            </item>
+            <item>
                 <title>The 10th month of October</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/octo10.html</guid>
                 <link>https://mikesub.net/blog/octo10.html</link>
