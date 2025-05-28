@@ -1,5 +1,5 @@
 ---
-title: HTML MCP
+title: HTML HATEOAS in the Age of LLMs
 date: 2025-05-28 02:51
 photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/wires.jpg
 ---
