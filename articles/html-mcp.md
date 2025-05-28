@@ -99,5 +99,7 @@ The beauty of it is that the same HTML can serve both as a UI for humans and a t
 
 So yeah — turns out old-school HTML over HTTP might just be the most future-proof API format we’ve got. And now with LLM reasoning, HATEOAS might be relevant again.
 
+Discussion: [BSKY](https://bsky.app/profile/mikesub.net/post/3lq7wdgbcvk2a), [HN](https://news.ycombinator.com/item?id=44114473), [LI](https://www.linkedin.com/posts/mikesub_ive-been-building-a-mcp-model-context-protocol-activity-7333455340815990784-XPXN)
+
 *Update:*  
 Just after writing the draft for this note, I saw the CEO of HTMX [bsky'ed about the same thing](https://bsky.app/profile/htmx.org/post/3lq6pobpjb22j), referencing his older article from 2016, “[HATEOAS is for Humans](https://htmx.org/articles/hateoas-is-for-humans/)”. Well, it's 2025 and indeed it might be not just for humans anymore.
