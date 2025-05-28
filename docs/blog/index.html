@@ -31,8 +31,7 @@ so you can use this information in your final answer.</code></pre><p>And suddenl
 <li>Token efficiency — specs are large, and LLMs get overwhelmed or hallucinate more with too much irrelevant context. JSON should be dense and purpose-built.</li>
 <li>OpenAPI specs are static. MCP supports more dynamic tool usage (whatever that exactly means).</li>
 </ol>
-<p>Neither argument feels super convincing as a reason to design a new protocol... but that’s not the point of this post.</p>
-<p>I want to go even further back — before OpenAPI — to REST itself.</p>
+<p>Neither argument feels super convincing as a reason to design a new protocol... but that’s not the point of this post. I want to go even further back — before OpenAPI — to REST itself.</p>
 <p>A decade ago, I was designing a public HTTP API for a SaaS product. Back then, even choosing JSON over XML felt edgy. We spent days arguing about what makes an API “RESTful”: what HTTP methods to use, what status codes to return, how to structure paths, all that. And we talked about HATEOAS.</p>
 <p>It felt utopian — the idea that you could fully navigate and use APIs just from what the server gives you in responses. For machine-consumable JSON APIs, it didn’t really work. No clear way to describe input schemas, required fields, or methods. And even if we had it all, you can&#39;t just script the algorithm to use it, you need human agency to interpret the responses. It worked fine for things like pagination: <code>&quot;next_page_url&quot;</code>, where clients could write their logic to follow the link, but for more complex workflows, we quickly dropped it.</p>
 <p>Fast forward 10 years — and somehow, it might be a good time to revisit it. Now we have LLMs who could somewhat reason about the text we give them and decide what to do. It led me to reread a really good piece by HTMX on <a href="https://htmx.org/essays/hateoas/">HATEOAS</a>, then open ChatGPT and try this little experiment:</p>
@@ -90,11 +89,11 @@ Content-Type: application/x-www-form-urlencoded
 Content-Length: 11
 
 amount=50</code></pre><p><a href="https://chatgpt.com/share/68365c43-61c8-8005-95f2-f6fc8fc814ac">here is a chatgpt.com-hosted chat transcript</a></p>
-<p>So, basically, HTML here fills all the missing pieces: method, endpoint, schema, everything. No additional docs or schemas. Just HTML. LLM handled other standard HTTP patterns (like 401 Unauthorized) all perfectly, no surprises.</p>
+<p>So, basically, HTML here fills all the missing pieces: method, endpoint, schema, everything. No additional docs or schemas. Just HTML. LLM handled other standard HTTP patterns (like <code>401 Unauthorized</code>) all perfectly, no surprises.</p>
 <p>So, here we are. HATEOASy HTML over HTTP might already have everything we need for. And it’s human-readable, and LLM-friendly. It’s not a static doc — tools and flows can change based on context, user input, or app state. It’s not really verbose. You can drop most of the markup (html, body, and other tags), and it&#39;s still totally valid HTML.</p>
 <p>The beauty of it is that the same HTML can serve both as a UI for humans and a tool interface for LLMs. You can load it in your browser, click through it manually, and see exactly what the agent would see. No need for separate dev consoles or special tooling.</p>
 <p>So yeah — turns out old-school HTML over HTTP might just be the most future-proof API format we’ve got. And now with LLM reasoning, HATEOAS might be relevant again.</p>
-<p><em>Update:</em><br>Just after writing the draft for this note, I saw the CEO of HTMX <a href="https://bsky.app/profile/htmx.org/post/3lq6pobpjb22j">bsky&#39;ed about the same thing</a>, referencing his older article from 2016, “<a href="https://htmx.org/articles/hateoas-is-for-humans/">HATEOAS is for Humans</a>”. Well, it&#39;s 2025 and it might be not just for humans anymore.</p>
+<p><em>Update:</em><br>Just after writing the draft for this note, I saw the CEO of HTMX <a href="https://bsky.app/profile/htmx.org/post/3lq6pobpjb22j">bsky&#39;ed about the same thing</a>, referencing his older article from 2016, “<a href="https://htmx.org/articles/hateoas-is-for-humans/">HATEOAS is for Humans</a>”. Well, it&#39;s 2025 and indeed it might be not just for humans anymore.</p>
 
     </article>
     <article>

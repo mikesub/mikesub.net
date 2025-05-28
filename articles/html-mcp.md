@@ -25,9 +25,7 @@ Besides “Why not use WebSockets?”, one of the most common questions I see ab
 1. Token efficiency — specs are large, and LLMs get overwhelmed or hallucinate more with too much irrelevant context. JSON should be dense and purpose-built.
 2. OpenAPI specs are static. MCP supports more dynamic tool usage (whatever that exactly means).
 
-Neither argument feels super convincing as a reason to design a new protocol... but that’s not the point of this post.
-
-I want to go even further back — before OpenAPI — to REST itself.
+Neither argument feels super convincing as a reason to design a new protocol... but that’s not the point of this post. I want to go even further back — before OpenAPI — to REST itself.
 
 A decade ago, I was designing a public HTTP API for a SaaS product. Back then, even choosing JSON over XML felt edgy. We spent days arguing about what makes an API “RESTful”: what HTTP methods to use, what status codes to return, how to structure paths, all that. And we talked about HATEOAS.
 
@@ -93,7 +91,7 @@ amount=50
 ```
 [here is a chatgpt.com-hosted chat transcript](https://chatgpt.com/share/68365c43-61c8-8005-95f2-f6fc8fc814ac)
 
-So, basically, HTML here fills all the missing pieces: method, endpoint, schema, everything. No additional docs or schemas. Just HTML. LLM handled other standard HTTP patterns (like 401 Unauthorized) all perfectly, no surprises.
+So, basically, HTML here fills all the missing pieces: method, endpoint, schema, everything. No additional docs or schemas. Just HTML. LLM handled other standard HTTP patterns (like `401 Unauthorized`) all perfectly, no surprises.
 
 So, here we are. HATEOASy HTML over HTTP might already have everything we need for. And it’s human-readable, and LLM-friendly. It’s not a static doc — tools and flows can change based on context, user input, or app state. It’s not really verbose. You can drop most of the markup (html, body, and other tags), and it's still totally valid HTML.
 
@@ -102,4 +100,4 @@ The beauty of it is that the same HTML can serve both as a UI for humans and a t
 So yeah — turns out old-school HTML over HTTP might just be the most future-proof API format we’ve got. And now with LLM reasoning, HATEOAS might be relevant again.
 
 *Update:*  
-Just after writing the draft for this note, I saw the CEO of HTMX [bsky'ed about the same thing](https://bsky.app/profile/htmx.org/post/3lq6pobpjb22j), referencing his older article from 2016, “[HATEOAS is for Humans](https://htmx.org/articles/hateoas-is-for-humans/)”. Well, it's 2025 and it might be not just for humans anymore.
+Just after writing the draft for this note, I saw the CEO of HTMX [bsky'ed about the same thing](https://bsky.app/profile/htmx.org/post/3lq6pobpjb22j), referencing his older article from 2016, “[HATEOAS is for Humans](https://htmx.org/articles/hateoas-is-for-humans/)”. Well, it's 2025 and indeed it might be not just for humans anymore.
