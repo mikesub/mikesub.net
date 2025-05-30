@@ -6,10 +6,10 @@ export default function ({ items, config }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog - ${config.author}</title>
   <link rel="stylesheet" href="css.css"/>
-  <link rel="alternate" type="application/json" title="${config.title}" href="${config.url}feed.json" />
+  <link rel="alternate" type="application/feed+json" title="${config.title}" href="${config.url}feed.json" />
   <link rel="alternate" type="application/rss+xml" title="${config.title}" href="${config.url}rss.xml"/>
   <meta name="author" content="${config.author}"/>
-  <meta name="description" content="${config.author}"/>
+  <meta name="description" content="${config.author}'s blog"/>
 </head>
 <body>
   <header><h1><a href="..">${config.title}</a></h1></header>
