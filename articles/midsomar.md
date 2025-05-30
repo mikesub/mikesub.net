@@ -4,8 +4,6 @@ date: 2024-08-15 21:00
 photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/harvest.jpg
 ---
 
-![](https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/harvest.jpg)
-
 I decided to extract a blog engine from my blog repository, even though nobody asked for it. While doing so, I dropped TypeScript but moved 
 it Deno for the rest of the tooling. There's nothing particularly interesting about this, except for one thing I noticed: If I decide to 
 publish this for others to use, it could be as simple as just cloning a repository and periodically rebasing it on my remote origin. 
@@ -29,5 +27,3 @@ Music:
 * [The Crazy World Of Arthur Brown](https://music.youtube.com/watch?v=37kjXWxGQGU&si=PwZ6zCHvPBSCoV2E)
 
 See you in Fall!
-
-

@@ -4,8 +4,6 @@ date: 2024-10-10 00:05
 photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/vdnkh.jpg
 ---
 
-![](https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/vdnkh.jpg)
-
 Some years ago, I would have listed these as problems that could be solved by now:
 
 ## Seamless language translation

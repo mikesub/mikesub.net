@@ -37,7 +37,7 @@ a:hover {
 	text-decoration: none;
 }
 
-header {
+body > header {
 	h1 {
 		font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
 		font-weight: normal;
@@ -57,47 +57,79 @@ header {
 }
 
 main {
-	header {
-		h2 {
-			font-weight: normal;
-			margin-bottom: 0;
-
-			a {
-				text-decoration: none;
-
-				&:hover {
-					text-decoration: underline;
-					color: light-dark(#000, #ccc);
-				}
-			}
-		}
-		p {
-			margin: 0;
-			font-size: 0.8rem;
-		}
-	}
 	article {
 		margin-bottom: 5rem;
+
+		header {
+			margin-bottom: 1rem;
+			h1 {
+				font-weight: normal;
+				margin: 0;
+
+				a {
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+						color: light-dark(#000, #ccc);
+					}
+				}
+			}
+			p {
+				margin: 0;
+				font-size: 0.8rem;
+			}
+		}
+
+		figure {
+			width: 90vw;
+			margin-left: calc(50% - 45vw);
+			margin-right: calc(50% - 45vw);
+			max-height: 65vh;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+
+			img {
+				max-height: 65vh;
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				display: block;
+				border-radius: 3px;
+				border: 0.5px solid light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
+			}
+		}
+
+		h2 {
+			font-weight: bold;
+			font-size: 1rem;
+			margin-bottom: 0;
+		}
+
 		p {
 			word-wrap: break-word;
+			margin-top: 0;
+
+			img {
+				border-radius: 3px;
+				border: 0.5px solid light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
+				max-height: 50vh;
+				height: auto;
+				max-width: 100%;
+				margin: 0 auto;
+				display: block;
+			}
 		}
 
 		ol,
 		ul {
-			margin: 0;
+			margin-top: 0;
 			padding: 0 0 0 1.5rem;
 			li {
 				margin: 0 0 .2rem 0;
 				padding: 0;
 			}
-		}
-
-		img {
-			max-height: 50vh;
-			height: auto;
-			max-width: 100%;
-			margin: 0 auto;
-			display: block;
 		}
 
 		hr {
@@ -117,8 +149,8 @@ main {
 
 		pre,
 		code {
-			background: rgb(40, 40, 40);
-			background: light-dark(rgb(230, 230, 230), rgb(40, 40, 40));
+			background: #f0f0f0;
+			background: light-dark(#f0f0f0, rgb(40, 40, 40));
 			font-family: "Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro",
 				Menlo, Consolas, "DejaVu Sans Mono", monospace;
 			font-weight: normal;
@@ -126,16 +158,21 @@ main {
 
 		pre {
 			border-radius: 3px;
+			border: 0.5px solid light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
+
+			margin-left: -0.5rem;
+			margin-right: -0.5rem;
 			padding: 0.5rem 1rem;
 			max-width: 100%;
 			overflow-x: auto;
 			font-size: 0.75rem;
-			white-space: pre;
+			white-space: pre-wrap;
 			overflow-wrap: normal;
 
 			code {
 				padding: 0;
 			}
+			margin-top: 0;
 		}
 
 		code {

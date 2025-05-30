@@ -5,7 +5,7 @@ export default function ({ items, config }) {
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog - ${config.author}</title>
-  <link rel="stylesheet" href="css.css"/>
+  <link rel="stylesheet" href="../blog.css"/>
   <link rel="alternate" type="application/feed+json" title="${config.title}" href="${config.url}feed.json" />
   <link rel="alternate" type="application/rss+xml" title="${config.title}" href="${config.url}rss.xml"/>
   <meta name="author" content="${config.author}"/>
@@ -18,7 +18,7 @@ ${items
 	.map(
 		({ path, title, machineDate, humanDate, body }) => `    <article>
       <header>
-        <h2><a href="${path}">${title ? title : "#"}</a></h2>
+        <h1><a href="${path}">${title ? title : "#"}</a></h1>
         <p><time datetime="${machineDate}">${humanDate}</time></p>
       </header>
       ${body}

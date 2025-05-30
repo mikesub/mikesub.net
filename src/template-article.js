@@ -5,7 +5,7 @@ export default function ({ item, config }) {
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${item.title || ""} - ${config.author}</title>
-  <link rel="stylesheet" href="css.css"/>
+  <link rel="stylesheet" href="../blog.css"/>
   <link rel="alternate" type="application/json" title="${config.title}" href="${config.url}feed.json" />
   <link rel="alternate" type="application/rss+xml" title="${config.title}" href="${config.url}rss.xml"/>
   <meta name="author" content="${config.author}"/>
@@ -16,7 +16,7 @@ export default function ({ item, config }) {
   <main>
   <article>
     <header>
-      ${item.title ? `<h2>${item.title}</h2>` : ""}
+      ${item.title ? `<h1>${item.title}</h1>` : ""}
       <p><time datetime="${item.machineDate}">${item.humanDate}</time></p>
     </header>
     ${item.body}

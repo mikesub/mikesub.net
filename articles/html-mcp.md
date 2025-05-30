@@ -4,9 +4,6 @@ date: 2025-05-28 02:51
 photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/wires.jpg
 ---
 
-![](https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/wires.jpg)
-
-
 I’ve been playing around with MCP lately, trying to figure out what it’s really about. I remember when OpenAI introduced function calling two years ago — that felt like a big deal. It was that missing piece: LLMs struggle with simple deterministic stuff — like counting how many rs are in strawberry, and doing basic math. But they’re smart enough to ask for help, if you tell them how to ask.
 
 Basically, you could now prompt LLMs with:

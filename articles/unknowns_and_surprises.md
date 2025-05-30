@@ -4,8 +4,6 @@ date: 2020-09-02 00:30
 photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/self_grass.jpg
 ---
 
-![](https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/self_grass.jpg)
-
 For most of my years in photography I’ve been using digital cameras. I bought film cameras a few times just to play around with the film but always sold it back after several months. And I never got into analogue printing, just developing and scanning with DSLRs.
 
 Around three years ago I found a full darkroom set for sale and decided to experience the complete process. It costed almost nothing and contained everything you might need. There was even some film in bulk rolls. But then it had to wait for two more years in my storage room until I finally found space and time to try it out.

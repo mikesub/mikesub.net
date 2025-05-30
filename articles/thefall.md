@@ -4,8 +4,6 @@ date: 2024-09-10 15:00
 photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/objects.jpg
 ---
 
-![](https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/objects.jpg)
-
 One thing that surprised me when I moved to the Netherlands was the difference in how the seasons are observed.
 It turns out that there are at least two ways: astronomical and calendar-based. I was used to calendar seasons, where
 each season has three months, starting on the first and ending on the last day of the respective months. While some countries use astronomical approach where it's defined by solstices and equinoxes.

@@ -9,7 +9,7 @@
                 <title>HTML HATEOAS in the age of LLMs</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/html-mcp.html</guid>
                 <link>https://mikesub.net/blog/html-mcp.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/wires.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/wires.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;I’ve been playing around with MCP lately, trying to figure out what it’s really about. I remember when OpenAI introduced function calling two years ago — that felt like a big deal. It was that missing piece: LLMs struggle with simple deterministic stuff — like counting how many rs are in strawberry, and doing basic math. But they’re smart enough to ask for help, if you tell them how to ask.&lt;/p&gt;
 &lt;p&gt;Basically, you could now prompt LLMs with:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;What is 8 * 23?
@@ -93,7 +93,7 @@ amount=50&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;https://chatgpt.com/
                 <title>The 10th month of October</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/octo10.html</guid>
                 <link>https://mikesub.net/blog/octo10.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/vdnkh.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/vdnkh.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;Some years ago, I would have listed these as problems that could be solved by now:&lt;/p&gt;
 &lt;h2 id=&quot;seamless-language-translation&quot;&gt;Seamless language translation&lt;/h2&gt;
 &lt;p&gt;Babel Fish by Douglas Adams. No matter what language one is writing, another should be able to seamlessly read and understand the written. We do have Google Translate, DeepL and LLMs, some of them even built-in in modern browsers, but they still feel a bit clunky. These tools often fail to translate all the text, and sometimes they break JavaScript interactivity and form submissions. We&amp;#39;re still in the POC stage, not much further.
@@ -118,7 +118,7 @@ Sometimes I don&amp;#39;t need to translate the full page, just a section. Some 
                 <title>Welcome to the fall</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/thefall.html</guid>
                 <link>https://mikesub.net/blog/thefall.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/objects.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/objects.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;One thing that surprised me when I moved to the Netherlands was the difference in how the seasons are observed.
 It turns out that there are at least two ways: astronomical and calendar-based. I was used to calendar seasons, where
 each season has three months, starting on the first and ending on the last day of the respective months. While some countries use astronomical approach where it&amp;#39;s defined by solstices and equinoxes.
@@ -145,7 +145,7 @@ So, for me, it&amp;#39;s already autumn, while for you, it might still be summer
                 <title>Midsummer 2024</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/midsomar.html</guid>
                 <link>https://mikesub.net/blog/midsomar.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/harvest.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/harvest.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;I decided to extract a blog engine from my blog repository, even though nobody asked for it. While doing so, I dropped TypeScript but moved 
 it Deno for the rest of the tooling. There&amp;#39;s nothing particularly interesting about this, except for one thing I noticed: If I decide to 
 publish this for others to use, it could be as simple as just cloning a repository and periodically rebasing it on my remote origin. 
@@ -175,7 +175,7 @@ you simply copy this one file to your server, and you have everything you need f
                 <title>A blog entry</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/2407.html</guid>
                 <link>https://mikesub.net/blog/2407.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/40yo.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/40yo.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;Quitting social media is like quitting smoking — easy, done it several times.&lt;/p&gt;
 &lt;p&gt;E-mail correspondence I suggested in my previous update didn’t really work out. Not that I expected it to. So here are some links I found interesting recently:&lt;/p&gt;
 &lt;ul&gt;
@@ -189,7 +189,7 @@ you simply copy this one file to your server, and you have everything you need f
                 <title>Disenchantment</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/disenchantment.html</guid>
                 <link>https://mikesub.net/blog/disenchantment.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/2d745cd0a60c491bb7c701cc1ecdf8ded120fbea/photos/tv_dinner.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/2d745cd0a60c491bb7c701cc1ecdf8ded120fbea/photos/tv_dinner.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;No updates here for a long time. And 2023 has ended, so why not to journal some results. Then I saw others&amp;#39; posts online and realized I would be writing roughly the same, and for some reason, it stopped me. Then, having found no rationale why not to, I thought it still was worth writing about the disenchantment which feels now not transient but getting deeply rooted.&lt;/p&gt;
 &lt;p&gt;It probably all began during the pandemic, with disenchantment in governments and states in general. Then it was affirmed and intensified due to the war. This year, I keenly felt it from social media and from the internet. At some point, I realized that I gain no interest and knowledge reading my RSS subscriptions, with rare exceptions. I didn&amp;#39;t renew my FeedBin and didn&amp;#39;t notice much difference. I did transfer a couple of subscriptions to email and that&amp;#39;s it. I tried to read books and listen to audio versions more. Not a strong habit yet but feels much better in comparison.&lt;/p&gt;
 &lt;p&gt;Also, I decided to try to transform email into what it used to be. You receive a letter, sometimes a long one, and you read it with interest, instead of an impersonal stream of spam in the form of updates for the sake of updates and news for attention-grabbing.
@@ -204,7 +204,7 @@ But to feel all this more vividly, I had to return to Twitter in December to sen
                 <title>Swamp surf</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/swamp_surf.html</guid>
                 <link>https://mikesub.net/blog/swamp_surf.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/car.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/car.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;I&amp;#39;m afraid of being that bear to the gardener, but let&amp;#39;s talk about burnouts.&lt;/p&gt;
 &lt;p&gt;Good things first. Burnout is not a stable condition. Once you remove yourself from the environment that caused it, you recover. I did. I even got curious about the work again. A thought of returning too soon and spoiling the time spent recovering was quite scary. At the same time, it was tempting to try to ride that motivation wave of curiosity to get back. In my case the timing was right. Trusting yourself worked. &lt;/p&gt;
 &lt;p&gt;It was clear that the wave would give me only that initial boost. Then I would have to jump from a board into good old surroundings which had once caused all that. What worked for me was resetting my goals and taking on projects with defined success metrics and intermediate milestones. All of them should be like that, right? Pause here and check yours. &lt;/p&gt;
@@ -217,7 +217,7 @@ But to feel all this more vividly, I had to return to Twitter in December to sen
                 <title>Buying CDs in 2020</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/buying_cds.html</guid>
                 <link>https://mikesub.net/blog/buying_cds.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/curtains.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/curtains.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;Around 8 years ago I started to buy vinyl records. It wasn’t for the vinyl audio quality. The idea was to have the most favourite albums in physical format. I did not even have a record player. I thought of getting one at some point but the goal was to have records on a shelf. I could stream the music online while sitting in the chair and enjoying a rich booklet of a deluxe edition with photos, lyrics and additional materials.&lt;/p&gt;
 &lt;p&gt;Later I got an amplifier and bookshelf speakers. There was room for extending the system with a record player, but at the same time it worked alright with a computer as the source. Recently, years later, I finally got a turntable. And the whole world of complexity crushed upon me. Records are not the most convenient format to start with: they’re heavy, need care to store, act as dust magnets. But the hardware added even more: pre-amps, the world of cartridges, fine-tuning the player itself (tonearms, counterweights), electric issues resulting in humming and/or hissing sounds, the space it takes, sound quality degradation due to scratches. And it looks like you need to clean/wash records which seems to be the ritual in itself. Yes, it could be all simpler and some of those things you might successfully skip or don’t have problems with, but they’re there still. Some would say that’s the essential part of the experience and they would be true. But not for me, so I thought whether I could keep that physical aspect but avoiding all the complexity mentioned? It turned out humans invented CDs just for that.&lt;/p&gt;
 &lt;p&gt;But there was a reason why I hadn’t considered them originally. Opposed to vinyl, I was there when CDs were the staple format. And around me, all CDs were from pirates: faceless jewel cases, no booklets. I didn’t see many digipaks, didn’t know what’s the deal with deluxe/limited editions. They were better than cassettes (which I started my audio experience with) but I didn’t think twice about abandoning them for mp3 collections, first, again on pirate CDs and then on iPod. And vinyl was before my times. And I skipped cheap mass editions of it. All I saw were gorgeous editions made for collectors and fans as everybody consumed mp3 anyway.&lt;/p&gt;
@@ -248,7 +248,7 @@ And I&amp;#39;m already reading about analog watches.&lt;/p&gt;
                 <title>Unknowns and surprises</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/unknowns_and_surprises.html</guid>
                 <link>https://mikesub.net/blog/unknowns_and_surprises.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/self_grass.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/self_grass.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;For most of my years in photography I’ve been using digital cameras. I bought film cameras a few times just to play around with the film but always sold it back after several months. And I never got into analogue printing, just developing and scanning with DSLRs.&lt;/p&gt;
 &lt;p&gt;Around three years ago I found a full darkroom set for sale and decided to experience the complete process. It costed almost nothing and contained everything you might need. There was even some film in bulk rolls. But then it had to wait for two more years in my storage room until I finally found space and time to try it out.&lt;/p&gt;
 &lt;p&gt;So I started with a bulk roll can marked Ilford FP4 (without plus) which I knew nothing about. Wikipedia says it was discontinued in 1990. I didn’t even know whether it had some film inside or not. Few empty cassettes were there as well so I barricaded in my bathroom and opened a can. The can contained some film but I couldn’t tell how much of the original 17 meters. Also, I was not sure was it FP4 to start with and how expired it was. W/o any precision, spreading my arms to measure the length, I loaded my first cassette and put it in my freshly obtained Olympus XA2.&lt;/p&gt;
@@ -274,7 +274,7 @@ And I&amp;#39;m already reading about analog watches.&lt;/p&gt;
                 <title>Intermission</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/intermission.html</guid>
                 <link>https://mikesub.net/blog/intermission.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/flower_thrower.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/flower_thrower.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;Obviously, it turned out harder than expected. My plans to go through all my photos year by year stalled on year #2 (2006).
 I haven&amp;#39;t picked a photo and finished the note but already have an external HDD dead, recovered data from backups,
 disassembled proprietory photo libraries, found a way to export photos from Lightroom CC (which doesn&amp;#39;t have Export
@@ -289,7 +289,7 @@ but I feel the need to fill that intermission.&lt;/p&gt;
                 <title>Oh five</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/2005.html</guid>
                 <link>https://mikesub.net/blog/2005.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/escalator.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/escalator.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;There is no better than to start from 2005. I borrowed a &lt;a href=&quot;https://www.dpreview.com/reviews/minoltadimagea1&quot;&gt;Minolta DiMAGE A1&lt;/a&gt; from a friend and started shooting. That was my first exposure into digital photography and photography in general apart from few episodes in my childhood.&lt;/p&gt;
 &lt;p&gt;Obviously, there is nothing worth sharing from these times, now it all seems very primitive and full of mistakes, but that was arguably the most exciting time: constant learning, a-ha moments, experiments, not knowing a thing, that was fantastic.&lt;/p&gt;
 &lt;p&gt;And this is a shot of a man on a escalator in Moscow metro. The original was lost, all I have this 600x450 processed for web. But that might be even better, that shows that all I knew at that moment was a pair of brightness and contrast sliders.&lt;/p&gt;
@@ -300,7 +300,7 @@ but I feel the need to fill that intermission.&lt;/p&gt;
                 <title>Django cards</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/django_cards.html</guid>
                 <link>https://mikesub.net/blog/django_cards.html</link>
-                <description>&lt;p&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/window.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/window.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;If you take metro and stand facing doors, it might feel as if the train goes straight without turns. Though if you look back and the previous car can be seen, you&amp;#39;ll notice that it&amp;#39;s wriggling from side to side.&lt;/p&gt;
 &lt;p&gt;That&amp;#39;s what I ended up with while trying to describe my interests in creativity. To capture and share such moments, mostly by photography now, occasionally by text. So at first, it was some DIY weblog, then I moved to LiveJournal. Later it was Flickr, then Instagram until it all froze in early 2018. Since then I&amp;#39;ve been thinking how to do it right. All social networks or standalone portfolio/blogging web platforms didn&amp;#39;t appeal to me. It was either focused on different goals or just too noisy. Also, I didn&amp;#39;t stop thinking of what to do with photographs being just a sub-second glimpse on your displays.&lt;/p&gt;
 &lt;p&gt;So here is another attempt. Now here.&lt;/p&gt;

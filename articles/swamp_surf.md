@@ -4,8 +4,6 @@ date: 2023-04-05 00:50
 photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/car.jpg
 ---
 
-![](https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/car.jpg)
-
 I'm afraid of being that bear to the gardener, but let's talk about burnouts.
 
 Good things first. Burnout is not a stable condition. Once you remove yourself from the environment that caused it, you recover. I did. I even got curious about the work again. A thought of returning too soon and spoiling the time spent recovering was quite scary. At the same time, it was tempting to try to ride that motivation wave of curiosity to get back. In my case the timing was right. Trusting yourself worked. 
