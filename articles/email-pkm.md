@@ -16,3 +16,5 @@ This kind of “omni-search” rarely happens. Most information we deal with sit
 So when something like this happens — a regular email search quietly returns useful, cross-context results with zero setup, it feels oddly effective.
 
 Not something we can count on, but really good when it happens.
+
+Discussion: [BSKY](https://bsky.app/profile/mikesub.net/post/3lqsswg7w322n)

@@ -10,7 +10,7 @@ export default function ({ item, config }) {
   <link rel="alternate" type="application/rss+xml" title="${config.title}" href="${config.url}rss.xml"/>
   <meta name="author" content="${config.author}"/>
   <meta name="description" content="${item.description}"/>
-  <meta property="og:image" content="${item.photo}">
+  ${item.photo ? `<meta property="og:image" content="${item.photo}">` : ""}
 </head>
 <body>
   <header><h1><a href="index.html">${config.title}</a></h1></header>
