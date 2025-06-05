@@ -17,4 +17,4 @@ So when something like this happens — a regular email search quietly returns u
 
 Not something we can count on, but really good when it happens.
 
-Discussion: [BSKY](https://bsky.app/profile/mikesub.net/post/3lqsswg7w322n)
+Discussion: [BSKY](https://bsky.app/profile/mikesub.net/post/3lqsswg7w322n), [LI](https://www.linkedin.com/posts/mikesub_pkm-knowledge-productivity-activity-7336307491913285632-Rs3r)
