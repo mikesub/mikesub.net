@@ -23,8 +23,7 @@
                 color-scheme: light dark;
             }
             body {
-                font-family:
-                    Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+                font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
                 font-weight: normal;
                 background-color: #0e1415;
                 background-color: light-dark(#f7f7f7, #0e1415);
@@ -62,6 +61,47 @@
                     margin: 1rem;
                 }
             }
+
+            button,
+            input {
+                font-family: inherit;
+                font-size: 100%;
+            }
+
+            input {
+                &:user-invalid {
+                    border-color: red;
+                }
+
+                background: none;
+                border: none;
+                width: 100%;
+                display: block;
+                margin-bottom: 1rem;
+                margin-left: -0.5rem;
+                margin-right: -0.5rem;
+
+                font-family: system-ui, sans-serif;
+                font-weight: 100;
+                color: #000;
+                color: light-dark(#000, #eee);
+
+                border: 0px solid light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
+                padding: 0 0.5rem;
+                padding-bottom: 2px;
+                border-bottom-width: 1px;
+
+                &:focus {
+                    outline: none;
+
+                    &:not(:user-invalid) {
+                        border-color: #325cc0;
+                    }
+                }
+            }
+            button {
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
@@ -71,27 +111,34 @@
             </header>
             <section>
                 <p>
-                    I fix bicycles, then I talk about fixing bicycles, then I
-                    show my friends, who just came over for no reason, how I
-                    fixed my bicycle, and my friends say, "Wow, good job," and
-                    we make tea.
+                    I fix bicycles, then I talk about fixing bicycles, then I show my friends, who just came over for no
+                    reason, how I fixed my bicycle, and my friends say, "Wow, good job," and we make tea.
                 </p>
                 <p>
                     The latest blog post is about
-                    <a href="/blog/email-pkm.html"
-                        >a moment when search accidentally worked</a
-                    >. You can see the rest at <a href="/blog/">/blog</a>. To
-                    subscribe, use
+                    <a href="/blog/email-pkm.html">a moment when search accidentally worked</a>. You can find that and
+                    more at <a href="/blog/">/blog</a>. To subscribe, use the
                     <a rel="alternate" href="/blog/rss.xml">RSS</a> or
                     <a rel="alternate" href="/blog/feed.json">JSON</a> feeds.
                 </p>
+                <p>Prefer email updates? Just drop your address below. I’ll only use it to send you newsletters.</p>
+                <form
+                    action="https://script.google.com/macros/s/AKfycbxlWlGY-jU7EPwudmEZ4JiF0-Hd26S8DFgpnbt717lmAx5O2ufsFNUM2VV0hbE6fm_G/exec"
+                    method="POST"
+                >
+                    <input type="email" id="email" name="email" placeholder="your-email-address@example.com" required />
+                    <input
+                        type="text"
+                        id="text"
+                        name="message"
+                        placeholder="A message (leave blank if you just want the newsletter)"
+                    />
+                    <button type="submit">Send</button>
+                </form>
                 <p>
-                    Everything I post here I share on
-                    <a rel="me" href="https://bsky.app/profile/mikesub.net"
-                        >Bluesky</a
-                    >
-                    as well.<br />Comments? Let's chat there, or drop me an
-                    email. I love correspondence!
+                    Also, everything I post here ends up on
+                    <a rel="me" href="https://bsky.app/profile/mikesub.net">Bluesky</a> too.<br />
+                    Got comments? Let’s chat there, or drop me a message here. I love correspondence!
                 </p>
             </section>
         </main>
