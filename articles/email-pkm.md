@@ -2,6 +2,7 @@
 title: When Search Accidentally Worked
 date: 2025-06-04 23:15
 photo: https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/night-shop-window.jpg
+alt: Clothing store window at night with neatly arranged shirts, jackets, and folded clothes
 ---
 
 I was writing an email about a vendor we used before. I couldn’t recall some details, so I ran a search in my mailbox.

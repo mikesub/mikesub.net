@@ -36,7 +36,7 @@ function parseArticle(fileEntry) {
 
 	let body = "";
 	if (parsed.meta.photo) {
-		body = `<figure><img src="${parsed.meta.photo}" alt="" /></figure>\n`;
+		body = `<figure><img src="${parsed.meta.photo}" alt="${parsed.meta.alt || ""}" /></figure>\n`;
 	}
 	body += parsed.html;
 
@@ -54,6 +54,7 @@ function parseArticle(fileEntry) {
 		description: description.truncate(parsed.html),
 		photo: parsed.meta.photo,
 		isDraft: fileEntry.name.startsWith("_"),
+		alt: parsed.meta.alt,
 	};
 }
 

@@ -9,7 +9,7 @@
                 <title>When Search Accidentally Worked</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/email-pkm.html</guid>
                 <link>https://mikesub.net/blog/email-pkm.html</link>
-                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/night-shop-window.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/night-shop-window.jpg&quot; alt=&quot;Clothing store window at night with neatly arranged shirts, jackets, and folded clothes&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;I was writing an email about a vendor we used before. I couldn’t recall some details, so I ran a search in my mailbox.&lt;/p&gt;
 &lt;p&gt;As expected, I found past threads with some discussions.
 But also it pulled up newsletters and mailing list mentions I’ve been subscribed to. There were product updates, industry news and a few casual mentions of this vendor. I barely remembered getting those. But they turned out to be relevant and useful.&lt;/p&gt;
@@ -25,7 +25,7 @@ But also it pulled up newsletters and mailing list mentions I’ve been subscrib
                 <title>HTML HATEOAS in the age of LLMs</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/html-mcp.html</guid>
                 <link>https://mikesub.net/blog/html-mcp.html</link>
-                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/wires.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+                <description>&lt;figure&gt;&lt;img src=&quot;https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/wires.jpg&quot; alt=&quot;Streetlight pole at night tangled with numerous power and utility wires&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;I’ve been playing around with MCP lately, trying to figure out what it’s really about. I remember when OpenAI introduced function calling two years ago — that felt like a big deal. It was that missing piece: LLMs struggle with simple deterministic stuff — like counting how many rs are in strawberry, and doing basic math. But they’re smart enough to ask for help, if you tell them how to ask.&lt;/p&gt;
 &lt;p&gt;Basically, you could now prompt LLMs with:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;What is 8 * 23?
