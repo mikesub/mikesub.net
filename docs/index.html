@@ -114,7 +114,7 @@
                     light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
                 border-left-width: 0;
                 margin-right: 10px;
-                max-height: 30vh;
+                max-height: max(30vh, 30vw);
                 margin-left: calc(-50vw + 50%);
                 cursor: grab;
                 user-select: none;
@@ -133,6 +133,11 @@
                 margin-top: 0; /* first P aligns with image */
             }
 
+            @media (max-width: 1400px) {
+                body {
+                    /* margin-left: 1rem; */
+                }
+            }
 
             @media (max-width: 768px) {
                 body {
@@ -271,8 +276,15 @@
                 });
 
                 img.addEventListener('dblclick', () => {
+                    // Disable double-click reset on touch devices
+                    if ('ontouchstart' in window) return;
                     img.style = "";
                     isDetached = false;
+                });
+
+                window.addEventListener('resize', () =>{
+                  img.style = "";
+                  isDetached = false;
                 });
             });
         </script>

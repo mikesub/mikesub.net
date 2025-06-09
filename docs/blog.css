@@ -3,9 +3,7 @@
 }
 
 body {
-    font-family:
-        Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
-        source-sans-pro, sans-serif;
+    font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
     font-weight: normal;
     background-color: #0e1415;
     background-color: light-dark(#f7f7f7, #0e1415);
@@ -39,8 +37,9 @@ a:hover {
 }
 
 body > header {
+    position: relative;
+
     h1 {
-        font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
         a,
         a:active,
         a:focus {
@@ -50,6 +49,12 @@ body > header {
         a:hover {
             text-decoration: underline;
             color: light-dark(#000, #ccc);
+
+            &::before {
+                content: "⬰";
+                position: absolute;
+                left: -2rem;
+            }
         }
     }
 }
@@ -95,8 +100,7 @@ main {
                 max-width: 100%;
                 display: block;
                 border-radius: 3px;
-                border: 0.5px solid
-                    light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
+                border: 0.5px solid light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
             }
         }
 
@@ -112,8 +116,7 @@ main {
 
             img {
                 border-radius: 3px;
-                border: 0.5px solid
-                    light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
+                border: 0.5px solid light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
                 max-height: 50vh;
                 height: auto;
                 max-width: 100%;
@@ -151,9 +154,8 @@ main {
         code {
             background: #f0f0f0;
             background: light-dark(#f0f0f0, rgb(40, 40, 40));
-            font-family:
-                "Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro",
-                Menlo, Consolas, "DejaVu Sans Mono", monospace;
+            font-family: "Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+                Consolas, "DejaVu Sans Mono", monospace;
             font-weight: normal;
         }
 

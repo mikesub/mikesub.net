@@ -9,10 +9,10 @@ export default function ({ items, config }) {
   <link rel="alternate" type="application/feed+json" title="${config.title}" href="${config.url}feed.json" />
   <link rel="alternate" type="application/rss+xml" title="${config.title}" href="${config.url}rss.xml"/>
   <meta name="author" content="${config.author}"/>
-  <meta name="description" content="${config.author}'s blog"/>
+  <meta name="description" content="${config.title}"/>
 </head>
 <body>
-  <header><h1><a href="..">${config.title}</a></h1></header>
+  <header><h1><a href="..">${config.author}</a>, blog</h1></header>
   <main>
 ${items
 	.map(

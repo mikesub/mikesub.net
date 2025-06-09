@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <atom:link href="https://mikesub.net/blog/rss.xml" rel="self" type="application/rss+xml" />
-        <title>Mike Saburenkov</title>
+        <title>Mike Saburenkov, blog</title>
         <link>https://mikesub.net/blog/</link>
-        <description>Mike Saburenkov</description>
+        <description>Mike Saburenkov, blog</description>
             <item>
                 <title>When Search Accidentally Worked</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/email-pkm.html</guid>
