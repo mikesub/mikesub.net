@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Mike S</title>
+        <title>Mike Saburenkov</title>
         <link
             rel="alternate"
             type="application/feed+json"
@@ -27,8 +27,7 @@
                 font-weight: normal;
                 background-color: #0e1415;
                 background-color: light-dark(#f7f7f7, #0e1415);
-                font-size: 1.2rem;
-
+                font-size: 1rem;
                 max-width: 45rem;
                 margin-left: auto;
                 margin-right: auto;
@@ -54,12 +53,6 @@
 
             a:hover {
                 color: #325cc0;
-            }
-
-            @media (max-width: 768px) {
-                body {
-                    margin: 1rem;
-                }
             }
 
             button,
@@ -107,19 +100,150 @@
             button {
                 cursor: pointer;
             }
+
+            [contenteditable="true"]:focus {
+                    outline: 1px solid #325cc0;
+                    border-radius: 3px;
+            }
+
+            img {
+                float: left;
+                border-radius: 0 3px 3px 0;
+                border: 0.5px solid
+                    light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
+                border-left-width: 0;
+                margin-right: 10px;
+                max-height: 30vh;
+                margin-left: calc(-50vw + 50%);
+                cursor: grab;
+                user-select: none;
+            }
+
+            img:active {
+                cursor: grabbing;
+            }
+
+            div {
+                overflow: hidden; /* so that floated image works */
+                padding: 1px; /* space for outline border */
+            }
+
+            div > p:first-child {
+                margin-top: 0; /* first P aligns with image */
+            }
+
+
+            @media (max-width: 768px) {
+                body {
+                    margin: 1rem;
+                }
+            }
+
+            @media (max-width: 600px) {
+                img {
+                    margin-left: 0;
+                    max-height: none;
+                    max-width: 50vw;
+                    margin-right: 0;
+                    border-left-width: 0.5px;
+                    border-radius: 3px;
+                    float: none;
+                }
+            }
+
+            @media (max-width: 400px) {
+                img {
+                    max-width: 90vw;
+                }
+            }
+
         </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const img = document.querySelector('img');
+                let isDragging = false;
+                let isDetached = false;
+                let startX, startY, initialX, initialY;
+                let currentX, currentY;
+                let animationId;
+                const threshold = 23;
+
+                img.addEventListener('mousedown', (e) => {
+                    e.preventDefault();
+                    isDragging = true;
+                    isDetached = false;
+
+                    const rect = img.getBoundingClientRect();
+                    initialX = rect.left;
+                    initialY = rect.top;
+                    startX = e.clientX;
+                    startY = e.clientY;
+                });
+
+                const updatePosition = () => {
+                    if (!isDragging || !isDetached) return;
+
+                    img.style.left = currentX + 'px';
+                    img.style.top = currentY + 'px';
+                };
+
+                document.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+
+                    const deltaX = e.clientX - startX;
+                    const deltaY = e.clientY - startY;
+                    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+                    if (!isDetached && distance > threshold) {
+                        isDetached = true;
+                        img.style.position = 'absolute';
+                        img.style.zIndex = '9999';
+                        img.style.float = 'none';
+                        img.style.margin = '0';
+                        img.style.left = initialX + 'px';
+                        img.style.top = initialY + 'px';
+                        img.style.borderRadius = '3px';
+                        img.style.borderWidth = '0.5px';
+                    }
+
+                    if (isDetached) {
+                        currentX = initialX + deltaX;
+                        currentY = initialY + deltaY;
+
+                        if (animationId) cancelAnimationFrame(animationId);
+                        animationId = requestAnimationFrame(updatePosition);
+                    }
+                });
+
+                document.addEventListener('mouseup', () => {
+                    isDragging = false;
+                    if (animationId) {
+                        cancelAnimationFrame(animationId);
+                        animationId = null;
+                    }
+                });
+
+                img.addEventListener('dblclick', () => {
+                    img.style = "";
+                    isDetached = false;
+                });
+            });
+        </script>
     </head>
     <body>
         <main>
             <header>
-                <h1>Mike Saburenkov here</h1>
+                <h1>
+                    <span contenteditable="true">Mike&nbsp;Saburenkov</span> here</h1>
             </header>
             <section>
+                <img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/balcony.jpg" alt="A man with dark hair and a full beard stands in a doorway, wearing a light gray button-up shirt. He is looking slightly to the side with a calm and content expression. The lighting is soft, and the background shows an indoor space with dim lighting and a window with blinds"/>
+                <div>
                 <p>
-                    I'm currently the co-founder and CTO of JUNO, a web services agency that is also building a SaaS tool for web interface design. Before that, I worked with a range of SaaS companies, both large and small, in different roles, from hands-on engineering to leadership. You can find more about that on <a rel="me" href="https://www.linkedin.com/in/mikesub/">LinkedIn</a>.
+                    I'm currently the <span contenteditable="true">co-founder and CTO of JUNO, a web services agency that is also building a SaaS tool for web interface design</span>. Before that, I <span contenteditable="true">worked with a range of SaaS companies, both large and small, in different roles, from hands-on engineering to leadership</span>. You can find more about that on <a rel="me" href="https://www.linkedin.com/in/mikesub/">LinkedIn</a>.
                 </p>
                 <p>
-                    I balance this work with mountain trails, film cameras, kids, Japanese saws, and bicycle chains. Occasionally, I write about all that and a few other things here.
+                    I balance this work with <span contenteditable="true">mountain trails, film cameras, kids, Japanese saws, and bicycle chains</span>. Occasionally, I write about all that and a few other things here.
                 </p>
                 <p>
                     The latest post is about
@@ -129,19 +253,21 @@
                     <a rel="alternate" href="/blog/feed.json">JSON</a> feeds. Prefer email updates? Just drop me a
                     message with your email address below. I’ll only use it to send you newsletters.
                 </p>
-                <form
-                    action="https://script.google.com/macros/s/AKfycbyt3_RfTFhR0jMCsfz8lykNPpgUbMIicEV6yLFH1A_d2oBM3Rm9h73R7sVxYHCKQlyu/exec"
-                    method="POST"
-                >
-                    <input type="text" name="fried" />
-                    <input type="text" name="hats" />
-                    <button type="submit">Send</button>
-                </form>
                 <p>
                     Also, everything I post here ends up on
                     <a rel="me" href="https://bsky.app/profile/mikesub.net">Bluesky</a> too.<br />
                     Got comments? Let’s chat there, or drop me a message here. I love correspondence!
                 </p>
+
+                <form
+                    action="https://script.google.com/macros/s/AKfycbyt3_RfTFhR0jMCsfz8lykNPpgUbMIicEV6yLFH1A_d2oBM3Rm9h73R7sVxYHCKQlyu/exec"
+                    method="POST"
+                >
+                    <input type="text" name="fried" placeholder="Enter your email address and/or message"/>
+                    <input type="text" name="hats" placeholder="Enter your email address and/or message"/>
+                    <button type="submit">Send</button>
+                </form>
+</div>
             </section>
         </main>
     </body>
