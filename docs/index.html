@@ -101,6 +101,11 @@
                 cursor: pointer;
             }
 
+            [contenteditable="true"] {
+                /* keep textsize for landscape mobile safari the same */
+                -webkit-text-size-adjust: 100%;
+            }
+
             [contenteditable="true"]:focus {
                     outline: 1px solid #325cc0;
                     border-radius: 3px;
