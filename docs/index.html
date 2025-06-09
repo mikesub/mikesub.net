@@ -166,9 +166,12 @@
                 let startX, startY, initialX, initialY;
                 let currentX, currentY;
                 let animationId;
-                const threshold = 23;
+                const threshold = 15;
 
                 img.addEventListener('mousedown', (e) => {
+                    // Disable dragging on touch devices
+                    if ('ontouchstart' in window) return;
+
                     e.preventDefault();
                     isDragging = true;
                     isDetached = false;
@@ -188,7 +191,7 @@
                 };
 
                 document.addEventListener('mousemove', (e) => {
-                    if (!isDragging) return;
+                    if (!isDragging || 'ontouchstart' in window) return;
 
                     const deltaX = e.clientX - startX;
                     const deltaY = e.clientY - startY;
@@ -202,13 +205,56 @@
                         img.style.margin = '0';
                         img.style.left = initialX + 'px';
                         img.style.top = initialY + 'px';
-                        img.style.borderRadius = '3px';
-                        img.style.borderWidth = '0.5px';
                     }
 
                     if (isDetached) {
                         currentX = initialX + deltaX;
                         currentY = initialY + deltaY;
+
+                        const imgRect = img.getBoundingClientRect();
+                        const windowWidth = window.innerWidth;
+                        const windowHeight = window.innerHeight;
+
+                        // Reset border styles
+                        img.style.borderTopWidth = '0.5px';
+                        img.style.borderRightWidth = '0.5px';
+                        img.style.borderBottomWidth = '0.5px';
+                        img.style.borderLeftWidth = '0.5px';
+
+                        img.style.borderTopRightRadius = '3px';
+                        img.style.borderBottomRightRadius = '3px';
+                        img.style.borderBottomLeftRadius = '3px';
+                        img.style.borderTopLeftRadius = '3px';
+
+                        // Snap to left
+                        if (currentX < threshold) {
+                            currentX = 0;
+                            img.style.borderLeftWidth = '0';
+                            img.style.borderTopLeftRadius = '0';
+                            img.style.borderBottomLeftRadius = '0';
+                        }
+                        // Snap to right
+                        else if (currentX + imgRect.width > windowWidth - threshold) {
+                            currentX = windowWidth - imgRect.width;
+                            img.style.borderRightWidth = '0';
+                            img.style.borderTopRightRadius = '0';
+                            img.style.borderBottomRightRadius = '0';
+                        }
+
+                        // Snap to top
+                        if (currentY < threshold) {
+                            currentY = 0;
+                            img.style.borderTopWidth = '0';
+                            img.style.borderTopLeftRadius = '0';
+                            img.style.borderTopRightRadius = '0';
+                        }
+                        // Snap to bottom
+                        else if (currentY + imgRect.height > windowHeight - threshold) {
+                            currentY = windowHeight - imgRect.height;
+                            img.style.borderBottomWidth = '0';
+                            img.style.borderBottomLeftRadius = '0';
+                            img.style.borderBottomRightRadius = '0';
+                        }
 
                         if (animationId) cancelAnimationFrame(animationId);
                         animationId = requestAnimationFrame(updatePosition);
