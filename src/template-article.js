@@ -1,5 +1,5 @@
 export default function ({ item, config }) {
-  return `<!DOCTYPE html>
+	return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>

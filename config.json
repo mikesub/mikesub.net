@@ -1,7 +1,7 @@
 {
-  "url": "https://mikesub.net/blog/",
-  "title": "Mike Saburenkov, blog",
-  "author": "Mike Saburenkov",
-  "articlesDir": "articles/",
-  "targetDir": "docs/blog/"
+	"url": "https://mikesub.net/blog/",
+	"title": "Mike Saburenkov, blog",
+	"author": "Mike Saburenkov",
+	"articlesDir": "articles/",
+	"targetDir": "docs/blog/"
 }

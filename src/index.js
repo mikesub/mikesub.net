@@ -6,5 +6,5 @@ Deno.writeTextFileSync(`${config.targetDir}index.html`, render.index);
 Deno.writeTextFileSync(`${config.targetDir}feed.json`, render.feed);
 
 for (const article of render.articles) {
-  Deno.writeTextFileSync(config.targetDir + article.path, article.body);
+	Deno.writeTextFileSync(config.targetDir + article.path, article.body);
 }

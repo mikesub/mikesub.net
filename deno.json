@@ -1,9 +1,9 @@
 {
-  "tasks": {
-    "build": "deno run -A src/index.js",
-    "run": "deno task build && python3 -m http.server -d docs"
-  },
-  "fmt": {
-    "include": ["src/"]
-  }
+	"tasks": {
+		"build": "deno run -A src/index.js",
+		"run": "deno task build && python3 -m http.server -d docs"
+	},
+	"fmt": {
+		"include": ["src/"]
+	}
 }
