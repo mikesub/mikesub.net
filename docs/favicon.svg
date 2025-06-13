@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+<style>
+rect { fill: #222 }
+text { fill: #fafafa }
+@media (prefers-color-scheme: dark) {
+rect { fill: #eee }
+text { fill: #222 }
+}
+</style>
+<rect width="32" height="32" rx="4" ry="4" />
+<text x="4" y="22" font-family="Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif" font-size="18" font-weight="700">MS</text>
+</svg>

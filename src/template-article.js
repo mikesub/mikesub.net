@@ -5,7 +5,9 @@ export default function ({ item, config }) {
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${item.title || ""} - ${config.author}</title>
-  <link rel="stylesheet" href="../blog.css"/>
+  <link rel="stylesheet" href="/blog.css"/>
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/json" title="${config.title}" href="${config.url}feed.json" />
   <link rel="alternate" type="application/rss+xml" title="${config.title}" href="${config.url}rss.xml"/>
   <meta name="author" content="${config.author}"/>
