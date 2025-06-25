@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.0.0-beta/schema.json",
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
@@ -7,40 +7,9 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"ignore": ["docs/blog/**/*"]
+		"includes": ["docs/blog/*", "!docs/blog/**/*", "articles/**/*", "src/**/*"]
 	},
 	"formatter": {
 		"lineWidth": 100
-	},
-	"linter": {
-		"rules": {
-			"a11y": {
-				"useKeyWithClickEvents": "warn",
-				"noAutofocus": "warn",
-				"useButtonType": "warn"
-			},
-			"style": {
-				"noUnusedTemplateLiteral": "warn",
-				"useConst": "warn",
-				"useTemplate": "warn",
-				"useImportType": "warn",
-				"noNonNullAssertion": "warn"
-			},
-			"suspicious": {
-				"noGlobalIsNan": "warn"
-			},
-			"complexity": {
-				"noForEach": "warn",
-				"noUselessTernary": "warn"
-			}
-		}
-	},
-	"css": {
-		"formatter": {
-			"enabled": true
-		},
-		"linter": {
-			"enabled": true
-		}
 	}
 }

@@ -186,6 +186,59 @@ main {
 	}
 }
 
+footer {
+    padding-top: 1rem;
+margin-bottom: 5rem;
+font-style: italic;
+
+button,
+input {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+input {
+    background: none;
+    border-radius: 0;
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+
+    font-family: system-ui, sans-serif;
+    font-weight: 100;
+    color: #000;
+    color: light-dark(#000, #eee);
+
+    border: 0px solid light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
+    padding: 0 0.5rem;
+    padding-bottom: 2px;
+    border-bottom-width: 1px;
+
+    &:focus,
+    &:hover {
+        outline: none;
+        border-color: #325cc0;
+    }
+}
+
+input[name="fried"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+}
+
+button {
+    cursor: pointer;
+}
+
+}
+
 @media (max-width: 768px) {
 	body {
 		margin: 1rem;
