@@ -33,4 +33,4 @@ So when I learned that two people spent 3 years getting Caves of Qud into public
 I picked up Zig, even though I’d never done any low-level programming. And I wrote the first few lines of a game. Imagine Frontier: Elite II meets Flatspace meets Roguelike meets Fallout meets WarioWare meets Micro Machines meets Non-violence and Sailing.  
 Sounds like too much, right? It is. But that’s what I have in mind as inspiration. Now I'm curious what gets to the release. The plan is to find out before I turn 50, lol.
 
-Discussion: BSKY
+Discussion: [BSKY](https://bsky.app/profile/mikesub.net/post/3lt7wlrqrvk2d)
