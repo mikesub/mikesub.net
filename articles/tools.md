@@ -15,3 +15,4 @@ At this moment, AI is still just a tool, an incredibly advanced and truly impres
 Related links:
 - [What can agents actually do? (by Will Larson)](https://lethain.com/what-can-agents-do/)
 - [Coding with LLMs in the summer of 2025 (by antirez)](https://antirez.com/news/154)
+- [I’m Tired of Talking About AI (by Paddy Carver)](https://paddy.carvers.com/posts/2025/07/ai/)
