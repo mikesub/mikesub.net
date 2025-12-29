@@ -55,6 +55,7 @@ function parseArticle(fileEntry) {
 		photo: parsed.meta.photo,
 		isDraft: fileEntry.name.startsWith("_"),
 		alt: parsed.meta.alt,
+		tags: parsed.meta.tags || [],
 	};
 }
 
