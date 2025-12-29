@@ -4,8 +4,8 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Mike Saburenkov</title>
-        <link rel="icon" href="/favicon.ico" sizes="32x32">
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link
             rel="alternate"
             type="application/feed+json"
@@ -26,7 +26,8 @@
                 -webkit-text-size-adjust: 100%;
             }
             body {
-                font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+                font-family:
+                    Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
                 font-weight: normal;
                 background-color: #0e1415;
                 background-color: light-dark(#f7f7f7, #0e1415);
@@ -78,7 +79,8 @@
                 color: #000;
                 color: light-dark(#000, #eee);
 
-                border: 0px solid light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
+                border: 0px solid
+                    light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
                 padding: 0 0.5rem;
                 padding-bottom: 2px;
                 border-bottom-width: 1px;
@@ -109,9 +111,9 @@
             }
 
             [contenteditable="true"]:focus {
-                    outline: 1px solid #325cc0;
-                    border-radius: 3px;
-                    cursor: text;
+                outline: 1px solid #325cc0;
+                border-radius: 3px;
+                cursor: text;
             }
 
             img {
@@ -172,20 +174,19 @@
 
             #shuffle {
                 transition: all 0.15s ease;
-                box-shadow: inset 0 -1px 0 light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
+                box-shadow: inset 0 -1px 0
+                    light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
                 padding: 0 2px;
                 margin: 0 -2px;
 
                 &:hover {
                     cursor: pointer;
                 }
-
             }
-
         </style>
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const img = document.querySelector('img');
+            document.addEventListener("DOMContentLoaded", () => {
+                const img = document.querySelector("img");
                 let isDragging = false;
                 let isDetached = false;
                 let startX, startY, initialX, initialY;
@@ -193,9 +194,9 @@
                 let animationId;
                 const threshold = 15;
 
-                img.addEventListener('mousedown', (e) => {
+                img.addEventListener("mousedown", (e) => {
                     // Disable dragging on touch devices
-                    if ('ontouchstart' in window) return;
+                    if ("ontouchstart" in window) return;
 
                     e.preventDefault();
                     isDragging = true;
@@ -211,25 +212,27 @@
                 const updatePosition = () => {
                     if (!isDragging || !isDetached) return;
 
-                    img.style.left = currentX + 'px';
-                    img.style.top = currentY + 'px';
+                    img.style.left = currentX + "px";
+                    img.style.top = currentY + "px";
                 };
 
-                document.addEventListener('mousemove', (e) => {
-                    if (!isDragging || 'ontouchstart' in window) return;
+                document.addEventListener("mousemove", (e) => {
+                    if (!isDragging || "ontouchstart" in window) return;
 
                     const deltaX = e.clientX - startX;
                     const deltaY = e.clientY - startY;
-                    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                    const distance = Math.sqrt(
+                        deltaX * deltaX + deltaY * deltaY,
+                    );
 
                     if (!isDetached && distance > threshold) {
                         isDetached = true;
-                        img.style.position = 'absolute';
-                        img.style.zIndex = '9999';
-                        img.style.float = 'none';
-                        img.style.margin = '0';
-                        img.style.left = initialX + 'px';
-                        img.style.top = initialY + 'px';
+                        img.style.position = "absolute";
+                        img.style.zIndex = "9999";
+                        img.style.float = "none";
+                        img.style.margin = "0";
+                        img.style.left = initialX + "px";
+                        img.style.top = initialY + "px";
                     }
 
                     if (isDetached) {
@@ -241,44 +244,50 @@
                         const windowHeight = window.innerHeight;
 
                         // Reset border styles
-                        img.style.borderTopWidth = '0.5px';
-                        img.style.borderRightWidth = '0.5px';
-                        img.style.borderBottomWidth = '0.5px';
-                        img.style.borderLeftWidth = '0.5px';
+                        img.style.borderTopWidth = "0.5px";
+                        img.style.borderRightWidth = "0.5px";
+                        img.style.borderBottomWidth = "0.5px";
+                        img.style.borderLeftWidth = "0.5px";
 
-                        img.style.borderTopRightRadius = '3px';
-                        img.style.borderBottomRightRadius = '3px';
-                        img.style.borderBottomLeftRadius = '3px';
-                        img.style.borderTopLeftRadius = '3px';
+                        img.style.borderTopRightRadius = "3px";
+                        img.style.borderBottomRightRadius = "3px";
+                        img.style.borderBottomLeftRadius = "3px";
+                        img.style.borderTopLeftRadius = "3px";
 
                         // Snap to left
                         if (currentX < threshold) {
                             currentX = 0;
-                            img.style.borderLeftWidth = '0';
-                            img.style.borderTopLeftRadius = '0';
-                            img.style.borderBottomLeftRadius = '0';
+                            img.style.borderLeftWidth = "0";
+                            img.style.borderTopLeftRadius = "0";
+                            img.style.borderBottomLeftRadius = "0";
                         }
                         // Snap to right
-                        else if (currentX + imgRect.width > windowWidth - threshold) {
+                        else if (
+                            currentX + imgRect.width >
+                            windowWidth - threshold
+                        ) {
                             currentX = windowWidth - imgRect.width;
-                            img.style.borderRightWidth = '0';
-                            img.style.borderTopRightRadius = '0';
-                            img.style.borderBottomRightRadius = '0';
+                            img.style.borderRightWidth = "0";
+                            img.style.borderTopRightRadius = "0";
+                            img.style.borderBottomRightRadius = "0";
                         }
 
                         // Snap to top
                         if (currentY < threshold) {
                             currentY = 0;
-                            img.style.borderTopWidth = '0';
-                            img.style.borderTopLeftRadius = '0';
-                            img.style.borderTopRightRadius = '0';
+                            img.style.borderTopWidth = "0";
+                            img.style.borderTopLeftRadius = "0";
+                            img.style.borderTopRightRadius = "0";
                         }
                         // Snap to bottom
-                        else if (currentY + imgRect.height > windowHeight - threshold) {
+                        else if (
+                            currentY + imgRect.height >
+                            windowHeight - threshold
+                        ) {
                             currentY = windowHeight - imgRect.height;
-                            img.style.borderBottomWidth = '0';
-                            img.style.borderBottomLeftRadius = '0';
-                            img.style.borderBottomRightRadius = '0';
+                            img.style.borderBottomWidth = "0";
+                            img.style.borderBottomLeftRadius = "0";
+                            img.style.borderBottomRightRadius = "0";
                         }
 
                         if (animationId) cancelAnimationFrame(animationId);
@@ -286,7 +295,7 @@
                     }
                 });
 
-                document.addEventListener('mouseup', () => {
+                document.addEventListener("mouseup", () => {
                     isDragging = false;
                     if (animationId) {
                         cancelAnimationFrame(animationId);
@@ -294,27 +303,27 @@
                     }
                 });
 
-                img.addEventListener('dblclick', () => {
+                img.addEventListener("dblclick", () => {
                     // Disable double-click reset on touch devices
-                    if ('ontouchstart' in window) return;
+                    if ("ontouchstart" in window) return;
                     img.style = "";
                     isDetached = false;
                 });
 
-                window.addEventListener('resize', () =>{
-                  img.style = "";
-                  isDetached = false;
-                });
-
-                document.addEventListener('keydown', (e) => {
-                  if (e.key === 'Escape') {
+                window.addEventListener("resize", () => {
                     img.style = "";
                     isDetached = false;
-                    shuffle.textContent = shuffleText;
-                  }
                 });
 
-                const shuffle = document.getElementById('shuffle');
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Escape") {
+                        img.style = "";
+                        isDetached = false;
+                        shuffle.textContent = shuffleText;
+                    }
+                });
+
+                const shuffle = document.getElementById("shuffle");
                 const shuffleText = shuffle.textContent;
 
                 const adj = ["mountain", "film", "Japanese", "bicycle"];
@@ -322,33 +331,34 @@
                 let isAnimating = false;
 
                 const shuffleArray = (array) => {
-                  const result = [...array];
-                  for (let i = result.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [result[i], result[j]] = [result[j], result[i]];
-                  }
-                  return result;
+                    const result = [...array];
+                    for (let i = result.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [result[i], result[j]] = [result[j], result[i]];
+                    }
+                    return result;
                 };
 
-                shuffle.addEventListener('click', () => {
-                  if (isAnimating) return;
-                  isAnimating = true;
+                shuffle.addEventListener("click", () => {
+                    if (isAnimating) return;
+                    isAnimating = true;
 
-                  const shuffledAdj = shuffleArray(adj);
-                  const shuffledNouns = shuffleArray(nouns);
-                  const pairs = shuffledAdj.map((adjective, index) =>
-                    `${adjective} ${shuffledNouns[index]}`
-                  );
-                  const newText = `${pairs[0]}, ${pairs[1]}, ${pairs[2]}, and ${pairs[3]}`;
+                    const shuffledAdj = shuffleArray(adj);
+                    const shuffledNouns = shuffleArray(nouns);
+                    const pairs = shuffledAdj.map(
+                        (adjective, index) =>
+                            `${adjective} ${shuffledNouns[index]}`,
+                    );
+                    const newText = `${pairs[0]}, ${pairs[1]}, ${pairs[2]}, and ${pairs[3]}`;
 
-                  shuffle.style.color = 'transparent';
-                  setTimeout(() => {
-                    shuffle.textContent = newText;
-                    shuffle.style.color = '';
+                    shuffle.style.color = "transparent";
                     setTimeout(() => {
-                      isAnimating = false;
+                        shuffle.textContent = newText;
+                        shuffle.style.color = "";
+                        setTimeout(() => {
+                            isAnimating = false;
+                        }, 150);
                     }, 150);
-                  }, 150);
                 });
             });
         </script>
@@ -359,39 +369,73 @@
                 <h1>Mike&nbsp;Saburenkov</h1>
             </header>
             <section>
-                <img src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/balcony.jpg" alt="Man with dark hair and beard in doorway, wearing light gray shirt"/>
+                <img
+                    src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/balcony.jpg"
+                    alt="Man with dark hair and beard in doorway, wearing light gray shirt"
+                />
                 <div>
-                <p>
-                    <span contenteditable="true">
-                        A web software engineer turned senior engineering leader. Currently offering consultancy services and working on a few of my own projects. Previously worked with SaaS companies of all sizes, from early-stage to scale-ups, in roles spanning hands-on development to org-level leadership.
-                    </span> You can find more about that on <a rel="me" href="https://www.linkedin.com/in/mikesub/">LinkedIn</a>, or get in touch if you’d like to work together.
-                </p>
-                <p>
-                    I balance this work with <span id="shuffle">mountain trails, film cameras, Japanese saws, and bicycle chains</span>. Occasionally, I write about all that and a few other things here.
-                </p>
-                <p>
-                    The latest post is about
-                    <a href="/blog/tools.html">AI, despite the hype, still being just a tool without agency</a>. You can find that and
-                    more at <a href="/blog/">/blog</a>. To subscribe, use the
-                    <a rel="alternate" href="/blog/rss.xml">RSS</a> or
-                    <a rel="alternate" href="/blog/feed.json">JSON</a> feeds. Prefer email updates? Just drop me a
-                    message with your email address below. I’ll only use it to send you newsletters.
-                </p>
-                <p>
-                    Also, everything I post here ends up on
-                    <a rel="me" href="https://bsky.app/profile/mikesub.net">Bluesky</a> too.<br />
-                    Got comments? Let’s chat there, or drop me a message here. I love correspondence!
-                </p>
+                    <p>
+                        <span contenteditable="true">
+                            A web software engineer turned senior engineering
+                            leader. Currently offering consultancy services and
+                            working on a few of my own projects. Previously
+                            worked with SaaS companies of all sizes, from
+                            early-stage to scale-ups, in roles spanning hands-on
+                            development to org-level leadership.
+                        </span>
+                        You can find more about that on
+                        <a rel="me" href="https://www.linkedin.com/in/mikesub/"
+                            >LinkedIn</a
+                        >, or get in touch if you’d like to work together.
+                    </p>
+                    <p>
+                        I balance this work with
+                        <span id="shuffle"
+                            >mountain trails, film cameras, Japanese saws, and
+                            bicycle chains</span
+                        >. Occasionally, I write about all that and a few other
+                        things here.
+                    </p>
+                    <p>
+                        The latest post is about
+                        <a href="/blog/tools.html"
+                            >AI, despite the hype, still being just a tool
+                            without agency</a
+                        >. You can find that and more at
+                        <a href="/blog/">/blog</a>. To subscribe, use the
+                        <a rel="alternate" href="/blog/rss.xml">RSS</a> or
+                        <a rel="alternate" href="/blog/feed.json">JSON</a>
+                        feeds. Prefer email updates? Just drop me a message with
+                        your email address below. I’ll only use it to send you
+                        newsletters.
+                    </p>
+                    <p>
+                        Also, everything I post here ends up on
+                        <a rel="me" href="https://bsky.app/profile/mikesub.net"
+                            >Bluesky</a
+                        >
+                        too.<br />
+                        Got comments? Let’s chat there, or drop me a message
+                        here. I love correspondence!
+                    </p>
 
-                <form
-                    action="https://script.google.com/macros/s/AKfycbyt3_RfTFhR0jMCsfz8lykNPpgUbMIicEV6yLFH1A_d2oBM3Rm9h73R7sVxYHCKQlyu/exec"
-                    method="POST"
-                >
-                    <input type="text" name="fried" placeholder="Enter your email address and/or message"/>
-                    <input type="text" name="hats" placeholder="Enter your email address and/or message"/>
-                    <button type="submit">Send</button>
-                </form>
-</div>
+                    <form
+                        action="https://script.google.com/macros/s/AKfycbyt3_RfTFhR0jMCsfz8lykNPpgUbMIicEV6yLFH1A_d2oBM3Rm9h73R7sVxYHCKQlyu/exec"
+                        method="POST"
+                    >
+                        <input
+                            type="text"
+                            name="fried"
+                            placeholder="Enter your email address and/or message"
+                        />
+                        <input
+                            type="text"
+                            name="hats"
+                            placeholder="Enter your email address and/or message"
+                        />
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
             </section>
         </main>
     </body>
