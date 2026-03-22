@@ -1,3 +1,7 @@
+function escapeHTML(str) {
+	return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
 export default function ({ items, config }) {
 	return `<!DOCTYPE html>
 <html lang="en">
@@ -20,7 +24,7 @@ ${items
 	.map(
 		({ path, title, machineDate, humanDate, body }) => `    <article>
       <header>
-        <h1><a href="${path}">${title ? title : "#"}</a></h1>
+        <h1><a href="${path}">${title ? escapeHTML(title) : "#"}</a></h1>
         <p><time datetime="${machineDate}">${humanDate}</time></p>
       </header>
       ${body}

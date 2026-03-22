@@ -16,8 +16,8 @@ export default function ({ items, config }) {
         <link>${config.url}</link>
         <description>${config.title}</description>
         ${items
-					.map(
-						({ path, title, rssDate, body }) => `    <item>
+			.map(
+				({ path, title, rssDate, body }) => `<item>
                 ${title ? `<title>${title}</title>` : ""}
                 <guid isPermaLink="true">${config.url}${path}</guid>
                 <link>${config.url}${path}</link>
@@ -25,8 +25,8 @@ export default function ({ items, config }) {
                 <pubDate>${rssDate}</pubDate>
             </item>
         `,
-					)
-					.join("")}
+			)
+			.join("")}
     </channel>
 </rss>
 `;

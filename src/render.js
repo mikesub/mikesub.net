@@ -8,8 +8,7 @@ import rssTemplate from "./template-rss.js";
 
 const sortedArticles = articles
 	.load()
-	.sort((a, b) => a.sortKey - b.sortKey)
-	.reverse();
+	.sort((a, b) => b.sortKey - a.sortKey);
 
 export default {
 	index: indexTemplate({ config, items: sortedArticles }),

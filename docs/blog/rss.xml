@@ -5,7 +5,7 @@
         <title>Mike Saburenkov, blog</title>
         <link>https://mikesub.net/blog/</link>
         <description>Mike Saburenkov, blog</description>
-            <item>
+        <item>
                 <title>Still no agents</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/tools.html</guid>
                 <link>https://mikesub.net/blog/tools.html</link>
@@ -23,7 +23,7 @@
 </description>
                 <pubDate>22 Jul 2025 02:26 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>PEEK POKE</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/peek-poke.html</guid>
                 <link>https://mikesub.net/blog/peek-poke.html</link>
@@ -48,7 +48,7 @@
 </description>
                 <pubDate>05 Jul 2025 23:05 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>When Search Accidentally Worked</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/email-pkm.html</guid>
                 <link>https://mikesub.net/blog/email-pkm.html</link>
@@ -64,7 +64,7 @@ But also it pulled up newsletters and mailing list mentions I’ve been subscrib
 </description>
                 <pubDate>05 Jun 2025 01:15 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>HTML HATEOAS in the age of LLMs</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/html-mcp.html</guid>
                 <link>https://mikesub.net/blog/html-mcp.html</link>
@@ -148,7 +148,7 @@ amount=50&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;https://chatgpt.com/
 </description>
                 <pubDate>28 May 2025 04:51 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>The 10th month of October</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/octo10.html</guid>
                 <link>https://mikesub.net/blog/octo10.html</link>
@@ -173,7 +173,7 @@ Sometimes I don&amp;#39;t need to translate the full page, just a section. Some 
 </description>
                 <pubDate>10 Oct 2024 02:05 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Welcome to the fall</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/thefall.html</guid>
                 <link>https://mikesub.net/blog/thefall.html</link>
@@ -200,7 +200,7 @@ So, for me, it&amp;#39;s already autumn, while for you, it might still be summer
 </description>
                 <pubDate>10 Sep 2024 17:00 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Midsummer 2024</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/midsomar.html</guid>
                 <link>https://mikesub.net/blog/midsomar.html</link>
@@ -230,7 +230,7 @@ you simply copy this one file to your server, and you have everything you need f
 </description>
                 <pubDate>15 Aug 2024 23:00 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>A blog entry</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/2407.html</guid>
                 <link>https://mikesub.net/blog/2407.html</link>
@@ -244,7 +244,7 @@ you simply copy this one file to your server, and you have everything you need f
 </description>
                 <pubDate>12 Jul 2024 02:30 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Disenchantment</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/disenchantment.html</guid>
                 <link>https://mikesub.net/blog/disenchantment.html</link>
@@ -259,7 +259,7 @@ But to feel all this more vividly, I had to return to Twitter in December to sen
 </description>
                 <pubDate>10 Jan 2024 14:25 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Swamp surf</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/swamp_surf.html</guid>
                 <link>https://mikesub.net/blog/swamp_surf.html</link>
@@ -272,7 +272,7 @@ But to feel all this more vividly, I had to return to Twitter in December to sen
 </description>
                 <pubDate>05 Apr 2023 02:50 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Buying CDs in 2020</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/buying_cds.html</guid>
                 <link>https://mikesub.net/blog/buying_cds.html</link>
@@ -288,7 +288,7 @@ And I&amp;#39;m already reading about analog watches.&lt;/p&gt;
 </description>
                 <pubDate>13 Nov 2020 01:30 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>The setup</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/setup.html</guid>
                 <link>https://mikesub.net/blog/setup.html</link>
@@ -303,7 +303,7 @@ And I&amp;#39;m already reading about analog watches.&lt;/p&gt;
 </description>
                 <pubDate>03 Sep 2020 23:31 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Unknowns and surprises</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/unknowns_and_surprises.html</guid>
                 <link>https://mikesub.net/blog/unknowns_and_surprises.html</link>
@@ -316,7 +316,7 @@ And I&amp;#39;m already reading about analog watches.&lt;/p&gt;
 </description>
                 <pubDate>02 Sep 2020 02:30 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Spoilers for unknowns</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/spoilers.html</guid>
                 <link>https://mikesub.net/blog/spoilers.html</link>
@@ -329,7 +329,7 @@ And I&amp;#39;m already reading about analog watches.&lt;/p&gt;
 </description>
                 <pubDate>09 Aug 2020 01:40 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Intermission</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/intermission.html</guid>
                 <link>https://mikesub.net/blog/intermission.html</link>
@@ -344,7 +344,7 @@ but I feel the need to fill that intermission.&lt;/p&gt;
 </description>
                 <pubDate>26 Jan 2020 16:20 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Oh five</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/2005.html</guid>
                 <link>https://mikesub.net/blog/2005.html</link>
@@ -355,7 +355,7 @@ but I feel the need to fill that intermission.&lt;/p&gt;
 </description>
                 <pubDate>09 Dec 2019 16:20 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Django cards</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/django_cards.html</guid>
                 <link>https://mikesub.net/blog/django_cards.html</link>
@@ -373,7 +373,7 @@ but I feel the need to fill that intermission.&lt;/p&gt;
 </description>
                 <pubDate>05 Dec 2019 14:15 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>A Case of SSR</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/ssr.html</guid>
                 <link>https://mikesub.net/blog/ssr.html</link>
@@ -393,7 +393,7 @@ but I feel the need to fill that intermission.&lt;/p&gt;
 </description>
                 <pubDate>07 Mar 2019 17:40 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Types. String semantics</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/types_string_semantics.html</guid>
                 <link>https://mikesub.net/blog/types_string_semantics.html</link>
@@ -439,7 +439,7 @@ if (flag !== &amp;quot;important&amp;quot;) {
 </description>
                 <pubDate>06 Mar 2019 10:08 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Types and runtime checks</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/types_runtime_checks.html</guid>
                 <link>https://mikesub.net/blog/types_runtime_checks.html</link>
@@ -480,7 +480,7 @@ if (flag !== &amp;quot;important&amp;quot;) {
 </description>
                 <pubDate>01 Mar 2019 18:00 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>TypeScript. Bad Parts</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/ts_bad_parts.html</guid>
                 <link>https://mikesub.net/blog/ts_bad_parts.html</link>
@@ -553,7 +553,7 @@ let x: Account = { foo: &amp;quot;bar&amp;quot; };
 </description>
                 <pubDate>07 Feb 2019 23:00 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 
                 <guid isPermaLink="true">https://mikesub.net/blog/microblog.html</guid>
                 <link>https://mikesub.net/blog/microblog.html</link>
@@ -561,7 +561,7 @@ let x: Account = { foo: &amp;quot;bar&amp;quot; };
 </description>
                 <pubDate>25 Sep 2018 22:30 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>NL#2</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/nl_drafts.html</guid>
                 <link>https://mikesub.net/blog/nl_drafts.html</link>
@@ -569,7 +569,7 @@ let x: Account = { foo: &amp;quot;bar&amp;quot; };
 </description>
                 <pubDate>12 Feb 2018 21:59 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>NL</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/nl.html</guid>
                 <link>https://mikesub.net/blog/nl.html</link>
@@ -584,7 +584,7 @@ let x: Account = { foo: &amp;quot;bar&amp;quot; };
 </description>
                 <pubDate>31 Aug 2017 10:00 +0200</pubDate>
             </item>
-            <item>
+        <item>
                 <title>10 years a web developer</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/10_years_a_developer.html</guid>
                 <link>https://mikesub.net/blog/10_years_a_developer.html</link>
@@ -594,7 +594,7 @@ let x: Account = { foo: &amp;quot;bar&amp;quot; };
 </description>
                 <pubDate>24 Nov 2016 14:20 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Пусть бегут</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/let_them_run.html</guid>
                 <link>https://mikesub.net/blog/let_them_run.html</link>
@@ -605,7 +605,7 @@ let x: Account = { foo: &amp;quot;bar&amp;quot; };
 </description>
                 <pubDate>31 Dec 2015 09:06 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>about:blank</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/about_blank.html</guid>
                 <link>https://mikesub.net/blog/about_blank.html</link>
@@ -631,7 +631,7 @@ let x: Account = { foo: &amp;quot;bar&amp;quot; };
 </description>
                 <pubDate>26 Mar 2015 15:45 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Гугл мой спотлайт</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/google_my_spotlight.html</guid>
                 <link>https://mikesub.net/blog/google_my_spotlight.html</link>
@@ -658,7 +658,7 @@ let x: Account = { foo: &amp;quot;bar&amp;quot; };
 </description>
                 <pubDate>26 Mar 2015 00:15 +0100</pubDate>
             </item>
-            <item>
+        <item>
                 <title>Верстальщики: от программистов к дизайнерам</title>
                 <guid isPermaLink="true">https://mikesub.net/blog/html_designers.html</guid>
                 <link>https://mikesub.net/blog/html_designers.html</link>
