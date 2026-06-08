@@ -3,7 +3,7 @@
 }
 
 body {
-	font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+	font-family: Optima, Candara, "Gill Sans Nova", system-ui, "Noto Sans", sans-serif;
 	font-weight: normal;
 	background-color: #0e1415;
 	background-color: light-dark(#f7f7f7, #0e1415);

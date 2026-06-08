@@ -24,17 +24,27 @@
             :root {
                 color-scheme: light dark;
                 -webkit-text-size-adjust: 100%;
+                --content-width: 45rem;
             }
             body {
                 font-family:
-                    Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+                    Optima, Candara, "Gill Sans Nova", system-ui,
+                    "Noto Sans", sans-serif;
                 font-weight: normal;
                 background-color: #0e1415;
                 background-color: light-dark(#f7f7f7, #0e1415);
                 font-size: 1rem;
-                max-width: 45rem;
+                max-width: var(--content-width);
                 margin-left: auto;
                 margin-right: auto;
+            }
+
+            header {
+                margin-left: clamp(
+                    -2.5rem,
+                    (var(--content-width) - 100vw) / 2,
+                    0rem
+                );
             }
 
             body,
@@ -59,61 +69,29 @@
                 color: #325cc0;
             }
 
-            button,
-            input {
-                font-family: inherit;
-                font-size: 100%;
-            }
-
-            input {
-                background: none;
-                border-radius: 0;
-                width: 100%;
-                display: block;
-                margin-bottom: 1rem;
-                margin-left: -0.5rem;
-                margin-right: -0.5rem;
-
-                font-family: system-ui, sans-serif;
-                font-weight: 100;
-                color: #000;
-                color: light-dark(#000, #eee);
-
-                border: 0px solid
-                    light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
-                padding: 0 0.5rem;
-                padding-bottom: 2px;
-                border-bottom-width: 1px;
-
-                &:focus,
-                &:hover {
-                    outline: none;
-                    border-color: #325cc0;
-                }
-            }
-
-            input[name="fried"] {
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 0;
-                width: 0;
-                z-index: -1;
-            }
-
-            button {
-                cursor: pointer;
-            }
-
             [contenteditable="true"] {
                 cursor: pointer;
+                border-radius: 3px;
+                padding: 0.15em 0;
+                -webkit-box-decoration-break: clone;
+                box-decoration-break: clone;
+                background-color: light-dark(
+                    rgba(253, 243, 166, 0.12),
+                    rgba(236, 217, 135, 0.06)
+                );
+                transition:
+                    background-color 0.2s ease,
+                    color 0.2s ease;
+            }
+
+            [contenteditable="true"]:hover {
+                background-color: transparent;
             }
 
             [contenteditable="true"]:focus {
-                outline: 1px solid #325cc0;
-                border-radius: 3px;
                 cursor: text;
+                outline: none;
+                background: none;
             }
 
             img {
@@ -125,6 +103,7 @@
                 margin-right: 10px;
                 max-height: max(30vh, 30vw);
                 margin-left: calc(-50vw + 50%);
+                margin-top: -2.5rem;
                 cursor: grab;
                 user-select: none;
             }
@@ -134,18 +113,12 @@
             }
 
             div {
-                overflow: hidden; /* so that floated image works */
-                padding: 1px; /* space for outline border */
+                overflow: hidden;
+                padding: 1px;
             }
 
             div > p:first-child {
-                margin-top: 0; /* first P aligns with image */
-            }
-
-            @media (max-width: 1400px) {
-                body {
-                    /* margin-left: 1rem; */
-                }
+                margin-top: 0;
             }
 
             @media (max-width: 768px) {
@@ -189,13 +162,12 @@
                 const img = document.querySelector("img");
                 let isDragging = false;
                 let isDetached = false;
-                let startX, startY, initialX, initialY;
+                let startX, startY, initialX, initialY, normalX, normalY;
                 let currentX, currentY;
                 let animationId;
                 const threshold = 15;
 
                 img.addEventListener("mousedown", (e) => {
-                    // Disable dragging on touch devices
                     if ("ontouchstart" in window) return;
 
                     e.preventDefault();
@@ -205,6 +177,8 @@
                     const rect = img.getBoundingClientRect();
                     initialX = rect.left;
                     initialY = rect.top;
+                    normalX = rect.left - (parseFloat(img.style.left) || 0);
+                    normalY = rect.top - (parseFloat(img.style.top) || 0);
                     startX = e.clientX;
                     startY = e.clientY;
                 });
@@ -212,8 +186,8 @@
                 const updatePosition = () => {
                     if (!isDragging || !isDetached) return;
 
-                    img.style.left = currentX + "px";
-                    img.style.top = currentY + "px";
+                    img.style.left = currentX - normalX + "px";
+                    img.style.top = currentY - normalY + "px";
                 };
 
                 document.addEventListener("mousemove", (e) => {
@@ -227,12 +201,16 @@
 
                     if (!isDetached && distance > threshold) {
                         isDetached = true;
-                        img.style.position = "absolute";
+
+                        const rect = img.getBoundingClientRect();
+
+                        img.style.position = "relative";
                         img.style.zIndex = "9999";
-                        img.style.float = "none";
-                        img.style.margin = "0";
-                        img.style.left = initialX + "px";
-                        img.style.top = initialY + "px";
+
+                        img.style.boxSizing = "border-box";
+                        img.style.maxHeight = "none";
+                        img.style.width = rect.width + "px";
+                        img.style.height = rect.height + "px";
                     }
 
                     if (isDetached) {
@@ -243,7 +221,6 @@
                         const windowWidth = window.innerWidth;
                         const windowHeight = window.innerHeight;
 
-                        // Reset border styles
                         img.style.borderTopWidth = "0.5px";
                         img.style.borderRightWidth = "0.5px";
                         img.style.borderBottomWidth = "0.5px";
@@ -254,15 +231,12 @@
                         img.style.borderBottomLeftRadius = "3px";
                         img.style.borderTopLeftRadius = "3px";
 
-                        // Snap to left
                         if (currentX < threshold) {
                             currentX = 0;
                             img.style.borderLeftWidth = "0";
                             img.style.borderTopLeftRadius = "0";
                             img.style.borderBottomLeftRadius = "0";
-                        }
-                        // Snap to right
-                        else if (
+                        } else if (
                             currentX + imgRect.width >
                             windowWidth - threshold
                         ) {
@@ -272,15 +246,12 @@
                             img.style.borderBottomRightRadius = "0";
                         }
 
-                        // Snap to top
                         if (currentY < threshold) {
                             currentY = 0;
                             img.style.borderTopWidth = "0";
                             img.style.borderTopLeftRadius = "0";
                             img.style.borderTopRightRadius = "0";
-                        }
-                        // Snap to bottom
-                        else if (
+                        } else if (
                             currentY + imgRect.height >
                             windowHeight - threshold
                         ) {
@@ -304,7 +275,6 @@
                 });
 
                 img.addEventListener("dblclick", () => {
-                    // Disable double-click reset on touch devices
                     if ("ontouchstart" in window) return;
                     img.style = "";
                     isDetached = false;
@@ -320,11 +290,31 @@
                         img.style = "";
                         isDetached = false;
                         shuffle.textContent = shuffleText;
+                        bio.textContent = bioOriginal;
+                        try {
+                            localStorage.removeItem(BIO_KEY);
+                        } catch {}
+                        bio.blur();
                     }
                 });
 
                 const shuffle = document.getElementById("shuffle");
                 const shuffleText = shuffle.textContent;
+
+                const bio = document.querySelector('[contenteditable="true"]');
+                const bioOriginal = bio.textContent;
+                const BIO_KEY = "mikesub:bio";
+
+                try {
+                    const savedBio = localStorage.getItem(BIO_KEY);
+                    if (savedBio !== null) bio.textContent = savedBio;
+                } catch {}
+
+                bio.addEventListener("input", () => {
+                    try {
+                        localStorage.setItem(BIO_KEY, bio.textContent);
+                    } catch {}
+                });
 
                 const adj = ["mountain", "film", "Japanese", "bike"];
                 const nouns = ["trails", "cameras", "saws", "chains"];
@@ -376,12 +366,13 @@
                 <div>
                     <p>
                         <span contenteditable="true">
-                            A web software engineer turned senior engineering
-                            leader. Currently offering consultancy services and
-                            working on a few of my own projects. Previously
-                            worked with SaaS companies of all sizes, from
-                            early-stage to scale-ups, in roles spanning hands-on
-                            development to org-level leadership.
+                            A web engineer who now splits time between building
+                            teams and shipping features. Currently offering
+                            consultancy services and working on a few projects
+                            of my own. Previously worked with SaaS companies of
+                            all sizes, from early-stage to scale-ups, in roles
+                            spanning hands-on development to running
+                            engineering.
                         </span>
                         You can find more about that on
                         <a rel="me" href="https://www.linkedin.com/in/mikesub/"
@@ -389,19 +380,12 @@
                         >, or get in touch if you’d like to work together.
                     </p>
                     <p>
-                        I balance this work with
+                        Away from work, it's
                         <span id="shuffle"
                             >mountain trails, film cameras, Japanese saws, and
                             bike chains</span
-                        >. Occasionally, I write about all that and a few other
-                        things in <a href="/blog/">/blog</a>. To subscribe, use
-                        the <a rel="alternate" href="/blog/rss.xml">RSS</a> or
-                        <a rel="alternate" href="/blog/feed.json">JSON</a>
-                        feeds. Also, everything I post here ends up on
-                        <a rel="me" href="https://bsky.app/profile/mikesub.net"
-                            >Bluesky</a
-                        >
-                        too.<br />
+                        >. Occasionally I write about all of it and a few other
+                        things in <a href="/blog/">/blog</a>.
                     </p>
                 </div>
             </section>
