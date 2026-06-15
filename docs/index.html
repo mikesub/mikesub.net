@@ -24,7 +24,6 @@
             :root {
                 color-scheme: light dark;
                 -webkit-text-size-adjust: 100%;
-                --content-width: 45rem;
             }
             body {
                 font-family:
@@ -33,21 +32,12 @@
                 font-weight: normal;
                 background-color: #0e1415;
                 background-color: light-dark(#f7f7f7, #0e1415);
-                font-size: 1rem;
-                max-width: var(--content-width);
-                margin-left: auto;
-                margin-right: auto;
+                max-width: 33rem;
+                color: #ccc;
+                color: light-dark(#000, #ccc);
+                margin: 1rem;
             }
 
-            header {
-                margin-left: clamp(
-                    -2.5rem,
-                    (var(--content-width) - 100vw) / 2,
-                    0rem
-                );
-            }
-
-            body,
             a,
             a:active,
             a:focus,
@@ -55,303 +45,13 @@
             a:hover {
                 color: #ccc;
                 color: light-dark(#000, #ccc);
-            }
-
-            a,
-            a:active,
-            a:focus,
-            a:visited,
-            a:hover {
                 text-decoration: underline;
             }
 
             a:hover {
                 color: #325cc0;
             }
-
-            [contenteditable="true"] {
-                cursor: pointer;
-                border-radius: 3px;
-                padding: 0.15em 0;
-                -webkit-box-decoration-break: clone;
-                box-decoration-break: clone;
-                background-color: light-dark(
-                    rgba(253, 243, 166, 0.12),
-                    rgba(236, 217, 135, 0.06)
-                );
-                transition:
-                    background-color 0.2s ease,
-                    color 0.2s ease;
-            }
-
-            [contenteditable="true"]:hover {
-                background-color: transparent;
-            }
-
-            [contenteditable="true"]:focus {
-                cursor: text;
-                outline: none;
-                background: none;
-            }
-
-            img {
-                float: left;
-                border-radius: 0 3px 3px 0;
-                border: 0.5px solid
-                    light-dark(rgb(217, 217, 217), rgb(70, 70, 70));
-                border-left-width: 0;
-                margin-right: 10px;
-                max-height: max(30vh, 30vw);
-                margin-left: calc(-50vw + 50%);
-                margin-top: -2.5rem;
-                cursor: grab;
-                user-select: none;
-            }
-
-            img:active {
-                cursor: grabbing;
-            }
-
-            div {
-                overflow: hidden;
-                padding: 1px;
-            }
-
-            div > p:first-child {
-                margin-top: 0;
-            }
-
-            @media (max-width: 768px) {
-                body {
-                    margin: 1rem;
-                }
-            }
-
-            @media (max-width: 600px) {
-                img {
-                    margin-left: 0;
-                    max-height: none;
-                    max-width: 50vw;
-                    margin-right: 0;
-                    border-left-width: 0.5px;
-                    border-radius: 3px;
-                    float: none;
-                }
-            }
-
-            @media (max-width: 400px) {
-                img {
-                    max-width: 100%;
-                }
-            }
-
-            #shuffle {
-                transition: all 0.15s ease;
-                box-shadow: inset 0 -1px 0
-                    light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
-                padding: 0 2px;
-                margin: 0 -2px;
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }
         </style>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const img = document.querySelector("img");
-                let isDragging = false;
-                let isDetached = false;
-                let startX, startY, initialX, initialY, normalX, normalY;
-                let currentX, currentY;
-                let animationId;
-                const threshold = 15;
-
-                img.addEventListener("mousedown", (e) => {
-                    if ("ontouchstart" in window) return;
-
-                    e.preventDefault();
-                    isDragging = true;
-                    isDetached = false;
-
-                    const rect = img.getBoundingClientRect();
-                    initialX = rect.left;
-                    initialY = rect.top;
-                    normalX = rect.left - (parseFloat(img.style.left) || 0);
-                    normalY = rect.top - (parseFloat(img.style.top) || 0);
-                    startX = e.clientX;
-                    startY = e.clientY;
-                });
-
-                const updatePosition = () => {
-                    if (!isDragging || !isDetached) return;
-
-                    img.style.left = currentX - normalX + "px";
-                    img.style.top = currentY - normalY + "px";
-                };
-
-                document.addEventListener("mousemove", (e) => {
-                    if (!isDragging || "ontouchstart" in window) return;
-
-                    const deltaX = e.clientX - startX;
-                    const deltaY = e.clientY - startY;
-                    const distance = Math.sqrt(
-                        deltaX * deltaX + deltaY * deltaY,
-                    );
-
-                    if (!isDetached && distance > threshold) {
-                        isDetached = true;
-
-                        const rect = img.getBoundingClientRect();
-
-                        img.style.position = "relative";
-                        img.style.zIndex = "9999";
-
-                        img.style.boxSizing = "border-box";
-                        img.style.maxHeight = "none";
-                        img.style.width = rect.width + "px";
-                        img.style.height = rect.height + "px";
-                    }
-
-                    if (isDetached) {
-                        currentX = initialX + deltaX;
-                        currentY = initialY + deltaY;
-
-                        const imgRect = img.getBoundingClientRect();
-                        const windowWidth = window.innerWidth;
-                        const windowHeight = window.innerHeight;
-
-                        img.style.borderTopWidth = "0.5px";
-                        img.style.borderRightWidth = "0.5px";
-                        img.style.borderBottomWidth = "0.5px";
-                        img.style.borderLeftWidth = "0.5px";
-
-                        img.style.borderTopRightRadius = "3px";
-                        img.style.borderBottomRightRadius = "3px";
-                        img.style.borderBottomLeftRadius = "3px";
-                        img.style.borderTopLeftRadius = "3px";
-
-                        if (currentX < threshold) {
-                            currentX = 0;
-                            img.style.borderLeftWidth = "0";
-                            img.style.borderTopLeftRadius = "0";
-                            img.style.borderBottomLeftRadius = "0";
-                        } else if (
-                            currentX + imgRect.width >
-                            windowWidth - threshold
-                        ) {
-                            currentX = windowWidth - imgRect.width;
-                            img.style.borderRightWidth = "0";
-                            img.style.borderTopRightRadius = "0";
-                            img.style.borderBottomRightRadius = "0";
-                        }
-
-                        if (currentY < threshold) {
-                            currentY = 0;
-                            img.style.borderTopWidth = "0";
-                            img.style.borderTopLeftRadius = "0";
-                            img.style.borderTopRightRadius = "0";
-                        } else if (
-                            currentY + imgRect.height >
-                            windowHeight - threshold
-                        ) {
-                            currentY = windowHeight - imgRect.height;
-                            img.style.borderBottomWidth = "0";
-                            img.style.borderBottomLeftRadius = "0";
-                            img.style.borderBottomRightRadius = "0";
-                        }
-
-                        if (animationId) cancelAnimationFrame(animationId);
-                        animationId = requestAnimationFrame(updatePosition);
-                    }
-                });
-
-                document.addEventListener("mouseup", () => {
-                    isDragging = false;
-                    if (animationId) {
-                        cancelAnimationFrame(animationId);
-                        animationId = null;
-                    }
-                });
-
-                img.addEventListener("dblclick", () => {
-                    if ("ontouchstart" in window) return;
-                    img.style = "";
-                    isDetached = false;
-                });
-
-                window.addEventListener("resize", () => {
-                    img.style = "";
-                    isDetached = false;
-                });
-
-                document.addEventListener("keydown", (e) => {
-                    if (e.key === "Escape") {
-                        img.style = "";
-                        isDetached = false;
-                        shuffle.textContent = shuffleText;
-                        bio.textContent = bioOriginal;
-                        try {
-                            localStorage.removeItem(BIO_KEY);
-                        } catch {}
-                        bio.blur();
-                    }
-                });
-
-                const shuffle = document.getElementById("shuffle");
-                const shuffleText = shuffle.textContent;
-
-                const bio = document.querySelector('[contenteditable="true"]');
-                const bioOriginal = bio.textContent;
-                const BIO_KEY = "mikesub:bio";
-
-                try {
-                    const savedBio = localStorage.getItem(BIO_KEY);
-                    if (savedBio !== null) bio.textContent = savedBio;
-                } catch {}
-
-                bio.addEventListener("input", () => {
-                    try {
-                        localStorage.setItem(BIO_KEY, bio.textContent);
-                    } catch {}
-                });
-
-                const adj = ["mountain", "film", "Japanese", "bike"];
-                const nouns = ["trails", "cameras", "saws", "chains"];
-                let isAnimating = false;
-
-                const shuffleArray = (array) => {
-                    const result = [...array];
-                    for (let i = result.length - 1; i > 0; i--) {
-                        const j = Math.floor(Math.random() * (i + 1));
-                        [result[i], result[j]] = [result[j], result[i]];
-                    }
-                    return result;
-                };
-
-                shuffle.addEventListener("click", () => {
-                    if (isAnimating) return;
-                    isAnimating = true;
-
-                    const shuffledAdj = shuffleArray(adj);
-                    const shuffledNouns = shuffleArray(nouns);
-                    const pairs = shuffledAdj.map(
-                        (adjective, index) =>
-                            `${adjective} ${shuffledNouns[index]}`,
-                    );
-                    const newText = `${pairs[0]}, ${pairs[1]}, ${pairs[2]}, and ${pairs[3]}`;
-
-                    shuffle.style.color = "transparent";
-                    setTimeout(() => {
-                        shuffle.textContent = newText;
-                        shuffle.style.color = "";
-                        setTimeout(() => {
-                            isAnimating = false;
-                        }, 150);
-                    }, 150);
-                });
-            });
-        </script>
     </head>
     <body>
         <main>
@@ -359,27 +59,17 @@
                 <h1>Mike&nbsp;Saburenkov</h1>
             </header>
             <section>
-                <img
-                    src="https://media.githubusercontent.com/media/mikesub/mikesub.net/master/photos/balcony.jpg"
-                    alt="Man with dark hair and beard in doorway, wearing light gray shirt"
-                />
-                <div>
-                    <p>
-                        <span contenteditable="true">
-                            A web engineer who now splits time between building
-                            teams and shipping features. Currently offering
-                            consultancy services and working on a few projects
-                            of my own. Previously worked with SaaS companies of
-                            all sizes, from early-stage to scale-ups, in roles
-                            spanning hands-on development to running
-                            engineering.
-                        </span>
-                        You can find more about that on
-                        <a rel="me" href="https://www.linkedin.com/in/mikesub/"
-                            >LinkedIn</a
-                        >, or get in touch if you’d like to work together.
-                    </p>
-                </div>
+                <p>
+                    A web engineer who now splits time between building teams
+                    and shipping features. Currently offering consultancy
+                    services and working on a few projects of my own. Previously
+                    worked with SaaS companies of all sizes, from early-stage to
+                    scale-ups, in roles spanning hands-on development to running
+                    engineering. You can find more about that on
+                    <a rel="me" href="https://www.linkedin.com/in/mikesub/"
+                        >LinkedIn</a
+                    >, or get in touch if you’d like to work together.
+                </p>
             </section>
         </main>
     </body>
